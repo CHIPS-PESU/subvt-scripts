@@ -1,0 +1,3 @@
+subckt ADDHXL S CO A B VDD GND
+
+ends ADDHXL

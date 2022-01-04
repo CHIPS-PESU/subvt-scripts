@@ -1,0 +1,84 @@
+//  corner.mdl
+//  (C) 2008 Cadence Design Systems, Inc.
+//
+// This example shows how MDL switches from corner to corner 
+// via combining MDL alias measurement with Spectre alter/altergroup 
+// statements neatly and easily to measure important aspects of a circuit.
+
+// alias measurement definition
+alias measurement tranmeas { 
+
+  // definition of the parameters to be output
+  export real clk_data_delay, outcross, clk_q_delay, \
+              maxq, minq, q_rise_time
+
+  // definition of transient analysis to be run in a conservative tolerance
+  run tran(stop=40n, errpreset='conservative)
+
+  // computation of crossing point of V(data)
+  real vddelay=cross(sig=V(data), thresh=vdd/2, dir='rise, n=1)
+
+  // computation of crossing point of V(clock)
+  real vcdelay=cross(sig=V(clock), thresh=vdd/2, n=1)
+
+  // computation of crossing point of V(q)
+  outcross=cross(V(q),thresh=vdd/2)
+
+  // computation of delay of V(data) versus V(clock)
+  clk_data_delay=vcdelay-vddelay
+
+  // computation of delay of V(q) versus V(clock)
+  clk_q_delay=outcross-vcdelay
+
+  //computation of maximum value of V(q)
+  maxq=max(v(q))
+
+  //computation of minimum value of V(q)
+  minq=min(V(q))
+
+  //computation of risetime for signal V(q)
+  q_rise_time=risetime(V(q), initval=minq, finalval=maxq, \
+              inittype='y, finaltype='y, theta1=10, theta2=90)
+
+}
+
+// alias measurement definition
+alias measurement dcmeas {
+
+  // definition of dc analysis to save operating points to logfile
+  run dc (oppoint='logfile)
+
+  // definition of the parameter to be output
+  export real dcout=v(q)
+
+}
+
+
+// execute the measurement aliases
+run tranmeas
+run dcmeas
+
+
+// run corner analyses
+
+// run alter_slow altergroup statement defined in netlist 
+// to switch to "slow" corner parameters
+run alter_slow
+
+// run alter_temp_slow alter statement defined in netlist
+// to switch to "slow" temp value
+run alter_temp_slow
+
+// run the measurement alias and store the resutls in a new dataset transmeas_slow
+run tranmeas as tranmeas_slow
+
+// run alter_fast altergroup statement defined in netlist
+// to switch to "fast" corner parameters
+run alter_fast
+
+// run alter_temp_fast alter statement defined in netlist
+// to switch to "fast" temp value
+run alter_temp_fast
+
+// run the measurement alias and store the resutls in a new dataset transmeas_fast
+run tranmeas as tranmeas_fast

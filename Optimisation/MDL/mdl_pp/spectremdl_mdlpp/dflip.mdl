@@ -1,0 +1,52 @@
+//  analyses.mdl
+//  (C) 2008 Cadence Design Systems, Inc.
+//
+// This example is to show that MDL post processing can handle spectremdl, spectre and ultrasim run raw data.
+// You will compare the MDL post processng reslut with the spectremdl result.
+// In this script, we run tran, dc sweep and dc analysis.  Ultrasim does not support dc sweep analysis. 
+// So when MDL post processing process ultrasim raw data, it will not give the dc sweep measurement.
+
+// alias measurement definition
+alias measurement mytran1 {
+
+   // define an input real variable
+   run tran1
+
+   //compute voltage of V(q) at specific times
+   export real vq_20n=V(q)@20e-9
+   export real vq_40n=V(q)@40e-9
+   
+   //compute the delay
+   export real vddelay=cross(sig=V(data), thresh=vdd/2, dir='rise, n=1)
+   export real vcdelay=cross(sig=V(clock), thresh=vdd/2, n=1)
+//   export real outcross=cross(V(q),thresh=vdd/2)
+//   export real clk_data_delay=vcdelay-vddelay
+
+}
+
+alias measurement oppoint {
+
+   //define an OP analysis mapping SPICE .op defined in the netlist
+   run dc1
+
+   //compute voltage of V(q) 
+   export real dcout=V(q)
+}
+
+
+// alias measurement definition
+alias measurement dcswp {
+
+   //define an DC sweep analysis mapping SPICE .dc defined in the netlist
+   run dc2
+
+   //compute voltage of V(q) at different value of swept parameter
+   export real dcswpout_1p2=V(q)@1.2
+   export real dcswpout_1p8=V(q)@1.8
+   export real dcswpout_2p4=V(q)@2.4
+}
+
+run mytran1
+run oppoint
+run dcswp
+

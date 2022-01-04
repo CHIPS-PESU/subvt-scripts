@@ -1,0 +1,1366 @@
+ROOT_DIR = /home/installs/LIBERATE192
+exepath = /home/installs/LIBERATE192/tools/bin
+Host : cad19 x86_64 Linux 2.6.32-696.el6.x86_64
+LIBERATE Library Characterization Platform (x86_64) 
+Release dev, compiled by vficcm on Tue Sep 10 06:33:00 PDT 2019
+
+
+    ********************************************************************
+    *   Copyright (c)  Cadence Design Systems, Inc.  2006 - 2021.      *
+    *             All rights reserved.                                 *
+    *                                                                  *
+    *                                                                  *
+    *                                                                  *
+    * This program contains confidential and trade secret information  *
+    * of Cadence Design Systems, Inc. and is protected by copyright    *
+    * law and international treaties.  Any reproduction, use,          *
+    * distribution or disclosure of this program or any portion of it, *
+    * or any attempt to obtain a human-readable version of this        *
+    * program, without the express, prior written consent of           *
+    * Cadence Design Systems, Inc., is strictly prohibited.            *
+    *                                                                  *
+    *         Cadence Design Systems, Inc.                             *
+    *           2655 Seely Avenue                                      *
+    *           San Jose, CA 95134,  USA                               *
+    *                                                                  *
+    *                                                                  *
+    ********************************************************************
+    
+    
+    Copyright notices for Open Source and Third Party Tools used by this 
+    software can be viewed at <cds_inst_dir>/doc/liberate/thirdpartyinfo/Notices.txt
+
+LIBERATE started on cad19 at Tue May 25 13:55:37 2021
+
+Command line arguments: 'char.tcl'.
+ALTOSHOME set to '/home/installs/LIBERATE192'.
+Server ID : T20210525135537937291S0011194
+LIBERATE parameter "slew_lower_rise" set to "0.2"
+LIBERATE parameter "slew_upper_rise" set to "0.8"
+LIBERATE parameter "slew_lower_fall" set to "0.2"
+LIBERATE parameter "slew_upper_fall" set to "0.8"
+LIBERATE parameter "measure_slew_lower_rise" set to "0.2"
+LIBERATE parameter "measure_slew_upper_rise" set to "0.8"
+LIBERATE parameter "measure_slew_lower_fall" set to "0.2"
+LIBERATE parameter "measure_slew_upper_fall" set to "0.8"
+LIBERATE parameter "min_transition" set to "6e-12"
+LIBERATE parameter "max_transition" set to "2e-07"
+LIBERATE parameter "min_output_cap" set to "1e-16"
+LIBERATE parameter "spectre_pwr" set to "0"
+LIBERATE parameter "simulator" set to "ski"
+LIBERATE parameter "char_library_skip_var_list" set to ""
+Start Characterizing Library at (Tue May 25 13:55:41 IST 2021)
+
+*Info* Removing all types
+*Info* Max Shared Memory Segments : 4096
+*Info* No Shared Memory Segments
+*Info* Max Semaphore Arrays : 128
+*Info* Max Message Queues : 7577
+*Info* No Message Queues
+*Info* No Zombie Processes
+WARNING (LIB-103): When using Spectre-SKI, runtime may significantly improve when using an extsim_model_include/define_leafcell flow.  This is needed to enable the Spectre modellib flow.
+INFO (LIB-956): (read_spice): Reading file: '/home/TSMC/Desktop/UMC180/Designkits/Cadence_6.1/lowpower/liberate/MODELS/include_tt.sp'.
+INFO (LIB-956): (read_spice): Reading file: '/home/TSMC/Desktop/UMC180/Designkits/Cadence_6.1/lowpower/liberate/NETLIST/INVX1.sp'.
+INFO (LIB-956): (read_spice): Reading file: '/home/TSMC/Desktop/UMC180/Designkits/Cadence_6.1/lowpower/liberate/NETLIST/NAND2X1.sp'.
+INFO (LIB-956): (read_spice): Reading file: '/home/TSMC/Desktop/UMC180/Designkits/Cadence_6.1/lowpower/liberate/NETLIST/AND2X1.sp'.
+INFO (LIB-956): (read_spice): Reading file: '/home/TSMC/Desktop/UMC180/Designkits/Cadence_6.1/lowpower/liberate/NETLIST/NOR2X1.sp'.
+INFO (LIB-956): (read_spice): Reading file: '/home/TSMC/Desktop/UMC180/Designkits/Cadence_6.1/lowpower/liberate/NETLIST/OR2X1.sp'.
+INFO (LIB-956): (read_spice): Reading file: '/home/TSMC/Desktop/UMC180/Designkits/Cadence_6.1/lowpower/liberate/NETLIST/XOR2X1.sp'.
+INFO (LIB-943): Finished reading netlist(s) at May 25 13:55:46.
+INFO (LIB-711): Feature 'Virtuoso_Multi_mode_Simulation' exists in the license pool. The parameter 'spectre_use_mmsim_token_license' will be set to '1'.
+INFO (LIB-1008): (char_library): This LIBERATE release was qualified with MMSIM version '' but newer version '19.1.0.396.isr8' was detected. If MMSIM-related issues are found, update to the qualified MMSIM version and re-run.
+*Info* (char_library) : SKI process child signal handler enabled.
+
+INFO (LIB-966): Using Spectre version 19.1.0.396.isr8 located at: /home/installs/SPECTRE191/tools/bin/spectre.
+*Info* Use temporary directory '/home/TSMC/Desktop/UMC180/Designkits/Cadence_6.1/lowpower/liberate'.
+LIBERATE parameter "extsim_deck_dir" defaulted to cad19:/home/TSMC/Desktop/UMC180/Designkits/Cadence_6.1/lowpower/liberate/decks.cad19.T20210525135537937291S0011194
+
+*Info* : Initializing SKI environment...
+Initializing Spice
+*Info* Adding 10 global models to Spice.
+Building library database
+Processing cell: AND2X1
+(May 25 13:55:47) Finish building module.
+Processing cell: INVX1
+WARNING (LIB-519): (char_library): The pin 'b' is not defined for cell 'INVX1'. Check the netlist and make sure it is consistent with 'define_cell' command.
+(May 25 13:55:53) Finish building module.
+Processing cell: NAND2X1
+(May 25 13:55:53) Finish building module.
+Processing cell: NOR2X1
+(May 25 13:55:53) Finish building module.
+Processing cell: OR2X1
+(May 25 13:55:53) Finish building module.
+Processing cell: XOR2X1
+(May 25 13:55:54) Finish building module.
+---------- Entering compute template index ------------ May 25 13:55:55
+May 25 13:55:55 Determining template indices...
+
+Minimum transition index for the library: 6e-12 sec
+Maximum transition index for the library: 2e-07 sec
+Minimum output capacitance index for the library: 1e-16 F
+May 25 13:56:06 Autoindex finished.
+---------- Exiting compute template index ------------ May 25 13:56:06
+  MEM=490 MB
+  MEM=490 MB
+(May 25 13:56:06) Generating vectors: AND2X1
+(May 25 13:56:06) Generating vectors: INVX1
+(May 25 13:56:06) Generating vectors: NAND2X1
+(May 25 13:56:06) Generating vectors: NOR2X1
+(May 25 13:56:06) Generating vectors: OR2X1
+(May 25 13:56:06) Generating vectors: XOR2X1
+  MEM=491 MB
+
+May 25 13:56:06 Thread 3: Cell=XOR2X1 (12%)     Pin=y    Related=a    combinational  rise_transition 
+May 25 13:56:07 Thread 1: Cell=XOR2X1 (25%)     Pin=y    Related=a    combinational  rise_transition 
+May 25 13:56:17 Thread 2: Cell=XOR2X1 (37%)     Pin=y    Related=b    combinational  rise_transition 
+May 25 13:56:17 Thread 0: Cell=XOR2X1 (50%)     Pin=y    Related=b    combinational  rise_transition 
+WARNING (LIB-449): The measured transition might be inaccurate because a rebound at voltage 0.06v (20%VDD) was detected on the transition of port 'y' for cell: 'XOR2X1', pin:  'y', related_pin: 'b', when: '!a', type: 'combinational', table: 'rise_transition'. The program will use the last crossing to determine the transition time. Save and review the delay_3 simulation decks (see extsim_deck_dir, extsim_save_passed, extsim_save_failed), adjust the slew measurement thresholds (see measure_slew_*), or modify the design and rerun.
+WARNING (LIB-449): The measured transition might be inaccurate because a rebound at voltage 0.06v (20%VDD) was detected on the transition of port 'y' for cell: 'XOR2X1', pin:  'y', related_pin: 'b', when: '!a', type: 'combinational', table: 'rise_transition'. The program will use the last crossing to determine the transition time. Save and review the delay_3 simulation decks (see extsim_deck_dir, extsim_save_passed, extsim_save_failed), adjust the slew measurement thresholds (see measure_slew_*), or modify the design and rerun.
+WARNING (LIB-449): The measured transition might be inaccurate because a rebound at voltage 0.06v (20%VDD) was detected on the transition of port 'y' for cell: 'XOR2X1', pin:  'y', related_pin: 'b', when: '!a', type: 'combinational', table: 'rise_transition'. The program will use the last crossing to determine the transition time. Save and review the delay_3 simulation decks (see extsim_deck_dir, extsim_save_passed, extsim_save_failed), adjust the slew measurement thresholds (see measure_slew_*), or modify the design and rerun.
+WARNING (LIB-449): The measured transition might be inaccurate because a rebound at voltage 0.06v (20%VDD) was detected on the transition of port 'y' for cell: 'XOR2X1', pin:  'y', related_pin: 'b', when: '!a', type: 'combinational', table: 'rise_transition'. The program will use the last crossing to determine the transition time. Save and review the delay_3 simulation decks (see extsim_deck_dir, extsim_save_passed, extsim_save_failed), adjust the slew measurement thresholds (see measure_slew_*), or modify the design and rerun.
+WARNING (LIB-449): The measured transition might be inaccurate because a rebound at voltage 0.06v (20%VDD) was detected on the transition of port 'y' for cell: 'XOR2X1', pin:  'y', related_pin: 'b', when: '!a', type: 'combinational', table: 'rise_transition'. The program will use the last crossing to determine the transition time. Save and review the delay_3 simulation decks (see extsim_deck_dir, extsim_save_passed, extsim_save_failed), adjust the slew measurement thresholds (see measure_slew_*), or modify the design and rerun.
+WARNING (LIB-449): The measured transition might be inaccurate because a rebound at voltage 0.06v (20%VDD) was detected on the transition of port 'y' for cell: 'XOR2X1', pin:  'y', related_pin: 'b', when: '!a', type: 'combinational', table: 'rise_transition'. The program will use the last crossing to determine the transition time. Save and review the delay_3 simulation decks (see extsim_deck_dir, extsim_save_passed, extsim_save_failed), adjust the slew measurement thresholds (see measure_slew_*), or modify the design and rerun.
+WARNING (LIB-449): The measured transition might be inaccurate because a rebound at voltage 0.06v (20%VDD) was detected on the transition of port 'y' for cell: 'XOR2X1', pin:  'y', related_pin: 'b', when: '!a', type: 'combinational', table: 'rise_transition'. The program will use the last crossing to determine the transition time. Save and review the delay_3 simulation decks (see extsim_deck_dir, extsim_save_passed, extsim_save_failed), adjust the slew measurement thresholds (see measure_slew_*), or modify the design and rerun.
+WARNING (LIB-449): The measured transition might be inaccurate because a rebound at voltage 0.06v (20%VDD) was detected on the transition of port 'y' for cell: 'XOR2X1', pin:  'y', related_pin: 'b', when: '!a', type: 'combinational', table: 'rise_transition'. The program will use the last crossing to determine the transition time. Save and review the delay_3 simulation decks (see extsim_deck_dir, extsim_save_passed, extsim_save_failed), adjust the slew measurement thresholds (see measure_slew_*), or modify the design and rerun.
+WARNING (LIB-449): The measured transition might be inaccurate because a rebound at voltage 0.06v (20%VDD) was detected on the transition of port 'y' for cell: 'XOR2X1', pin:  'y', related_pin: 'b', when: '!a', type: 'combinational', table: 'rise_transition'. The program will use the last crossing to determine the transition time. Save and review the delay_3 simulation decks (see extsim_deck_dir, extsim_save_passed, extsim_save_failed), adjust the slew measurement thresholds (see measure_slew_*), or modify the design and rerun.
+WARNING (LIB-449): The measured transition might be inaccurate because a rebound at voltage 0.06v (20%VDD) was detected on the transition of port 'y' for cell: 'XOR2X1', pin:  'y', related_pin: 'b', when: '!a', type: 'combinational', table: 'rise_transition'. The program will use the last crossing to determine the transition time. Save and review the delay_3 simulation decks (see extsim_deck_dir, extsim_save_passed, extsim_save_failed), adjust the slew measurement thresholds (see measure_slew_*), or modify the design and rerun.
+WARNING (LIB-449): The measured transition might be inaccurate because a rebound at voltage 0.06v (20%VDD) was detected on the transition of port 'y' for cell: 'XOR2X1', pin:  'y', related_pin: 'b', when: '!a', type: 'combinational', table: 'rise_transition'. The program will use the last crossing to determine the transition time. Save and review the delay_3 simulation decks (see extsim_deck_dir, extsim_save_passed, extsim_save_failed), adjust the slew measurement thresholds (see measure_slew_*), or modify the design and rerun.
+WARNING (LIB-449): The measured transition might be inaccurate because a rebound at voltage 0.06v (20%VDD) was detected on the transition of port 'y' for cell: 'XOR2X1', pin:  'y', related_pin: 'b', when: '!a', type: 'combinational', table: 'rise_transition'. The program will use the last crossing to determine the transition time. Save and review the delay_3 simulation decks (see extsim_deck_dir, extsim_save_passed, extsim_save_failed), adjust the slew measurement thresholds (see measure_slew_*), or modify the design and rerun.
+WARNING (LIB-449): The measured transition might be inaccurate because a rebound at voltage 0.06v (20%VDD) was detected on the transition of port 'y' for cell: 'XOR2X1', pin:  'y', related_pin: 'b', when: '!a', type: 'combinational', table: 'rise_transition'. The program will use the last crossing to determine the transition time. Save and review the delay_3 simulation decks (see extsim_deck_dir, extsim_save_passed, extsim_save_failed), adjust the slew measurement thresholds (see measure_slew_*), or modify the design and rerun.
+WARNING (LIB-449): The measured transition might be inaccurate because a rebound at voltage 0.06v (20%VDD) was detected on the transition of port 'y' for cell: 'XOR2X1', pin:  'y', related_pin: 'b', when: '!a', type: 'combinational', table: 'rise_transition'. The program will use the last crossing to determine the transition time. Save and review the delay_3 simulation decks (see extsim_deck_dir, extsim_save_passed, extsim_save_failed), adjust the slew measurement thresholds (see measure_slew_*), or modify the design and rerun.
+WARNING (LIB-449): The measured transition might be inaccurate because a rebound at voltage 0.06v (20%VDD) was detected on the transition of port 'y' for cell: 'XOR2X1', pin:  'y', related_pin: 'b', when: '!a', type: 'combinational', table: 'rise_transition'. The program will use the last crossing to determine the transition time. Save and review the delay_3 simulation decks (see extsim_deck_dir, extsim_save_passed, extsim_save_failed), adjust the slew measurement thresholds (see measure_slew_*), or modify the design and rerun.
+WARNING (LIB-449): The measured transition might be inaccurate because a rebound at voltage 0.06v (20%VDD) was detected on the transition of port 'y' for cell: 'XOR2X1', pin:  'y', related_pin: 'b', when: '!a', type: 'combinational', table: 'rise_transition'. The program will use the last crossing to determine the transition time. Save and review the delay_3 simulation decks (see extsim_deck_dir, extsim_save_passed, extsim_save_failed), adjust the slew measurement thresholds (see measure_slew_*), or modify the design and rerun.
+WARNING (LIB-449): The measured transition might be inaccurate because a rebound at voltage 0.06v (20%VDD) was detected on the transition of port 'y' for cell: 'XOR2X1', pin:  'y', related_pin: 'b', when: '!a', type: 'combinational', table: 'rise_transition'. The program will use the last crossing to determine the transition time. Save and review the delay_3 simulation decks (see extsim_deck_dir, extsim_save_passed, extsim_save_failed), adjust the slew measurement thresholds (see measure_slew_*), or modify the design and rerun.
+WARNING (LIB-449): The measured transition might be inaccurate because a rebound at voltage 0.06v (20%VDD) was detected on the transition of port 'y' for cell: 'XOR2X1', pin:  'y', related_pin: 'b', when: '!a', type: 'combinational', table: 'rise_transition'. The program will use the last crossing to determine the transition time. Save and review the delay_3 simulation decks (see extsim_deck_dir, extsim_save_passed, extsim_save_failed), adjust the slew measurement thresholds (see measure_slew_*), or modify the design and rerun.
+WARNING (LIB-449): The measured transition might be inaccurate because a rebound at voltage 0.06v (20%VDD) was detected on the transition of port 'y' for cell: 'XOR2X1', pin:  'y', related_pin: 'b', when: '!a', type: 'combinational', table: 'rise_transition'. The program will use the last crossing to determine the transition time. Save and review the delay_3 simulation decks (see extsim_deck_dir, extsim_save_passed, extsim_save_failed), adjust the slew measurement thresholds (see measure_slew_*), or modify the design and rerun.
+WARNING (LIB-449): The measured transition might be inaccurate because a rebound at voltage 0.06v (20%VDD) was detected on the transition of port 'y' for cell: 'XOR2X1', pin:  'y', related_pin: 'b', when: '!a', type: 'combinational', table: 'rise_transition'. The program will use the last crossing to determine the transition time. Save and review the delay_3 simulation decks (see extsim_deck_dir, extsim_save_passed, extsim_save_failed), adjust the slew measurement thresholds (see measure_slew_*), or modify the design and rerun.
+May 25 13:56:18 Thread 3: Cell=XOR2X1 (62%)     Pin=y    Related=a    combinational  fall_transition 
+May 25 13:56:47 Thread 2: Cell=XOR2X1 (75%)     Pin=y    Related=a    combinational  fall_transition 
+May 25 13:56:47 Thread 1: Cell=XOR2X1 (87%)     Pin=y    Related=b    combinational  fall_transition 
+WARNING (LIB-449): The measured transition might be inaccurate because a rebound at voltage 0.24v (80%VDD) was detected on the transition of port 'y' for cell: 'XOR2X1', pin:  'y', related_pin: 'b', when: '!a', type: 'combinational', table: 'fall_transition'. The program will use the last crossing to determine the transition time. Save and review the delay_7 simulation decks (see extsim_deck_dir, extsim_save_passed, extsim_save_failed), adjust the slew measurement thresholds (see measure_slew_*), or modify the design and rerun.
+WARNING (LIB-449): The measured transition might be inaccurate because a rebound at voltage 0.24v (80%VDD) was detected on the transition of port 'y' for cell: 'XOR2X1', pin:  'y', related_pin: 'b', when: '!a', type: 'combinational', table: 'fall_transition'. The program will use the last crossing to determine the transition time. Save and review the delay_7 simulation decks (see extsim_deck_dir, extsim_save_passed, extsim_save_failed), adjust the slew measurement thresholds (see measure_slew_*), or modify the design and rerun.
+WARNING (LIB-449): The measured transition might be inaccurate because a rebound at voltage 0.24v (80%VDD) was detected on the transition of port 'y' for cell: 'XOR2X1', pin:  'y', related_pin: 'b', when: '!a', type: 'combinational', table: 'fall_transition'. The program will use the last crossing to determine the transition time. Save and review the delay_7 simulation decks (see extsim_deck_dir, extsim_save_passed, extsim_save_failed), adjust the slew measurement thresholds (see measure_slew_*), or modify the design and rerun.
+WARNING (LIB-449): The measured transition might be inaccurate because a rebound at voltage 0.24v (80%VDD) was detected on the transition of port 'y' for cell: 'XOR2X1', pin:  'y', related_pin: 'b', when: '!a', type: 'combinational', table: 'fall_transition'. The program will use the last crossing to determine the transition time. Save and review the delay_7 simulation decks (see extsim_deck_dir, extsim_save_passed, extsim_save_failed), adjust the slew measurement thresholds (see measure_slew_*), or modify the design and rerun.
+WARNING (LIB-449): The measured transition might be inaccurate because a rebound at voltage 0.24v (80%VDD) was detected on the transition of port 'y' for cell: 'XOR2X1', pin:  'y', related_pin: 'b', when: '!a', type: 'combinational', table: 'fall_transition'. The program will use the last crossing to determine the transition time. Save and review the delay_7 simulation decks (see extsim_deck_dir, extsim_save_passed, extsim_save_failed), adjust the slew measurement thresholds (see measure_slew_*), or modify the design and rerun.
+WARNING (LIB-449): The measured transition might be inaccurate because a rebound at voltage 0.24v (80%VDD) was detected on the transition of port 'y' for cell: 'XOR2X1', pin:  'y', related_pin: 'b', when: '!a', type: 'combinational', table: 'fall_transition'. The program will use the last crossing to determine the transition time. Save and review the delay_7 simulation decks (see extsim_deck_dir, extsim_save_passed, extsim_save_failed), adjust the slew measurement thresholds (see measure_slew_*), or modify the design and rerun.
+WARNING (LIB-449): The measured transition might be inaccurate because a rebound at voltage 0.24v (80%VDD) was detected on the transition of port 'y' for cell: 'XOR2X1', pin:  'y', related_pin: 'b', when: '!a', type: 'combinational', table: 'fall_transition'. The program will use the last crossing to determine the transition time. Save and review the delay_7 simulation decks (see extsim_deck_dir, extsim_save_passed, extsim_save_failed), adjust the slew measurement thresholds (see measure_slew_*), or modify the design and rerun.
+WARNING (LIB-449): The measured transition might be inaccurate because a rebound at voltage 0.24v (80%VDD) was detected on the transition of port 'y' for cell: 'XOR2X1', pin:  'y', related_pin: 'b', when: '!a', type: 'combinational', table: 'fall_transition'. The program will use the last crossing to determine the transition time. Save and review the delay_7 simulation decks (see extsim_deck_dir, extsim_save_passed, extsim_save_failed), adjust the slew measurement thresholds (see measure_slew_*), or modify the design and rerun.
+WARNING (LIB-449): The measured transition might be inaccurate because a rebound at voltage 0.24v (80%VDD) was detected on the transition of port 'y' for cell: 'XOR2X1', pin:  'y', related_pin: 'b', when: '!a', type: 'combinational', table: 'fall_transition'. The program will use the last crossing to determine the transition time. Save and review the delay_7 simulation decks (see extsim_deck_dir, extsim_save_passed, extsim_save_failed), adjust the slew measurement thresholds (see measure_slew_*), or modify the design and rerun.
+WARNING (LIB-449): The measured transition might be inaccurate because a rebound at voltage 0.24v (80%VDD) was detected on the transition of port 'y' for cell: 'XOR2X1', pin:  'y', related_pin: 'b', when: '!a', type: 'combinational', table: 'fall_transition'. The program will use the last crossing to determine the transition time. Save and review the delay_7 simulation decks (see extsim_deck_dir, extsim_save_passed, extsim_save_failed), adjust the slew measurement thresholds (see measure_slew_*), or modify the design and rerun.
+WARNING (LIB-449): The measured transition might be inaccurate because a rebound at voltage 0.24v (80%VDD) was detected on the transition of port 'y' for cell: 'XOR2X1', pin:  'y', related_pin: 'b', when: '!a', type: 'combinational', table: 'fall_transition'. The program will use the last crossing to determine the transition time. Save and review the delay_7 simulation decks (see extsim_deck_dir, extsim_save_passed, extsim_save_failed), adjust the slew measurement thresholds (see measure_slew_*), or modify the design and rerun.
+WARNING (LIB-449): The measured transition might be inaccurate because a rebound at voltage 0.24v (80%VDD) was detected on the transition of port 'y' for cell: 'XOR2X1', pin:  'y', related_pin: 'b', when: '!a', type: 'combinational', table: 'fall_transition'. The program will use the last crossing to determine the transition time. Save and review the delay_7 simulation decks (see extsim_deck_dir, extsim_save_passed, extsim_save_failed), adjust the slew measurement thresholds (see measure_slew_*), or modify the design and rerun.
+WARNING (LIB-449): The measured transition might be inaccurate because a rebound at voltage 0.24v (80%VDD) was detected on the transition of port 'y' for cell: 'XOR2X1', pin:  'y', related_pin: 'b', when: '!a', type: 'combinational', table: 'fall_transition'. The program will use the last crossing to determine the transition time. Save and review the delay_7 simulation decks (see extsim_deck_dir, extsim_save_passed, extsim_save_failed), adjust the slew measurement thresholds (see measure_slew_*), or modify the design and rerun.
+WARNING (LIB-449): The measured transition might be inaccurate because a rebound at voltage 0.24v (80%VDD) was detected on the transition of port 'y' for cell: 'XOR2X1', pin:  'y', related_pin: 'b', when: '!a', type: 'combinational', table: 'fall_transition'. The program will use the last crossing to determine the transition time. Save and review the delay_7 simulation decks (see extsim_deck_dir, extsim_save_passed, extsim_save_failed), adjust the slew measurement thresholds (see measure_slew_*), or modify the design and rerun.
+WARNING (LIB-449): The measured transition might be inaccurate because a rebound at voltage 0.24v (80%VDD) was detected on the transition of port 'y' for cell: 'XOR2X1', pin:  'y', related_pin: 'b', when: '!a', type: 'combinational', table: 'fall_transition'. The program will use the last crossing to determine the transition time. Save and review the delay_7 simulation decks (see extsim_deck_dir, extsim_save_passed, extsim_save_failed), adjust the slew measurement thresholds (see measure_slew_*), or modify the design and rerun.
+May 25 13:56:48 Thread 3: Cell=XOR2X1 (100%)    Pin=y    Related=b    combinational  fall_transition 
+May 25 13:56:48 Thread 0: Cell=XOR2X1 (100%)    Pin=     Related=     combinational  leakage_power  
+WARNING (LIB-449): The measured transition might be inaccurate because a rebound at voltage 0.24v (80%VDD) was detected on the transition of port 'y' for cell: 'XOR2X1', pin:  'y', related_pin: 'b', when: '!a', type: 'combinational', table: 'fall_transition'. The program will use the last crossing to determine the transition time. Save and review the delay_7 simulation decks (see extsim_deck_dir, extsim_save_passed, extsim_save_failed), adjust the slew measurement thresholds (see measure_slew_*), or modify the design and rerun.
+WARNING (LIB-449): The measured transition might be inaccurate because a rebound at voltage 0.24v (80%VDD) was detected on the transition of port 'y' for cell: 'XOR2X1', pin:  'y', related_pin: 'b', when: '!a', type: 'combinational', table: 'fall_transition'. The program will use the last crossing to determine the transition time. Save and review the delay_7 simulation decks (see extsim_deck_dir, extsim_save_passed, extsim_save_failed), adjust the slew measurement thresholds (see measure_slew_*), or modify the design and rerun.
+WARNING (LIB-449): The measured transition might be inaccurate because a rebound at voltage 0.24v (80%VDD) was detected on the transition of port 'y' for cell: 'XOR2X1', pin:  'y', related_pin: 'b', when: '!a', type: 'combinational', table: 'fall_transition'. The program will use the last crossing to determine the transition time. Save and review the delay_7 simulation decks (see extsim_deck_dir, extsim_save_passed, extsim_save_failed), adjust the slew measurement thresholds (see measure_slew_*), or modify the design and rerun.
+WARNING (LIB-449): The measured transition might be inaccurate because a rebound at voltage 0.24v (80%VDD) was detected on the transition of port 'y' for cell: 'XOR2X1', pin:  'y', related_pin: 'b', when: '!a', type: 'combinational', table: 'fall_transition'. The program will use the last crossing to determine the transition time. Save and review the delay_7 simulation decks (see extsim_deck_dir, extsim_save_passed, extsim_save_failed), adjust the slew measurement thresholds (see measure_slew_*), or modify the design and rerun.
+WARNING (LIB-449): The measured transition might be inaccurate because a rebound at voltage 0.24v (80%VDD) was detected on the transition of port 'y' for cell: 'XOR2X1', pin:  'y', related_pin: 'b', when: '!a', type: 'combinational', table: 'fall_transition'. The program will use the last crossing to determine the transition time. Save and review the delay_7 simulation decks (see extsim_deck_dir, extsim_save_passed, extsim_save_failed), adjust the slew measurement thresholds (see measure_slew_*), or modify the design and rerun.
+May 25 13:56:48 Thread 2: Cell=XOR2X1 (100%)    Pin=     Related=     combinational  leakage_power  
+May 25 13:56:57 Thread 1: Cell=XOR2X1 (100%)    Pin=     Related=     combinational  leakage_power  
+May 25 13:56:57 Thread 3: Cell=XOR2X1 (100%)    Pin=     Related=     combinational  leakage_power  
+May 25 13:56:58 Thread 0: Cell=AND2X1 (20%)     Pin=y    Related=a    combinational  rise_transition 
+May 25 13:57:27 Thread 3: Cell=AND2X1 (41%)     Pin=y    Related=b    combinational  rise_transition 
+May 25 13:57:27 Thread 1: Cell=AND2X1 (62%)     Pin=y    Related=a    combinational  fall_transition 
+Performance statistics for XOR2X1: Spectre cpu time = 4.2 seconds, total cpu time = 6.3 seconds, wall clock time = 101.0 seconds.
+May 25 13:57:58 Thread 2: Cell=AND2X1 (83%)     Pin=y    Related=b    combinational  fall_transition 
+May 25 13:57:58 Thread 1: Cell=AND2X1 (87%)     Pin=a    Related=     rising_edge    rise_power     
+May 25 13:57:58 Thread 0: Cell=AND2X1 (91%)     Pin=a    Related=     falling_edge   fall_power     
+May 25 13:57:58 Thread 1: Cell=AND2X1 (95%)     Pin=b    Related=     rising_edge    rise_power     
+May 25 13:58:08 Thread 0: Cell=AND2X1 (100%)    Pin=b    Related=     falling_edge   fall_power     
+May 25 13:58:08 Thread 3: Cell=AND2X1 (100%)    Pin=     Related=     combinational  leakage_power  
+May 25 13:58:08 Thread 0: Cell=AND2X1 (100%)    Pin=     Related=     combinational  leakage_power  
+May 25 13:58:19 Thread 1: Cell=AND2X1 (100%)    Pin=     Related=     combinational  leakage_power  
+May 25 13:58:19 Thread 2: Cell=AND2X1 (100%)    Pin=     Related=     combinational  leakage_power  
+May 25 13:58:19 Thread 3: Cell=OR2X1 (20%)      Pin=y    Related=a    combinational  rise_transition 
+May 25 13:58:48 Thread 1: Cell=OR2X1 (41%)      Pin=y    Related=b    combinational  rise_transition 
+May 25 13:58:48 Thread 2: Cell=OR2X1 (62%)      Pin=y    Related=a    combinational  fall_transition 
+WARNING (LIB-449): The measured transition might be inaccurate because a rebound at voltage 0.06v (20%VDD) was detected on the transition of port 'y' for cell: 'OR2X1', pin:  'y', related_pin: 'b', when: '', type: 'combinational', table: 'rise_transition'. The program will use the last crossing to determine the transition time. Save and review the delay_2 simulation decks (see extsim_deck_dir, extsim_save_passed, extsim_save_failed), adjust the slew measurement thresholds (see measure_slew_*), or modify the design and rerun.
+Performance statistics for AND2X1: Spectre cpu time = 1.9 seconds, total cpu time = 2.8 seconds, wall clock time = 81.0 seconds.
+May 25 13:59:18 Thread 0: Cell=OR2X1 (83%)      Pin=y    Related=b    combinational  fall_transition 
+May 25 13:59:18 Thread 1: Cell=OR2X1 (87%)      Pin=a    Related=     rising_edge    rise_power     
+May 25 13:59:18 Thread 2: Cell=OR2X1 (91%)      Pin=a    Related=     falling_edge   fall_power     
+May 25 13:59:18 Thread 1: Cell=OR2X1 (95%)      Pin=b    Related=     rising_edge    rise_power     
+May 25 13:59:28 Thread 2: Cell=OR2X1 (100%)     Pin=b    Related=     falling_edge   fall_power     
+May 25 13:59:28 Thread 3: Cell=OR2X1 (100%)     Pin=     Related=     combinational  leakage_power  
+WARNING (LIB-449): The measured transition might be inaccurate because a rebound at voltage 0.24v (80%VDD) was detected on the transition of port 'y' for cell: 'OR2X1', pin:  'y', related_pin: 'b', when: '', type: 'combinational', table: 'fall_transition'. The program will use the last crossing to determine the transition time. Save and review the delay_4 simulation decks (see extsim_deck_dir, extsim_save_passed, extsim_save_failed), adjust the slew measurement thresholds (see measure_slew_*), or modify the design and rerun.
+WARNING (LIB-449): The measured transition might be inaccurate because a rebound at voltage 0.24v (80%VDD) was detected on the transition of port 'y' for cell: 'OR2X1', pin:  'y', related_pin: 'b', when: '', type: 'combinational', table: 'fall_transition'. The program will use the last crossing to determine the transition time. Save and review the delay_4 simulation decks (see extsim_deck_dir, extsim_save_passed, extsim_save_failed), adjust the slew measurement thresholds (see measure_slew_*), or modify the design and rerun.
+May 25 13:59:28 Thread 1: Cell=OR2X1 (100%)     Pin=     Related=     combinational  leakage_power  
+May 25 13:59:39 Thread 2: Cell=OR2X1 (100%)     Pin=     Related=     combinational  leakage_power  
+May 25 13:59:39 Thread 0: Cell=OR2X1 (100%)     Pin=     Related=     combinational  leakage_power  
+May 25 13:59:39 Thread 3: Cell=NAND2X1 (20%)    Pin=y    Related=a    combinational  rise_transition 
+May 25 14:00:09 Thread 2: Cell=NAND2X1 (41%)    Pin=y    Related=b    combinational  rise_transition 
+May 25 14:00:09 Thread 1: Cell=NAND2X1 (62%)    Pin=y    Related=a    combinational  fall_transition 
+Performance statistics for OR2X1: Spectre cpu time = 1.8 seconds, total cpu time = 2.6 seconds, wall clock time = 81.0 seconds.
+May 25 14:00:40 Thread 0: Cell=NAND2X1 (83%)    Pin=y    Related=b    combinational  fall_transition 
+May 25 14:00:40 Thread 1: Cell=NAND2X1 (87%)    Pin=a    Related=     rising_edge    rise_power     
+May 25 14:00:40 Thread 2: Cell=NAND2X1 (91%)    Pin=a    Related=     falling_edge   fall_power     
+May 25 14:00:40 Thread 2: Cell=NAND2X1 (95%)    Pin=b    Related=     rising_edge    rise_power     
+May 25 14:00:50 Thread 1: Cell=NAND2X1 (100%)   Pin=b    Related=     falling_edge   fall_power     
+May 25 14:00:50 Thread 3: Cell=NAND2X1 (100%)   Pin=     Related=     combinational  leakage_power  
+May 25 14:00:51 Thread 1: Cell=NAND2X1 (100%)   Pin=     Related=     combinational  leakage_power  
+May 25 14:01:01 Thread 2: Cell=NAND2X1 (100%)   Pin=     Related=     combinational  leakage_power  
+May 25 14:01:01 Thread 0: Cell=NAND2X1 (100%)   Pin=     Related=     combinational  leakage_power  
+May 25 14:01:01 Thread 3: Cell=NOR2X1 (20%)     Pin=y    Related=a    combinational  rise_transition 
+May 25 14:01:31 Thread 0: Cell=NOR2X1 (41%)     Pin=y    Related=b    combinational  rise_transition 
+May 25 14:01:31 Thread 2: Cell=NOR2X1 (62%)     Pin=y    Related=a    combinational  fall_transition 
+Performance statistics for NAND2X1: Spectre cpu time = 1.6 seconds, total cpu time = 2.4 seconds, wall clock time = 82.0 seconds.
+May 25 14:02:01 Thread 1: Cell=NOR2X1 (83%)     Pin=y    Related=b    combinational  fall_transition 
+May 25 14:02:01 Thread 0: Cell=NOR2X1 (87%)     Pin=a    Related=     rising_edge    rise_power     
+May 25 14:02:01 Thread 3: Cell=NOR2X1 (91%)     Pin=a    Related=     falling_edge   fall_power     
+May 25 14:02:01 Thread 3: Cell=NOR2X1 (95%)     Pin=b    Related=     rising_edge    rise_power     
+May 25 14:02:11 Thread 0: Cell=NOR2X1 (100%)    Pin=b    Related=     falling_edge   fall_power     
+May 25 14:02:11 Thread 2: Cell=NOR2X1 (100%)    Pin=     Related=     combinational  leakage_power  
+May 25 14:02:12 Thread 3: Cell=NOR2X1 (100%)    Pin=     Related=     combinational  leakage_power  
+May 25 14:02:21 Thread 0: Cell=NOR2X1 (100%)    Pin=     Related=     combinational  leakage_power  
+May 25 14:02:21 Thread 1: Cell=NOR2X1 (100%)    Pin=     Related=     combinational  leakage_power  
+May 25 14:02:21 Thread 2: Cell=INVX1 (50%)      Pin=y    Related=a    combinational  rise_transition 
+May 25 14:02:52 Thread 3: Cell=INVX1 (100%)     Pin=y    Related=a    combinational  fall_transition 
+May 25 14:02:52 Thread 1: Cell=INVX1 (100%)     Pin=     Related=     combinational  leakage_power  
+May 25 14:02:52 Thread 1: Cell=INVX1 (100%)     Pin=     Related=     combinational  leakage_power  
+Performance statistics for NOR2X1: Spectre cpu time = 1.6 seconds, total cpu time = 2.4 seconds, wall clock time = 81.0 seconds.
+Performance statistics for INVX1: Spectre cpu time = 0.5 seconds, total cpu time = 0.6 seconds, wall clock time = 20.0 seconds.
+*Info* (char_library) : SKI process child signal handler disabled.
+
+
+  MEM=1197 MB
+Performance statistics (4 thread(s)):
+Spectre CPU time:     0.00 hours (11.63 seconds)
+Total PreProcessing time:     0.00 hours (0.66 seconds)
+Total cpu time:     0.00 hours (17.18 seconds)
+Wall clock time:     0.12 hours (7 minutes 26 seconds)
+
+Characterization finished at Tue May 25 14:03:12 2021
+
+Characterization statistics:
+
+Number of cells to characterize =    6
+Number of define_cell commands  =    6
+Number of passing cells         =    6
+Number of failing cells         =    0
+List of failing cells {}
+ERROR: Process ID out of range.
+********* simple selection *********  ********* selection by list *********
+-A all processes                      -C by command name
+-N negate selection                   -G by real group ID (supports names)
+-a all w/ tty except session leaders  -U by real user ID (supports names)
+-d all except session leaders         -g by session OR by effective group name
+-e all processes                      -p by process ID
+                                      -q by process ID (unsorted & quick)
+T  all processes on this terminal     -s processes in the sessions given
+a  all w/ tty, including other users  -t by tty
+g  OBSOLETE -- DO NOT USE             -u by effective user ID (supports names)
+r  only running processes             U  processes for specified users
+x  processes w/o controlling ttys     t  by tty
+*********** output format **********  *********** long options ***********
+-o,o user-defined  -f full            --Group --User --pid --cols --ppid
+-j,j job control   s  signal          --group --user --sid --rows --info
+-O,O preloaded -o  v  virtual memory  --cumulative --format --deselect
+-l,l long          u  user-oriented   --sort --tty --forest --version
+-F   extra full    X  registers       --heading --no-heading --context
+                                      --quick-pid
+                    ********* misc options *********
+-V,V  show version      L  list format codes  f  ASCII art forest
+-m,m,-L,-T,H  threads   S  children in sum    -y change -l format
+-M,Z  security data     c  true command name  -c scheduling class
+-w,w  wide output       n  numeric WCHAN,UID  -H process hierarchy
+ERROR: Process ID out of range.
+********* simple selection *********  ********* selection by list *********
+-A all processes                      -C by command name
+-N negate selection                   -G by real group ID (supports names)
+-a all w/ tty except session leaders  -U by real user ID (supports names)
+-d all except session leaders         -g by session OR by effective group name
+-e all processes                      -p by process ID
+                                      -q by process ID (unsorted & quick)
+T  all processes on this terminal     -s processes in the sessions given
+a  all w/ tty, including other users  -t by tty
+g  OBSOLETE -- DO NOT USE             -u by effective user ID (supports names)
+r  only running processes             U  processes for specified users
+x  processes w/o controlling ttys     t  by tty
+*********** output format **********  *********** long options ***********
+-o,o user-defined  -f full            --Group --User --pid --cols --ppid
+-j,j job control   s  signal          --group --user --sid --rows --info
+-O,O preloaded -o  v  virtual memory  --cumulative --format --deselect
+-l,l long          u  user-oriented   --sort --tty --forest --version
+-F   extra full    X  registers       --heading --no-heading --context
+                                      --quick-pid
+                    ********* misc options *********
+-V,V  show version      L  list format codes  f  ASCII art forest
+-m,m,-L,-T,H  threads   S  children in sum    -y change -l format
+-M,Z  security data     c  true command name  -c scheduling class
+-w,w  wide output       n  numeric WCHAN,UID  -H process hierarchy
+ERROR: Process ID out of range.
+********* simple selection *********  ********* selection by list *********
+-A all processes                      -C by command name
+-N negate selection                   -G by real group ID (supports names)
+-a all w/ tty except session leaders  -U by real user ID (supports names)
+-d all except session leaders         -g by session OR by effective group name
+-e all processes                      -p by process ID
+                                      -q by process ID (unsorted & quick)
+T  all processes on this terminal     -s processes in the sessions given
+a  all w/ tty, including other users  -t by tty
+g  OBSOLETE -- DO NOT USE             -u by effective user ID (supports names)
+r  only running processes             U  processes for specified users
+x  processes w/o controlling ttys     t  by tty
+*********** output format **********  *********** long options ***********
+-o,o user-defined  -f full            --Group --User --pid --cols --ppid
+-j,j job control   s  signal          --group --user --sid --rows --info
+-O,O preloaded -o  v  virtual memory  --cumulative --format --deselect
+-l,l long          u  user-oriented   --sort --tty --forest --version
+-F   extra full    X  registers       --heading --no-heading --context
+                                      --quick-pid
+                    ********* misc options *********
+-V,V  show version      L  list format codes  f  ASCII art forest
+-m,m,-L,-T,H  threads   S  children in sum    -y change -l format
+-M,Z  security data     c  true command name  -c scheduling class
+-w,w  wide output       n  numeric WCHAN,UID  -H process hierarchy
+ERROR: Process ID out of range.
+********* simple selection *********  ********* selection by list *********
+-A all processes                      -C by command name
+-N negate selection                   -G by real group ID (supports names)
+-a all w/ tty except session leaders  -U by real user ID (supports names)
+-d all except session leaders         -g by session OR by effective group name
+-e all processes                      -p by process ID
+                                      -q by process ID (unsorted & quick)
+T  all processes on this terminal     -s processes in the sessions given
+a  all w/ tty, including other users  -t by tty
+g  OBSOLETE -- DO NOT USE             -u by effective user ID (supports names)
+r  only running processes             U  processes for specified users
+x  processes w/o controlling ttys     t  by tty
+*********** output format **********  *********** long options ***********
+-o,o user-defined  -f full            --Group --User --pid --cols --ppid
+-j,j job control   s  signal          --group --user --sid --rows --info
+-O,O preloaded -o  v  virtual memory  --cumulative --format --deselect
+-l,l long          u  user-oriented   --sort --tty --forest --version
+-F   extra full    X  registers       --heading --no-heading --context
+                                      --quick-pid
+                    ********* misc options *********
+-V,V  show version      L  list format codes  f  ASCII art forest
+-m,m,-L,-T,H  threads   S  children in sum    -y change -l format
+-M,Z  security data     c  true command name  -c scheduling class
+-w,w  wide output       n  numeric WCHAN,UID  -H process hierarchy
+ERROR: Process ID out of range.
+********* simple selection *********  ********* selection by list *********
+-A all processes                      -C by command name
+-N negate selection                   -G by real group ID (supports names)
+-a all w/ tty except session leaders  -U by real user ID (supports names)
+-d all except session leaders         -g by session OR by effective group name
+-e all processes                      -p by process ID
+                                      -q by process ID (unsorted & quick)
+T  all processes on this terminal     -s processes in the sessions given
+a  all w/ tty, including other users  -t by tty
+g  OBSOLETE -- DO NOT USE             -u by effective user ID (supports names)
+r  only running processes             U  processes for specified users
+x  processes w/o controlling ttys     t  by tty
+*********** output format **********  *********** long options ***********
+-o,o user-defined  -f full            --Group --User --pid --cols --ppid
+-j,j job control   s  signal          --group --user --sid --rows --info
+-O,O preloaded -o  v  virtual memory  --cumulative --format --deselect
+-l,l long          u  user-oriented   --sort --tty --forest --version
+-F   extra full    X  registers       --heading --no-heading --context
+                                      --quick-pid
+                    ********* misc options *********
+-V,V  show version      L  list format codes  f  ASCII art forest
+-m,m,-L,-T,H  threads   S  children in sum    -y change -l format
+-M,Z  security data     c  true command name  -c scheduling class
+-w,w  wide output       n  numeric WCHAN,UID  -H process hierarchy
+ERROR: Process ID out of range.
+********* simple selection *********  ********* selection by list *********
+-A all processes                      -C by command name
+-N negate selection                   -G by real group ID (supports names)
+-a all w/ tty except session leaders  -U by real user ID (supports names)
+-d all except session leaders         -g by session OR by effective group name
+-e all processes                      -p by process ID
+                                      -q by process ID (unsorted & quick)
+T  all processes on this terminal     -s processes in the sessions given
+a  all w/ tty, including other users  -t by tty
+g  OBSOLETE -- DO NOT USE             -u by effective user ID (supports names)
+r  only running processes             U  processes for specified users
+x  processes w/o controlling ttys     t  by tty
+*********** output format **********  *********** long options ***********
+-o,o user-defined  -f full            --Group --User --pid --cols --ppid
+-j,j job control   s  signal          --group --user --sid --rows --info
+-O,O preloaded -o  v  virtual memory  --cumulative --format --deselect
+-l,l long          u  user-oriented   --sort --tty --forest --version
+-F   extra full    X  registers       --heading --no-heading --context
+                                      --quick-pid
+                    ********* misc options *********
+-V,V  show version      L  list format codes  f  ASCII art forest
+-m,m,-L,-T,H  threads   S  children in sum    -y change -l format
+-M,Z  security data     c  true command name  -c scheduling class
+-w,w  wide output       n  numeric WCHAN,UID  -H process hierarchy
+ERROR: Process ID out of range.
+********* simple selection *********  ********* selection by list *********
+-A all processes                      -C by command name
+-N negate selection                   -G by real group ID (supports names)
+-a all w/ tty except session leaders  -U by real user ID (supports names)
+-d all except session leaders         -g by session OR by effective group name
+-e all processes                      -p by process ID
+                                      -q by process ID (unsorted & quick)
+T  all processes on this terminal     -s processes in the sessions given
+a  all w/ tty, including other users  -t by tty
+g  OBSOLETE -- DO NOT USE             -u by effective user ID (supports names)
+r  only running processes             U  processes for specified users
+x  processes w/o controlling ttys     t  by tty
+*********** output format **********  *********** long options ***********
+-o,o user-defined  -f full            --Group --User --pid --cols --ppid
+-j,j job control   s  signal          --group --user --sid --rows --info
+-O,O preloaded -o  v  virtual memory  --cumulative --format --deselect
+-l,l long          u  user-oriented   --sort --tty --forest --version
+-F   extra full    X  registers       --heading --no-heading --context
+                                      --quick-pid
+                    ********* misc options *********
+-V,V  show version      L  list format codes  f  ASCII art forest
+-m,m,-L,-T,H  threads   S  children in sum    -y change -l format
+-M,Z  security data     c  true command name  -c scheduling class
+-w,w  wide output       n  numeric WCHAN,UID  -H process hierarchy
+ERROR: Process ID out of range.
+********* simple selection *********  ********* selection by list *********
+-A all processes                      -C by command name
+-N negate selection                   -G by real group ID (supports names)
+-a all w/ tty except session leaders  -U by real user ID (supports names)
+-d all except session leaders         -g by session OR by effective group name
+-e all processes                      -p by process ID
+                                      -q by process ID (unsorted & quick)
+T  all processes on this terminal     -s processes in the sessions given
+a  all w/ tty, including other users  -t by tty
+g  OBSOLETE -- DO NOT USE             -u by effective user ID (supports names)
+r  only running processes             U  processes for specified users
+x  processes w/o controlling ttys     t  by tty
+*********** output format **********  *********** long options ***********
+-o,o user-defined  -f full            --Group --User --pid --cols --ppid
+-j,j job control   s  signal          --group --user --sid --rows --info
+-O,O preloaded -o  v  virtual memory  --cumulative --format --deselect
+-l,l long          u  user-oriented   --sort --tty --forest --version
+-F   extra full    X  registers       --heading --no-heading --context
+                                      --quick-pid
+                    ********* misc options *********
+-V,V  show version      L  list format codes  f  ASCII art forest
+-m,m,-L,-T,H  threads   S  children in sum    -y change -l format
+-M,Z  security data     c  true command name  -c scheduling class
+-w,w  wide output       n  numeric WCHAN,UID  -H process hierarchy
+ERROR: Process ID out of range.
+********* simple selection *********  ********* selection by list *********
+-A all processes                      -C by command name
+-N negate selection                   -G by real group ID (supports names)
+-a all w/ tty except session leaders  -U by real user ID (supports names)
+-d all except session leaders         -g by session OR by effective group name
+-e all processes                      -p by process ID
+                                      -q by process ID (unsorted & quick)
+T  all processes on this terminal     -s processes in the sessions given
+a  all w/ tty, including other users  -t by tty
+g  OBSOLETE -- DO NOT USE             -u by effective user ID (supports names)
+r  only running processes             U  processes for specified users
+x  processes w/o controlling ttys     t  by tty
+*********** output format **********  *********** long options ***********
+-o,o user-defined  -f full            --Group --User --pid --cols --ppid
+-j,j job control   s  signal          --group --user --sid --rows --info
+-O,O preloaded -o  v  virtual memory  --cumulative --format --deselect
+-l,l long          u  user-oriented   --sort --tty --forest --version
+-F   extra full    X  registers       --heading --no-heading --context
+                                      --quick-pid
+                    ********* misc options *********
+-V,V  show version      L  list format codes  f  ASCII art forest
+-m,m,-L,-T,H  threads   S  children in sum    -y change -l format
+-M,Z  security data     c  true command name  -c scheduling class
+-w,w  wide output       n  numeric WCHAN,UID  -H process hierarchy
+ERROR: Process ID out of range.
+********* simple selection *********  ********* selection by list *********
+-A all processes                      -C by command name
+-N negate selection                   -G by real group ID (supports names)
+-a all w/ tty except session leaders  -U by real user ID (supports names)
+-d all except session leaders         -g by session OR by effective group name
+-e all processes                      -p by process ID
+                                      -q by process ID (unsorted & quick)
+T  all processes on this terminal     -s processes in the sessions given
+a  all w/ tty, including other users  -t by tty
+g  OBSOLETE -- DO NOT USE             -u by effective user ID (supports names)
+r  only running processes             U  processes for specified users
+x  processes w/o controlling ttys     t  by tty
+*********** output format **********  *********** long options ***********
+-o,o user-defined  -f full            --Group --User --pid --cols --ppid
+-j,j job control   s  signal          --group --user --sid --rows --info
+-O,O preloaded -o  v  virtual memory  --cumulative --format --deselect
+-l,l long          u  user-oriented   --sort --tty --forest --version
+-F   extra full    X  registers       --heading --no-heading --context
+                                      --quick-pid
+                    ********* misc options *********
+-V,V  show version      L  list format codes  f  ASCII art forest
+-m,m,-L,-T,H  threads   S  children in sum    -y change -l format
+-M,Z  security data     c  true command name  -c scheduling class
+-w,w  wide output       n  numeric WCHAN,UID  -H process hierarchy
+ERROR: Process ID out of range.
+********* simple selection *********  ********* selection by list *********
+-A all processes                      -C by command name
+-N negate selection                   -G by real group ID (supports names)
+-a all w/ tty except session leaders  -U by real user ID (supports names)
+-d all except session leaders         -g by session OR by effective group name
+-e all processes                      -p by process ID
+                                      -q by process ID (unsorted & quick)
+T  all processes on this terminal     -s processes in the sessions given
+a  all w/ tty, including other users  -t by tty
+g  OBSOLETE -- DO NOT USE             -u by effective user ID (supports names)
+r  only running processes             U  processes for specified users
+x  processes w/o controlling ttys     t  by tty
+*********** output format **********  *********** long options ***********
+-o,o user-defined  -f full            --Group --User --pid --cols --ppid
+-j,j job control   s  signal          --group --user --sid --rows --info
+-O,O preloaded -o  v  virtual memory  --cumulative --format --deselect
+-l,l long          u  user-oriented   --sort --tty --forest --version
+-F   extra full    X  registers       --heading --no-heading --context
+                                      --quick-pid
+                    ********* misc options *********
+-V,V  show version      L  list format codes  f  ASCII art forest
+-m,m,-L,-T,H  threads   S  children in sum    -y change -l format
+-M,Z  security data     c  true command name  -c scheduling class
+-w,w  wide output       n  numeric WCHAN,UID  -H process hierarchy
+ERROR: Process ID out of range.
+********* simple selection *********  ********* selection by list *********
+-A all processes                      -C by command name
+-N negate selection                   -G by real group ID (supports names)
+-a all w/ tty except session leaders  -U by real user ID (supports names)
+-d all except session leaders         -g by session OR by effective group name
+-e all processes                      -p by process ID
+                                      -q by process ID (unsorted & quick)
+T  all processes on this terminal     -s processes in the sessions given
+a  all w/ tty, including other users  -t by tty
+g  OBSOLETE -- DO NOT USE             -u by effective user ID (supports names)
+r  only running processes             U  processes for specified users
+x  processes w/o controlling ttys     t  by tty
+*********** output format **********  *********** long options ***********
+-o,o user-defined  -f full            --Group --User --pid --cols --ppid
+-j,j job control   s  signal          --group --user --sid --rows --info
+-O,O preloaded -o  v  virtual memory  --cumulative --format --deselect
+-l,l long          u  user-oriented   --sort --tty --forest --version
+-F   extra full    X  registers       --heading --no-heading --context
+                                      --quick-pid
+                    ********* misc options *********
+-V,V  show version      L  list format codes  f  ASCII art forest
+-m,m,-L,-T,H  threads   S  children in sum    -y change -l format
+-M,Z  security data     c  true command name  -c scheduling class
+-w,w  wide output       n  numeric WCHAN,UID  -H process hierarchy
+ERROR: Process ID out of range.
+********* simple selection *********  ********* selection by list *********
+-A all processes                      -C by command name
+-N negate selection                   -G by real group ID (supports names)
+-a all w/ tty except session leaders  -U by real user ID (supports names)
+-d all except session leaders         -g by session OR by effective group name
+-e all processes                      -p by process ID
+                                      -q by process ID (unsorted & quick)
+T  all processes on this terminal     -s processes in the sessions given
+a  all w/ tty, including other users  -t by tty
+g  OBSOLETE -- DO NOT USE             -u by effective user ID (supports names)
+r  only running processes             U  processes for specified users
+x  processes w/o controlling ttys     t  by tty
+*********** output format **********  *********** long options ***********
+-o,o user-defined  -f full            --Group --User --pid --cols --ppid
+-j,j job control   s  signal          --group --user --sid --rows --info
+-O,O preloaded -o  v  virtual memory  --cumulative --format --deselect
+-l,l long          u  user-oriented   --sort --tty --forest --version
+-F   extra full    X  registers       --heading --no-heading --context
+                                      --quick-pid
+                    ********* misc options *********
+-V,V  show version      L  list format codes  f  ASCII art forest
+-m,m,-L,-T,H  threads   S  children in sum    -y change -l format
+-M,Z  security data     c  true command name  -c scheduling class
+-w,w  wide output       n  numeric WCHAN,UID  -H process hierarchy
+ERROR: Process ID out of range.
+********* simple selection *********  ********* selection by list *********
+-A all processes                      -C by command name
+-N negate selection                   -G by real group ID (supports names)
+-a all w/ tty except session leaders  -U by real user ID (supports names)
+-d all except session leaders         -g by session OR by effective group name
+-e all processes                      -p by process ID
+                                      -q by process ID (unsorted & quick)
+T  all processes on this terminal     -s processes in the sessions given
+a  all w/ tty, including other users  -t by tty
+g  OBSOLETE -- DO NOT USE             -u by effective user ID (supports names)
+r  only running processes             U  processes for specified users
+x  processes w/o controlling ttys     t  by tty
+*********** output format **********  *********** long options ***********
+-o,o user-defined  -f full            --Group --User --pid --cols --ppid
+-j,j job control   s  signal          --group --user --sid --rows --info
+-O,O preloaded -o  v  virtual memory  --cumulative --format --deselect
+-l,l long          u  user-oriented   --sort --tty --forest --version
+-F   extra full    X  registers       --heading --no-heading --context
+                                      --quick-pid
+                    ********* misc options *********
+-V,V  show version      L  list format codes  f  ASCII art forest
+-m,m,-L,-T,H  threads   S  children in sum    -y change -l format
+-M,Z  security data     c  true command name  -c scheduling class
+-w,w  wide output       n  numeric WCHAN,UID  -H process hierarchy
+ERROR: Process ID out of range.
+********* simple selection *********  ********* selection by list *********
+-A all processes                      -C by command name
+-N negate selection                   -G by real group ID (supports names)
+-a all w/ tty except session leaders  -U by real user ID (supports names)
+-d all except session leaders         -g by session OR by effective group name
+-e all processes                      -p by process ID
+                                      -q by process ID (unsorted & quick)
+T  all processes on this terminal     -s processes in the sessions given
+a  all w/ tty, including other users  -t by tty
+g  OBSOLETE -- DO NOT USE             -u by effective user ID (supports names)
+r  only running processes             U  processes for specified users
+x  processes w/o controlling ttys     t  by tty
+*********** output format **********  *********** long options ***********
+-o,o user-defined  -f full            --Group --User --pid --cols --ppid
+-j,j job control   s  signal          --group --user --sid --rows --info
+-O,O preloaded -o  v  virtual memory  --cumulative --format --deselect
+-l,l long          u  user-oriented   --sort --tty --forest --version
+-F   extra full    X  registers       --heading --no-heading --context
+                                      --quick-pid
+                    ********* misc options *********
+-V,V  show version      L  list format codes  f  ASCII art forest
+-m,m,-L,-T,H  threads   S  children in sum    -y change -l format
+-M,Z  security data     c  true command name  -c scheduling class
+-w,w  wide output       n  numeric WCHAN,UID  -H process hierarchy
+ERROR: Process ID out of range.
+********* simple selection *********  ********* selection by list *********
+-A all processes                      -C by command name
+-N negate selection                   -G by real group ID (supports names)
+-a all w/ tty except session leaders  -U by real user ID (supports names)
+-d all except session leaders         -g by session OR by effective group name
+-e all processes                      -p by process ID
+                                      -q by process ID (unsorted & quick)
+T  all processes on this terminal     -s processes in the sessions given
+a  all w/ tty, including other users  -t by tty
+g  OBSOLETE -- DO NOT USE             -u by effective user ID (supports names)
+r  only running processes             U  processes for specified users
+x  processes w/o controlling ttys     t  by tty
+*********** output format **********  *********** long options ***********
+-o,o user-defined  -f full            --Group --User --pid --cols --ppid
+-j,j job control   s  signal          --group --user --sid --rows --info
+-O,O preloaded -o  v  virtual memory  --cumulative --format --deselect
+-l,l long          u  user-oriented   --sort --tty --forest --version
+-F   extra full    X  registers       --heading --no-heading --context
+                                      --quick-pid
+                    ********* misc options *********
+-V,V  show version      L  list format codes  f  ASCII art forest
+-m,m,-L,-T,H  threads   S  children in sum    -y change -l format
+-M,Z  security data     c  true command name  -c scheduling class
+-w,w  wide output       n  numeric WCHAN,UID  -H process hierarchy
+ERROR: Process ID out of range.
+********* simple selection *********  ********* selection by list *********
+-A all processes                      -C by command name
+-N negate selection                   -G by real group ID (supports names)
+-a all w/ tty except session leaders  -U by real user ID (supports names)
+-d all except session leaders         -g by session OR by effective group name
+-e all processes                      -p by process ID
+                                      -q by process ID (unsorted & quick)
+T  all processes on this terminal     -s processes in the sessions given
+a  all w/ tty, including other users  -t by tty
+g  OBSOLETE -- DO NOT USE             -u by effective user ID (supports names)
+r  only running processes             U  processes for specified users
+x  processes w/o controlling ttys     t  by tty
+*********** output format **********  *********** long options ***********
+-o,o user-defined  -f full            --Group --User --pid --cols --ppid
+-j,j job control   s  signal          --group --user --sid --rows --info
+-O,O preloaded -o  v  virtual memory  --cumulative --format --deselect
+-l,l long          u  user-oriented   --sort --tty --forest --version
+-F   extra full    X  registers       --heading --no-heading --context
+                                      --quick-pid
+                    ********* misc options *********
+-V,V  show version      L  list format codes  f  ASCII art forest
+-m,m,-L,-T,H  threads   S  children in sum    -y change -l format
+-M,Z  security data     c  true command name  -c scheduling class
+-w,w  wide output       n  numeric WCHAN,UID  -H process hierarchy
+ERROR: Process ID out of range.
+********* simple selection *********  ********* selection by list *********
+-A all processes                      -C by command name
+-N negate selection                   -G by real group ID (supports names)
+-a all w/ tty except session leaders  -U by real user ID (supports names)
+-d all except session leaders         -g by session OR by effective group name
+-e all processes                      -p by process ID
+                                      -q by process ID (unsorted & quick)
+T  all processes on this terminal     -s processes in the sessions given
+a  all w/ tty, including other users  -t by tty
+g  OBSOLETE -- DO NOT USE             -u by effective user ID (supports names)
+r  only running processes             U  processes for specified users
+x  processes w/o controlling ttys     t  by tty
+*********** output format **********  *********** long options ***********
+-o,o user-defined  -f full            --Group --User --pid --cols --ppid
+-j,j job control   s  signal          --group --user --sid --rows --info
+-O,O preloaded -o  v  virtual memory  --cumulative --format --deselect
+-l,l long          u  user-oriented   --sort --tty --forest --version
+-F   extra full    X  registers       --heading --no-heading --context
+                                      --quick-pid
+                    ********* misc options *********
+-V,V  show version      L  list format codes  f  ASCII art forest
+-m,m,-L,-T,H  threads   S  children in sum    -y change -l format
+-M,Z  security data     c  true command name  -c scheduling class
+-w,w  wide output       n  numeric WCHAN,UID  -H process hierarchy
+ERROR: Process ID out of range.
+********* simple selection *********  ********* selection by list *********
+-A all processes                      -C by command name
+-N negate selection                   -G by real group ID (supports names)
+-a all w/ tty except session leaders  -U by real user ID (supports names)
+-d all except session leaders         -g by session OR by effective group name
+-e all processes                      -p by process ID
+                                      -q by process ID (unsorted & quick)
+T  all processes on this terminal     -s processes in the sessions given
+a  all w/ tty, including other users  -t by tty
+g  OBSOLETE -- DO NOT USE             -u by effective user ID (supports names)
+r  only running processes             U  processes for specified users
+x  processes w/o controlling ttys     t  by tty
+*********** output format **********  *********** long options ***********
+-o,o user-defined  -f full            --Group --User --pid --cols --ppid
+-j,j job control   s  signal          --group --user --sid --rows --info
+-O,O preloaded -o  v  virtual memory  --cumulative --format --deselect
+-l,l long          u  user-oriented   --sort --tty --forest --version
+-F   extra full    X  registers       --heading --no-heading --context
+                                      --quick-pid
+                    ********* misc options *********
+-V,V  show version      L  list format codes  f  ASCII art forest
+-m,m,-L,-T,H  threads   S  children in sum    -y change -l format
+-M,Z  security data     c  true command name  -c scheduling class
+-w,w  wide output       n  numeric WCHAN,UID  -H process hierarchy
+ERROR: Process ID out of range.
+********* simple selection *********  ********* selection by list *********
+-A all processes                      -C by command name
+-N negate selection                   -G by real group ID (supports names)
+-a all w/ tty except session leaders  -U by real user ID (supports names)
+-d all except session leaders         -g by session OR by effective group name
+-e all processes                      -p by process ID
+                                      -q by process ID (unsorted & quick)
+T  all processes on this terminal     -s processes in the sessions given
+a  all w/ tty, including other users  -t by tty
+g  OBSOLETE -- DO NOT USE             -u by effective user ID (supports names)
+r  only running processes             U  processes for specified users
+x  processes w/o controlling ttys     t  by tty
+*********** output format **********  *********** long options ***********
+-o,o user-defined  -f full            --Group --User --pid --cols --ppid
+-j,j job control   s  signal          --group --user --sid --rows --info
+-O,O preloaded -o  v  virtual memory  --cumulative --format --deselect
+-l,l long          u  user-oriented   --sort --tty --forest --version
+-F   extra full    X  registers       --heading --no-heading --context
+                                      --quick-pid
+                    ********* misc options *********
+-V,V  show version      L  list format codes  f  ASCII art forest
+-m,m,-L,-T,H  threads   S  children in sum    -y change -l format
+-M,Z  security data     c  true command name  -c scheduling class
+-w,w  wide output       n  numeric WCHAN,UID  -H process hierarchy
+ERROR: Process ID out of range.
+********* simple selection *********  ********* selection by list *********
+-A all processes                      -C by command name
+-N negate selection                   -G by real group ID (supports names)
+-a all w/ tty except session leaders  -U by real user ID (supports names)
+-d all except session leaders         -g by session OR by effective group name
+-e all processes                      -p by process ID
+                                      -q by process ID (unsorted & quick)
+T  all processes on this terminal     -s processes in the sessions given
+a  all w/ tty, including other users  -t by tty
+g  OBSOLETE -- DO NOT USE             -u by effective user ID (supports names)
+r  only running processes             U  processes for specified users
+x  processes w/o controlling ttys     t  by tty
+*********** output format **********  *********** long options ***********
+-o,o user-defined  -f full            --Group --User --pid --cols --ppid
+-j,j job control   s  signal          --group --user --sid --rows --info
+-O,O preloaded -o  v  virtual memory  --cumulative --format --deselect
+-l,l long          u  user-oriented   --sort --tty --forest --version
+-F   extra full    X  registers       --heading --no-heading --context
+                                      --quick-pid
+                    ********* misc options *********
+-V,V  show version      L  list format codes  f  ASCII art forest
+-m,m,-L,-T,H  threads   S  children in sum    -y change -l format
+-M,Z  security data     c  true command name  -c scheduling class
+-w,w  wide output       n  numeric WCHAN,UID  -H process hierarchy
+ERROR: Process ID out of range.
+********* simple selection *********  ********* selection by list *********
+-A all processes                      -C by command name
+-N negate selection                   -G by real group ID (supports names)
+-a all w/ tty except session leaders  -U by real user ID (supports names)
+-d all except session leaders         -g by session OR by effective group name
+-e all processes                      -p by process ID
+                                      -q by process ID (unsorted & quick)
+T  all processes on this terminal     -s processes in the sessions given
+a  all w/ tty, including other users  -t by tty
+g  OBSOLETE -- DO NOT USE             -u by effective user ID (supports names)
+r  only running processes             U  processes for specified users
+x  processes w/o controlling ttys     t  by tty
+*********** output format **********  *********** long options ***********
+-o,o user-defined  -f full            --Group --User --pid --cols --ppid
+-j,j job control   s  signal          --group --user --sid --rows --info
+-O,O preloaded -o  v  virtual memory  --cumulative --format --deselect
+-l,l long          u  user-oriented   --sort --tty --forest --version
+-F   extra full    X  registers       --heading --no-heading --context
+                                      --quick-pid
+                    ********* misc options *********
+-V,V  show version      L  list format codes  f  ASCII art forest
+-m,m,-L,-T,H  threads   S  children in sum    -y change -l format
+-M,Z  security data     c  true command name  -c scheduling class
+-w,w  wide output       n  numeric WCHAN,UID  -H process hierarchy
+ERROR: Process ID out of range.
+********* simple selection *********  ********* selection by list *********
+-A all processes                      -C by command name
+-N negate selection                   -G by real group ID (supports names)
+-a all w/ tty except session leaders  -U by real user ID (supports names)
+-d all except session leaders         -g by session OR by effective group name
+-e all processes                      -p by process ID
+                                      -q by process ID (unsorted & quick)
+T  all processes on this terminal     -s processes in the sessions given
+a  all w/ tty, including other users  -t by tty
+g  OBSOLETE -- DO NOT USE             -u by effective user ID (supports names)
+r  only running processes             U  processes for specified users
+x  processes w/o controlling ttys     t  by tty
+*********** output format **********  *********** long options ***********
+-o,o user-defined  -f full            --Group --User --pid --cols --ppid
+-j,j job control   s  signal          --group --user --sid --rows --info
+-O,O preloaded -o  v  virtual memory  --cumulative --format --deselect
+-l,l long          u  user-oriented   --sort --tty --forest --version
+-F   extra full    X  registers       --heading --no-heading --context
+                                      --quick-pid
+                    ********* misc options *********
+-V,V  show version      L  list format codes  f  ASCII art forest
+-m,m,-L,-T,H  threads   S  children in sum    -y change -l format
+-M,Z  security data     c  true command name  -c scheduling class
+-w,w  wide output       n  numeric WCHAN,UID  -H process hierarchy
+ERROR: Process ID out of range.
+********* simple selection *********  ********* selection by list *********
+-A all processes                      -C by command name
+-N negate selection                   -G by real group ID (supports names)
+-a all w/ tty except session leaders  -U by real user ID (supports names)
+-d all except session leaders         -g by session OR by effective group name
+-e all processes                      -p by process ID
+                                      -q by process ID (unsorted & quick)
+T  all processes on this terminal     -s processes in the sessions given
+a  all w/ tty, including other users  -t by tty
+g  OBSOLETE -- DO NOT USE             -u by effective user ID (supports names)
+r  only running processes             U  processes for specified users
+x  processes w/o controlling ttys     t  by tty
+*********** output format **********  *********** long options ***********
+-o,o user-defined  -f full            --Group --User --pid --cols --ppid
+-j,j job control   s  signal          --group --user --sid --rows --info
+-O,O preloaded -o  v  virtual memory  --cumulative --format --deselect
+-l,l long          u  user-oriented   --sort --tty --forest --version
+-F   extra full    X  registers       --heading --no-heading --context
+                                      --quick-pid
+                    ********* misc options *********
+-V,V  show version      L  list format codes  f  ASCII art forest
+-m,m,-L,-T,H  threads   S  children in sum    -y change -l format
+-M,Z  security data     c  true command name  -c scheduling class
+-w,w  wide output       n  numeric WCHAN,UID  -H process hierarchy
+ERROR: Process ID out of range.
+********* simple selection *********  ********* selection by list *********
+-A all processes                      -C by command name
+-N negate selection                   -G by real group ID (supports names)
+-a all w/ tty except session leaders  -U by real user ID (supports names)
+-d all except session leaders         -g by session OR by effective group name
+-e all processes                      -p by process ID
+                                      -q by process ID (unsorted & quick)
+T  all processes on this terminal     -s processes in the sessions given
+a  all w/ tty, including other users  -t by tty
+g  OBSOLETE -- DO NOT USE             -u by effective user ID (supports names)
+r  only running processes             U  processes for specified users
+x  processes w/o controlling ttys     t  by tty
+*********** output format **********  *********** long options ***********
+-o,o user-defined  -f full            --Group --User --pid --cols --ppid
+-j,j job control   s  signal          --group --user --sid --rows --info
+-O,O preloaded -o  v  virtual memory  --cumulative --format --deselect
+-l,l long          u  user-oriented   --sort --tty --forest --version
+-F   extra full    X  registers       --heading --no-heading --context
+                                      --quick-pid
+                    ********* misc options *********
+-V,V  show version      L  list format codes  f  ASCII art forest
+-m,m,-L,-T,H  threads   S  children in sum    -y change -l format
+-M,Z  security data     c  true command name  -c scheduling class
+-w,w  wide output       n  numeric WCHAN,UID  -H process hierarchy
+ERROR: Process ID out of range.
+********* simple selection *********  ********* selection by list *********
+-A all processes                      -C by command name
+-N negate selection                   -G by real group ID (supports names)
+-a all w/ tty except session leaders  -U by real user ID (supports names)
+-d all except session leaders         -g by session OR by effective group name
+-e all processes                      -p by process ID
+                                      -q by process ID (unsorted & quick)
+T  all processes on this terminal     -s processes in the sessions given
+a  all w/ tty, including other users  -t by tty
+g  OBSOLETE -- DO NOT USE             -u by effective user ID (supports names)
+r  only running processes             U  processes for specified users
+x  processes w/o controlling ttys     t  by tty
+*********** output format **********  *********** long options ***********
+-o,o user-defined  -f full            --Group --User --pid --cols --ppid
+-j,j job control   s  signal          --group --user --sid --rows --info
+-O,O preloaded -o  v  virtual memory  --cumulative --format --deselect
+-l,l long          u  user-oriented   --sort --tty --forest --version
+-F   extra full    X  registers       --heading --no-heading --context
+                                      --quick-pid
+                    ********* misc options *********
+-V,V  show version      L  list format codes  f  ASCII art forest
+-m,m,-L,-T,H  threads   S  children in sum    -y change -l format
+-M,Z  security data     c  true command name  -c scheduling class
+-w,w  wide output       n  numeric WCHAN,UID  -H process hierarchy
+ERROR: Process ID out of range.
+********* simple selection *********  ********* selection by list *********
+-A all processes                      -C by command name
+-N negate selection                   -G by real group ID (supports names)
+-a all w/ tty except session leaders  -U by real user ID (supports names)
+-d all except session leaders         -g by session OR by effective group name
+-e all processes                      -p by process ID
+                                      -q by process ID (unsorted & quick)
+T  all processes on this terminal     -s processes in the sessions given
+a  all w/ tty, including other users  -t by tty
+g  OBSOLETE -- DO NOT USE             -u by effective user ID (supports names)
+r  only running processes             U  processes for specified users
+x  processes w/o controlling ttys     t  by tty
+*********** output format **********  *********** long options ***********
+-o,o user-defined  -f full            --Group --User --pid --cols --ppid
+-j,j job control   s  signal          --group --user --sid --rows --info
+-O,O preloaded -o  v  virtual memory  --cumulative --format --deselect
+-l,l long          u  user-oriented   --sort --tty --forest --version
+-F   extra full    X  registers       --heading --no-heading --context
+                                      --quick-pid
+                    ********* misc options *********
+-V,V  show version      L  list format codes  f  ASCII art forest
+-m,m,-L,-T,H  threads   S  children in sum    -y change -l format
+-M,Z  security data     c  true command name  -c scheduling class
+-w,w  wide output       n  numeric WCHAN,UID  -H process hierarchy
+ERROR: Process ID out of range.
+********* simple selection *********  ********* selection by list *********
+-A all processes                      -C by command name
+-N negate selection                   -G by real group ID (supports names)
+-a all w/ tty except session leaders  -U by real user ID (supports names)
+-d all except session leaders         -g by session OR by effective group name
+-e all processes                      -p by process ID
+                                      -q by process ID (unsorted & quick)
+T  all processes on this terminal     -s processes in the sessions given
+a  all w/ tty, including other users  -t by tty
+g  OBSOLETE -- DO NOT USE             -u by effective user ID (supports names)
+r  only running processes             U  processes for specified users
+x  processes w/o controlling ttys     t  by tty
+*********** output format **********  *********** long options ***********
+-o,o user-defined  -f full            --Group --User --pid --cols --ppid
+-j,j job control   s  signal          --group --user --sid --rows --info
+-O,O preloaded -o  v  virtual memory  --cumulative --format --deselect
+-l,l long          u  user-oriented   --sort --tty --forest --version
+-F   extra full    X  registers       --heading --no-heading --context
+                                      --quick-pid
+                    ********* misc options *********
+-V,V  show version      L  list format codes  f  ASCII art forest
+-m,m,-L,-T,H  threads   S  children in sum    -y change -l format
+-M,Z  security data     c  true command name  -c scheduling class
+-w,w  wide output       n  numeric WCHAN,UID  -H process hierarchy
+ERROR: Process ID out of range.
+********* simple selection *********  ********* selection by list *********
+-A all processes                      -C by command name
+-N negate selection                   -G by real group ID (supports names)
+-a all w/ tty except session leaders  -U by real user ID (supports names)
+-d all except session leaders         -g by session OR by effective group name
+-e all processes                      -p by process ID
+                                      -q by process ID (unsorted & quick)
+T  all processes on this terminal     -s processes in the sessions given
+a  all w/ tty, including other users  -t by tty
+g  OBSOLETE -- DO NOT USE             -u by effective user ID (supports names)
+r  only running processes             U  processes for specified users
+x  processes w/o controlling ttys     t  by tty
+*********** output format **********  *********** long options ***********
+-o,o user-defined  -f full            --Group --User --pid --cols --ppid
+-j,j job control   s  signal          --group --user --sid --rows --info
+-O,O preloaded -o  v  virtual memory  --cumulative --format --deselect
+-l,l long          u  user-oriented   --sort --tty --forest --version
+-F   extra full    X  registers       --heading --no-heading --context
+                                      --quick-pid
+                    ********* misc options *********
+-V,V  show version      L  list format codes  f  ASCII art forest
+-m,m,-L,-T,H  threads   S  children in sum    -y change -l format
+-M,Z  security data     c  true command name  -c scheduling class
+-w,w  wide output       n  numeric WCHAN,UID  -H process hierarchy
+ERROR: Process ID out of range.
+********* simple selection *********  ********* selection by list *********
+-A all processes                      -C by command name
+-N negate selection                   -G by real group ID (supports names)
+-a all w/ tty except session leaders  -U by real user ID (supports names)
+-d all except session leaders         -g by session OR by effective group name
+-e all processes                      -p by process ID
+                                      -q by process ID (unsorted & quick)
+T  all processes on this terminal     -s processes in the sessions given
+a  all w/ tty, including other users  -t by tty
+g  OBSOLETE -- DO NOT USE             -u by effective user ID (supports names)
+r  only running processes             U  processes for specified users
+x  processes w/o controlling ttys     t  by tty
+*********** output format **********  *********** long options ***********
+-o,o user-defined  -f full            --Group --User --pid --cols --ppid
+-j,j job control   s  signal          --group --user --sid --rows --info
+-O,O preloaded -o  v  virtual memory  --cumulative --format --deselect
+-l,l long          u  user-oriented   --sort --tty --forest --version
+-F   extra full    X  registers       --heading --no-heading --context
+                                      --quick-pid
+                    ********* misc options *********
+-V,V  show version      L  list format codes  f  ASCII art forest
+-m,m,-L,-T,H  threads   S  children in sum    -y change -l format
+-M,Z  security data     c  true command name  -c scheduling class
+-w,w  wide output       n  numeric WCHAN,UID  -H process hierarchy
+ERROR: Process ID out of range.
+********* simple selection *********  ********* selection by list *********
+-A all processes                      -C by command name
+-N negate selection                   -G by real group ID (supports names)
+-a all w/ tty except session leaders  -U by real user ID (supports names)
+-d all except session leaders         -g by session OR by effective group name
+-e all processes                      -p by process ID
+                                      -q by process ID (unsorted & quick)
+T  all processes on this terminal     -s processes in the sessions given
+a  all w/ tty, including other users  -t by tty
+g  OBSOLETE -- DO NOT USE             -u by effective user ID (supports names)
+r  only running processes             U  processes for specified users
+x  processes w/o controlling ttys     t  by tty
+*********** output format **********  *********** long options ***********
+-o,o user-defined  -f full            --Group --User --pid --cols --ppid
+-j,j job control   s  signal          --group --user --sid --rows --info
+-O,O preloaded -o  v  virtual memory  --cumulative --format --deselect
+-l,l long          u  user-oriented   --sort --tty --forest --version
+-F   extra full    X  registers       --heading --no-heading --context
+                                      --quick-pid
+                    ********* misc options *********
+-V,V  show version      L  list format codes  f  ASCII art forest
+-m,m,-L,-T,H  threads   S  children in sum    -y change -l format
+-M,Z  security data     c  true command name  -c scheduling class
+-w,w  wide output       n  numeric WCHAN,UID  -H process hierarchy
+ERROR: Process ID out of range.
+********* simple selection *********  ********* selection by list *********
+-A all processes                      -C by command name
+-N negate selection                   -G by real group ID (supports names)
+-a all w/ tty except session leaders  -U by real user ID (supports names)
+-d all except session leaders         -g by session OR by effective group name
+-e all processes                      -p by process ID
+                                      -q by process ID (unsorted & quick)
+T  all processes on this terminal     -s processes in the sessions given
+a  all w/ tty, including other users  -t by tty
+g  OBSOLETE -- DO NOT USE             -u by effective user ID (supports names)
+r  only running processes             U  processes for specified users
+x  processes w/o controlling ttys     t  by tty
+*********** output format **********  *********** long options ***********
+-o,o user-defined  -f full            --Group --User --pid --cols --ppid
+-j,j job control   s  signal          --group --user --sid --rows --info
+-O,O preloaded -o  v  virtual memory  --cumulative --format --deselect
+-l,l long          u  user-oriented   --sort --tty --forest --version
+-F   extra full    X  registers       --heading --no-heading --context
+                                      --quick-pid
+                    ********* misc options *********
+-V,V  show version      L  list format codes  f  ASCII art forest
+-m,m,-L,-T,H  threads   S  children in sum    -y change -l format
+-M,Z  security data     c  true command name  -c scheduling class
+-w,w  wide output       n  numeric WCHAN,UID  -H process hierarchy
+ERROR: Process ID out of range.
+********* simple selection *********  ********* selection by list *********
+-A all processes                      -C by command name
+-N negate selection                   -G by real group ID (supports names)
+-a all w/ tty except session leaders  -U by real user ID (supports names)
+-d all except session leaders         -g by session OR by effective group name
+-e all processes                      -p by process ID
+                                      -q by process ID (unsorted & quick)
+T  all processes on this terminal     -s processes in the sessions given
+a  all w/ tty, including other users  -t by tty
+g  OBSOLETE -- DO NOT USE             -u by effective user ID (supports names)
+r  only running processes             U  processes for specified users
+x  processes w/o controlling ttys     t  by tty
+*********** output format **********  *********** long options ***********
+-o,o user-defined  -f full            --Group --User --pid --cols --ppid
+-j,j job control   s  signal          --group --user --sid --rows --info
+-O,O preloaded -o  v  virtual memory  --cumulative --format --deselect
+-l,l long          u  user-oriented   --sort --tty --forest --version
+-F   extra full    X  registers       --heading --no-heading --context
+                                      --quick-pid
+                    ********* misc options *********
+-V,V  show version      L  list format codes  f  ASCII art forest
+-m,m,-L,-T,H  threads   S  children in sum    -y change -l format
+-M,Z  security data     c  true command name  -c scheduling class
+-w,w  wide output       n  numeric WCHAN,UID  -H process hierarchy
+ERROR: Process ID out of range.
+********* simple selection *********  ********* selection by list *********
+-A all processes                      -C by command name
+-N negate selection                   -G by real group ID (supports names)
+-a all w/ tty except session leaders  -U by real user ID (supports names)
+-d all except session leaders         -g by session OR by effective group name
+-e all processes                      -p by process ID
+                                      -q by process ID (unsorted & quick)
+T  all processes on this terminal     -s processes in the sessions given
+a  all w/ tty, including other users  -t by tty
+g  OBSOLETE -- DO NOT USE             -u by effective user ID (supports names)
+r  only running processes             U  processes for specified users
+x  processes w/o controlling ttys     t  by tty
+*********** output format **********  *********** long options ***********
+-o,o user-defined  -f full            --Group --User --pid --cols --ppid
+-j,j job control   s  signal          --group --user --sid --rows --info
+-O,O preloaded -o  v  virtual memory  --cumulative --format --deselect
+-l,l long          u  user-oriented   --sort --tty --forest --version
+-F   extra full    X  registers       --heading --no-heading --context
+                                      --quick-pid
+                    ********* misc options *********
+-V,V  show version      L  list format codes  f  ASCII art forest
+-m,m,-L,-T,H  threads   S  children in sum    -y change -l format
+-M,Z  security data     c  true command name  -c scheduling class
+-w,w  wide output       n  numeric WCHAN,UID  -H process hierarchy
+ERROR: Process ID out of range.
+********* simple selection *********  ********* selection by list *********
+-A all processes                      -C by command name
+-N negate selection                   -G by real group ID (supports names)
+-a all w/ tty except session leaders  -U by real user ID (supports names)
+-d all except session leaders         -g by session OR by effective group name
+-e all processes                      -p by process ID
+                                      -q by process ID (unsorted & quick)
+T  all processes on this terminal     -s processes in the sessions given
+a  all w/ tty, including other users  -t by tty
+g  OBSOLETE -- DO NOT USE             -u by effective user ID (supports names)
+r  only running processes             U  processes for specified users
+x  processes w/o controlling ttys     t  by tty
+*********** output format **********  *********** long options ***********
+-o,o user-defined  -f full            --Group --User --pid --cols --ppid
+-j,j job control   s  signal          --group --user --sid --rows --info
+-O,O preloaded -o  v  virtual memory  --cumulative --format --deselect
+-l,l long          u  user-oriented   --sort --tty --forest --version
+-F   extra full    X  registers       --heading --no-heading --context
+                                      --quick-pid
+                    ********* misc options *********
+-V,V  show version      L  list format codes  f  ASCII art forest
+-m,m,-L,-T,H  threads   S  children in sum    -y change -l format
+-M,Z  security data     c  true command name  -c scheduling class
+-w,w  wide output       n  numeric WCHAN,UID  -H process hierarchy
+ERROR: Process ID out of range.
+********* simple selection *********  ********* selection by list *********
+-A all processes                      -C by command name
+-N negate selection                   -G by real group ID (supports names)
+-a all w/ tty except session leaders  -U by real user ID (supports names)
+-d all except session leaders         -g by session OR by effective group name
+-e all processes                      -p by process ID
+                                      -q by process ID (unsorted & quick)
+T  all processes on this terminal     -s processes in the sessions given
+a  all w/ tty, including other users  -t by tty
+g  OBSOLETE -- DO NOT USE             -u by effective user ID (supports names)
+r  only running processes             U  processes for specified users
+x  processes w/o controlling ttys     t  by tty
+*********** output format **********  *********** long options ***********
+-o,o user-defined  -f full            --Group --User --pid --cols --ppid
+-j,j job control   s  signal          --group --user --sid --rows --info
+-O,O preloaded -o  v  virtual memory  --cumulative --format --deselect
+-l,l long          u  user-oriented   --sort --tty --forest --version
+-F   extra full    X  registers       --heading --no-heading --context
+                                      --quick-pid
+                    ********* misc options *********
+-V,V  show version      L  list format codes  f  ASCII art forest
+-m,m,-L,-T,H  threads   S  children in sum    -y change -l format
+-M,Z  security data     c  true command name  -c scheduling class
+-w,w  wide output       n  numeric WCHAN,UID  -H process hierarchy
+ERROR: Process ID out of range.
+********* simple selection *********  ********* selection by list *********
+-A all processes                      -C by command name
+-N negate selection                   -G by real group ID (supports names)
+-a all w/ tty except session leaders  -U by real user ID (supports names)
+-d all except session leaders         -g by session OR by effective group name
+-e all processes                      -p by process ID
+                                      -q by process ID (unsorted & quick)
+T  all processes on this terminal     -s processes in the sessions given
+a  all w/ tty, including other users  -t by tty
+g  OBSOLETE -- DO NOT USE             -u by effective user ID (supports names)
+r  only running processes             U  processes for specified users
+x  processes w/o controlling ttys     t  by tty
+*********** output format **********  *********** long options ***********
+-o,o user-defined  -f full            --Group --User --pid --cols --ppid
+-j,j job control   s  signal          --group --user --sid --rows --info
+-O,O preloaded -o  v  virtual memory  --cumulative --format --deselect
+-l,l long          u  user-oriented   --sort --tty --forest --version
+-F   extra full    X  registers       --heading --no-heading --context
+                                      --quick-pid
+                    ********* misc options *********
+-V,V  show version      L  list format codes  f  ASCII art forest
+-m,m,-L,-T,H  threads   S  children in sum    -y change -l format
+-M,Z  security data     c  true command name  -c scheduling class
+-w,w  wide output       n  numeric WCHAN,UID  -H process hierarchy
+ERROR: Process ID out of range.
+********* simple selection *********  ********* selection by list *********
+-A all processes                      -C by command name
+-N negate selection                   -G by real group ID (supports names)
+-a all w/ tty except session leaders  -U by real user ID (supports names)
+-d all except session leaders         -g by session OR by effective group name
+-e all processes                      -p by process ID
+                                      -q by process ID (unsorted & quick)
+T  all processes on this terminal     -s processes in the sessions given
+a  all w/ tty, including other users  -t by tty
+g  OBSOLETE -- DO NOT USE             -u by effective user ID (supports names)
+r  only running processes             U  processes for specified users
+x  processes w/o controlling ttys     t  by tty
+*********** output format **********  *********** long options ***********
+-o,o user-defined  -f full            --Group --User --pid --cols --ppid
+-j,j job control   s  signal          --group --user --sid --rows --info
+-O,O preloaded -o  v  virtual memory  --cumulative --format --deselect
+-l,l long          u  user-oriented   --sort --tty --forest --version
+-F   extra full    X  registers       --heading --no-heading --context
+                                      --quick-pid
+                    ********* misc options *********
+-V,V  show version      L  list format codes  f  ASCII art forest
+-m,m,-L,-T,H  threads   S  children in sum    -y change -l format
+-M,Z  security data     c  true command name  -c scheduling class
+-w,w  wide output       n  numeric WCHAN,UID  -H process hierarchy
+ERROR: Process ID out of range.
+********* simple selection *********  ********* selection by list *********
+-A all processes                      -C by command name
+-N negate selection                   -G by real group ID (supports names)
+-a all w/ tty except session leaders  -U by real user ID (supports names)
+-d all except session leaders         -g by session OR by effective group name
+-e all processes                      -p by process ID
+                                      -q by process ID (unsorted & quick)
+T  all processes on this terminal     -s processes in the sessions given
+a  all w/ tty, including other users  -t by tty
+g  OBSOLETE -- DO NOT USE             -u by effective user ID (supports names)
+r  only running processes             U  processes for specified users
+x  processes w/o controlling ttys     t  by tty
+*********** output format **********  *********** long options ***********
+-o,o user-defined  -f full            --Group --User --pid --cols --ppid
+-j,j job control   s  signal          --group --user --sid --rows --info
+-O,O preloaded -o  v  virtual memory  --cumulative --format --deselect
+-l,l long          u  user-oriented   --sort --tty --forest --version
+-F   extra full    X  registers       --heading --no-heading --context
+                                      --quick-pid
+                    ********* misc options *********
+-V,V  show version      L  list format codes  f  ASCII art forest
+-m,m,-L,-T,H  threads   S  children in sum    -y change -l format
+-M,Z  security data     c  true command name  -c scheduling class
+-w,w  wide output       n  numeric WCHAN,UID  -H process hierarchy
+ERROR: Process ID out of range.
+********* simple selection *********  ********* selection by list *********
+-A all processes                      -C by command name
+-N negate selection                   -G by real group ID (supports names)
+-a all w/ tty except session leaders  -U by real user ID (supports names)
+-d all except session leaders         -g by session OR by effective group name
+-e all processes                      -p by process ID
+                                      -q by process ID (unsorted & quick)
+T  all processes on this terminal     -s processes in the sessions given
+a  all w/ tty, including other users  -t by tty
+g  OBSOLETE -- DO NOT USE             -u by effective user ID (supports names)
+r  only running processes             U  processes for specified users
+x  processes w/o controlling ttys     t  by tty
+*********** output format **********  *********** long options ***********
+-o,o user-defined  -f full            --Group --User --pid --cols --ppid
+-j,j job control   s  signal          --group --user --sid --rows --info
+-O,O preloaded -o  v  virtual memory  --cumulative --format --deselect
+-l,l long          u  user-oriented   --sort --tty --forest --version
+-F   extra full    X  registers       --heading --no-heading --context
+                                      --quick-pid
+                    ********* misc options *********
+-V,V  show version      L  list format codes  f  ASCII art forest
+-m,m,-L,-T,H  threads   S  children in sum    -y change -l format
+-M,Z  security data     c  true command name  -c scheduling class
+-w,w  wide output       n  numeric WCHAN,UID  -H process hierarchy
+ERROR: Process ID out of range.
+********* simple selection *********  ********* selection by list *********
+-A all processes                      -C by command name
+-N negate selection                   -G by real group ID (supports names)
+-a all w/ tty except session leaders  -U by real user ID (supports names)
+-d all except session leaders         -g by session OR by effective group name
+-e all processes                      -p by process ID
+                                      -q by process ID (unsorted & quick)
+T  all processes on this terminal     -s processes in the sessions given
+a  all w/ tty, including other users  -t by tty
+g  OBSOLETE -- DO NOT USE             -u by effective user ID (supports names)
+r  only running processes             U  processes for specified users
+x  processes w/o controlling ttys     t  by tty
+*********** output format **********  *********** long options ***********
+-o,o user-defined  -f full            --Group --User --pid --cols --ppid
+-j,j job control   s  signal          --group --user --sid --rows --info
+-O,O preloaded -o  v  virtual memory  --cumulative --format --deselect
+-l,l long          u  user-oriented   --sort --tty --forest --version
+-F   extra full    X  registers       --heading --no-heading --context
+                                      --quick-pid
+                    ********* misc options *********
+-V,V  show version      L  list format codes  f  ASCII art forest
+-m,m,-L,-T,H  threads   S  children in sum    -y change -l format
+-M,Z  security data     c  true command name  -c scheduling class
+-w,w  wide output       n  numeric WCHAN,UID  -H process hierarchy
+ERROR: Process ID out of range.
+********* simple selection *********  ********* selection by list *********
+-A all processes                      -C by command name
+-N negate selection                   -G by real group ID (supports names)
+-a all w/ tty except session leaders  -U by real user ID (supports names)
+-d all except session leaders         -g by session OR by effective group name
+-e all processes                      -p by process ID
+                                      -q by process ID (unsorted & quick)
+T  all processes on this terminal     -s processes in the sessions given
+a  all w/ tty, including other users  -t by tty
+g  OBSOLETE -- DO NOT USE             -u by effective user ID (supports names)
+r  only running processes             U  processes for specified users
+x  processes w/o controlling ttys     t  by tty
+*********** output format **********  *********** long options ***********
+-o,o user-defined  -f full            --Group --User --pid --cols --ppid
+-j,j job control   s  signal          --group --user --sid --rows --info
+-O,O preloaded -o  v  virtual memory  --cumulative --format --deselect
+-l,l long          u  user-oriented   --sort --tty --forest --version
+-F   extra full    X  registers       --heading --no-heading --context
+                                      --quick-pid
+                    ********* misc options *********
+-V,V  show version      L  list format codes  f  ASCII art forest
+-m,m,-L,-T,H  threads   S  children in sum    -y change -l format
+-M,Z  security data     c  true command name  -c scheduling class
+-w,w  wide output       n  numeric WCHAN,UID  -H process hierarchy
+ERROR: Process ID out of range.
+********* simple selection *********  ********* selection by list *********
+-A all processes                      -C by command name
+-N negate selection                   -G by real group ID (supports names)
+-a all w/ tty except session leaders  -U by real user ID (supports names)
+-d all except session leaders         -g by session OR by effective group name
+-e all processes                      -p by process ID
+                                      -q by process ID (unsorted & quick)
+T  all processes on this terminal     -s processes in the sessions given
+a  all w/ tty, including other users  -t by tty
+g  OBSOLETE -- DO NOT USE             -u by effective user ID (supports names)
+r  only running processes             U  processes for specified users
+x  processes w/o controlling ttys     t  by tty
+*********** output format **********  *********** long options ***********
+-o,o user-defined  -f full            --Group --User --pid --cols --ppid
+-j,j job control   s  signal          --group --user --sid --rows --info
+-O,O preloaded -o  v  virtual memory  --cumulative --format --deselect
+-l,l long          u  user-oriented   --sort --tty --forest --version
+-F   extra full    X  registers       --heading --no-heading --context
+                                      --quick-pid
+                    ********* misc options *********
+-V,V  show version      L  list format codes  f  ASCII art forest
+-m,m,-L,-T,H  threads   S  children in sum    -y change -l format
+-M,Z  security data     c  true command name  -c scheduling class
+-w,w  wide output       n  numeric WCHAN,UID  -H process hierarchy
+Finished Liberate Execution.
+Updating library database /home/TSMC/Desktop/UMC180/Designkits/Cadence_6.1/lowpower/liberate/LDB/example.ldb.3.gz
+Memory usage: 843 Mbytes
+
+LIBERATE parameter "mx_format_expand_buses" set to "0"
+LIBERATE parameter "ecsm_multi_stage_cap_mode" set to "0"
+LIBERATE parameter "ccsp_mode" set to "0"
+Writing library to /home/TSMC/Desktop/UMC180/Designkits/Cadence_6.1/lowpower/liberate/LIBRARY/lowpower_tt_0.3_25_xor.lib, started at Tue May 25 14:03:14 IST 2021
+Writing .lib for cell AND2X1
+Writing .lib for cell INVX1
+Writing .lib for cell NAND2X1
+Writing .lib for cell NOR2X1
+Writing .lib for cell OR2X1
+Writing .lib for cell XOR2X1
+LIBERATE parameter "ccsp_table_reduction" set to "1"
+Number of passing cells = 6
+Number of failing cells = 0
+List of failing cells {}
+Finished writing 6 cells to library /home/TSMC/Desktop/UMC180/Designkits/Cadence_6.1/lowpower/liberate/LIBRARY/lowpower_tt_0.3_25_xor.lib at Tue May 25 14:03:14 IST 2021
+LIBERATE parameter "write_sens_nochange" set to "1"
+Writing datasheet in text format to /home/TSMC/Desktop/UMC180/Designkits/Cadence_6.1/lowpower/liberate/DATASHEET/lowpower_tt_0.3_25_xor.txt.txt
+Writing cell group AND2X1
+Writing cell group INVX1
+Writing cell group NAND2X1
+Writing cell group NOR2X1
+Writing cell group OR2X1
+Writing cell group XOR2X1
+no value given for parameter "verilog_filename" (use -help for full usage) :
+    verilog_filename string () Output Verilog filename
+    while executing
+"OptDoOne descriptions state arguments"
+    (procedure "OptDoAll" line 30)
+    invoked from within
+"OptDoAll desc arglist"
+    (procedure "::tcl::OptKeyParse" line 10)
+    invoked from within
+"::tcl::OptKeyParse write_verilog $args"
+    (procedure "write_verilog" line 1)
+    invoked from within
+"write_verilog -specparams -table_style min-avg-max -cells ${cells}"
+    (file "/home/TSMC/Desktop/UMC180/Designkits/Cadence_6.1/lowpower/liberate/char.tcl" line 40)
+Peak memory usage:          1.17 GB
+Peak virtual memory usage:  1.08 GB
+Peak physical memory usage: 0.09 GB
+Wall time      :    0.13 hours (7 minutes 37 seconds)
+LIBERATE exited on cad19 at Tue May 25 14:03:14 2021
+

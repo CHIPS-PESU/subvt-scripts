@@ -1,0 +1,121 @@
+HEADER
+"PSFversion" "1.00"
+"Log Generator" "drlLog rev. 1.0"
+"Log Time Stamp" "Mon Nov 29 20:00:19 2021"
+"psfversion" "1.4.0"
+"simulator" "spectre"
+"version" "19.1.0.396.isr8"
+"date" "8:00:19 PM, Mon Nov 29, 2021"
+"design" "// Generated for: spectre"
+"signalNameType" "spectre"
+"simMode" "Spectre"
+"measdgt" 0
+"ingold" 2
+"sst2usecolon" 0
+TYPE
+"analysisInst" STRUCT(
+"analysisType" STRING *
+"dataFile" STRING *
+"format" STRING *
+"parent" STRING *
+"sweepVariable" ARRAY ( * ) STRING *
+"description" STRING *
+)
+VALUE
+"trans-optimize" "analysisInst" (
+"optimize"
+"trans.optimize"
+"PSF"
+""
+("_paramsetIndex" "WP" "WN")
+"parent"
+) PROP(
+"sweep_tree_type" "paramSetSweepNode"
+)
+
+"trans_meas-meas_optimize" "analysisInst" (
+"meas_optimize"
+"trans_meas.meas_optimize"
+"PSF"
+""
+("_paramsetIndex" "WP" "WN")
+"parent"
+) PROP(
+"sweep_tree_type" "paramSetSweepNode"
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 100 ns)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 1.00000e-07
+"WN" 1.00000e-07
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 100 ns)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 1.03162e-07
+"WN" 1.00000e-07
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 100 ns)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 1.00000e-07
+"WN" 1.03162e-07
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 100 ns)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 1.00000e-07
+"WN" 1.03162e-07
+)
+
+"trans-optimize-000-meas_tran" "analysisInst" (
+"meas_tran"
+"trans-optimize-000.meas_tran"
+"PSF"
+"trans_meas-meas_optimize"
+()
+"Measurement Results for trans Analysis tran"
+) PROP(
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 1.00000e-07
+"WN" 1.03162e-07
+)
+
+END

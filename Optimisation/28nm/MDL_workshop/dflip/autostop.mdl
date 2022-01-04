@@ -1,0 +1,21 @@
+//  autostop.mdl
+//  (C) 2008 Cadence Design Systems, Inc.
+//
+// This measurement displays Spectre autostop capability to 
+// end the transient analysis as soon as all the necessary 
+// results of requested measurements are generated in order to 
+// save total simulation time
+
+// alias measurement definition
+alias measurement tranmeas_autostop { 
+
+  // definition of transient analysis with autostop capability
+  run tran(stop=40n, errpreset='conservative, autostop='no)
+
+  // definition of the parameter to be output
+  export real outcross=cross(V(q),thresh=vdd/2)
+  
+}
+
+// execute the measurement alias
+run tranmeas_autostop

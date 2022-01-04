@@ -1,0 +1,243 @@
+library (altos_generated_library) {
+  altos_database : true;
+  /* Models written by LIBERATE vdev */
+  date : "$Date: Sat May 22 14:58:15 2021 $";
+  altos_compile_version : "dev";
+  altos_compile_date : "Tue Sep 10 06:33:00 PDT 2019";
+  revision : "1.0";
+  comment : "";
+  delay_model : table_lookup;
+  capacitive_load_unit (1,pf);
+  current_unit : "1mA";
+  leakage_power_unit : "1nW";
+  pulling_resistance_unit : "1kohm";
+  time_unit : "1ns";
+  voltage_unit : "1V";
+  in_place_swap_mode : match_footprint;
+  nom_process : 1;
+  nom_temperature : 25;
+  nom_voltage : 0.3;
+  altos_default_operating_conditions : "tt_0.3_25";
+  altos_extsim_version : "19.1.0.396.isr8";
+  altos_measure_slew_lower_fall : 0.2;
+  altos_measure_slew_lower_rise : 0.2;
+  altos_measure_slew_upper_fall : 0.8;
+  altos_measure_slew_upper_rise : 0.8;
+  altos_slew_lower_fall : 0.2;
+  altos_slew_lower_rise : 0.2;
+  altos_slew_upper_fall : 0.8;
+  altos_slew_upper_rise : 0.8;
+  altos_vtn : 0.35;
+  altos_vtp : 0.35;
+  input_threshold_pct_fall : 50;
+  input_threshold_pct_rise : 50;
+  output_threshold_pct_fall : 50;
+  output_threshold_pct_rise : 50;
+  slew_lower_threshold_pct_fall : 20;
+  slew_lower_threshold_pct_rise : 20;
+  slew_upper_threshold_pct_fall : 80;
+  slew_upper_threshold_pct_rise : 80;
+  altos_receiver_fall_cap_threshold ("0.9, 0.8, 0.7, 0.5, 0.4, 0.3, 0.2, 0.1, 0.0001, 0");
+  altos_receiver_rise_cap_threshold ("0.1, 0.2, 0.3, 0.5, 0.6, 0.7, 0.8, 0.9, 0.9999, 100");
+  altos_set_var ("alspice_power_subtract_output_load_match_extsim", "1");
+  altos_set_var ("capacitance_save_mode", "0");
+  altos_set_var ("ccsn_include_passgate_attr", "1");
+  altos_set_var ("ccsn_model_related_node_attr", "1");
+  altos_set_var ("ccsn_print_is_needed_if_false_attr_value", "1");
+  altos_set_var ("ccsp_min_pts", "15");
+  altos_set_var ("ccsp_rel_tol", "0.01");
+  altos_set_var ("ccsp_related_pin_mode", "2");
+  altos_set_var ("ccsp_table_reduction", "0");
+  altos_set_var ("ccsp_tail_tol", "0.02");
+  altos_set_var ("ccsp_unateness_infer_mode", "true");
+  altos_set_var ("cell_use_both_ff_latch_groups", "2");
+  altos_set_var ("char_library_skip_var_list", "");
+  altos_set_var ("conditional_mpw", "0");
+  altos_set_var ("constraint_info", "2");
+  altos_set_var ("def_arc_msg_level", "0");
+  altos_set_var ("default_constraint", "off");
+  altos_set_var ("default_power", "avg");
+  altos_set_var ("default_unateness", "merge");
+  altos_set_var ("delay_inp_fall", "0.5");
+  altos_set_var ("delay_inp_rise", "0.5");
+  altos_set_var ("delay_out_fall", "0.5");
+  altos_set_var ("delay_out_rise", "0.5");
+  altos_set_var ("driver_type_model_pad_check", "1");
+  altos_set_var ("extsim_cmd_option", "+aps +spice -mt +liberate +rcopt=2");
+  altos_set_var ("extsim_deck_dir", "/home/TSMC/Desktop/UMC180/Designkits/Cadence_6.1/lowpower/liberate/run_char/decks");
+  altos_set_var ("extsim_deck_header", "simulator lang=spectre
+Opt1 options reltol=1e-4 
+simulator lang=spice");
+  altos_set_var ("extsim_exclusive", "1");
+  altos_set_var ("extsim_leakage_option", "redefinedparams=ignore hier_ambiguity=lower limit=delta ");
+  altos_set_var ("extsim_model_include", "/home/TSMC/Desktop/UMC180/Designkits/Cadence_6.1/lowpower/liberate/run_char/models/spectre/umc");
+  altos_set_var ("extsim_option", "redefinedparams=ignore hier_ambiguity=lower limit=delta ");
+  altos_set_var ("force_condition", "4");
+  altos_set_var ("force_default_group", "1");
+  altos_set_var ("leakage_float_internal_supply", "0");
+  altos_set_var ("max_hidden_vector", "1024");
+  altos_set_var ("max_leakage_vector", "1024");
+  altos_set_var ("max_transition", "1e-06");
+  altos_set_var ("measure_slew_lower_fall", "0.2");
+  altos_set_var ("measure_slew_lower_rise", "0.2");
+  altos_set_var ("measure_slew_upper_fall", "0.8");
+  altos_set_var ("measure_slew_upper_rise", "0.8");
+  altos_set_var ("min_capacitance_for_outputs", "1");
+  altos_set_var ("min_output_cap", "1e-16");
+  altos_set_var ("min_transition", "6e-12");
+  altos_set_var ("msg_level", "0");
+  altos_set_var ("nochange_mode", "1");
+  altos_set_var ("parenthesize_not", "0");
+  altos_set_var ("parse_auto_define_leafcell", "0");
+  altos_set_var ("pin_based_power", "0");
+  altos_set_var ("power_combinational_include_output", "0");
+  altos_set_var ("power_minimize_switching", "1");
+  altos_set_var ("power_multi_output_binning_mode", "1");
+  altos_set_var ("power_subtract_leakage", "4");
+  altos_set_var ("power_tend_match_tran", "1");
+  altos_set_var ("predriver_waveform", "2");
+  altos_set_var ("process_match_pins_to_ports", "1");
+  altos_set_var ("reset_negative_leakage_power", "1");
+  altos_set_var ("sdf_cond_style", "1");
+  altos_set_var ("set_var_failure_action", "error");
+  altos_set_var ("simulator", "spectre");
+  altos_set_var ("ski_alter_mode", "3");
+  altos_set_var ("ski_clean_mode", "1");
+  altos_set_var ("ski_compatibility_mode", "1");
+  altos_set_var ("ski_delay_estimate_match_extsim", "1");
+  altos_set_var ("ski_enable", "1");
+  altos_set_var ("ski_mdlthreshold_exact", "1");
+  altos_set_var ("ski_power_subtract_output_load_match_extsim", "1");
+  altos_set_var ("skip_rcvr_fall_threshold", "-1");
+  altos_set_var ("skip_rcvr_rise_threshold", "-1");
+  altos_set_var ("slew_lower_fall", "0.2");
+  altos_set_var ("slew_lower_rise", "0.2");
+  altos_set_var ("slew_upper_fall", "0.8");
+  altos_set_var ("slew_upper_rise", "0.8");
+  altos_set_var ("subtract_hidden_power", "2");
+  altos_set_var ("subtract_hidden_power_use_default", "3");
+  altos_set_var ("tmpdir", "/dev/shm");
+  altos_set_var ("user_data_override", " power_down_function pg_pin input_signal_level output_signal_level ");
+  altos_set_var ("user_set_ccs", "0");
+  altos_set_var ("voltage_map", "1");
+  altos_set_var ("write_library_allow_switching_and_hidden_power", "1");
+  altos_set_var ("write_library_is_unbuffered", "1");
+  altos_voltage_map ("vdd", 0.3);
+  altos_voltage_map ("gnd", 0);
+  altos_voltage_map ("VSS", 0);
+  output_current_template (ccs_template) {
+    variable_1 : input_net_transition;
+    variable_2 : total_output_net_capacitance;
+    variable_3 : time;
+  }
+  lu_table_template (ccsn_dc_template) {
+    variable_1 : input_voltage;
+    variable_2 : output_voltage;
+    index_1 ("-1, -0.5, -0.2, -0.1, 0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95, 1, 1.1, 1.2, 1.5, 2");
+    index_2 ("-1, -0.5, -0.2, -0.1, 0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95, 1, 1.1, 1.2, 1.5, 2");
+  }
+  lu_table_template (ccsn_prop_template) {
+    variable_1 : input_noise_width;
+    variable_2 : total_output_net_capacitance;
+    variable_3 : input_noise_height;
+    variable_4 : time;
+    index_1 ("0");
+    index_2 ("1e-08");
+    index_3 ("0");
+    index_4 ("0");
+  }
+  lu_table_template (ccsn_vout_template) {
+    variable_1 : input_net_transition;
+    variable_2 : total_output_net_capacitance;
+    variable_3 : time;
+    index_1 ("0");
+    index_2 ("1e-08");
+    index_3 ("0");
+  }
+  lu_table_template (const_template) {
+    variable_1 : constrained_pin_transition;
+    variable_2 : related_pin_transition;
+    index_1 ("61.75, 158.9");
+    index_2 ("18.732, 37.464");
+  }
+  lu_table_template (delay_template) {
+    variable_1 : input_net_transition;
+    variable_2 : total_output_net_capacitance;
+    index_1 ("61.75, 158.9");
+    index_2 ("18.732, 37.464");
+  }
+  ecsm_lut_template (ecsm_template_13) {
+    variable_1 : normalized_voltage;
+    index_1 ("0.02, 0.05, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 0.95, 0.98");
+  }
+  lu_table_template (mpw_const_template) {
+    variable_1 : constrained_pin_transition;
+    index_1 ("61.75, 158.9");
+  }
+  power_lut_template (passive_output_power_template) {
+    variable_1 : total_output_net_capacitance;
+    index_1 ("18.732, 37.464");
+  }
+  power_lut_template (passive_power_template) {
+    variable_1 : input_transition_time;
+    index_1 ("61.75, 158.9");
+  }
+  power_lut_template (power_template) {
+    variable_1 : input_transition_time;
+    variable_2 : total_output_net_capacitance;
+    index_1 ("61.75, 158.9");
+    index_2 ("18.732, 37.464");
+  }
+  lu_table_template (receiver_cap_power_template) {
+    variable_1 : input_net_transition;
+    index_1 ("61.75, 158.9");
+  }
+  altos_power_supply () {
+    default_power_rail : "vdd_gnd";
+    power_rail ("vdd_gnd", 0.3);
+  }
+  altos_operating_conditions (tt_0.3_25) {
+    process : 1;
+    temperature : 25;
+    voltage : 0.3;
+    power_rail ("vdd_gnd", 0.3);
+  }
+  default_cell_leakage_power : 0;
+  default_fanout_load : 1;
+  default_max_transition : 1000;
+  default_output_pin_cap : 0;
+  lu_table_template (waveform_template_name) {
+    variable_1 : input_net_transition;
+    variable_2 : normalized_voltage;
+    index_1 ("0, 1");
+    index_2 ("0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16");
+  }
+  normalized_driver_waveform (waveform_template_name) {
+    altos_driver_waveform : "0.0000000000e+00 0.0000000e+00 1.0291666376e-08 1.5000000e-02 1.0806249694e-08 1.6296045e-02 1.5437499563e-08 3.7804554e-02 2.0583332751e-08 6.0000000e-02 2.6758332577e-08 8.4533932e-02 3.3447915721e-08 1.0885158e-01 4.0652082184e-08 1.3277636e-01 4.7856248647e-08 1.5469639e-01 5.5574998428e-08 1.7629665e-01 6.3808331529e-08 1.9752850e-01 7.2556247948e-08 2.1838651e-01 8.2333331005e-08 2.4000000e-01 8.9537497468e-08 2.5497999e-01 9.6741663931e-08 2.6929096e-01 1.0497499703e-07 2.8495462e-01 1.1320833013e-07 3.0000000e-01 ";
+    driver_waveform_name : "PreDriver20.5:pin:PreDriver:6.175e-08:rise";
+    index_1 ("61.75");
+    index_2 ("0, 0.015, 0.016296, 0.0378046, 0.06, 0.0845339, 0.108852, 0.132776, 0.154696, 0.176297, 0.197528, 0.218387, 0.24, 0.25498, 0.269291, 0.284955, 0.3");
+    values ("0, 10.2917, 10.8062, 15.4375, 20.5833, 26.7583, 33.4479, 40.6521, 47.8563, 55.575, 63.8083, 72.5563, 82.3333, 89.5375, 96.7417, 104.975, 113.208");
+  }
+  normalized_driver_waveform (waveform_template_name) {
+    altos_driver_waveform : "0.0000000000e+00 3.0000000e-01 1.0291666376e-08 2.8500000e-01 1.0806249694e-08 2.8370395e-01 1.5437499563e-08 2.6219545e-01 2.0583332751e-08 2.4000000e-01 2.6758332577e-08 2.1546607e-01 3.3447915721e-08 1.9114842e-01 4.0652082184e-08 1.6722364e-01 4.7856248647e-08 1.4530361e-01 5.5574998428e-08 1.2370335e-01 6.3808331529e-08 1.0247150e-01 7.2556247948e-08 8.1613489e-02 8.2333331005e-08 6.0000000e-02 8.9537497468e-08 4.5020015e-02 9.6741663931e-08 3.0709039e-02 1.0497499703e-07 1.5045376e-02 1.1320833013e-07 0.0000000e+00 ";
+    driver_waveform_name : "PreDriver20.5:pin:PreDriver:6.175e-08:fall";
+    index_1 ("61.75");
+    index_2 ("0, 0.0150454, 0.030709, 0.04502, 0.06, 0.0816135, 0.102472, 0.123703, 0.145304, 0.167224, 0.191148, 0.215466, 0.24, 0.262195, 0.283704, 0.285, 0.3");
+    values ("0, 10.2917, 10.8062, 15.4375, 20.5833, 26.7583, 33.4479, 40.6521, 47.8563, 55.575, 63.8083, 72.5563, 82.3333, 89.5375, 96.7417, 104.975, 113.208");
+  }
+  normalized_driver_waveform (waveform_template_name) {
+    altos_driver_waveform : "0.0000000000e+00 0.0000000e+00 2.6483331567e-08 1.5000000e-02 2.7807498145e-08 1.6296045e-02 3.9724997351e-08 3.7804554e-02 5.2966663134e-08 6.0000000e-02 6.8856662074e-08 8.4533932e-02 8.6070827593e-08 1.0885158e-01 1.0460915969e-07 1.3277636e-01 1.2314749179e-07 1.5469639e-01 1.4300999046e-07 1.7629665e-01 1.6419665572e-07 1.9752850e-01 1.8670748755e-07 2.1838651e-01 2.1186665254e-07 2.4000000e-01 2.3040498463e-07 2.5497999e-01 2.4894331673e-07 2.6929096e-01 2.7012998198e-07 2.8495462e-01 2.9131664724e-07 3.0000000e-01 ";
+    driver_waveform_name : "PreDriver20.5:pin:PreDriver:1.589e-07:rise";
+    index_1 ("158.9");
+    index_2 ("0, 0.015, 0.016296, 0.0378046, 0.06, 0.0845339, 0.108852, 0.132776, 0.154696, 0.176297, 0.197528, 0.218387, 0.24, 0.25498, 0.269291, 0.284955, 0.3");
+    values ("0, 26.4833, 27.8075, 39.725, 52.9667, 68.8567, 86.0708, 104.609, 123.147, 143.01, 164.197, 186.707, 211.867, 230.405, 248.943, 270.13, 291.317");
+  }
+  normalized_driver_waveform (waveform_template_name) {
+    altos_driver_waveform : "0.0000000000e+00 3.0000000e-01 2.6483331567e-08 2.8500000e-01 2.7807498145e-08 2.8370395e-01 3.9724997351e-08 2.6219545e-01 5.2966663134e-08 2.4000000e-01 6.8856662074e-08 2.1546607e-01 8.6070827593e-08 1.9114842e-01 1.0460915969e-07 1.6722364e-01 1.2314749179e-07 1.4530361e-01 1.4300999046e-07 1.2370335e-01 1.6419665572e-07 1.0247150e-01 1.8670748755e-07 8.1613489e-02 2.1186665254e-07 6.0000000e-02 2.3040498463e-07 4.5020015e-02 2.4894331673e-07 3.0709039e-02 2.7012998198e-07 1.5045376e-02 2.9131664724e-07 0.0000000e+00 ";
+    driver_waveform_name : "PreDriver20.5:pin:PreDriver:1.589e-07:fall";
+    index_1 ("158.9");
+    index_2 ("0, 0.0150454, 0.030709, 0.04502, 0.06, 0.0816135, 0.102472, 0.123703, 0.145304, 0.167224, 0.191148, 0.215466, 0.24, 0.262195, 0.283704, 0.285, 0.3");
+    values ("0, 26.4833, 27.8075, 39.725, 52.9667, 68.8567, 86.0708, 104.609, 123.147, 143.01, 164.197, 186.707, 211.867, 230.405, 248.943, 270.13, 291.317");
+  }
+}

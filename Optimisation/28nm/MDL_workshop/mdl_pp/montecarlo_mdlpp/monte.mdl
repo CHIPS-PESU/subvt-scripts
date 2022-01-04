@@ -1,0 +1,97 @@
+//  monte.mdl
+//  (C) 2008 Cadence Design Systems, Inc.
+//
+// This mdl control file shows running montecarlo analysis from MDL
+// at the top level and inside a foreach loop, running info analysis 
+// and printing results inside a montecarlo block.
+ 
+
+// alias measurement definition
+alias measurement tranmeas {
+
+  // define the parameters to be output
+  export real clk_q_delay
+
+  // define a transient analysis in conservative mode
+  run tran(stop=40n, errpreset='conservative)
+
+  //Compute delay of V(q) to V(clock) using deltax function
+  clk_q_delay=deltax(sig1=v(clock), sig2=v(q), dir1='rise, \
+            n1=1, thresh1=vdd/2, dir2='cross, n2=1, thresh2=vdd/2)
+
+  // Compute the minimum value of V(q)
+  real minq=min(V(q))
+
+  // Compute the maximum value of V(q)
+  real maxq=max(V(q))
+
+}
+
+// alias measurement definition
+alias measurement dcmeas {
+  
+  // define and execute a dcsweep analysis
+  run dc (start=0, stop=1.8, step=0.1, dev=vdd, param=dc)
+
+  // define voltage of V(q) to be output
+  export real vq=v(q) @ 1.8
+
+  // define current flowing into device vdd to be output
+  export real ivdd=I(vdd)@ 1.8
+}
+
+// alias measurement definition
+
+
+// print results of montecarlo within a foreach loop
+
+// print the header
+print fmt("\n****Monte Carlo results with nom parameters****\n\n") to="monte.print"
+print fmt("%-10s%-15s\n\n", "temp", "clk_q_delay" \
+          ) addto="monte.print"
+
+// define a sweep
+foreach temp from {25,75}
+{
+   // execute the measurement alias
+   run dcmeas as dc_nom
+
+   //define and execute a montecarlo analysis
+   run montecarlo (scalarfile="monte.dat",numruns=5, seed=8, \
+                  donominal='no, variations='all, firstrun=1,savefamilyplots='yes)
+   {
+      // execute the measurement alias
+      run tranmeas as tran_nom
+
+      // print transient results in a montecarlo block
+      print fmt("%-10g%-15g\n", temp, tran_nom->clk_q_delay \
+              ) addto="monte.print"
+
+     
+  }
+}
+
+//execute alter/altergroup statements defined in the netlist
+run alter_slow
+run alter_temp_slow
+
+// print the header
+print fmt("\n****Monte Carlo results with slow parameters****\n\n") addto="monte.print"
+print fmt("%-10s%-15s\n\n", "temp", "clk_q_delay" \
+          ) addto="monte.print"
+
+// execute the measurement alias
+run dcmeas as dc_slow
+
+//define and execute a montecarlo analysis
+run montecarlo (scalarfile="monte.dat",numruns=5, seed=8,   \
+                donominal='no, variations='all, firstrun=1, savefamilyplots='yes)
+{
+  // execute the measurement alias
+  run tranmeas as tran_slow
+
+  // print transient results in a montecarlo block
+  print fmt("%-10g%-15g\n", temp, tran_slow->clk_q_delay) \
+             addto="monte.print"
+}
+

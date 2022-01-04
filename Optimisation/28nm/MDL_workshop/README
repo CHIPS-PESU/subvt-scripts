@@ -1,0 +1,87 @@
+
+Jun-2011:
+
+1.	Added ./mdl_pp/spectremdl_mdlpp (MDL post-processing)
+2.	Added ./mdl_pp/montecarlo_mdlpp (MDL post-processing)
+
+
+Dec-2008:
+
+1. Updated ./mdl_meas/dff.mdl (added probing current of subcircut instance port name and model instance terminal name)
+2. Updated ./dflip/search.mdl (added output parameter and multiple conditions)
+3. Updated ./dflip/if-else.mdl (added "not" operator)
+4. Updated ./dflip/paramnet.mdl
+
+
+June-2008:
+
+1. Added getting help from MDL ( -usage, -h)
+2. Added command line option demonstration in ./mdl_meas/dff.mdl
+3. Added ./dflip/analyses.mdl (added Spice syntax analysis, Spectre syntax actimes/acnames in tran)
+4. Updated ./dflip/paramnet.mdl (added array of net/term types)
+5. Updated ./dflip/foreach.mdl (added sweeps over an analysis array)
+6. Updated ./dflip/print.mdl (added printing mosfet "region", engineering format numbers (%S))
+
+
+Dec-2007:
+
+1. added ./dflip/print.mdl (print feature)
+2. added ./dflip/include.mdl (include feature)
+3. added ./dflip/if-else.mdl (if/else, ternary feature)
+4. added ./optimize/foreach_mvar.mdl (mvarserach inside foreach loops)
+5. added ./montecarlo/monte.mdl (montecarlo analysis)
+6. added ./sparam/sparam.mdl (S parameter analysis)
+7. updated ./dflip/ppass.mdl (added running info analysis)
+8. updated ./dflip/paramnet.mdl (added enum and array data type)
+9. updated ./dflip/search.mdl (added new features of 
+           "search inside foreach" and "print inside search".
+
+
+May-2006:
+This is the workshop for SpectreMDL. The steps required to work 
+through the workshop are listed and described in:
+
+"SpectreMDL Workshop Tutorial"
+
+For the detail description on SpectreMDL product, refer to  
+the Cadence publication "SpectreMDL User Guide and Reference".
+
+
+Getting Started 
+---------------
+
+The files for the workshop are in a tarred, compressed file, called 
+MDL_workshop.tar.Z, located in the same directory that holds this 
+README file. A tutorial called "SpectreMDL Workshop Tutorial" to 
+work through the workshop is located in the same directory as well.
+
+To prepare for the workshop:
+
+1. Copy MDL_worshop.tar.Z to the directory where you want to install 
+   the workshop files.
+
+2. Move to the directory that you copied the file into and uncompress and 
+   untar the file. For example, you might use the command:
+
+   zcat MDL_workshop.tar.Z | tar -xvf -
+
+3. Move down into the directory MDL_workshop. That directory contains 
+   five sub-directories: mdl_meas, dflip, optimize, montecarlo and advance.
+
+4. Check your setup by running the command below
+
+   % which spectremdl
+
+   If the operating system does not return the location of the executable 
+   file, check your installation.
+
+5. Run the command below
+
+   % printenv SPECTRE_DEFAULTS
+
+   and ensure that the simulator is not set to write wsfbin, nutbin, or 
+   any of the ASCII formats. To use SpectreMDL, the simulator must be 
+   using the psfbin format.
+
+6. Follow the instructions in the "SpectreMDL Workshop Tutorial" to continue.
+

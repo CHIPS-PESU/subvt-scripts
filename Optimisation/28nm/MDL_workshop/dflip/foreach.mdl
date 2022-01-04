@@ -1,0 +1,46 @@
+//  foreach.mdl
+//  (C) 2008 Cadence Design Systems, Inc.
+//
+// This example performs parameter sweeps supported by MDL. 
+// A sweep either from a list, an array or depends on parameters
+// like start, stop, step, center and span are supported.
+
+
+// alias measurement definition
+alias measurement findqcross {
+
+  // definition of transient analysis 
+  run tran(stop=40n)
+
+  // computation of crossing point of V(clock)
+  real vcdelay=cross(sig=V(clock), thresh=vdd/2, dir='rise, n=1)
+
+  // computation of crossing point of V(q)
+  real outcross=cross(V(q),thresh=vdd/2)
+
+  // computation of delay of V(q) versus V(clock)
+  export real clk_q_delay=outcross-vcdelay
+
+}
+
+//define analysis type variables
+analysis item, myAgs[]={alter_slow, alter_fast}
+
+// definition of outer loop designated by start, stop and step parameters
+foreach temp from swp (start=25, stop=125, step=50) {
+
+  // definition of middle loop from a list
+  foreach vdd from {1.5, 2} {
+
+     // definition of inner loop from an array
+     foreach item from myAgs onerror='continue {
+
+        // execute corner parameters
+        run item
+
+        // execute the measurement alias
+        run findqcross
+    }
+  }
+}
+

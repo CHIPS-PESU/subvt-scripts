@@ -1,0 +1,27 @@
+Exported variables from results directory:  ././input.raw/
+
+date               :  8:00:19 PM, Mon Nov 29, 2021
+design             :  // Generated for: spectre
+simulator          :  spectre
+version            :  19.1.0.396.isr8
+
+
+Swept Measurements :
+Measurement Name   :  trans-meas_optimize
+Analysis Type      :  tran
+delay              WP         @ 1e-07     
+                   WN         @ 1.03162e-07   =  NaN     
+fall               WP         @ 1e-07     
+                   WN         @ 1.03162e-07   =  NaN     
+my_avg_power       WP         @ 1e-07     
+                   WN         @ 1.03162e-07   =  NaN     
+rise               WP         @ 1e-07     
+                   WN         @ 1.03162e-07   =  NaN     
+
+
+
+
+
+
+
+

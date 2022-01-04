@@ -1,0 +1,91 @@
+//  mvarpwr.mdl
+//  (C) 2008 Cadence Design Systems, Inc.
+//
+// This example is to find optimal values of design parameters 
+// by running a multi-parameter, multi-goal search function
+//
+
+// alias measurement definition
+alias measurement trans {
+  run tran( stop=200n, autostop='yes )
+     export real fall=falltime(sig=V(OUT), initval=0.3, inittype='y, finalval=0.0, finaltype='y, theta1=90, theta2=10)
+     export real n_fall=((fall-(239e-12))/(270e-06 - 200e-12))*100000 //(62e-09 - 239e-12))*100
+     export real rise=risetime(sig=V(OUT), initval=0.0, inittype='y, finalval=0.3, finaltype='y, theta1=10, theta2=90)
+     export real n_rise=((rise-(224e-12))/(270e-06 - 200e-12))*100000
+
+     export real delay = (rise+fall)/2
+     
+     export real max_pwr=max(abs(I22:pwr))
+
+     export real energy = integ(I22:pwr, from=0n, to=10u)
+
+     export real n_pwr = ((max_pwr-27.31e-09)/(30.6-06 - 27.31e-09))*1000000
+     
+
+}
+
+alias measurement dcs {
+	run dc
+	export real dvodvi = deriv(V(OUT))
+	export real d1 = yval(cross(sig=deriv(V(OUT)), dir='fall, n=1, thresh=-1))
+     export real V_il = cross(sig=deriv(V(OUT)), dir='fall, n=1, thresh=-1)
+     export real V_ih = cross(sig=deriv(V(OUT)), dir='rise, n=1, thresh=-1)
+
+     export real NM_h_n = -(0.3 - V_ih)/0.3
+	export real NM_h = -NM_h_n*0.3
+     export real NM_l_n = -(V_il - 0)/0.3
+	export real NM_l = -NM_l_n*0.3
+}
+
+// Print results to a specified file beginning with "to=" keyword
+//print fmt ("\n****Intermediate Results of Optimization Searching****\n\n") to="mvar.csv"
+
+// continue to print in user-format with "addto=" keyword
+print fmt ("%-12s,%-12s,%-12s,%-12s,%-12s,%-12s,%-12s,%-12s,%-12s\n", "WP","WN","LP","LN","rise","fall","pwr","-NM_h", "-NM_l") to="mvar.csv"
+
+// workaround - uncomment this and then the power gets properly measured in the subsequent
+// mvarsearch (seems like a bug)
+run trans
+run dcs
+
+// definition of a mvarsearch function
+mvarsearch {
+
+         // definition of multiple optimization goals
+   	 option {
+	    method='lm
+   	    accuracy = 1e-4     // convergence tolerance of trans
+   	    deltax = 1e-9       // step length
+   	    maxiter = 1000       // limit to 100 iterations
+   	 }
+
+         //  definition of multiple parameters to be optimized
+   	 parameter {
+   	    {WP, 10u, 400n, 12u} //init_val, lower_val, upper_value
+   	    {WN, 4u, 400n, 12u} //init_val, lower_val, upper_value 
+	    {ln, 60n, 30n, 130n} //init_val, lower_val, upper_value
+   	    {lp, 30n, 30n, 130n} //init_val, lower_val, upper_value
+		
+   	 }
+
+         // execution of the measurement alias
+   	 exec {
+            print fmt("%-12e,%-12e,%-12e,%-12e,", WP, WN,lp,ln) addto="mvar.csv"
+   	    run trans
+		run dcs
+            print fmt("%-12e,%-12e,%-12e,%-12e,%-12e,%-12e,%-12e,%-12e\n", trans->rise,trans->fall,trans->max_pwr,dcs->NM_h,dcs->NM_l, max(trans->n_rise,trans->n_fall),trans->n_pwr,min(dcs->NM_h_n,dcs->NM_l_n)) \
+                      addto="mvar.csv"
+   	 }
+
+         // definition of goal values to be minimized
+   	 zero {
+   	    tmp1 = max(trans->n_rise,trans->n_fall)-1p
+   	   // tmp2 =  
+// uncomment to add this power goal (doesn't work with this alone as the power is always 0)
+	    tmp2 = trans->n_pwr-1p
+	    //tmp3 = trans->delay-2p
+	    tmp5 = trans->energy-1a
+	    tmp4 = min(dcs->NM_h_n,dcs->NM_l_n)-1f
+	   // tmp4 = 
+   	 }
+}

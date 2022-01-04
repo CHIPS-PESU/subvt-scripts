@@ -1,0 +1,3 @@
+
+rm -rf  *.raw *.measure *.dat *.print *.txt *.log *.out
+

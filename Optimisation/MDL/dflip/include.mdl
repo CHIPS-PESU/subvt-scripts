@@ -1,0 +1,30 @@
+// include.mdl
+// (C) 2008 Cadence Design Systems, Inc.
+//
+// This example shows include feature at the top level of a MDL control file
+// and the "path/file" supported for the include statement.
+
+// include a MDL control file in the same dir
+include "inc/include_tranmeas.mdl"
+
+// define a measurement alias
+alias measurement dcmeas {
+
+  // definition of dc analysis
+  run dc
+
+  // definition of the parameter to be output
+  export real dcout=v(q)
+}
+
+// execute the alias defined in this file
+run tranmeas
+run dcmeas
+
+// include a file in sub-dir inc
+include "inc/alter_fast"
+
+// execute the alias
+run tranmeas as tranmeas_fast
+run dcmeas as dcmeas_fast
+

@@ -1,0 +1,110 @@
+// if-else.mdl
+// (C) 2008 Cadence Design Systems, Inc.
+//
+// This example shows if/else statements used at the top level 
+// and inside a foreach statement, the ternary expressions used 
+// inside an alias measurement block as well as the run and 
+// print statements used inside if/else statements.
+
+
+// define a measurement alias
+alias measurement tranmeas {
+
+  // definition of the parameters to be output
+  export real maxq, minq, q_rise_time
+
+  // definition of transient analysis to be run in a conservative tolerance
+  run tran(stop=40n, errpreset='conservative)
+
+  //computation of maximum value of V(q)
+  maxq=max(v(q))
+
+  //computation of minimum value of V(q)
+  minq=min(V(q))
+
+  //computation of risetime for signal V(q)
+  q_rise_time=risetime(V(q), initval=minq, finalval=maxq, \
+              inittype='y, finaltype='y, theta1=10, theta2=90)
+
+  // definitions of ternary expressions
+  export int val1 = (maxq >= vdd) ? 1:0
+  export int val1_not = !(maxq >= vdd) ? 1:0
+  export real val2 = mag(minq <= 0 ? min(V(q)):0 )
+  export real val3 = (q_rise_time !='nan)&&(val1==1)? (val2+maxq):(val2+vdd)
+
+}
+
+// alias measurement definition
+alias measurement dcmeas {
+
+  // definition of dc analysis
+  run dc
+
+  // definition of the parameter to be output
+  export real dcout=v(q)
+  export int flag_dc=(dcout !='nan)?1:0
+
+}
+
+// execute the measurement aliases
+run dcmeas
+
+// define a if-else statement
+if (dcmeas->flag_dc == 1)
+{
+
+  //print inside if-else block
+  print fmt("dc analysis succeeded ...\n") to="if-else.print"
+
+  // execute run statement inside if-else block
+  run tranmeas
+
+  // define a nested if block
+  if (tranmeas->q_rise_time !='nan)
+  {
+    print fmt("transient succeeded...\n") addto="if-else.print"
+  }
+}
+else
+{
+  print fmt("dc analysis failed...\n") addto="if-else.print" 
+}
+
+// define an int type local variable
+int count=0
+
+// deine a foreach loop
+foreach count from swp(start=1, stop=3, step=1) {
+
+  //define an if-else block in a foreach loop
+  if (count==1)
+  {
+    run dcmeas as dcmeas1
+    if (dcmeas1->flag_dc==1)
+    {
+      print fmt("dcmeas1 completed...\n") addto="if-else.print"
+    }
+    else
+    {
+      print fmt("dcmeas1 failed...\n") addto="if-else.print"
+    }
+  }
+  else if (count == 2)
+  {
+    run dcmeas as dcmeas2
+    if (dcmeas2->flag_dc==1)
+    {
+      print fmt("dcmeas2 completed...\n") addto="if-else.print"
+    }
+    else
+    {
+      print fmt("dcmeas2 failed...\n") addto="if-else.print"
+    }
+  }
+  else
+  {
+    run dcmeas as dcmeas3
+    print fmt("dcmeas3 completed...\n") addto="if-else.print"
+  }
+}
+

@@ -1,0 +1,39 @@
+alias measurement trans {
+     run tran( stop=1u )
+     export real my_fall = falltime(sig=V(OUT), initval=max(trim(V(OUT),350n,1u)), inittype='y, finalval=min(trim(V(OUT),350n,1u)), finaltype='y, theta1=80, theta2=20)  
+     export real my_rise=risetime(sig=V(OUT), initval=min(trim(V(OUT),0,350n)), inittype='y, finalval=max(trim(V(OUT)),0,350n), finaltype='y, theta1=20, theta2=80)
+
+     export real ctoq = cross(sig=V(OUT), dir='rise, n=1, thresh=150e-03) - cross(sig=V(net02), dir='rise, n=1, thresh=150e-03)
+	export real tpd = max (my_fall, my_rise)
+	export real delay = max (tpd, ctoq)
+	export real n_delay = (delay - 1e-08)/(7e-08 - 1e-08)
+     export real energy = integ(I12:pwr, from=0n, to=1u)
+	export real n_energy = (energy - 1e-15)/(2.5e-14 - 1e-15)
+}
+
+print fmt ("%-15s,%-15s,%-15s,%-15s,%-15s,%-15s,%-15s,%-15s\n", "WP","WN","LP","LN","energy","delay", "n_energy", "n_delay") to="mvar.csv"
+run trans
+mvarsearch {
+   	 option {
+   	    accuracy = 1e-9
+   	    deltax = 1e-9
+   	    maxiter = 1000
+   	 }
+   	 parameter {
+   	    {WP, 2u, 240n, 4u}
+   	    {WN, 600n, 240n, 3u}
+	    {LP, 40n, 40n, 80n}
+   	    {LN, 40n, 40n, 80n}
+   	 }
+   	 exec {
+            print fmt("%-15e,%-15e,%-15e,%-15e,", WP, WN, LP, LN) addto="mvar.csv"
+   	    run trans
+            print fmt("%-15e,%-15e,%-15e,%-15e\n", trans->energy, trans->delay, trans->n_energy, trans->n_delay) addto="mvar.csv"
+   	 }
+   	 zero {
+   	    tmp1 = trans->tpd * 1e-150
+	    tmp2 = trans->ctoq * 1e-150
+	    tmp3 = sqrt(trans->n_delay) * 0.25
+	    tmp4 = sqrt(trans->n_energy) * 0.25
+   	 }
+}

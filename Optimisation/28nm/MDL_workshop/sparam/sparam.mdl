@@ -1,0 +1,29 @@
+//sparam.mdl
+//  (C) 2008 Cadence Design Systems, Inc.
+//
+//This example shows running S parameter analysis from MDL, 
+//printing and measuring S parameters.
+
+// alias measurement definition
+alias measurement spmeas {
+
+    // print header
+    print fmt("*** S-Parameter ***\n") to="sparam.print"
+    print fmt("\n%-15s%-15s%-15s%-15s\n", "freq","s11_db", \
+              "s11_phase", "s22_real") addto="sparam.print"
+
+    // definition of sp analysis
+    run sp (ports={PORT_1, PORT_2}, dec=20, start=0.1G, stop=10G)
+
+    // print sp analysis results
+    print fmt("%-15e%-15e%-15e%-15e\n", xval(db(s(1,1))), \
+              db(s(1,1)), angle(s(1,1)), re(s(2,2))) addto="sparam.print"
+
+    //definition of parameters to be measured
+    export real ft = cross(sig=(db(s(2,1))), dir='cross, n=1)
+    export real phasemargin = angle(s(2,1))@ft
+}
+
+// execute the measurement alias
+run spmeas
+

@@ -1,0 +1,98 @@
+//  mvarpwr.mdl
+//  (C) 2008 Cadence Design Systems, Inc.
+//
+// This example is to find optimal values of design parameters 
+// by running a multi-parameter, multi-goal search function
+//
+
+// alias measurement definition
+alias measurement trans {
+
+  // definition of transient analysis with autostop turned on
+  run tran( stop=20u, autostop='yes )
+
+//computation of falltime for signal V(out) from 90% to 10%
+     export real my_fall=falltime(sig=V(OUT), initval=0.3, inittype='y, finalval=0.0, finaltype='y, theta1=90, theta2=10)
+     export real fall=(my_fall-(239e-12))/(62e-09 - 239e-12)     
+
+// computation of risetime for signal V(out) from 10% to 90%
+     export real my_rise=risetime(sig=V(OUT), initval=0.0, inittype='y, finalval=0.3, finaltype='y, theta1=10, theta2=90)
+     export real rise=(my_rise-(224e-12))/(30.10e-06 - 224e-12)
+
+     export real delay = (rise+fall)/2
+     
+     export real my_pwr=max(abs(I9:pwr))
+
+     export real energy = integ(I9:pwr, from=0n, to=10u)
+
+     export real max_pwr = (my_pwr-27.31e-09)/(18.6-06 - 27.31e-09)
+     
+
+}
+
+alias measurement dcs {
+	run dc
+	export real dvodvi = deriv(V(OUT))
+	export real d1 = yval(cross(sig=deriv(V(OUT)), dir='fall, n=1, thresh=-1))
+     export real V_il = cross(sig=deriv(V(OUT)), dir='fall, n=1, thresh=-1)
+     export real V_ih = cross(sig=deriv(V(OUT)), dir='rise, n=1, thresh=-1)
+
+     export real NM_h_n = -(0.3 - V_ih)
+	export real NM_h = -NM_h_n/0.15
+     export real NM_l_n = -(V_il - 0)
+	export real NM_l = -NM_l_n/0.15
+
+}
+
+// Print results to a specified file beginning with "to=" keyword
+print fmt ("\n****Intermediate Results of Optimization Searching****\n\n") to="mvar.print"
+
+// continue to print in user-format with "addto=" keyword
+print fmt ("%-15s%-15s%-15s%-15s%-15s%-15s%-15s%-15s%-15s%-15s\n", "WP","WN","LP","LN","rise","fall","pwr","energy","-NM_h", "-NM_l") addto="mvar.print"
+
+// workaround - uncomment this and then the power gets properly measured in the subsequent
+// mvarsearch (seems like a bug)
+run trans
+run dcs
+
+// definition of a mvarsearch function
+mvarsearch {
+
+         // definition of multiple optimization goals
+   	 option {
+	    //method='lm
+   	    accuracy = 1e-12     // convergence tolerance of trans
+   	    deltax = 1e-6       // step length
+   	    maxiter = 1000       // limit to 100 iterations
+   	 }
+
+         //  definition of multiple parameters to be optimized
+   	 parameter {
+   	    {WP, 4u, 300n, 8.95u} //init_val, lower_val, upper_value
+   	    {WN, 4u, 300n, 8.95u} //init_val, lower_val, upper_value 
+	    {ln, 50n, 30n, 130n} //init_val, lower_val, upper_value
+   	    {lp, 60n, 30n, 130n} //init_val, lower_val, upper_value
+		
+   	 }
+
+         // execution of the measurement alias
+   	 exec {
+            print fmt("%-15e%-15e%-15e%-15e", WP, WN,lp,ln) addto="mvar.print"
+   	    run trans
+		run dcs
+            print fmt("%-15e%-15e%-15e%-15e%-15e%-15e\n", trans->my_rise,trans->my_fall,trans->my_pwr,trans->energy,dcs->NM_h,dcs->NM_l) \
+                      addto="mvar.print"
+   	 }
+
+         // definition of goal values to be minimized
+   	 zero {
+   	    tmp1 = sqrt(max(trans->my_rise,trans->my_fall))-1f
+   	   // tmp2 =  
+// uncomment to add this power goal (doesn't work with this alone as the power is always 0)
+	    tmp2 = sqrt(trans->my_pwr)-1f
+	    //tmp3 = trans->delay-2p
+	    tmp3 = sqrt(trans->energy)-1f
+	    tmp4 = sqrt(min(dcs->NM_h_n,dcs->NM_l_n))-1f
+	   // tmp4 = 
+   	 }
+}

@@ -1,0 +1,767 @@
+
+Spectre (R) Circuit Simulator
+Version 19.1.0.396.isr8 64bit -- 19 Jun 2020
+Copyright (C) 1989-2020 Cadence Design Systems, Inc. All rights reserved worldwide. Cadence and Spectre are registered trademarks of Cadence Design Systems, Inc. All others are the property of their respective holders.
+
+Includes RSA BSAFE(R) Cryptographic or Security Protocol Software from RSA Security, Inc.
+
+User: VLSI_ANALOG   Host: cad19   HostID: 7F0100   PID: 20315
+Memory  available: 390.5986 MB  physical: 3.9327 GB
+Linux   : Red Hat Enterprise Linux Server release 6.9 (Santiago)
+CPU Type: Intel(R) Core(TM) i5-2320 CPU @ 3.00GHz
+        Socket: Processors [Frequency]
+        0:       0 [1600.0],  1 [1800.0],  2 [1600.0],  3 [1600.0]
+        
+System load averages (1min, 5min, 15min) : 2.2 %, 3.8 %, 1.5 %
+
+
+Simulating `dff.scs' on cad19 at 9:18:22 AM, Mon Dec 6, 2021 (process id: 20315).
+Current working directory: /home/VLSI_ANALOG/UMC180/Designkits/Cadence_6.1/lowpower28/spectremdl/new/dff/dff
+Command line:
+    /home/installs/SPECTRE191/tools.lnx86/bin/spectre -64 =mdl dff.mdl  \
+        dff.scs
+
+Loading /home/installs/SPECTRE191/tools.lnx86/cmi/lib/64bit/5.0/libinfineon_sh.so ...
+Loading /home/installs/SPECTRE191/tools.lnx86/cmi/lib/64bit/5.0/libphilips_o_sh.so ...
+Loading /home/installs/SPECTRE191/tools.lnx86/cmi/lib/64bit/5.0/libphilips_sh.so ...
+Loading /home/installs/SPECTRE191/tools.lnx86/cmi/lib/64bit/5.0/libsparam_sh.so ...
+Loading /home/installs/SPECTRE191/tools.lnx86/cmi/lib/64bit/5.0/libstmodels_sh.so ...
+Loading /home/installs/SPECTRE191/tools.lnx86/spectre/lib/64bit/mdl/libSpectreEH_sh.so ...
+Reading file:  /home/VLSI_ANALOG/UMC180/Designkits/Cadence_6.1/lowpower28/spectremdl/new/dff/dff/dff.mdl
+Reading file:  /home/VLSI_ANALOG/UMC180/Designkits/Cadence_6.1/lowpower28/spectremdl/new/dff/dff/dff.scs
+Reading file:  /home/installs/SPECTRE191/tools.lnx86/spectre/etc/configs/spectre.cfg
+Reading file:  /home/VLSI_ANALOG/UMCLib/pdk/UMC/28/_G-01-LOGIC_MIXED_MODE28N-HPC/Designkits/Cadence_IC6/G-9FD-LOGIC_MIXED_MODE28N-HPC_UM028FDKHCC0000OA-FDK-Ver.A14_PB/UM028FDKHCC0000OA_A14_DESIGNKIT/UM028FDKHCC0000OA_A14_PB/Models/Spectre/l28hpc_mm_v1201.lib.scs
+Reading file:  /home/VLSI_ANALOG/UMCLib/pdk/UMC/28/_G-01-LOGIC_MIXED_MODE28N-HPC/Designkits/Cadence_IC6/G-9FD-LOGIC_MIXED_MODE28N-HPC_UM028FDKHCC0000OA-FDK-Ver.A14_PB/UM028FDKHCC0000OA_A14_DESIGNKIT/UM028FDKHCC0000OA_A14_PB/Models/Spectre/l28hpc_rf_v017.lib.scs
+Time for NDB Parsing: CPU = 4.90125 s, elapsed = 5.28559 s.
+Time accumulated: CPU = 5.05823 s, elapsed = 5.28559 s.
+Peak resident memory used = 213 Mbytes.
+
+
+Warning from spectre during hierarchy flattening.
+    WARNING (SFE-1131): Scope option `scalefactor' specified with scope `TopCircuit' at line `680' has also been specified at line `729' in file `/home/VLSI_ANALOG/UMCLib/pdk/UMC/28/_G-01-LOGIC_MIXED_MODE28N-HPC/Designkits/Cadence_IC6/G-9FD-LOGIC_MIXED_MODE28N-HPC_UM028FDKHCC0000OA-FDK-Ver.A14_PB/UM028FDKHCC0000OA_A14_DESIGNKIT/UM028FDKHCC0000OA_A14_PB/umc28hpc/../Models/Spectre/l28hpc_rf_v017.lib.scs'. As a result, the last specified value will be used for simulation.
+
+Time for Elaboration: CPU = 102.984 ms, elapsed = 103.849 ms.
+Time accumulated: CPU = 5.16121 s, elapsed = 5.38962 s.
+Peak resident memory used = 227 Mbytes.
+
+
+Warning from spectre during hierarchy flattening.
+    WARNING (SPECTRE-17101): The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+
+
+Time for EDB Visiting: CPU = 2 ms, elapsed = 1.8971 ms.
+Time accumulated: CPU = 5.16321 s, elapsed = 5.39169 s.
+Peak resident memory used = 228 Mbytes.
+
+
+Global user options:
+         psfversion = 1.4.0
+            vabstol = 1e-06
+            iabstol = 1e-12
+               temp = 27
+               gmin = 1e-12
+             rforce = 1
+           maxnotes = 5
+           maxwarns = 5
+             digits = 5
+               cols = 80
+             pivrel = 0.001
+           sensfile = ../psf/sens.output
+     checklimitdest = psf
+               save = all
+                pwr = all
+        scalefactor = 0.9
+             reltol = 0.001
+               tnom = 27
+             scalem = 1
+              scale = 1
+
+Scoped user options:
+
+Circuit inventory:
+              nodes 18
+              bsim4 28    
+          capacitor 2     
+              diode 14    
+            vsource 3     
+
+Analysis and control statement inventory:
+               info 7     
+               tran 1     
+
+Output statements:
+             .probe 0     
+           .measure 0     
+               save 0     
+
+Time for parsing: CPU = 3 ms, elapsed = 90.064 ms.
+Time accumulated: CPU = 5.16621 s, elapsed = 5.48188 s.
+Peak resident memory used = 229 Mbytes.
+
+~~~~~~~~~~~~~~~~~~~~~~
+Pre-Simulation Summary
+~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~
+
+************************************************
+Transient Analysis `trans': time = (0 s -> 1 us)
+************************************************
+DC simulation time: CPU = 5 ms, elapsed = 4.8151 ms.
+
+Opening the PSFXL file dff.raw/trans.tran.tran ...
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 1 us
+    step = 1 ns
+    maxstep = 20 ns
+    ic = all
+    useprevic = no
+    skipdc = no
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = moderate
+    method = traponly
+    lteratio = 3.5
+    relref = sigglobal
+    cmin = 0 F
+    gmin = 1 pS
+
+
+Output and IC/nodeset summary:
+                 save   1       (current)
+                 save   116     (voltage)
+                 others 44      
+
+......9......8......7......6......5......4......3......2......1......0
+Number of accepted tran steps =             435
+
+Maximum value achieved for any signal of each quantity: 
+V: V(I14.PM15:int_s) = 368.6 mV
+I: I(V0:p) = 12.85 uA
+If your circuit contains signals of the same quantity that are vastly different in size (such as high voltage circuitry combined with low voltage control circuitry), you should consider specifying global option `bin_relref=yes'.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Post-Transient Simulation Summary
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   -   To further speed up simulation, consider
+          add ++aps on command line
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+During simulation, the CPU load for active processors is :
+         0 (5.9 %)       1 (94.4 %)      2 (5.5 %)       3 (2.1 %)
+        Total: 107.9%
+Initial condition solution time: CPU = 5 ms, elapsed = 4.92406 ms.
+Intrinsic tran analysis time:    CPU = 228.966 ms, elapsed = 276.86 ms.
+Total time required for tran analysis `trans': CPU = 239.963 ms, elapsed = 287.752 ms.
+Time accumulated: CPU = 5.41818 s, elapsed = 5.78222 s.
+Peak resident memory used = 235 Mbytes.
+
+
+Warning from spectre.
+    WARNING (SPECTRE-17101): The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+    WARNING (SPECTRE-17101): The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+    WARNING (SPECTRE-17101): The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+    WARNING (SPECTRE-17101): The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+
+
+Opening the PSF file dff.raw/trans.optimize ...
+
+**********************************************************
+Transient Analysis `trans-000_trans': time = (0 s -> 1 us)
+**********************************************************
+
+Notice from spectre during IC analysis, during transient analysis `trans-000_trans', during task `MDLControl'.
+    GminDC = 1 pS is large enough to noticeably affect the DC solution.
+        dV(I14.PM14:int_d) = 121.905 uV
+        Use the `gmin_check' option to eliminate or expand this report.
+
+DC simulation time: CPU = 5.999 ms, elapsed = 6.09398 ms.
+
+Opening the PSFXL file dff.raw/trans-000_trans.tran.tran ...
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 1 us
+    step = 1 ns
+    maxstep = 20 ns
+    ic = all
+    useprevic = no
+    skipdc = no
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = moderate
+    method = traponly
+    lteratio = 3.5
+    relref = sigglobal
+    cmin = 0 F
+    gmin = 1 pS
+
+
+Output and IC/nodeset summary:
+                 save   1       (current)
+                 save   116     (voltage)
+                 others 44      
+
+......9
+
+Notice from spectre at time = 100.21 ns during transient analysis `trans-000_trans', during task `MDLControl'.
+    Found trapezoidal ringing on node I14.NM0:int_g.
+Notice from spectre at time = 100.272 ns during transient analysis `trans-000_trans', during task `MDLControl'.
+    Found trapezoidal ringing on node I14.NM0:int_g.
+
+......9.
+
+Notice from spectre at time = 108.369 ns during transient analysis `trans-000_trans', during task `MDLControl'.
+    Found trapezoidal ringing on node I14.NM0:int_g.
+Notice from spectre at time = 108.377 ns during transient analysis `trans-000_trans', during task `MDLControl'.
+    Found trapezoidal ringing on node I14.NM0:int_g.
+Notice from spectre at time = 108.537 ns during transient analysis `trans-000_trans', during task `MDLControl'.
+    Found trapezoidal ringing on node I14.NM0:int_g.
+        Further occurrences of this notice will be suppressed.
+
+......9......8......7......6......5......4......3......2......1......0
+Number of accepted tran steps =             410
+
+Notice from spectre during transient analysis `trans-000_trans', during task `MDLControl'.
+    Trapezoidal ringing is detected during tran analysis.
+        Please use method=trap for better results and performance.
+
+
+Maximum value achieved for any signal of each quantity: 
+V: V(I14.PM14:int_d) = 381.8 mV
+I: I(V0:p) = 8.175 uA
+If your circuit contains signals of the same quantity that are vastly different in size (such as high voltage circuitry combined with low voltage control circuitry), you should consider specifying global option `bin_relref=yes'.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Post-Transient Simulation Summary
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   -   To further speed up simulation, consider
+          add ++aps on command line
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+During simulation, the CPU load for active processors is :
+         0 (6.4 %)       1 (92.5 %)      2 (5.9 %)       3 (2.2 %)
+        Total: 107.1%
+Initial condition solution time: CPU = 5.999 ms, elapsed = 6.16789 ms.
+Intrinsic tran analysis time:    CPU = 232.965 ms, elapsed = 265.266 ms.
+
+Warning from spectre during transient analysis `trans-000_trans', during task `MDLControl'.
+    WARNING (MDL-2034): line `7': risetime - Rise Time Not Found 
+
+Total time required for tran analysis `trans-000_trans': CPU = 244.963 ms, elapsed = 277.171 ms.
+Time accumulated: CPU = 5.86811 s, elapsed = 6.39115 s.
+Peak resident memory used = 236 Mbytes.
+
+
+Notice from spectre during task `MDLControl'.
+    21 notices suppressed.
+Warning from spectre.
+    WARNING (SPECTRE-17101): The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+
+
+**********************************************************
+Transient Analysis `trans-000_trans': time = (0 s -> 1 us)
+**********************************************************
+
+Notice from spectre during IC analysis, during transient analysis `trans-000_trans', during task `MDLControl'.
+    GminDC = 1 pS is large enough to noticeably affect the DC solution.
+        dV(I14.PM14:int_d) = 121.761 uV
+        Use the `gmin_check' option to eliminate or expand this report.
+
+DC simulation time: CPU = 2.999 ms, elapsed = 3.18789 ms.
+
+Opening the PSFXL file dff.raw/trans-000_trans.tran.tran ...
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 1 us
+    step = 1 ns
+    maxstep = 20 ns
+    ic = all
+    useprevic = no
+    skipdc = no
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = moderate
+    method = traponly
+    lteratio = 3.5
+    relref = sigglobal
+    cmin = 0 F
+    gmin = 1 pS
+
+
+Output and IC/nodeset summary:
+                 save   1       (current)
+                 save   116     (voltage)
+                 others 44      
+
+......9
+
+Notice from spectre at time = 100.21 ns during transient analysis `trans-000_trans', during task `MDLControl'.
+    Found trapezoidal ringing on node I14.NM0:int_g.
+Notice from spectre at time = 100.272 ns during transient analysis `trans-000_trans', during task `MDLControl'.
+    Found trapezoidal ringing on node I14.NM0:int_g.
+
+......9.
+
+Notice from spectre at time = 108.366 ns during transient analysis `trans-000_trans', during task `MDLControl'.
+    Found trapezoidal ringing on node I14.NM0:int_g.
+Notice from spectre at time = 108.374 ns during transient analysis `trans-000_trans', during task `MDLControl'.
+    Found trapezoidal ringing on node I14.NM0:int_g.
+Notice from spectre at time = 108.535 ns during transient analysis `trans-000_trans', during task `MDLControl'.
+    Found trapezoidal ringing on node I14.NM0:int_g.
+        Further occurrences of this notice will be suppressed.
+
+......9......8......7......6......5......4......3......2......1......0
+Number of accepted tran steps =             410
+
+Notice from spectre during transient analysis `trans-000_trans', during task `MDLControl'.
+    Trapezoidal ringing is detected during tran analysis.
+        Please use method=trap for better results and performance.
+
+
+Maximum value achieved for any signal of each quantity: 
+V: V(I14.PM14:int_d) = 381.8 mV
+I: I(V0:p) = 8.183 uA
+If your circuit contains signals of the same quantity that are vastly different in size (such as high voltage circuitry combined with low voltage control circuitry), you should consider specifying global option `bin_relref=yes'.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Post-Transient Simulation Summary
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   -   To further speed up simulation, consider
+          add ++aps on command line
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+During simulation, the CPU load for active processors is :
+         0 (6.7 %)       1 (92.5 %)      2 (6.4 %)       3 (2.3 %)
+        Total: 107.8%
+Initial condition solution time: CPU = 2.999 ms, elapsed = 3.23296 ms.
+Intrinsic tran analysis time:    CPU = 232.965 ms, elapsed = 277.918 ms.
+
+Warning from spectre during transient analysis `trans-000_trans', during task `MDLControl'.
+    WARNING (MDL-2034): line `7': risetime - Rise Time Not Found 
+
+Total time required for tran analysis `trans-000_trans': CPU = 237.964 ms, elapsed = 284.829 ms.
+Time accumulated: CPU = 6.16406 s, elapsed = 6.7336 s.
+Peak resident memory used = 236 Mbytes.
+
+
+Notice from spectre during task `MDLControl'.
+    21 notices suppressed.
+Warning from spectre.
+    WARNING (SPECTRE-17101): The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+    WARNING (SPECTRE-17101): The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+
+
+**********************************************************
+Transient Analysis `trans-000_trans': time = (0 s -> 1 us)
+**********************************************************
+
+Notice from spectre during IC analysis, during transient analysis `trans-000_trans', during task `MDLControl'.
+    GminDC = 1 pS is large enough to noticeably affect the DC solution.
+        dV(I14.PM14:int_d) = 121.905 uV
+        Use the `gmin_check' option to eliminate or expand this report.
+
+DC simulation time: CPU = 3 ms, elapsed = 3.13902 ms.
+
+Opening the PSFXL file dff.raw/trans-000_trans.tran.tran ...
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 1 us
+    step = 1 ns
+    maxstep = 20 ns
+    ic = all
+    useprevic = no
+    skipdc = no
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = moderate
+    method = traponly
+    lteratio = 3.5
+    relref = sigglobal
+    cmin = 0 F
+    gmin = 1 pS
+
+
+Output and IC/nodeset summary:
+                 save   1       (current)
+                 save   116     (voltage)
+                 others 44      
+
+......9
+
+Notice from spectre at time = 100.21 ns during transient analysis `trans-000_trans', during task `MDLControl'.
+    Found trapezoidal ringing on node I14.NM0:int_g.
+Notice from spectre at time = 100.272 ns during transient analysis `trans-000_trans', during task `MDLControl'.
+    Found trapezoidal ringing on node I14.NM0:int_g.
+
+......9.
+
+Notice from spectre at time = 108.369 ns during transient analysis `trans-000_trans', during task `MDLControl'.
+    Found trapezoidal ringing on node I14.NM0:int_g.
+Notice from spectre at time = 108.377 ns during transient analysis `trans-000_trans', during task `MDLControl'.
+    Found trapezoidal ringing on node I14.NM0:int_g.
+Notice from spectre at time = 108.538 ns during transient analysis `trans-000_trans', during task `MDLControl'.
+    Found trapezoidal ringing on node I14.NM0:int_g.
+        Further occurrences of this notice will be suppressed.
+
+......9......8......7......6......5......4......3......2......1......0
+Number of accepted tran steps =             410
+
+Notice from spectre during transient analysis `trans-000_trans', during task `MDLControl'.
+    Trapezoidal ringing is detected during tran analysis.
+        Please use method=trap for better results and performance.
+
+
+Maximum value achieved for any signal of each quantity: 
+V: V(I14.PM14:int_d) = 381.8 mV
+I: I(V0:p) = 8.175 uA
+If your circuit contains signals of the same quantity that are vastly different in size (such as high voltage circuitry combined with low voltage control circuitry), you should consider specifying global option `bin_relref=yes'.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Post-Transient Simulation Summary
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   -   To further speed up simulation, consider
+          add ++aps on command line
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+During simulation, the CPU load for active processors is :
+         0 (6.6 %)       1 (92.4 %)      2 (6.5 %)       3 (2.2 %)
+        Total: 107.7%
+Initial condition solution time: CPU = 3 ms, elapsed = 3.17788 ms.
+Intrinsic tran analysis time:    CPU = 228.965 ms, elapsed = 262.134 ms.
+
+Warning from spectre during transient analysis `trans-000_trans', during task `MDLControl'.
+    WARNING (MDL-2034): line `7': risetime - Rise Time Not Found 
+
+Total time required for tran analysis `trans-000_trans': CPU = 235.964 ms, elapsed = 268.319 ms.
+Time accumulated: CPU = 6.49301 s, elapsed = 7.09715 s.
+Peak resident memory used = 236 Mbytes.
+
+
+Notice from spectre during task `MDLControl'.
+    20 notices suppressed.
+Warning from spectre.
+    WARNING (SPECTRE-17101): The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+    WARNING (SPECTRE-17101): The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+
+
+**********************************************************
+Transient Analysis `trans-000_trans': time = (0 s -> 1 us)
+**********************************************************
+
+Notice from spectre during IC analysis, during transient analysis `trans-000_trans', during task `MDLControl'.
+    GminDC = 1 pS is large enough to noticeably affect the DC solution.
+        dV(I14.PM14:int_d) = 121.905 uV
+        Use the `gmin_check' option to eliminate or expand this report.
+
+DC simulation time: CPU = 3 ms, elapsed = 3.18098 ms.
+
+Opening the PSFXL file dff.raw/trans-000_trans.tran.tran ...
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 1 us
+    step = 1 ns
+    maxstep = 20 ns
+    ic = all
+    useprevic = no
+    skipdc = no
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = moderate
+    method = traponly
+    lteratio = 3.5
+    relref = sigglobal
+    cmin = 0 F
+    gmin = 1 pS
+
+
+Output and IC/nodeset summary:
+                 save   1       (current)
+                 save   116     (voltage)
+                 others 44      
+
+......9
+
+Notice from spectre at time = 100.21 ns during transient analysis `trans-000_trans', during task `MDLControl'.
+    Found trapezoidal ringing on node I14.NM0:int_g.
+Notice from spectre at time = 100.273 ns during transient analysis `trans-000_trans', during task `MDLControl'.
+    Found trapezoidal ringing on node I14.NM0:int_g.
+
+......9.
+
+Notice from spectre at time = 108.37 ns during transient analysis `trans-000_trans', during task `MDLControl'.
+    Found trapezoidal ringing on node I14.NM0:int_g.
+Notice from spectre at time = 108.378 ns during transient analysis `trans-000_trans', during task `MDLControl'.
+    Found trapezoidal ringing on node I14.NM0:int_g.
+Notice from spectre at time = 108.54 ns during transient analysis `trans-000_trans', during task `MDLControl'.
+    Found trapezoidal ringing on node I14.NM0:int_g.
+        Further occurrences of this notice will be suppressed.
+
+......9......8......7......6......5......4......3......2......1......0
+Number of accepted tran steps =             410
+
+Notice from spectre during transient analysis `trans-000_trans', during task `MDLControl'.
+    Trapezoidal ringing is detected during tran analysis.
+        Please use method=trap for better results and performance.
+
+
+Maximum value achieved for any signal of each quantity: 
+V: V(I14.PM14:int_d) = 381.8 mV
+I: I(V0:p) = 8.175 uA
+If your circuit contains signals of the same quantity that are vastly different in size (such as high voltage circuitry combined with low voltage control circuitry), you should consider specifying global option `bin_relref=yes'.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Post-Transient Simulation Summary
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   -   To further speed up simulation, consider
+          add ++aps on command line
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+During simulation, the CPU load for active processors is :
+         0 (6.7 %)       1 (92.4 %)      2 (7.0 %)       3 (2.3 %)
+        Total: 108.4%
+Initial condition solution time: CPU = 3 ms, elapsed = 3.22604 ms.
+Intrinsic tran analysis time:    CPU = 228.965 ms, elapsed = 264.88 ms.
+
+Warning from spectre during transient analysis `trans-000_trans', during task `MDLControl'.
+    WARNING (MDL-2034): line `7': risetime - Rise Time Not Found 
+
+Total time required for tran analysis `trans-000_trans': CPU = 236.963 ms, elapsed = 272.65 ms.
+Time accumulated: CPU = 6.82996 s, elapsed = 7.472 s.
+Peak resident memory used = 236 Mbytes.
+
+
+Notice from spectre during task `MDLControl'.
+    21 notices suppressed.
+Warning from spectre.
+    WARNING (SPECTRE-17101): The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+    WARNING (SPECTRE-17101): The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+
+
+**********************************************************
+Transient Analysis `trans-000_trans': time = (0 s -> 1 us)
+**********************************************************
+
+Notice from spectre during IC analysis, during transient analysis `trans-000_trans', during task `MDLControl'.
+    GminDC = 1 pS is large enough to noticeably affect the DC solution.
+        dV(I14.PM14:int_d) = 122.479 uV
+        Use the `gmin_check' option to eliminate or expand this report.
+
+DC simulation time: CPU = 3 ms, elapsed = 3.39484 ms.
+
+Opening the PSFXL file dff.raw/trans-000_trans.tran.tran ...
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 1 us
+    step = 1 ns
+    maxstep = 20 ns
+    ic = all
+    useprevic = no
+    skipdc = no
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = moderate
+    method = traponly
+    lteratio = 3.5
+    relref = sigglobal
+    cmin = 0 F
+    gmin = 1 pS
+
+
+Output and IC/nodeset summary:
+                 save   1       (current)
+                 save   116     (voltage)
+                 others 44      
+
+......9
+
+Notice from spectre at time = 100.21 ns during transient analysis `trans-000_trans', during task `MDLControl'.
+    Found trapezoidal ringing on node I14.NM0:int_g.
+Notice from spectre at time = 100.272 ns during transient analysis `trans-000_trans', during task `MDLControl'.
+    Found trapezoidal ringing on node I14.NM0:int_g.
+
+......9.
+
+Notice from spectre at time = 108.387 ns during transient analysis `trans-000_trans', during task `MDLControl'.
+    Found trapezoidal ringing on node I14.NM0:int_g.
+Notice from spectre at time = 108.395 ns during transient analysis `trans-000_trans', during task `MDLControl'.
+    Found trapezoidal ringing on node I14.NM0:int_g.
+Notice from spectre at time = 108.556 ns during transient analysis `trans-000_trans', during task `MDLControl'.
+    Found trapezoidal ringing on node I14.NM0:int_g.
+        Further occurrences of this notice will be suppressed.
+
+......9......8......7......6......5......4......3......2......1......0
+Number of accepted tran steps =             410
+
+Notice from spectre during transient analysis `trans-000_trans', during task `MDLControl'.
+    Trapezoidal ringing is detected during tran analysis.
+        Please use method=trap for better results and performance.
+
+
+Maximum value achieved for any signal of each quantity: 
+V: V(I14.PM14:int_d) = 381.8 mV
+I: I(V0:p) = 8.173 uA
+If your circuit contains signals of the same quantity that are vastly different in size (such as high voltage circuitry combined with low voltage control circuitry), you should consider specifying global option `bin_relref=yes'.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Post-Transient Simulation Summary
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   -   To further speed up simulation, consider
+          add ++aps on command line
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+During simulation, the CPU load for active processors is :
+         0 (6.8 %)       1 (89.8 %)      2 (9.8 %)       3 (2.5 %)
+        Total: 108.8%
+Initial condition solution time: CPU = 3 ms, elapsed = 3.45111 ms.
+Intrinsic tran analysis time:    CPU = 226.965 ms, elapsed = 259.016 ms.
+
+Warning from spectre during transient analysis `trans-000_trans', during task `MDLControl'.
+    WARNING (MDL-2034): line `7': risetime - Rise Time Not Found 
+
+Total time required for tran analysis `trans-000_trans': CPU = 232.964 ms, elapsed = 266.338 ms.
+Time accumulated: CPU = 7.16591 s, elapsed = 7.84188 s.
+Peak resident memory used = 236 Mbytes.
+
+
+Notice from spectre during task `MDLControl'.
+    19 notices suppressed.
+
+
+**********************************************************
+Transient Analysis `trans-000_trans': time = (0 s -> 1 us)
+**********************************************************
+
+Notice from spectre during IC analysis, during transient analysis `trans-000_trans', during task `MDLControl'.
+    GminDC = 1 pS is large enough to noticeably affect the DC solution.
+        dV(I14.PM14:int_d) = 122.479 uV
+        Use the `gmin_check' option to eliminate or expand this report.
+
+DC simulation time: CPU = 4 ms, elapsed = 3.18289 ms.
+
+Opening the PSFXL file dff.raw/trans-000_trans.tran.tran ...
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 1 us
+    step = 1 ns
+    maxstep = 20 ns
+    ic = all
+    useprevic = no
+    skipdc = no
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = moderate
+    method = traponly
+    lteratio = 3.5
+    relref = sigglobal
+    cmin = 0 F
+    gmin = 1 pS
+
+
+Output and IC/nodeset summary:
+                 save   1       (current)
+                 save   116     (voltage)
+                 others 44      
+
+......9
+
+Notice from spectre at time = 100.21 ns during transient analysis `trans-000_trans', during task `MDLControl'.
+    Found trapezoidal ringing on node I14.NM0:int_g.
+Notice from spectre at time = 100.272 ns during transient analysis `trans-000_trans', during task `MDLControl'.
+    Found trapezoidal ringing on node I14.NM0:int_g.
+
+......9.
+
+Notice from spectre at time = 108.387 ns during transient analysis `trans-000_trans', during task `MDLControl'.
+    Found trapezoidal ringing on node I14.NM0:int_g.
+Notice from spectre at time = 108.395 ns during transient analysis `trans-000_trans', during task `MDLControl'.
+    Found trapezoidal ringing on node I14.NM0:int_g.
+Notice from spectre at time = 108.556 ns during transient analysis `trans-000_trans', during task `MDLControl'.
+    Found trapezoidal ringing on node I14.NM0:int_g.
+        Further occurrences of this notice will be suppressed.
+
+......9......8......7......6......5......4......3......2......1......0
+Number of accepted tran steps =             410
+
+Notice from spectre during transient analysis `trans-000_trans', during task `MDLControl'.
+    Trapezoidal ringing is detected during tran analysis.
+        Please use method=trap for better results and performance.
+
+
+Maximum value achieved for any signal of each quantity: 
+V: V(I14.PM14:int_d) = 381.8 mV
+I: I(V0:p) = 8.173 uA
+If your circuit contains signals of the same quantity that are vastly different in size (such as high voltage circuitry combined with low voltage control circuitry), you should consider specifying global option `bin_relref=yes'.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Post-Transient Simulation Summary
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   -   To further speed up simulation, consider
+          add ++aps on command line
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+During simulation, the CPU load for active processors is :
+         0 (6.8 %)       1 (89.5 %)      2 (9.9 %)       3 (2.5 %)
+        Total: 108.8%
+Initial condition solution time: CPU = 4 ms, elapsed = 3.23081 ms.
+Intrinsic tran analysis time:    CPU = 231.965 ms, elapsed = 279.818 ms.
+
+Warning from spectre during transient analysis `trans-000_trans', during task `MDLControl'.
+    WARNING (MDL-2034): line `7': risetime - Rise Time Not Found 
+
+Total time required for tran analysis `trans-000_trans': CPU = 237.965 ms, elapsed = 285.908 ms.
+Time accumulated: CPU = 7.40987 s, elapsed = 8.13456 s.
+Peak resident memory used = 236 Mbytes.
+
+
+Notice from spectre during task `MDLControl'.
+    19 notices suppressed.
+
+
+Aggregate audit (9:18:30 AM, Mon Dec 6, 2021):
+Time used: CPU = 7.55 s, elapsed = 8.35 s, util. = 90.4%.
+Time spent in licensing: elapsed = 235 ms.
+Peak memory used = 236 Mbytes.
+Simulation started at: 9:18:22 AM, Mon Dec 6, 2021, ended at: 9:18:30 AM, Mon Dec 6, 2021, with elapsed time (wall clock): 8.35 s.
+spectre completes with 0 errors, 19 warnings, and 49 notices.

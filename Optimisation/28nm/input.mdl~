@@ -1,0 +1,27 @@
+alias measurement trans {
+run tran( stop=100n, autostop='yes )
+   	 export real rise=risetime(sig=V(OUT), initval=0.5, inittype='y, finalval=3.0, finaltype='y, theta1=10, theta2=90)
+   	 export real fall=falltime(sig=V(OUT), initval=3.0, inittype='y, finalval=0.5, finaltype='y, theta1=90, theta2=10)
+	 export real delay = (rise + fall)/2
+	 export real my_avg_power = avg( abs( \*.M\*:pwr ) )
+
+}
+
+mvarsearch {
+   	 option {
+   	    accuracy = 1e-3     // convergence tolerance of trans->rise
+   	    deltax = 1e-3       // numerical difference % of design variables
+   	    maxiter = 100       // limit to 100 iterations
+   	 }
+   	 parameter {
+   	    {WP, 100n, 1n, 3u}
+   	    {WN, 100n, 1n, 3u}
+   	 }
+   	 exec {
+   	    run trans
+   	 }
+   	 zero {
+   	    tmp1 = trans->delay-250p
+   	    tmp2 = trans->my_avg_power-1n
+}
+}

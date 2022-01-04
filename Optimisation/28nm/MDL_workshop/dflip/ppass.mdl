@@ -1,0 +1,76 @@
+//  ppass.mdl
+//  (C) 2008 Cadence Design Systems, Inc.
+//
+// This measurement computes crossing point, delay and 
+// risetime of a signal, shows how MDL calls a Spectre 
+// info analysis and a measurement alias multiple times 
+// by passing different values to the input parameters
+
+
+// alias measurement definition
+alias measurement tranmeas { 
+  
+  // definition of the input parameters
+  input real transtop=40n
+  input real prop_thresh=vdd/2
+  
+  // definition of the parameters to be output
+  export real clk_data_delay, outcross, clk_q_delay, \
+              maxq, minq, q_rise_time
+
+  // definition of transient analysis to be run in a conservative tolerance
+  // and to be stopped at time point of that parameter transtop defined
+  run tran(stop=transtop, errpreset='conservative)
+
+  // computation of crossing point of V(data)
+  real vddelay=cross(sig=V(data), thresh=prop_thresh, \
+                     dir='rise, n=1)
+
+  // computation of crossing point of V(clock)
+  real vcdelay=cross(sig=V(clock), thresh=vdd/2, dir='rise, n=1)
+
+  // computation of crossing point of V(q) using nput parameter prop_thresh
+  outcross=cross(V(q),thresh=prop_thresh)
+
+  // computation of delay of V(data) versus V(clock)
+  clk_data_delay=vcdelay-vddelay
+
+  // computation of delay of V(q) versus V(clock)
+  clk_q_delay=outcross-vcdelay
+
+  //computation of maximum value of V(q)
+  maxq=max(V(q))
+
+  //computation of minimum value of V(q)
+  minq=min(V(q))
+
+  //computation of risetime for signal V(q)
+  q_rise_time=risetime(V(q), initval=minq, finalval=maxq, \
+              inittype='y, finaltype='y, theta1=10, theta2=90)
+
+}
+
+// alias measurement definition
+alias measurement dcmeas {
+  
+  // definition of dc analysis to save operating point results to logfile
+  run dc (oppoint='logfile)
+
+  // definition of the parameter to be output
+  export real dcout=v(q)
+}
+
+// alias measurement definition  
+alias measurement infoModels {
+
+  // define an info analysis and dump results to a file
+  run info(what='models, where='file, file="infoModels.txt")
+}
+ 
+// execute the measurement aliases
+run tranmeas
+run dcmeas
+run infoModels
+
+//execute the measurement alias with new values of input parameters
+run tranmeas(transtop=20n, prop_thresh=vdd/3) as tranmeas_lower_thresh

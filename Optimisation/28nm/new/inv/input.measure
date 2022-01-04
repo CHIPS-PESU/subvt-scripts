@@ -1,0 +1,181 @@
+Exported variables from results directory:  ././input.raw/
+
+date               :  9:26:28 AM, Tue Dec 21, 2021
+design             :  // Generated for: spectre
+simulator          :  spectre
+version            :  19.1.0.396.isr8
+
+
+Measurement Name   :  trans
+Analysis Type      :  tran
+a                     =  0.1 
+b                     =  1 
+delay                 =  2.41243e-08 
+energy                =  4.7631e-15 
+fall                  =  3.01421e-09 
+max_pwr               =  9.52621e-09 
+n_delay               =  0.044437 
+n_energy              =  0.815776 
+n_fall                =  2.34518e-05 
+n_pwr                 =  -0.000262024 
+n_rise                =  0.000199369 
+n_tphl                =  0.0528473 
+n_tplh                =  0.44437 
+rise                  =  2.41243e-08 
+tphl                  =  1.63278e-09 
+tplh                  =  1.33589e-08 
+
+
+Measurement Name   :  dcs
+Analysis Type      :  dc
+NM                    =  0.0805209 
+NM_h                  =  0.164346 
+NM_h_n                =  0.912709 
+NM_l                  =  0.0805209 
+NM_l_n                =  1.86287 
+V_ih                  =  0.135654 
+V_il                  =  0.0805209 
+c                     =  0.1 
+d                     =  1e-30 
+d1                    =  0.0805209 
+dvodvi                =  -5.53818e-05 
+max_dc_pwr            =  8.8993e-10 
+n_dc_pwr              =  0.015451 
+n_nm                  =  0.186287 
+
+
+Swept Measurements :
+Measurement Name   :  trans-meas_optimize
+Analysis Type      :  tran
+a                  WP         @ nan       
+                   WN         @ nan       
+                   LP         @ nan       
+                   LN         @ nan          =  0.1     
+b                  WP         @ nan       
+                   WN         @ nan       
+                   LP         @ nan       
+                   LN         @ nan          =  1     
+delay              WP         @ nan       
+                   WN         @ nan       
+                   LP         @ nan       
+                   LN         @ nan          =  1.1479e-07     
+energy             WP         @ nan       
+                   WN         @ nan       
+                   LP         @ nan       
+                   LN         @ nan          =  3.56371e-15     
+fall               WP         @ nan       
+                   WN         @ nan       
+                   LP         @ nan       
+                   LN         @ nan          =  6.38893e-08     
+max_pwr            WP         @ nan       
+                   WN         @ nan       
+                   LP         @ nan       
+                   LN         @ nan          =  7.12742e-09     
+n_delay            WP         @ nan       
+                   WN         @ nan       
+                   LP         @ nan       
+                   LN         @ nan          =  0.186484     
+n_energy           WP         @ nan       
+                   WN         @ nan       
+                   LP         @ nan       
+                   LN         @ nan          =  0.515928     
+n_fall             WP         @ nan       
+                   WN         @ nan       
+                   LP         @ nan       
+                   LN         @ nan          =  0.000530745     
+n_pwr              WP         @ nan       
+                   WN         @ nan       
+                   LP         @ nan       
+                   LN         @ nan          =  -0.000322034     
+n_rise             WP         @ nan       
+                   WN         @ nan       
+                   LP         @ nan       
+                   LN         @ nan          =  0.000954917     
+n_tphl             WP         @ nan       
+                   WN         @ nan       
+                   LP         @ nan       
+                   LN         @ nan          =  1.21022     
+n_tplh             WP         @ nan       
+                   WN         @ nan       
+                   LP         @ nan       
+                   LN         @ nan          =  1.86484     
+rise               WP         @ nan       
+                   WN         @ nan       
+                   LP         @ nan       
+                   LN         @ nan          =  1.1479e-07     
+tphl               WP         @ nan       
+                   WN         @ nan       
+                   LP         @ nan       
+                   LN         @ nan          =  3.62961e-08     
+tplh               WP         @ nan       
+                   WN         @ nan       
+                   LP         @ nan       
+                   LN         @ nan          =  5.5902e-08     
+
+
+Measurement Name   :  dcs-meas_optimize
+Analysis Type      :  dc
+NM                 WP         @ nan       
+                   WN         @ nan       
+                   LP         @ nan       
+                   LN         @ nan          =  0.124141     
+NM_h               WP         @ nan       
+                   WN         @ nan       
+                   LP         @ nan       
+                   LN         @ nan          =  0.125804     
+NM_h_n             WP         @ nan       
+                   WN         @ nan       
+                   LP         @ nan       
+                   LN         @ nan          =  1.19234     
+NM_l               WP         @ nan       
+                   WN         @ nan       
+                   LP         @ nan       
+                   LN         @ nan          =  0.124141     
+NM_l_n             WP         @ nan       
+                   WN         @ nan       
+                   LP         @ nan       
+                   LN         @ nan          =  1.2083     
+V_ih               WP         @ nan       
+                   WN         @ nan       
+                   LP         @ nan       
+                   LN         @ nan          =  0.174196     
+V_il               WP         @ nan       
+                   WN         @ nan       
+                   LP         @ nan       
+                   LN         @ nan          =  0.124141     
+c                  WP         @ nan       
+                   WN         @ nan       
+                   LP         @ nan       
+                   LN         @ nan          =  0.1     
+d                  WP         @ nan       
+                   WN         @ nan       
+                   LP         @ nan       
+                   LN         @ nan          =  1e-30     
+d1                 WP         @ nan       
+                   WN         @ nan       
+                   LP         @ nan       
+                   LN         @ nan          =  0.124141     
+dvodvi             WP         @ nan       
+                   WN         @ nan       
+                   LP         @ nan       
+                   LN         @ nan          =  -0.000378843     
+max_dc_pwr         WP         @ nan       
+                   WN         @ nan       
+                   LP         @ nan       
+                   LN         @ nan          =  5.24089e-11     
+n_dc_pwr           WP         @ nan       
+                   WN         @ nan       
+                   LP         @ nan       
+                   LN         @ nan          =  0.000234535     
+n_nm               WP         @ nan       
+                   WN         @ nan       
+                   LP         @ nan       
+                   LN         @ nan          =  0.12083     
+
+
+
+
+
+
+
+

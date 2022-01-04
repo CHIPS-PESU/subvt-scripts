@@ -1,0 +1,24 @@
+//  snm.mdl
+//  (C) 2008 Cadence Design Systems, Inc.
+//
+// This measurement computes noise margin for signal integrity analysis tools.
+// Included are the derivative of the VTC (voltage transfer characteristic), 
+// crossing point of the derivative of unity VTC and noise margin. 
+// It is implemented by only 10 statements. Unbelievable!!
+
+// alias measurement definition
+alias measurement snm {
+
+        // definition of the parameters to be output
+   	export real vin_low, vin_high
+
+        // definition of dc analysis on source vin and sweeping dc value
+	run dc (start=0, stop=3.0, step=.05m, dev=vin, param=dc)
+
+        // calculation of low and high static noise margin
+	vin_low = cross(sig=deriv(out), dir='fall, n=1, thresh=-1) - 0
+	vin_high = 3.0 - cross(sig=deriv(out), dir='rise, n=-1, thresh=-1)
+}
+
+// execute the measurement alias
+run snm

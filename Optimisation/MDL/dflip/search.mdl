@@ -1,0 +1,72 @@
+//  search.mdl
+//  (C) 2008 Cadence Design Systems, Inc.
+//
+// This example performs a binary search at the top level as well as 
+// in a foreach loop to find the value of a design parameter meeting 
+// specified criteria. This capability is typically used to 
+// determine values such as setup time or maximum load.
+
+// alias measurement definition
+alias measurement setup { 
+
+  // definition of the parameters to be output
+  export real outcross, Tsetup, maxq
+
+  // definition of transient analysis
+  run tran(stop=40n)
+
+  // computation of crossing point of V(q)
+  outcross=cross(V(q),thresh=vdd/2)
+  
+  // computation of maximum value of V(q)
+  maxq=max(q)  
+
+  // computation of Tsetup
+  Tsetup=deltax(sig1=v(clock),sig2=v(data),dir1='rise, \
+         n1=1, thresh1=vdd/2, dir2='rise, n2=1, thresh2=vdd/2)
+}
+
+// print results in user-defined format
+print fmt("****Intermediate results of search****\n\n") to="search.print"
+print fmt("%-15s%-15s%-15s%-15s\n\n", "vdata:delay", \
+          "outcross", "maxq", "Tsetup") addto="search.print"
+
+// define a binary search function, varying the value of 
+// vdata:delay from 2n to 10n with tolerance=1p
+search vdata:delay from binary(start=2n, stop=10n, tol=1p) {
+
+  // execute the measurement alias
+  run setup
+
+  // print out intermediate results of search function
+  print fmt("%-15g%-15g%-15g%-15g\n", vdata:delay, \
+            setup ->outcross, setup ->maxq, setup ->Tsetup) \
+            addto="search.print"
+
+// Continuing search until maxq value falls below vdd/2
+} until ( setup -> maxq < vdd/2) 
+
+// Or continuing search once maxq value falls above vdd/2
+//} while ( setup->maxq > vdd/2)
+
+// Or continuing search either until maxq value falls below vdd/2 or once maxq value falls above vdd/2
+//} bisection ( setup -> maxq > vdd/2) 
+
+
+// define a foreach sweep with a search function in it
+//foreach vdd from {1.8, 3}
+//{
+//   foreach temp from {25, 50}
+//   {
+//     print fmt("\n\nvdd=%g\ttemp=%g\n", vdd, temp) addto="search.print"
+//     print fmt("%-15s%-15s%-15s%-15s\n", "vdata:delay", \
+//          "outcross", "maxq", "Tsetup") addto="search.print"
+//     search vdata:delay from binary(start=2n, stop=10n, tol=1p) output='none {
+//        run setup as foreach_setup
+//        print fmt("%-15g%-15g%-15g%-15g\n", vdata:delay, \
+//                  foreach_setup ->outcross, foreach_setup ->maxq, \
+//                  foreach_setup ->Tsetup) addto="search.print"
+//     }bisection( foreach_setup->maxq >vdd/2 && foreach_setup->outcross <10.3n)
+//   }
+//}
+

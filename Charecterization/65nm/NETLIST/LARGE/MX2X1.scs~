@@ -1,0 +1,44 @@
+subckt MX2X1 Y A B S0 VDD GND
+NM5 (n5 B GND GND) n_p9_hpculvt m=1 mf=1 w=200n l=30n nf=1 ad=15f as=15f \
+        pd=550n ps=550n sa=75n sb=75n sd=0 sca=58.0552 scb=30.1749m \
+        scc=7.4422m mis_flag=1 cctg_flag=1 rdscon_flag=1 rgate_flag=1
+NM4 (n0 S0 n5 GND) n_p9_hpculvt m=1 mf=1 w=200n l=30n nf=1 ad=15f as=15f \
+        pd=550n ps=550n sa=75n sb=75n sd=0 sca=58.0552 scb=30.1749m \
+        scc=7.4422m mis_flag=1 cctg_flag=1 rdscon_flag=1 rgate_flag=1
+NM0 (S0b S0 GND GND) n_p9_hpculvt m=1 mf=1 w=100n l=30n nf=1 ad=7.5f \
+        as=7.5f pd=350n ps=350n sa=75n sb=75n sd=0 sca=93.2401 \
+        scb=35.2443m scc=11.7056m mis_flag=1 cctg_flag=1 rdscon_flag=1 \
+        rgate_flag=1
+NM2 (n3 A GND GND) n_p9_hpculvt m=1 mf=1 w=200n l=30n nf=1 ad=15f as=15f \
+        pd=550n ps=550n sa=75n sb=75n sd=0 sca=58.0552 scb=30.1749m \
+        scc=7.4422m mis_flag=1 cctg_flag=1 rdscon_flag=1 rgate_flag=1
+NM1 (Y n0 GND GND) n_p9_hpculvt m=1 mf=1 w=100n l=30n nf=1 ad=7.5f as=7.5f \
+        pd=350n ps=350n sa=75n sb=75n sd=0 sca=93.2401 scb=35.2443m \
+        scc=11.7056m mis_flag=1 cctg_flag=1 rdscon_flag=1 rgate_flag=1
+NM3 (n0 S0b n3 GND) n_p9_hpculvt m=1 mf=1 w=200n l=30n nf=1 ad=15f as=15f \
+        pd=550n ps=550n sa=75n sb=75n sd=0 sca=58.0552 scb=30.1749m \
+        scc=7.4422m mis_flag=1 cctg_flag=1 rdscon_flag=1 rgate_flag=1
+PM1 (Y n0 VDD VDD) p_p9_hpculvt m=1 mf=1 w=1.08u l=30n nf=1 ad=81f as=81f \
+        pd=2.31u ps=2.31u sa=75n sb=75n sd=0 sca=13.4363 scb=7.97447m \
+        scc=1.45098m mis_flag=1 cctg_flag=1 rdscon_flag=1 rgate_flag=1
+PM5 (n6 B VDD VDD) p_p9_hpculvt m=1 mf=1 w=2.16u l=30n nf=1 ad=162f \
+        as=162f pd=4.47u ps=4.47u sa=75n sb=75n sd=0 sca=6.91443 \
+        scb=3.98785m scc=725.49u mis_flag=1 cctg_flag=1 rdscon_flag=1 \
+        rgate_flag=1
+PM0 (S0b S0 VDD VDD) p_p9_hpculvt m=1 mf=1 w=1.08u l=30n nf=1 ad=81f \
+        as=81f pd=2.31u ps=2.31u sa=75n sb=75n sd=0 sca=13.4363 \
+        scb=7.97447m scc=1.45098m mis_flag=1 cctg_flag=1 rdscon_flag=1 \
+        rgate_flag=1
+PM3 (n0 S0 n4 VDD) p_p9_hpculvt m=1 mf=1 w=2.16u l=30n nf=1 ad=162f \
+        as=162f pd=4.47u ps=4.47u sa=75n sb=75n sd=0 sca=6.91443 \
+        scb=3.98785m scc=725.49u mis_flag=1 cctg_flag=1 rdscon_flag=1 \
+        rgate_flag=1
+PM4 (n0 S0b n6 VDD) p_p9_hpculvt m=1 mf=1 w=2.16u l=30n nf=1 ad=162f \
+        as=162f pd=4.47u ps=4.47u sa=75n sb=75n sd=0 sca=6.91443 \
+        scb=3.98785m scc=725.49u mis_flag=1 cctg_flag=1 rdscon_flag=1 \
+        rgate_flag=1
+PM2 (n4 A VDD VDD) p_p9_hpculvt m=1 mf=1 w=2.16u l=30n nf=1 ad=162f \
+        as=162f pd=4.47u ps=4.47u sa=75n sb=75n sd=0 sca=6.91443 \
+        scb=3.98785m scc=725.49u mis_flag=1 cctg_flag=1 rdscon_flag=1 \
+        rgate_flag=1
+ends MX2X1

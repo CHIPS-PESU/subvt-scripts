@@ -1,0 +1,25 @@
+HEADER
+"PSFversion" "1.00"
+"Log Generator" "drlLog rev. 1.0"
+"Log Time Stamp" "Fri May 21 11:48:44 2021"
+"psfversion" ""
+"simulator" "spectre"
+"version" "19.1.0.396.isr8"
+"date" "11:48:44 AM, Fri May 21, 2021"
+"design" "**** Altos spice deck for characterization release dev"
+"signalNameType" "spectre"
+"simMode" "Spectre"
+"measdgt" 6
+"ingold" 2
+"sst2usecolon" 0
+TYPE
+"analysisInst" STRUCT(
+"analysisType" STRING *
+"dataFile" STRING *
+"format" STRING *
+"parent" STRING *
+"sweepVariable" ARRAY ( * ) STRING *
+"description" STRING *
+)
+VALUE
+END

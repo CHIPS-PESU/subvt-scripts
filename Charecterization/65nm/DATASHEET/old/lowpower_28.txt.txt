@@ -1,0 +1,2 @@
+Library /home/VLSI_ANALOG/Backup/UMC180/Designkits/Cadence_6.1/lowpower/liberate/DATASHEET/lowpower_28.txt Datasheet - created by Liberate dev on Tue Jul  6 14:06:45 IST 2021
+

@@ -1,0 +1,63 @@
+Exported variables from results directory:  ././input.raw/
+
+date               :  3:48:10 PM, Mon Dec 27, 2021
+design             :  // Generated for: spectre
+simulator          :  spectre
+version            :  19.1.0.396.isr8
+
+
+Measurement Name   :  trans
+Analysis Type      :  tran
+ctoq                  =  2.27735e-07 
+delay                 =  2.27735e-07 
+energy                =  2.23541e-14 
+my_fall               =  5.6369e-09 
+my_rise               =  8.219e-09 
+n_delay               =  0.75081 
+n_energy              =  0.889752 
+tpd                   =  8.219e-09 
+
+
+Swept Measurements :
+Measurement Name   :  trans-meas_optimize
+Analysis Type      :  tran
+ctoq               WP         @ 3.05279e-07
+                   WN         @ 1.2e-07   
+                   LP         @ 4e-08     
+                   LN         @ 5.48214e-08   =  2.57295e-07     
+delay              WP         @ 3.05279e-07
+                   WN         @ 1.2e-07   
+                   LP         @ 4e-08     
+                   LN         @ 5.48214e-08   =  2.57295e-07     
+energy             WP         @ 3.05279e-07
+                   WN         @ 1.2e-07   
+                   LP         @ 4e-08     
+                   LN         @ 5.48214e-08   =  3.71054e-15     
+my_fall            WP         @ 3.05279e-07
+                   WN         @ 1.2e-07   
+                   LP         @ 4e-08     
+                   LN         @ 5.48214e-08   =  2.73449e-08     
+my_rise            WP         @ 3.05279e-07
+                   WN         @ 1.2e-07   
+                   LP         @ 4e-08     
+                   LN         @ 5.48214e-08   =  1.88941e-08     
+n_delay            WP         @ 3.05279e-07
+                   WN         @ 1.2e-07   
+                   LP         @ 4e-08     
+                   LN         @ 5.48214e-08   =  0.852742     
+n_energy           WP         @ 3.05279e-07
+                   WN         @ 1.2e-07   
+                   LP         @ 4e-08     
+                   LN         @ 5.48214e-08   =  0.112939     
+tpd                WP         @ 3.05279e-07
+                   WN         @ 1.2e-07   
+                   LP         @ 4e-08     
+                   LN         @ 5.48214e-08   =  2.73449e-08     
+
+
+
+
+
+
+
+

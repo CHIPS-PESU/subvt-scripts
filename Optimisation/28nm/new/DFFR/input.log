@@ -1,0 +1,3191 @@
+
+Spectre (R) Circuit Simulator
+Version 19.1.0.396.isr8 64bit -- 19 Jun 2020
+Copyright (C) 1989-2020 Cadence Design Systems, Inc. All rights reserved worldwide. Cadence and Spectre are registered trademarks of Cadence Design Systems, Inc. All others are the property of their respective holders.
+
+Includes RSA BSAFE(R) Cryptographic or Security Protocol Software from RSA Security, Inc.
+
+User: VLSI_ANALOG   Host: cad19   HostID: 7F0100   PID: 29335
+Memory  available: 333.5987 MB  physical: 3.9726 GB
+Linux   : Red Hat Enterprise Linux Server release 6.9 (Santiago)
+CPU Type: Intel(R) Core(TM) i5-2320 CPU @ 3.00GHz
+All processors running at 1600.0 MHz
+        Socket: Processors
+        0:       0,  1,  2,  3
+        
+System load averages (1min, 5min, 15min) : 3.8 %, 6.2 %, 3.8 %
+
+
+Simulating `./input.scs' on cad19 at 3:03:45 PM, Fri Dec 10, 2021 (process id: 29335).
+Current working directory: /home/VLSI_ANALOG/UMC180/Designkits/Cadence_6.1/lowpower28/spectremdl/new/DFFR
+Command line:
+    /home/installs/SPECTRE191/tools.lnx86/bin/spectre -64 =mdl  \
+        input.mdl ./input.scs
+
+Loading /home/installs/SPECTRE191/tools.lnx86/cmi/lib/64bit/5.0/libinfineon_sh.so ...
+Loading /home/installs/SPECTRE191/tools.lnx86/cmi/lib/64bit/5.0/libphilips_o_sh.so ...
+Loading /home/installs/SPECTRE191/tools.lnx86/cmi/lib/64bit/5.0/libphilips_sh.so ...
+Loading /home/installs/SPECTRE191/tools.lnx86/cmi/lib/64bit/5.0/libsparam_sh.so ...
+Loading /home/installs/SPECTRE191/tools.lnx86/cmi/lib/64bit/5.0/libstmodels_sh.so ...
+Loading /home/installs/SPECTRE191/tools.lnx86/spectre/lib/64bit/mdl/libSpectreEH_sh.so ...
+Reading file:  /home/VLSI_ANALOG/UMC180/Designkits/Cadence_6.1/lowpower28/spectremdl/new/DFFR/input.mdl
+Reading file:  /home/VLSI_ANALOG/UMC180/Designkits/Cadence_6.1/lowpower28/spectremdl/new/DFFR/input.scs
+Reading file:  /home/installs/SPECTRE191/tools.lnx86/spectre/etc/configs/spectre.cfg
+Reading file:  /home/VLSI_ANALOG/UMCLib/pdk/UMC/28/_G-01-LOGIC_MIXED_MODE28N-HPC/Designkits/Cadence_IC6/G-9FD-LOGIC_MIXED_MODE28N-HPC_UM028FDKHCC0000OA-FDK-Ver.A14_PB/UM028FDKHCC0000OA_A14_DESIGNKIT/UM028FDKHCC0000OA_A14_PB/Models/Spectre/l28hpc_mm_v1201.lib.scs
+Reading file:  /home/VLSI_ANALOG/UMCLib/pdk/UMC/28/_G-01-LOGIC_MIXED_MODE28N-HPC/Designkits/Cadence_IC6/G-9FD-LOGIC_MIXED_MODE28N-HPC_UM028FDKHCC0000OA-FDK-Ver.A14_PB/UM028FDKHCC0000OA_A14_DESIGNKIT/UM028FDKHCC0000OA_A14_PB/Models/Spectre/l28hpc_rf_v017.lib.scs
+Time for NDB Parsing: CPU = 4.6203 s, elapsed = 4.89547 s.
+Time accumulated: CPU = 4.76527 s, elapsed = 4.89547 s.
+Peak resident memory used = 206 Mbytes.
+
+
+Warning from spectre during hierarchy flattening.
+    WARNING (SFE-1131): Scope option `scalefactor' specified with scope `TopCircuit' at line `680' has also been specified at line `729' in file `/home/VLSI_ANALOG/UMCLib/pdk/UMC/28/_G-01-LOGIC_MIXED_MODE28N-HPC/Designkits/Cadence_IC6/G-9FD-LOGIC_MIXED_MODE28N-HPC_UM028FDKHCC0000OA-FDK-Ver.A14_PB/UM028FDKHCC0000OA_A14_DESIGNKIT/UM028FDKHCC0000OA_A14_PB/umc28hpc/../Models/Spectre/l28hpc_rf_v017.lib.scs'. As a result, the last specified value will be used for simulation.
+
+Time for Elaboration: CPU = 75.988 ms, elapsed = 76.179 ms.
+Time accumulated: CPU = 4.84126 s, elapsed = 4.97184 s.
+Peak resident memory used = 219 Mbytes.
+
+
+Warning from spectre during hierarchy flattening.
+    WARNING (SPECTRE-17101): The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+
+
+Time for EDB Visiting: CPU = 1.999 ms, elapsed = 1.82605 ms.
+Time accumulated: CPU = 4.84326 s, elapsed = 4.97385 s.
+Peak resident memory used = 220 Mbytes.
+
+
+Global user options:
+         psfversion = 1.4.0
+            vabstol = 1e-06
+            iabstol = 1e-12
+               temp = 27
+               gmin = 1e-12
+             rforce = 1
+           maxnotes = 5
+           maxwarns = 5
+             digits = 5
+               cols = 80
+             pivrel = 0.001
+           sensfile = ../psf/sens.output
+     checklimitdest = psf
+               save = allpub
+        scalefactor = 0.9
+             reltol = 0.001
+               tnom = 27
+             scalem = 1
+              scale = 1
+
+Scoped user options:
+
+Circuit inventory:
+              nodes 20
+              bsim4 29    
+          capacitor 1     
+              diode 15    
+            vsource 4     
+
+Analysis and control statement inventory:
+               info 7     
+               tran 1     
+
+Output statements:
+             .probe 0     
+           .measure 0     
+               save 0     
+
+Time for parsing: CPU = 4 ms, elapsed = 87.3909 ms.
+Time accumulated: CPU = 4.84726 s, elapsed = 5.06135 s.
+Peak resident memory used = 222 Mbytes.
+
+~~~~~~~~~~~~~~~~~~~~~~
+Pre-Simulation Summary
+~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~
+
+************************************************
+Transient Analysis `trans': time = (0 s -> 1 us)
+************************************************
+DC simulation time: CPU = 5.999 ms, elapsed = 5.73897 ms.
+
+Opening the PSFXL file ./input.raw/trans.tran.tran ...
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 1 us
+    step = 1 ns
+    maxstep = 20 ns
+    ic = all
+    useprevic = 
+Spectre received SIGTERM sent from PID: 23012 with UID: 0.
+   abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = moderate
+    method = traponly
+    lteratio = 3.5
+    relref = sigglobal
+    cmin = 0 F
+    gmin = 1 pS
+
+
+Output and IC/nodeset summary:
+                 save   1       (current)
+                 save   20      (voltage)
+
+......9......8......7......6......5......4......3......2......1......0
+Number of accepted tran steps =             453
+
+Maximum value achieved for any signal of each quantity: 
+V: V(I20.PM16:int_d) = 389 mV
+I: I(V0:p) = 64.52 uA
+If your circuit contains signals of the same quantity that are vastly different in size (such as high voltage circuitry combined with low voltage control circuitry), you should consider specifying global option `bin_relref=yes'.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Post-Transient Simulation Summary
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   -   To further speed up simulation, consider
+          add ++aps on command line
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+During simulation, the CPU load for active processors is :
+         0 (5.2 %)       1 (89.9 %)     
+        Total: 96.0%
+Initial condition solution time: CPU = 5.999 ms, elapsed = 5.80311 ms.
+Intrinsic tran analysis time:    CPU = 213.968 ms, elapsed = 253.211 ms.
+Total time required for tran analysis `trans': CPU = 222.966 ms, elapsed = 262.266 ms.
+Time accumulated: CPU = 5.07723 s, elapsed = 5.33148 s.
+Peak resident memory used = 226 Mbytes.
+
+
+Warning from spectre.
+    WARNING (SPECTRE-17101): The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+    WARNING (SPECTRE-17101): The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+    WARNING (SPECTRE-17101): The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+    WARNING (SPECTRE-17101): The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+
+
+Opening the PSF file ./input.raw/trans.optimize ...
+
+**********************************************************
+Transient Analysis `trans-000_trans': time = (0 s -> 1 us)
+**********************************************************
+DC simulation time: CPU = 4 ms, elapsed = 4.17805 ms.
+
+Opening the PSFXL file ./input.raw/trans-000_trans.tran.tran ...
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 1 us
+    step = 1 ns
+    maxstep = 20 ns
+    ic = all
+    useprevic = no
+    skipdc = no
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = moderate
+    method = traponly
+    lteratio = 3.5
+    relref = sigglobal
+    cmin = 0 F
+    gmin = 1 pS
+
+
+Output and IC/nodeset summary:
+                 save   1       (current)
+                 save   20      (voltage)
+
+......9......8......7......6......5......4......3......2......1......0
+Number of accepted tran steps =             490
+
+Maximum value achieved for any signal of each quantity: 
+V: V(I20.PM16:int_d) = 382.4 mV
+I: I(V0:p) = 28.16 uA
+If your circuit contains signals of the same quantity that are vastly different in size (such as high voltage circuitry combined with low voltage control circuitry), you should consider specifying global option `bin_relref=yes'.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Post-Transient Simulation Summary
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   -   To further speed up simulation, consider
+          add ++aps on command line
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+During simulation, the CPU load for active processors is :
+         0 (11.5 %)      1 (82.3 %)     
+        Total: 95.0%
+Initial condition solution time: CPU = 4 ms, elapsed = 4.22788 ms.
+Intrinsic tran analysis time:    CPU = 229.965 ms, elapsed = 273.117 ms.
+Total time required for tran analysis `trans-000_trans': CPU = 236.964 ms, elapsed = 280.29 ms.
+Time accumulated: CPU = 5.44317 s, elapsed = 5.83659 s.
+Peak resident memory used = 226 Mbytes.
+
+
+Warning from spectre.
+    WARNING (SPECTRE-17101): The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+
+
+**********************************************************
+Transient Analysis `trans-000_trans': time = (0 s -> 1 us)
+**********************************************************
+DC simulation time: CPU = 3 ms, elapsed = 2.86293 ms.
+
+Opening the PSFXL file ./input.raw/trans-000_trans.tran.tran ...
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 1 us
+    step = 1 ns
+    maxstep = 20 ns
+    ic = all
+    useprevic = no
+    skipdc = no
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = moderate
+    method = traponly
+    lteratio = 3.5
+    relref = sigglobal
+    cmin = 0 F
+    gmin = 1 pS
+
+
+Output and IC/nodeset summary:
+                 save   1       (current)
+                 save   20      (voltage)
+
+......9......8......7......6......5......4......3......2......1......0
+Number of accepted tran steps =             490
+
+Maximum value achieved for any signal of each quantity: 
+V: V(I20.PM16:int_d) = 382.4 mV
+I: I(V0:p) = 28.16 uA
+If your circuit contains signals of the same quantity that are vastly different in size (such as high voltage circuitry combined with low voltage control circuitry), you should consider specifying global option `bin_relref=yes'.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Post-Transient Simulation Summary
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   -   To further speed up simulation, consider
+          add ++aps on command line
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+During simulation, the CPU load for active processors is :
+         0 (15.0 %)      1 (78.8 %)      2 (1.2 %)      
+        Total: 95.3%
+Initial condition solution time: CPU = 3 ms, elapsed = 2.90895 ms.
+Intrinsic tran analysis time:    CPU = 232.964 ms, elapsed = 276.702 ms.
+Total time required for tran analysis `trans-000_trans': CPU = 237.964 ms, elapsed = 282.289 ms.
+Time accumulated: CPU = 5.71713 s, elapsed = 6.15644 s.
+Peak resident memory used = 227 Mbytes.
+
+
+Warning from spectre.
+    WARNING (SPECTRE-17101): The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+    WARNING (SPECTRE-17101): The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+
+
+**********************************************************
+Transient Analysis `trans-000_trans': time = (0 s -> 1 us)
+**********************************************************
+DC simulation time: CPU = 3 ms, elapsed = 2.71797 ms.
+
+Opening the PSFXL file ./input.raw/trans-000_trans.tran.tran ...
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 1 us
+    step = 1 ns
+    maxstep = 20 ns
+    ic = all
+    useprevic = no
+    skipdc = no
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = moderate
+    method = traponly
+    lteratio = 3.5
+    relref = sigglobal
+    cmin = 0 F
+    gmin = 1 pS
+
+
+Output and IC/nodeset summary:
+                 save   1       (current)
+                 save   20      (voltage)
+
+......9......8......7......6......5......4......3......2......1......0
+Number of accepted tran steps =             490
+
+Maximum value achieved for any signal of each quantity: 
+V: V(I20.PM16:int_d) = 382.4 mV
+I: I(V0:p) = 28.16 uA
+If your circuit contains signals of the same quantity that are vastly different in size (such as high voltage circuitry combined with low voltage control circuitry), you should consider specifying global option `bin_relref=yes'.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Post-Transient Simulation Summary
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   -   To further speed up simulation, consider
+          add ++aps on command line
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+During simulation, the CPU load for active processors is :
+         0 (18.9 %)      1 (74.9 %)      2 (1.4 %)      
+        Total: 95.6%
+Initial condition solution time: CPU = 3 ms, elapsed = 2.76184 ms.
+Intrinsic tran analysis time:    CPU = 225.966 ms, elapsed = 257.707 ms.
+Total time required for tran analysis `trans-000_trans': CPU = 229.965 ms, elapsed = 263.164 ms.
+Time accumulated: CPU = 6.00909 s, elapsed = 6.48243 s.
+Peak resident memory used = 227 Mbytes.
+
+
+Warning from spectre.
+    WARNING (SPECTRE-17101): The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+    WARNING (SPECTRE-17101): The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+
+
+**********************************************************
+Transient Analysis `trans-000_trans': time = (0 s -> 1 us)
+**********************************************************
+DC simulation time: CPU = 3 ms, elapsed = 3.45087 ms.
+
+Opening the PSFXL file ./input.raw/trans-000_trans.tran.tran ...
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 1 us
+    step = 1 ns
+    maxstep = 20 ns
+    ic = all
+    useprevic = no
+    skipdc = no
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = moderate
+    method = traponly
+    lteratio = 3.5
+    relref = sigglobal
+    cmin = 0 F
+    gmin = 1 pS
+
+
+Output and IC/nodeset summary:
+                 save   1       (current)
+                 save   20      (voltage)
+
+......9......8......7......6......5......4......3......2......1......0
+Number of accepted tran steps =             490
+
+Maximum value achieved for any signal of each quantity: 
+V: V(I20.PM16:int_d) = 382.4 mV
+I: I(V0:p) = 28.16 uA
+If your circuit contains signals of the same quantity that are vastly different in size (such as high voltage circuitry combined with low voltage control circuitry), you should consider specifying global option `bin_relref=yes'.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Post-Transient Simulation Summary
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   -   To further speed up simulation, consider
+          add ++aps on command line
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+During simulation, the CPU load for active processors is :
+         0 (22.5 %)      1 (71.5 %)      2 (1.6 %)      
+        Total: 95.9%
+Initial condition solution time: CPU = 3 ms, elapsed = 3.49903 ms.
+Intrinsic tran analysis time:    CPU = 222.966 ms, elapsed = 255.939 ms.
+Total time required for tran analysis `trans-000_trans': CPU = 229.965 ms, elapsed = 262.196 ms.
+Time accumulated: CPU = 6.30004 s, elapsed = 6.80766 s.
+Peak resident memory used = 227 Mbytes.
+
+
+Warning from spectre.
+    WARNING (SPECTRE-17101): The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+    WARNING (SPECTRE-17101): The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+
+
+**********************************************************
+Transient Analysis `trans-000_trans': time = (0 s -> 1 us)
+**********************************************************
+DC simulation time: CPU = 3 ms, elapsed = 2.67982 ms.
+
+Opening the PSFXL file ./input.raw/trans-000_trans.tran.tran ...
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 1 us
+    step = 1 ns
+    maxstep = 20 ns
+    ic = all
+    useprevic = no
+    skipdc = no
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = moderate
+    method = traponly
+    lteratio = 3.5
+    relref = sigglobal
+    cmin = 0 F
+    gmin = 1 pS
+
+
+Output and IC/nodeset summary:
+                 save   1       (current)
+                 save   20      (voltage)
+
+......9......8......7......6......5......4......3......2......1......0
+Number of accepted tran steps =             490
+
+Maximum value achieved for any signal of each quantity: 
+V: V(I20.PM16:int_d) = 382.4 mV
+I: I(V0:p) = 28.16 uA
+If your circuit contains signals of the same quantity that are vastly different in size (such as high voltage circuitry combined with low voltage control circuitry), you should consider specifying global option `bin_relref=yes'.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Post-Transient Simulation Summary
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   -   To further speed up simulation, consider
+          add ++aps on command line
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+During simulation, the CPU load for active processors is :
+         0 (25.7 %)      1 (68.3 %)      2 (1.8 %)      
+        Total: 96.1%
+Initial condition solution time: CPU = 3 ms, elapsed = 2.72417 ms.
+Intrinsic tran analysis time:    CPU = 229.964 ms, elapsed = 263.214 ms.
+Total time required for tran analysis `trans-000_trans': CPU = 233.964 ms, elapsed = 268.575 ms.
+Time accumulated: CPU = 6.597 s, elapsed = 7.1393 s.
+Peak resident memory used = 227 Mbytes.
+
+
+Warning from spectre.
+    WARNING (SPECTRE-17101): The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+    WARNING (SPECTRE-17101): The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+    WARNING (SPECTRE-17101): The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+
+
+**********************************************************
+Transient Analysis `trans-000_trans': time = (0 s -> 1 us)
+**********************************************************
+
+Notice from spectre during IC analysis, during transient analysis `trans-000_trans', during task `MDLControl'.
+    GminDC = 1 pS is large enough to noticeably affect the DC solution.
+        dV(I20.PM12:int_d) = 4.9911 uV
+        Use the `gmin_check' option to eliminate or expand this report.
+
+DC simulation time: CPU = 3.999 ms, elapsed = 3.84617 ms.
+
+Opening the PSFXL file ./input.raw/trans-000_trans.tran.tran ...
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 1 us
+    step = 1 ns
+    maxstep = 20 ns
+    ic = all
+    useprevic = no
+    skipdc = no
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = moderate
+    method = traponly
+    lteratio = 3.5
+    relref = sigglobal
+    cmin = 0 F
+    gmin = 1 pS
+
+
+Output and IC/nodeset summary:
+                 save   1       (current)
+                 save   20      (voltage)
+
+......9......8......7......6......5......4......3......2......
+
+Notice from spectre at time = 900 ns during transient analysis `trans-000_trans', during task `MDLControl'.
+    Found trapezoidal ringing on node V0:p.
+
+......9......8......7......6......5......4......3......2......1..
+
+Notice from spectre at time = 944.026 ns during transient analysis `trans-000_trans', during task `MDLControl'.
+    Found trapezoidal ringing on node V0:p.
+
+......9......8......7......6......5......4......3......2......1......0
+Number of accepted tran steps =             405
+
+Notice from spectre during transient analysis `trans-000_trans', during task `MDLControl'.
+    Trapezoidal ringing is detected during tran analysis.
+        Please use method=trap for better results and performance.
+
+
+Maximum value achieved for any signal of each quantity: 
+V: V(I20.PM0:int_d) = 415.4 mV
+I: I(V0:p) = 76.44 uA
+If your circuit contains signals of the same quantity that are vastly different in size (such as high voltage circuitry combined with low voltage control circuitry), you should consider specifying global option `bin_relref=yes'.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Post-Transient Simulation Summary
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   -   To further speed up simulation, consider
+          add ++aps on command line
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+During simulation, the CPU load for active processors is :
+         0 (28.9 %)      1 (65.6 %)      2 (2.0 %)      
+        Total: 96.9%
+Initial condition solution time: CPU = 3.999 ms, elapsed = 3.88503 ms.
+Intrinsic tran analysis time:    CPU = 203.969 ms, elapsed = 230.865 ms.
+Total time required for tran analysis `trans-000_trans': CPU = 209.968 ms, elapsed = 237.401 ms.
+Time accumulated: CPU = 6.89995 s, elapsed = 7.47178 s.
+Peak resident memory used = 227 Mbytes.
+
+
+Warning from spectre.
+    WARNING (SPECTRE-17101): The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+    WARNING (SPECTRE-17101): The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+
+
+**********************************************************
+Transient Analysis `trans-000_trans': time = (0 s -> 1 us)
+**********************************************************
+
+Notice from spectre during IC analysis, during transient analysis `trans-000_trans', during task `MDLControl'.
+    GminDC = 1 pS is large enough to noticeably affect the DC solution.
+        dV(I20.PM12:int_d) = 5.02926 uV
+        Use the `gmin_check' option to eliminate or expand this report.
+
+DC simulation time: CPU = 5.999 ms, elapsed = 5.87416 ms.
+
+Opening the PSFXL file ./input.raw/trans-000_trans.tran.tran ...
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 1 us
+    step = 1 ns
+    maxstep = 20 ns
+    ic = all
+    useprevic = no
+    skipdc = no
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = moderate
+    method = traponly
+    lteratio = 3.5
+    relref = sigglobal
+    cmin = 0 F
+    gmin = 1 pS
+
+
+Output and IC/nodeset summary:
+                 save   1       (current)
+                 save   20      (voltage)
+
+......9......8......7......6......5......4......3......2......1......0
+Number of accepted tran steps =             409
+
+Maximum value achieved for any signal of each quantity: 
+V: V(I20.PM1:int_s) = 380.4 mV
+I: I(V0:p) = 3.794 uA
+If your circuit contains signals of the same quantity that are vastly different in size (such as high voltage circuitry combined with low voltage control circuitry), you should consider specifying global option `bin_relref=yes'.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Post-Transient Simulation Summary
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   -   To further speed up simulation, consider
+          add ++aps on command line
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+During simulation, the CPU load for active processors is :
+         0 (31.3 %)      1 (63.1 %)      2 (1.9 %)      
+        Total: 96.7%
+Initial condition solution time: CPU = 5.999 ms, elapsed = 5.91111 ms.
+Intrinsic tran analysis time:    CPU = 200.969 ms, elapsed = 232.188 ms.
+Total time required for tran analysis `trans-000_trans': CPU = 209.968 ms, elapsed = 240.741 ms.
+Time accumulated: CPU = 7.17291 s, elapsed = 7.77783 s.
+Peak resident memory used = 227 Mbytes.
+
+
+Warning from spectre.
+    WARNING (SPECTRE-17101): The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+    WARNING (SPECTRE-17101): The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+
+
+**********************************************************
+Transient Analysis `trans-000_trans': time = (0 s -> 1 us)
+**********************************************************
+DC simulation time: CPU = 2.999 ms, elapsed = 2.985 ms.
+
+Opening the PSFXL file ./input.raw/trans-000_trans.tran.tran ...
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 1 us
+    step = 1 ns
+    maxstep = 20 ns
+    ic = all
+    useprevic = no
+    skipdc = no
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = moderate
+    method = traponly
+    lteratio = 3.5
+    relref = sigglobal
+    cmin = 0 F
+    gmin = 1 pS
+
+
+Output and IC/nodeset summary:
+                 save   1       (current)
+                 save   20      (voltage)
+
+......9......8......7.
+
+Notice from spectre at time = 307.853 ns during transient analysis `trans-000_trans', during task `MDLControl'.
+    Found trapezoidal ringing on node I20.NM5:int_s.
+Notice from spectre at time = 308.513 ns during transient analysis `trans-000_trans', during task `MDLControl'.
+    Found trapezoidal ringing on node I20.NM5:int_s.
+
+......9......8......7......6......5......4......3......2......1......0
+Number of accepted tran steps =             496
+
+Notice from spectre during transient analysis `trans-000_trans', during task `MDLControl'.
+    Trapezoidal ringing is detected during tran analysis.
+        Please use method=trap for better results and performance.
+
+
+Maximum value achieved for any signal of each quantity: 
+V: V(I20.PM15:int_d) = 370.8 mV
+I: I(V0:p) = 3.273 uA
+If your circuit contains signals of the same quantity that are vastly different in size (such as high voltage circuitry combined with low voltage control circuitry), you should consider specifying global option `bin_relref=yes'.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Post-Transient Simulation Summary
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   -   To further speed up simulation, consider
+          add ++aps on command line
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+During simulation, the CPU load for active processors is :
+         0 (34.0 %)      1 (60.6 %)      2 (2.2 %)      
+        Total: 97.3%
+Initial condition solution time: CPU = 2.999 ms, elapsed = 3.02911 ms.
+Intrinsic tran analysis time:    CPU = 236.964 ms, elapsed = 265.523 ms.
+Total time required for tran analysis `trans-000_trans': CPU = 241.963 ms, elapsed = 271.284 ms.
+Time accumulated: CPU = 7.47986 s, elapsed = 8.1144 s.
+Peak resident memory used = 227 Mbytes.
+
+
+Warning from spectre.
+    WARNING (SPECTRE-17101): The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+
+
+**********************************************************
+Transient Analysis `trans-000_trans': time = (0 s -> 1 us)
+**********************************************************
+DC simulation time: CPU = 2 ms, elapsed = 3.36099 ms.
+
+Opening the PSFXL file ./input.raw/trans-000_trans.tran.tran ...
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 1 us
+    step = 1 ns
+    maxstep = 20 ns
+    ic = all
+    useprevic = no
+    skipdc = no
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = moderate
+    method = traponly
+    lteratio = 3.5
+    relref = sigglobal
+    cmin = 0 F
+    gmin = 1 pS
+
+
+Output and IC/nodeset summary:
+                 save   1       (current)
+                 save   20      (voltage)
+
+......9......8......7.
+
+Notice from spectre at time = 307.853 ns during transient analysis `trans-000_trans', during task `MDLControl'.
+    Found trapezoidal ringing on node I20.NM5:int_s.
+Notice from spectre at time = 308.512 ns during transient analysis `trans-000_trans', during task `MDLControl'.
+    Found trapezoidal ringing on node I20.NM5:int_s.
+
+......9......8......7......6......5......4......3......2......1......0
+Number of accepted tran steps =             496
+
+Notice from spectre during transient analysis `trans-000_trans', during task `MDLControl'.
+    Trapezoidal ringing is detected during tran analysis.
+        Please use method=trap for better results and performance.
+
+
+Maximum value achieved for any signal of each quantity: 
+V: V(I20.PM15:int_d) = 370.8 mV
+I: I(V0:p) = 3.273 uA
+If your circuit contains signals of the same quantity that are vastly different in size (such as high voltage circuitry combined with low voltage control circuitry), you should consider specifying global option `bin_relref=yes'.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Post-Transient Simulation Summary
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   -   To further speed up simulation, consider
+          add ++aps on command line
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+During simulation, the CPU load for active processors is :
+         0 (36.1 %)      1 (58.6 %)      2 (2.2 %)      
+        Total: 97.3%
+Initial condition solution time: CPU = 2 ms, elapsed = 3.407 ms.
+Intrinsic tran analysis time:    CPU = 234.965 ms, elapsed = 268.445 ms.
+Total time required for tran analysis `trans-000_trans': CPU = 240.963 ms, elapsed = 274.956 ms.
+Time accumulated: CPU = 7.75282 s, elapsed = 8.42176 s.
+Peak resident memory used = 227 Mbytes.
+
+
+Warning from spectre.
+    WARNING (SPECTRE-17101): The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+    WARNING (SPECTRE-17101): The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+
+
+**********************************************************
+Transient Analysis `trans-000_trans': time = (0 s -> 1 us)
+**********************************************************
+DC simulation time: CPU = 3 ms, elapsed = 3.65901 ms.
+
+Opening the PSFXL file ./input.raw/trans-000_trans.tran.tran ...
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 1 us
+    step = 1 ns
+    maxstep = 20 ns
+    ic = all
+    useprevic = no
+    skipdc = no
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = moderate
+    method = traponly
+    lteratio = 3.5
+    relref = sigglobal
+    cmin = 0 F
+    gmin = 1 pS
+
+
+Output and IC/nodeset summary:
+                 save   1       (current)
+                 save   20      (voltage)
+
+......9......8......7.
+
+Notice from spectre at time = 307.854 ns during transient analysis `trans-000_trans', during task `MDLControl'.
+    Found trapezoidal ringing on node I20.NM5:int_s.
+Notice from spectre at time = 308.513 ns during transient analysis `trans-000_trans', during task `MDLControl'.
+    Found trapezoidal ringing on node I20.NM5:int_s.
+
+......9......8......7......6......5......4......3......2......1......0
+Number of accepted tran steps =             496
+
+Notice from spectre during transient analysis `trans-000_trans', during task `MDLControl'.
+    Trapezoidal ringing is detected during tran analysis.
+        Please use method=trap for better results and performance.
+
+
+Maximum value achieved for any signal of each quantity: 
+V: V(I20.PM15:int_d) = 370.8 mV
+I: I(V0:p) = 3.273 uA
+If your circuit contains signals of the same quantity that are vastly different in size (such as high voltage circuitry combined with low voltage control circuitry), you should consider specifying global option `bin_relref=yes'.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Post-Transient Simulation Summary
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   -   To further speed up simulation, consider
+          add ++aps on command line
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+During simulation, the CPU load for active processors is :
+         0 (35.6 %)      1 (59.0 %)      2 (2.4 %)      
+        Total: 97.5%
+Initial condition solution time: CPU = 3 ms, elapsed = 3.70598 ms.
+Intrinsic tran analysis time:    CPU = 235.965 ms, elapsed = 264.216 ms.
+Total time required for tran analysis `trans-000_trans': CPU = 242.964 ms, elapsed = 270.898 ms.
+Time accumulated: CPU = 8.05777 s, elapsed = 8.75544 s.
+Peak resident memory used = 227 Mbytes.
+
+
+Warning from spectre.
+    WARNING (SPECTRE-17101): The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+    WARNING (SPECTRE-17101): The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+
+
+**********************************************************
+Transient Analysis `trans-000_trans': time = (0 s -> 1 us)
+**********************************************************
+DC simulation time: CPU = 3 ms, elapsed = 2.91204 ms.
+
+Opening the PSFXL file ./input.raw/trans-000_trans.tran.tran ...
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 1 us
+    step = 1 ns
+    maxstep = 20 ns
+    ic = all
+    useprevic = no
+    skipdc = no
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = moderate
+    method = traponly
+    lteratio = 3.5
+    relref = sigglobal
+    cmin = 0 F
+    gmin = 1 pS
+
+
+Output and IC/nodeset summary:
+                 save   1       (current)
+                 save   20      (voltage)
+
+......9......8......7.
+
+Notice from spectre at time = 307.854 ns during transient analysis `trans-000_trans', during task `MDLControl'.
+    Found trapezoidal ringing on node I20.NM5:int_s.
+Notice from spectre at time = 308.514 ns during transient analysis `trans-000_trans', during task `MDLControl'.
+    Found trapezoidal ringing on node I20.NM5:int_s.
+
+......9......8......7......6......5......4......3......2......1......0
+Number of accepted tran steps =             496
+
+Notice from spectre during transient analysis `trans-000_trans', during task `MDLControl'.
+    Trapezoidal ringing is detected during tran analysis.
+        Please use method=trap for better results and performance.
+
+
+Maximum value achieved for any signal of each quantity: 
+V: V(I20.PM15:int_d) = 370.8 mV
+I: I(V0:p) = 3.273 uA
+If your circuit contains signals of the same quantity that are vastly different in size (such as high voltage circuitry combined with low voltage control circuitry), you should consider specifying global option `bin_relref=yes'.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Post-Transient Simulation Summary
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   -   To further speed up simulation, consider
+          add ++aps on command line
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+During simulation, the CPU load for active processors is :
+         0 (34.4 %)      1 (60.2 %)      2 (2.5 %)      
+        Total: 97.7%
+Initial condition solution time: CPU = 3 ms, elapsed = 2.96307 ms.
+Intrinsic tran analysis time:    CPU = 234.963 ms, elapsed = 264.31 ms.
+Total time required for tran analysis `trans-000_trans': CPU = 240.962 ms, elapsed = 270.078 ms.
+Time accumulated: CPU = 8.35973 s, elapsed = 9.08769 s.
+Peak resident memory used = 227 Mbytes.
+
+
+Warning from spectre.
+    WARNING (SPECTRE-17101): The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+    WARNING (SPECTRE-17101): The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+
+
+**********************************************************
+Transient Analysis `trans-000_trans': time = (0 s -> 1 us)
+**********************************************************
+DC simulation time: CPU = 2.999 ms, elapsed = 2.91181 ms.
+
+Opening the PSFXL file ./input.raw/trans-000_trans.tran.tran ...
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 1 us
+    step = 1 ns
+    maxstep = 20 ns
+    ic = all
+    useprevic = no
+    skipdc = no
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = moderate
+    method = traponly
+    lteratio = 3.5
+    relref = sigglobal
+    cmin = 0 F
+    gmin = 1 pS
+
+
+Output and IC/nodeset summary:
+                 save   1       (current)
+                 save   20      (voltage)
+
+......9......8......7.
+
+Notice from spectre at time = 307.858 ns during transient analysis `trans-000_trans', during task `MDLControl'.
+    Found trapezoidal ringing on node I20.NM5:int_s.
+Notice from spectre at time = 308.521 ns during transient analysis `trans-000_trans', during task `MDLControl'.
+    Found trapezoidal ringing on node I20.NM5:int_s.
+
+......9......8......7......6......5......4......3......2......1......0
+Number of accepted tran steps =             496
+
+Notice from spectre during transient analysis `trans-000_trans', during task `MDLControl'.
+    Trapezoidal ringing is detected during tran analysis.
+        Please use method=trap for better results and performance.
+
+
+Maximum value achieved for any signal of each quantity: 
+V: V(I20.PM15:int_d) = 370.8 mV
+I: I(V0:p) = 3.272 uA
+If your circuit contains signals of the same quantity that are vastly different in size (such as high voltage circuitry combined with low voltage control circuitry), you should consider specifying global option `bin_relref=yes'.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Post-Transient Simulation Summary
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   -   To further speed up simulation, consider
+          add ++aps on command line
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+During simulation, the CPU load for active processors is :
+         0 (35.9 %)      1 (58.9 %)      2 (2.6 %)      
+        Total: 97.8%
+Initial condition solution time: CPU = 2.999 ms, elapsed = 2.95401 ms.
+Intrinsic tran analysis time:    CPU = 232.965 ms, elapsed = 266.382 ms.
+Total time required for tran analysis `trans-000_trans': CPU = 239.964 ms, elapsed = 272.082 ms.
+Time accumulated: CPU = 8.65968 s, elapsed = 9.42168 s.
+Peak resident memory used = 227 Mbytes.
+
+
+Warning from spectre.
+    WARNING (SPECTRE-17101): The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+    WARNING (SPECTRE-17101): The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+
+
+**********************************************************
+Transient Analysis `trans-000_trans': time = (0 s -> 1 us)
+**********************************************************
+
+Notice from spectre during IC analysis, during transient analysis `trans-000_trans', during task `MDLControl'.
+    GminDC = 1 pS is large enough to noticeably affect the DC solution.
+        dV(I20.PM13:int_d) = -7.67972 mV
+        Use the `gmin_check' option to eliminate or expand this report.
+
+DC simulation time: CPU = 3.999 ms, elapsed = 3.77011 ms.
+
+Opening the PSFXL file ./input.raw/trans-000_trans.tran.tran ...
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 1 us
+    step = 1 ns
+    maxstep = 20 ns
+    ic = all
+    useprevic = no
+    skipdc = no
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = moderate
+    method = traponly
+    lteratio = 3.5
+    relref = sigglobal
+    cmin = 0 F
+    gmin = 1 pS
+
+
+Output and IC/nodeset summary:
+                 save   1       (current)
+                 save   20      (voltage)
+
+......9......8......7......6......5......4......3......2......1......0
+Number of accepted tran steps =             505
+
+Maximum value achieved for any signal of each quantity: 
+V: V(I20.PM15:int_d) = 371.5 mV
+I: I(V0:p) = 3.427 uA
+If your circuit contains signals of the same quantity that are vastly different in size (such as high voltage circuitry combined with low voltage control circuitry), you should consider specifying global option `bin_relref=yes'.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Post-Transient Simulation Summary
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   -   To further speed up simulation, consider
+          add ++aps on command line
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+During simulation, the CPU load for active processors is :
+         0 (37.9 %)      1 (57.0 %)      2 (2.7 %)      
+        Total: 98.2%
+Initial condition solution time: CPU = 3.999 ms, elapsed = 3.80802 ms.
+Intrinsic tran analysis time:    CPU = 239.964 ms, elapsed = 268.492 ms.
+Total time required for tran analysis `trans-000_trans': CPU = 246.963 ms, elapsed = 275.023 ms.
+Time accumulated: CPU = 8.96964 s, elapsed = 9.76094 s.
+Peak resident memory used = 227 Mbytes.
+
+
+Warning from spectre.
+    WARNING (SPECTRE-17101): The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+
+
+**********************************************************
+Transient Analysis `trans-000_trans': time = (0 s -> 1 us)
+**********************************************************
+
+Notice from spectre during IC analysis, during transient analysis `trans-000_trans', during task `MDLControl'.
+    GminDC = 1 pS is large enough to noticeably affect the DC solution.
+        dV(I20.PM13:int_d) = -7.50879 mV
+        Use the `gmin_check' option to eliminate or expand this report.
+
+DC simulation time: CPU = 3.999 ms, elapsed = 3.76916 ms.
+
+Opening the PSFXL file ./input.raw/trans-000_trans.tran.tran ...
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 1 us
+    step = 1 ns
+    maxstep = 20 ns
+    ic = all
+    useprevic = no
+    skipdc = no
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = moderate
+    method = traponly
+    lteratio = 3.5
+    relref = sigglobal
+    cmin = 0 F
+    gmin = 1 pS
+
+
+Output and IC/nodeset summary:
+                 save   1       (current)
+                 save   20      (voltage)
+
+......9......8......7......6......5......4......3......2......1......0
+Number of accepted tran steps =             505
+
+Maximum value achieved for any signal of each quantity: 
+V: V(I20.PM15:int_d) = 371.5 mV
+I: I(V0:p) = 3.427 uA
+If your circuit contains signals of the same quantity that are vastly different in size (such as high voltage circuitry combined with low voltage control circuitry), you should consider specifying global option `bin_relref=yes'.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Post-Transient Simulation Summary
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   -   To further speed up simulation, consider
+          add ++aps on command line
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+During simulation, the CPU load for active processors is :
+         0 (39.6 %)      1 (55.4 %)      2 (2.6 %)      
+        Total: 98.1%
+Initial condition solution time: CPU = 3.999 ms, elapsed = 3.80707 ms.
+Intrinsic tran analysis time:    CPU = 240.963 ms, elapsed = 270.043 ms.
+Total time required for tran analysis `trans-000_trans': CPU = 247.962 ms, elapsed = 276.585 ms.
+Time accumulated: CPU = 9.24959 s, elapsed = 10.0707 s.
+Peak resident memory used = 227 Mbytes.
+
+
+Warning from spectre.
+    WARNING (SPECTRE-17101): The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+    WARNING (SPECTRE-17101): The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+
+
+**********************************************************
+Transient Analysis `trans-000_trans': time = (0 s -> 1 us)
+**********************************************************
+
+Notice from spectre during IC analysis, during transient analysis `trans-000_trans', during task `MDLControl'.
+    GminDC = 1 pS is large enough to noticeably affect the DC solution.
+        dV(I20.PM13:int_d) = -7.4972 mV
+        Use the `gmin_check' option to eliminate or expand this report.
+
+DC simulation time: CPU = 4 ms, elapsed = 3.88312 ms.
+
+Opening the PSFXL file ./input.raw/trans-000_trans.tran.tran ...
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 1 us
+    step = 1 ns
+    maxstep = 20 ns
+    ic = all
+    useprevic = no
+    skipdc = no
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = moderate
+    method = traponly
+    lteratio = 3.5
+    relref = sigglobal
+    cmin = 0 F
+    gmin = 1 pS
+
+
+Output and IC/nodeset summary:
+                 save   1       (current)
+                 save   20      (voltage)
+
+......9......8......7......6......5......4......3......2......1......0
+Number of accepted tran steps =             505
+
+Maximum value achieved for any signal of each quantity: 
+V: V(I20.PM15:int_d) = 371.5 mV
+I: I(V0:p) = 3.427 uA
+If your circuit contains signals of the same quantity that are vastly different in size (such as high voltage circuitry combined with low voltage control circuitry), you should consider specifying global option `bin_relref=yes'.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Post-Transient Simulation Summary
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   -   To further speed up simulation, consider
+          add ++aps on command line
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+During simulation, the CPU load for active processors is :
+         0 (41.3 %)      1 (53.7 %)      2 (2.7 %)      
+        Total: 98.1%
+Initial condition solution time: CPU = 4 ms, elapsed = 3.92294 ms.
+Intrinsic tran analysis time:    CPU = 236.965 ms, elapsed = 283.635 ms.
+Total time required for tran analysis `trans-000_trans': CPU = 242.964 ms, elapsed = 290.816 ms.
+Time accumulated: CPU = 9.55655 s, elapsed = 10.4256 s.
+Peak resident memory used = 227 Mbytes.
+
+
+Warning from spectre.
+    WARNING (SPECTRE-17101): The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+    WARNING (SPECTRE-17101): The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+
+
+**********************************************************
+Transient Analysis `trans-000_trans': time = (0 s -> 1 us)
+**********************************************************
+
+Notice from spectre during IC analysis, during transient analysis `trans-000_trans', during task `MDLControl'.
+    GminDC = 1 pS is large enough to noticeably affect the DC solution.
+        dV(I20.PM13:int_d) = -7.31519 mV
+        Use the `gmin_check' option to eliminate or expand this report.
+
+DC simulation time: CPU = 4 ms, elapsed = 3.85499 ms.
+
+Opening the PSFXL file ./input.raw/trans-000_trans.tran.tran ...
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 1 us
+    step = 1 ns
+    maxstep = 20 ns
+    ic = all
+    useprevic = no
+    skipdc = no
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = moderate
+    method = traponly
+    lteratio = 3.5
+    relref = sigglobal
+    cmin = 0 F
+    gmin = 1 pS
+
+
+Output and IC/nodeset summary:
+                 save   1       (current)
+                 save   20      (voltage)
+
+......9......8......7......6......5......4......3......2......1......0
+Number of accepted tran steps =             505
+
+Maximum value achieved for any signal of each quantity: 
+V: V(I20.PM15:int_d) = 371.5 mV
+I: I(V0:p) = 3.427 uA
+If your circuit contains signals of the same quantity that are vastly different in size (such as high voltage circuitry combined with low voltage control circuitry), you should consider specifying global option `bin_relref=yes'.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Post-Transient Simulation Summary
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   -   To further speed up simulation, consider
+          add ++aps on command line
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+During simulation, the CPU load for active processors is :
+         0 (43.0 %)      1 (52.0 %)      2 (2.8 %)      
+        Total: 98.3%
+Initial condition solution time: CPU = 4 ms, elapsed = 3.89695 ms.
+Intrinsic tran analysis time:    CPU = 244.963 ms, elapsed = 271.005 ms.
+Total time required for tran analysis `trans-000_trans': CPU = 251.962 ms, elapsed = 277.636 ms.
+Time accumulated: CPU = 9.8715 s, elapsed = 10.7671 s.
+Peak resident memory used = 227 Mbytes.
+
+
+Warning from spectre.
+    WARNING (SPECTRE-17101): The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+    WARNING (SPECTRE-17101): The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+
+
+**********************************************************
+Transient Analysis `trans-000_trans': time = (0 s -> 1 us)
+**********************************************************
+
+Notice from spectre during IC analysis, during transient analysis `trans-000_trans', during task `MDLControl'.
+    GminDC = 1 pS is large enough to noticeably affect the DC solution.
+        dV(I20.PM13:int_d) = -9.65116 mV
+        Use the `gmin_check' option to eliminate or expand this report.
+
+DC simulation time: CPU = 3 ms, elapsed = 3.68905 ms.
+
+Opening the PSFXL file ./input.raw/trans-000_trans.tran.tran ...
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 1 us
+    step = 1 ns
+    maxstep = 20 ns
+    ic = all
+    useprevic = no
+    skipdc = no
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = moderate
+    method = traponly
+    lteratio = 3.5
+    relref = sigglobal
+    cmin = 0 F
+    gmin = 1 pS
+
+
+Output and IC/nodeset summary:
+                 save   1       (current)
+                 save   20      (voltage)
+
+......9......8......7......6......5......4......3......2......1......0
+Number of accepted tran steps =             506
+
+Maximum value achieved for any signal of each quantity: 
+V: V(I20.PM15:int_d) = 371.5 mV
+I: I(V0:p) = 3.427 uA
+If your circuit contains signals of the same quantity that are vastly different in size (such as high voltage circuitry combined with low voltage control circuitry), you should consider specifying global option `bin_relref=yes'.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Post-Transient Simulation Summary
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   -   To further speed up simulation, consider
+          add ++aps on command line
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+During simulation, the CPU load for active processors is :
+         0 (44.6 %)      1 (50.6 %)      2 (2.8 %)      
+        Total: 98.4%
+Initial condition solution time: CPU = 4 ms, elapsed = 3.74293 ms.
+Intrinsic tran analysis time:    CPU = 243.962 ms, elapsed = 269.945 ms.
+Total time required for tran analysis `trans-000_trans': CPU = 250.961 ms, elapsed = 276.487 ms.
+Time accumulated: CPU = 10.1845 s, elapsed = 11.1091 s.
+Peak resident memory used = 227 Mbytes.
+
+
+Warning from spectre.
+    WARNING (SPECTRE-17101): The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+    WARNING (SPECTRE-17101): The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+
+
+**********************************************************
+Transient Analysis `trans-000_trans': time = (0 s -> 1 us)
+**********************************************************
+
+Notice from spectre during IC analysis, during transient analysis `trans-000_trans', during task `MDLControl'.
+    GminDC = 1 pS is large enough to noticeably affect the DC solution.
+        dV(I20.PM14:int_d) = -25.4051 uV
+        Use the `gmin_check' option to eliminate or expand this report.
+
+DC simulation time: CPU = 3 ms, elapsed = 3.36909 ms.
+
+Opening the PSFXL file ./input.raw/trans-000_trans.tran.tran ...
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 1 us
+    step = 1 ns
+    maxstep = 20 ns
+    ic = all
+    useprevic = no
+    skipdc = no
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = moderate
+    method = traponly
+    lteratio = 3.5
+    relref = sigglobal
+    cmin = 0 F
+    gmin = 1 pS
+
+
+Output and IC/nodeset summary:
+                 save   1       (current)
+                 save   20      (voltage)
+
+......9......8......7
+
+Notice from spectre at time = 306.416 ns during transient analysis `trans-000_trans', during task `MDLControl'.
+    Found trapezoidal ringing on node I20.NM10:int_s.
+Notice from spectre at time = 306.93 ns during transient analysis `trans-000_trans', during task `MDLControl'.
+    Found trapezoidal ringing on node I20.NM10:int_s.
+
+......9......8......7......6......5......4......3......2......1......0
+Number of accepted tran steps =             498
+
+Notice from spectre during transient analysis `trans-000_trans', during task `MDLControl'.
+    Trapezoidal ringing is detected during tran analysis.
+        Please use method=trap for better results and performance.
+
+
+Maximum value achieved for any signal of each quantity: 
+V: V(I20.PM15:int_d) = 374.1 mV
+I: I(V0:p) = 3.971 uA
+If your circuit contains signals of the same quantity that are vastly different in size (such as high voltage circuitry combined with low voltage control circuitry), you should consider specifying global option `bin_relref=yes'.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Post-Transient Simulation Summary
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   -   To further speed up simulation, consider
+          add ++aps on command line
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+During simulation, the CPU load for active processors is :
+         0 (46.0 %)      1 (49.2 %)      2 (2.8 %)      
+        Total: 98.6%
+Initial condition solution time: CPU = 3 ms, elapsed = 3.40891 ms.
+Intrinsic tran analysis time:    CPU = 238.964 ms, elapsed = 267.206 ms.
+Total time required for tran analysis `trans-000_trans': CPU = 245.963 ms, elapsed = 273.364 ms.
+Time accumulated: CPU = 10.4914 s, elapsed = 11.4458 s.
+Peak resident memory used = 227 Mbytes.
+
+
+Warning from spectre.
+    WARNING (SPECTRE-17101): The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+    WARNING (SPECTRE-17101): The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+
+
+**********************************************************
+Transient Analysis `trans-000_trans': time = (0 s -> 1 us)
+**********************************************************
+
+Notice from spectre during IC analysis, during transient analysis `trans-000_trans', during task `MDLControl'.
+    GminDC = 1 pS is large enough to noticeably affect the DC solution.
+        dV(I20.NM9:int_d) = -18.7269 mV
+        Use the `gmin_check' option to eliminate or expand this report.
+
+DC simulation time: CPU = 3 ms, elapsed = 3.25799 ms.
+
+Opening the PSFXL file ./input.raw/trans-000_trans.tran.tran ...
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 1 us
+    step = 1 ns
+    maxstep = 20 ns
+    ic = all
+    useprevic = no
+    skipdc = no
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = moderate
+    method = traponly
+    lteratio = 3.5
+    relref = sigglobal
+    cmin = 0 F
+    gmin = 1 pS
+
+
+Output and IC/nodeset summary:
+                 save   1       (current)
+                 save   20      (voltage)
+
+......9......8......7......6......5......4......3......2......1......0
+Number of accepted tran steps =             506
+
+Maximum value achieved for any signal of each quantity: 
+V: V(I20.PM15:int_d) = 371.5 mV
+I: I(V0:p) = 3.426 uA
+If your circuit contains signals of the same quantity that are vastly different in size (such as high voltage circuitry combined with low voltage control circuitry), you should consider specifying global option `bin_relref=yes'.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Post-Transient Simulation Summary
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   -   To further speed up simulation, consider
+          add ++aps on command line
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+During simulation, the CPU load for active processors is :
+         0 (47.4 %)      1 (47.9 %)      2 (2.8 %)      
+        Total: 98.7%
+Initial condition solution time: CPU = 3 ms, elapsed = 3.29614 ms.
+Intrinsic tran analysis time:    CPU = 241.963 ms, elapsed = 272.509 ms.
+Total time required for tran analysis `trans-000_trans': CPU = 246.962 ms, elapsed = 278.502 ms.
+Time accumulated: CPU = 10.8024 s, elapsed = 11.7903 s.
+Peak resident memory used = 227 Mbytes.
+
+
+Warning from spectre.
+    WARNING (SPECTRE-17101): The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+
+
+**********************************************************
+Transient Analysis `trans-000_trans': time = (0 s -> 1 us)
+**********************************************************
+
+Notice from spectre during IC analysis, during transient analysis `trans-000_trans', during task `MDLControl'.
+    GminDC = 1 pS is large enough to noticeably affect the DC solution.
+        dV(I20.NM9:int_d) = -18.4638 mV
+        Use the `gmin_check' option to eliminate or expand this report.
+
+DC simulation time: CPU = 3.999 ms, elapsed = 3.47805 ms.
+
+Opening the PSFXL file ./input.raw/trans-000_trans.tran.tran ...
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 1 us
+    step = 1 ns
+    maxstep = 20 ns
+    ic = all
+    useprevic = no
+    skipdc = no
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = moderate
+    method = traponly
+    lteratio = 3.5
+    relref = sigglobal
+    cmin = 0 F
+    gmin = 1 pS
+
+
+Output and IC/nodeset summary:
+                 save   1       (current)
+                 save   20      (voltage)
+
+......9......8......7......6......5......4......3......2......1......0
+Number of accepted tran steps =             506
+
+Maximum value achieved for any signal of each quantity: 
+V: V(I20.PM15:int_d) = 371.5 mV
+I: I(V0:p) = 3.426 uA
+If your circuit contains signals of the same quantity that are vastly different in size (such as high voltage circuitry combined with low voltage control circuitry), you should consider specifying global option `bin_relref=yes'.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Post-Transient Simulation Summary
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   -   To further speed up simulation, consider
+          add ++aps on command line
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+During simulation, the CPU load for active processors is :
+         0 (48.6 %)      1 (46.8 %)      2 (2.8 %)      
+        Total: 98.7%
+Initial condition solution time: CPU = 3.999 ms, elapsed = 3.51787 ms.
+Intrinsic tran analysis time:    CPU = 238.963 ms, elapsed = 266.172 ms.
+Total time required for tran analysis `trans-000_trans': CPU = 244.962 ms, elapsed = 272.903 ms.
+Time accumulated: CPU = 11.0803 s, elapsed = 12.0962 s.
+Peak resident memory used = 227 Mbytes.
+
+
+Warning from spectre.
+    WARNING (SPECTRE-17101): The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+    WARNING (SPECTRE-17101): The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+
+
+**********************************************************
+Transient Analysis `trans-000_trans': time = (0 s -> 1 us)
+**********************************************************
+
+Notice from spectre during IC analysis, during transient analysis `trans-000_trans', during task `MDLControl'.
+    GminDC = 1 pS is large enough to noticeably affect the DC solution.
+        dV(I20.NM9:int_d) = -18.4757 mV
+        Use the `gmin_check' option to eliminate or expand this report.
+
+DC simulation time: CPU = 3 ms, elapsed = 3.36289 ms.
+
+Opening the PSFXL file ./input.raw/trans-000_trans.tran.tran ...
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 1 us
+    step = 1 ns
+    maxstep = 20 ns
+    ic = all
+    useprevic = no
+    skipdc = no
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = moderate
+    method = traponly
+    lteratio = 3.5
+    relref = sigglobal
+    cmin = 0 F
+    gmin = 1 pS
+
+
+Output and IC/nodeset summary:
+                 save   1       (current)
+                 save   20      (voltage)
+
+......9......8......7......6......5......4......3......2......1......0
+Number of accepted tran steps =             506
+
+Maximum value achieved for any signal of each quantity: 
+V: V(I20.PM15:int_d) = 371.5 mV
+I: I(V0:p) = 3.426 uA
+If your circuit contains signals of the same quantity that are vastly different in size (such as high voltage circuitry combined with low voltage control circuitry), you should consider specifying global option `bin_relref=yes'.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Post-Transient Simulation Summary
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   -   To further speed up simulation, consider
+          add ++aps on command line
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+During simulation, the CPU load for active processors is :
+         0 (49.6 %)      1 (45.5 %)      2 (2.8 %)      
+        Total: 98.4%
+Initial condition solution time: CPU = 3 ms, elapsed = 3.40199 ms.
+Intrinsic tran analysis time:    CPU = 239.963 ms, elapsed = 306.776 ms.
+Total time required for tran analysis `trans-000_trans': CPU = 245.963 ms, elapsed = 313.034 ms.
+Time accumulated: CPU = 11.3883 s, elapsed = 12.4729 s.
+Peak resident memory used = 227 Mbytes.
+
+
+Warning from spectre.
+    WARNING (SPECTRE-17101): The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+    WARNING (SPECTRE-17101): The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+
+
+**********************************************************
+Transient Analysis `trans-000_trans': time = (0 s -> 1 us)
+**********************************************************
+
+Notice from spectre during IC analysis, during transient analysis `trans-000_trans', during task `MDLControl'.
+    GminDC = 1 pS is large enough to noticeably affect the DC solution.
+        dV(I20.NM9:int_d) = -18.2391 mV
+        Use the `gmin_check' option to eliminate or expand this report.
+
+DC simulation time: CPU = 3.999 ms, elapsed = 3.38507 ms.
+
+Opening the PSFXL file ./input.raw/trans-000_trans.tran.tran ...
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 1 us
+    step = 1 ns
+    maxstep = 20 ns
+    ic = all
+    useprevic = no
+    skipdc = no
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = moderate
+    method = traponly
+    lteratio = 3.5
+    relref = sigglobal
+    cmin = 0 F
+    gmin = 1 pS
+
+
+Output and IC/nodeset summary:
+                 save   1       (current)
+                 save   20      (voltage)
+
+......9......8......7......6......5......4......3......2......1......0
+Number of accepted tran steps =             506
+
+Maximum value achieved for any signal of each quantity: 
+V: V(I20.PM15:int_d) = 371.5 mV
+I: I(V0:p) = 3.426 uA
+If your circuit contains signals of the same quantity that are vastly different in size (such as high voltage circuitry combined with low voltage control circuitry), you should consider specifying global option `bin_relref=yes'.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Post-Transient Simulation Summary
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   -   To further speed up simulation, consider
+          add ++aps on command line
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+During simulation, the CPU load for active processors is :
+         0 (50.8 %)      1 (44.4 %)      2 (2.9 %)      
+        Total: 98.7%
+Initial condition solution time: CPU = 3.999 ms, elapsed = 3.42393 ms.
+Intrinsic tran analysis time:    CPU = 239.963 ms, elapsed = 272.006 ms.
+Total time required for tran analysis `trans-000_trans': CPU = 245.962 ms, elapsed = 278.171 ms.
+Time accumulated: CPU = 11.6972 s, elapsed = 12.8145 s.
+Peak resident memory used = 227 Mbytes.
+
+
+Warning from spectre.
+    WARNING (SPECTRE-17101): The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+    WARNING (SPECTRE-17101): The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+
+
+**********************************************************
+Transient Analysis `trans-000_trans': time = (0 s -> 1 us)
+**********************************************************
+
+Notice from spectre during IC analysis, during transient analysis `trans-000_trans', during task `MDLControl'.
+    GminDC = 1 pS is large enough to noticeably affect the DC solution.
+        dV(I20.NM9:int_d) = -21.0187 mV
+        Use the `gmin_check' option to eliminate or expand this report.
+
+DC simulation time: CPU = 2.999 ms, elapsed = 3.30019 ms.
+
+Opening the PSFXL file ./input.raw/trans-000_trans.tran.tran ...
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 1 us
+    step = 1 ns
+    maxstep = 20 ns
+    ic = all
+    useprevic = no
+    skipdc = no
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = moderate
+    method = traponly
+    lteratio = 3.5
+    relref = sigglobal
+    cmin = 0 F
+    gmin = 1 pS
+
+
+Output and IC/nodeset summary:
+                 save   1       (current)
+                 save   20      (voltage)
+
+......9......8......7......6......5......4......3......2......1......0
+Number of accepted tran steps =             507
+
+Maximum value achieved for any signal of each quantity: 
+V: V(I20.PM15:int_d) = 371.5 mV
+I: I(V0:p) = 3.425 uA
+If your circuit contains signals of the same quantity that are vastly different in size (such as high voltage circuitry combined with low voltage control circuitry), you should consider specifying global option `bin_relref=yes'.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Post-Transient Simulation Summary
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   -   To further speed up simulation, consider
+          add ++aps on command line
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+During simulation, the CPU load for active processors is :
+         0 (51.8 %)      1 (43.5 %)      2 (3.0 %)      
+        Total: 98.8%
+Initial condition solution time: CPU = 2.999 ms, elapsed = 3.34001 ms.
+Intrinsic tran analysis time:    CPU = 238.964 ms, elapsed = 262.948 ms.
+Total time required for tran analysis `trans-000_trans': CPU = 244.963 ms, elapsed = 269.121 ms.
+Time accumulated: CPU = 12.0032 s, elapsed = 13.147 s.
+Peak resident memory used = 227 Mbytes.
+
+
+Warning from spectre.
+    WARNING (SPECTRE-17101): The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+
+
+**********************************************************
+Transient Analysis `trans-000_trans': time = (0 s -> 1 us)
+**********************************************************
+
+Notice from spectre during IC analysis, during transient analysis `trans-000_trans', during task `MDLControl'.
+    GminDC = 1 pS is large enough to noticeably affect the DC solution.
+        dV(I20.NM9:int_d) = -20.5422 mV
+        Use the `gmin_check' option to eliminate or expand this report.
+
+DC simulation time: CPU = 3.999 ms, elapsed = 3.25894 ms.
+
+Opening the PSFXL file ./input.raw/trans-000_trans.tran.tran ...
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 1 us
+    step = 1 ns
+    maxstep = 20 ns
+    ic = all
+    useprevic = no
+    skipdc = no
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = moderate
+    method = traponly
+    lteratio = 3.5
+    relref = sigglobal
+    cmin = 0 F
+    gmin = 1 pS
+
+
+Output and IC/nodeset summary:
+                 save   1       (current)
+                 save   20      (voltage)
+
+......9......8......7......6......5......4......3......2......1......0
+Number of accepted tran steps =             507
+
+Maximum value achieved for any signal of each quantity: 
+V: V(I20.PM15:int_d) = 371.5 mV
+I: I(V0:p) = 3.425 uA
+If your circuit contains signals of the same quantity that are vastly different in size (such as high voltage circuitry combined with low voltage control circuitry), you should consider specifying global option `bin_relref=yes'.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Post-Transient Simulation Summary
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   -   To further speed up simulation, consider
+          add ++aps on command line
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+During simulation, the CPU load for active processors is :
+         0 (52.8 %)      1 (42.5 %)      2 (2.9 %)      
+        Total: 98.7%
+Initial condition solution time: CPU = 3.999 ms, elapsed = 3.30496 ms.
+Intrinsic tran analysis time:    CPU = 236.963 ms, elapsed = 269.425 ms.
+Total time required for tran analysis `trans-000_trans': CPU = 242.962 ms, elapsed = 275.425 ms.
+Time accumulated: CPU = 12.2791 s, elapsed = 13.4556 s.
+Peak resident memory used = 227 Mbytes.
+
+
+Warning from spectre.
+    WARNING (SPECTRE-17101): The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+
+
+**********************************************************
+Transient Analysis `trans-000_trans': time = (0 s -> 1 us)
+**********************************************************
+
+Notice from spectre during IC analysis, during transient analysis `trans-000_trans', during task `MDLControl'.
+    GminDC = 1 pS is large enough to noticeably affect the DC solution.
+        dV(I20.NM9:int_d) = -20.3628 mV
+        Use the `gmin_check' option to eliminate or expand this report.
+
+DC simulation time: CPU = 3 ms, elapsed = 3.32785 ms.
+
+Opening the PSFXL file ./input.raw/trans-000_trans.tran.tran ...
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 1 us
+    step = 1 ns
+    maxstep = 20 ns
+    ic = all
+    useprevic = no
+    skipdc = no
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = moderate
+    method = traponly
+    lteratio = 3.5
+    relref = sigglobal
+    cmin = 0 F
+    gmin = 1 pS
+
+
+Output and IC/nodeset summary:
+                 save   1       (current)
+                 save   20      (voltage)
+
+......9......8......7......6......5......4......3......2......1......0
+Number of accepted tran steps =             507
+
+Maximum value achieved for any signal of each quantity: 
+V: V(I20.PM15:int_d) = 371.5 mV
+I: I(V0:p) = 3.425 uA
+If your circuit contains signals of the same quantity that are vastly different in size (such as high voltage circuitry combined with low voltage control circuitry), you should consider specifying global option `bin_relref=yes'.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Post-Transient Simulation Summary
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   -   To further speed up simulation, consider
+          add ++aps on command line
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+During simulation, the CPU load for active processors is :
+         0 (53.7 %)      1 (41.7 %)      2 (2.9 %)      
+        Total: 98.8%
+Initial condition solution time: CPU = 3 ms, elapsed = 3.3741 ms.
+Intrinsic tran analysis time:    CPU = 242.963 ms, elapsed = 274.84 ms.
+Total time required for tran analysis `trans-000_trans': CPU = 248.963 ms, elapsed = 280.987 ms.
+Time accumulated: CPU = 12.5601 s, elapsed = 13.7699 s.
+Peak resident memory used = 227 Mbytes.
+
+
+Warning from spectre.
+    WARNING (SPECTRE-17101): The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+    WARNING (SPECTRE-17101): The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+
+
+**********************************************************
+Transient Analysis `trans-000_trans': time = (0 s -> 1 us)
+**********************************************************
+
+Notice from spectre during IC analysis, during transient analysis `trans-000_trans', during task `MDLControl'.
+    GminDC = 1 pS is large enough to noticeably affect the DC solution.
+        dV(I20.NM9:int_d) = -20.349 mV
+        Use the `gmin_check' option to eliminate or expand this report.
+
+DC simulation time: CPU = 3.999 ms, elapsed = 3.94082 ms.
+
+Opening the PSFXL file ./input.raw/trans-000_trans.tran.tran ...
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 1 us
+    step = 1 ns
+    maxstep = 20 ns
+    ic = all
+    useprevic = no
+    skipdc = no
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = moderate
+    method = traponly
+    lteratio = 3.5
+    relref = sigglobal
+    cmin = 0 F
+    gmin = 1 pS
+
+
+Output and IC/nodeset summary:
+                 save   1       (current)
+                 save   20      (voltage)
+
+......9......8......7......6......5......4......3......2......1......0
+Number of accepted tran steps =             507
+
+Maximum value achieved for any signal of each quantity: 
+V: V(I20.PM15:int_d) = 371.5 mV
+I: I(V0:p) = 3.425 uA
+If your circuit contains signals of the same quantity that are vastly different in size (such as high voltage circuitry combined with low voltage control circuitry), you should consider specifying global option `bin_relref=yes'.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Post-Transient Simulation Summary
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   -   To further speed up simulation, consider
+          add ++aps on command line
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+During simulation, the CPU load for active processors is :
+         0 (53.0 %)      1 (42.5 %)      2 (3.0 %)      
+        Total: 98.9%
+Initial condition solution time: CPU = 3.999 ms, elapsed = 3.98088 ms.
+Intrinsic tran analysis time:    CPU = 236.964 ms, elapsed = 265.764 ms.
+Total time required for tran analysis `trans-000_trans': CPU = 242.962 ms, elapsed = 272.532 ms.
+Time accumulated: CPU = 12.865 s, elapsed = 14.1057 s.
+Peak resident memory used = 227 Mbytes.
+
+
+Warning from spectre.
+    WARNING (SPECTRE-17101): The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+    WARNING (SPECTRE-17101): The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+
+
+**********************************************************
+Transient Analysis `trans-000_trans': time = (0 s -> 1 us)
+**********************************************************
+
+Notice from spectre during IC analysis, during transient analysis `trans-000_trans', during task `MDLControl'.
+    GminDC = 1 pS is large enough to noticeably affect the DC solution.
+        dV(I20.NM9:int_d) = -20.1484 mV
+        Use the `gmin_check' option to eliminate or expand this report.
+
+DC simulation time: CPU = 2.999 ms, elapsed = 3.33786 ms.
+
+Opening the PSFXL file ./input.raw/trans-000_trans.tran.tran ...
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 1 us
+    step = 1 ns
+    maxstep = 20 ns
+    ic = all
+    useprevic = no
+    skipdc = no
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = moderate
+    method = traponly
+    lteratio = 3.5
+    relref = sigglobal
+    cmin = 0 F
+    gmin = 1 pS
+
+
+Output and IC/nodeset summary:
+                 save   1       (current)
+                 save   20      (voltage)
+
+......9......8......7......6......5......4......3......2......1......0
+Number of accepted tran steps =             507
+
+Maximum value achieved for any signal of each quantity: 
+V: V(I20.PM15:int_d) = 371.5 mV
+I: I(V0:p) = 3.425 uA
+If your circuit contains signals of the same quantity that are vastly different in size (such as high voltage circuitry combined with low voltage control circuitry), you should consider specifying global option `bin_relref=yes'.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Post-Transient Simulation Summary
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   -   To further speed up simulation, consider
+          add ++aps on command line
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+During simulation, the CPU load for active processors is :
+         0 (51.9 %)      1 (43.6 %)      2 (2.9 %)      
+        Total: 98.9%
+Initial condition solution time: CPU = 2.999 ms, elapsed = 3.37815 ms.
+Intrinsic tran analysis time:    CPU = 243.963 ms, elapsed = 272.791 ms.
+Total time required for tran analysis `trans-000_trans': CPU = 249.962 ms, elapsed = 278.993 ms.
+Time accumulated: CPU = 13.177 s, elapsed = 14.4467 s.
+Peak resident memory used = 227 Mbytes.
+
+
+Warning from spectre.
+    WARNING (SPECTRE-17101): The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+    WARNING (SPECTRE-17101): The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+
+
+**********************************************************
+Transient Analysis `trans-000_trans': time = (0 s -> 1 us)
+**********************************************************
+
+Notice from spectre during IC analysis, during transient analysis `trans-000_trans', during task `MDLControl'.
+    GminDC = 1 pS is large enough to noticeably affect the DC solution.
+        dV(I20.NM9:int_d) = -22.1772 mV
+        Use the `gmin_check' option to eliminate or expand this report.
+
+DC simulation time: CPU = 2.999 ms, elapsed = 3.20601 ms.
+
+Opening the PSFXL file ./input.raw/trans-000_trans.tran.tran ...
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 1 us
+    step = 1 ns
+    maxstep = 20 ns
+    ic = all
+    useprevic = no
+    skipdc = no
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = moderate
+    method = traponly
+    lteratio = 3.5
+    relref = sigglobal
+    cmin = 0 F
+    gmin = 1 pS
+
+
+Output and IC/nodeset summary:
+                 save   1       (current)
+                 save   20      (voltage)
+
+......9......8......7......6......5......4......3......2......1......0
+Number of accepted tran steps =             508
+
+Maximum value achieved for any signal of each quantity: 
+V: V(I20.PM15:int_d) = 371.5 mV
+I: I(V0:p) = 3.425 uA
+If your circuit contains signals of the same quantity that are vastly different in size (such as high voltage circuitry combined with low voltage control circuitry), you should consider specifying global option `bin_relref=yes'.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Post-Transient Simulation Summary
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   -   To further speed up simulation, consider
+          add ++aps on command line
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+During simulation, the CPU load for active processors is :
+         0 (50.8 %)      1 (44.7 %)      2 (3.0 %)      
+        Total: 99.0%
+Initial condition solution time: CPU = 3.999 ms, elapsed = 3.268 ms.
+Intrinsic tran analysis time:    CPU = 238.963 ms, elapsed = 269.164 ms.
+Total time required for tran analysis `trans-000_trans': CPU = 244.962 ms, elapsed = 275.208 ms.
+Time accumulated: CPU = 13.4839 s, elapsed = 14.7835 s.
+Peak resident memory used = 227 Mbytes.
+
+
+Warning from spectre.
+    WARNING (SPECTRE-17101): The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+
+
+**********************************************************
+Transient Analysis `trans-000_trans': time = (0 s -> 1 us)
+**********************************************************
+
+Notice from spectre during IC analysis, during transient analysis `trans-000_trans', during task `MDLControl'.
+    GminDC = 1 pS is large enough to noticeably affect the DC solution.
+        dV(I20.NM9:int_d) = -22.4858 mV
+        Use the `gmin_check' option to eliminate or expand this report.
+
+DC simulation time: CPU = 3 ms, elapsed = 3.31497 ms.
+
+Opening the PSFXL file ./input.raw/trans-000_trans.tran.tran ...
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 1 us
+    step = 1 ns
+    maxstep = 20 ns
+    ic = all
+    useprevic = no
+    skipdc = no
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = moderate
+    method = traponly
+    lteratio = 3.5
+    relref = sigglobal
+    cmin = 0 F
+    gmin = 1 pS
+
+
+Output and IC/nodeset summary:
+                 save   1       (current)
+                 save   20      (voltage)
+
+......9......8......7......6......5......4......3......2......1......0
+Number of accepted tran steps =             509
+
+Maximum value achieved for any signal of each quantity: 
+V: V(I20.PM15:int_d) = 371.5 mV
+I: I(V0:p) = 3.425 uA
+If your circuit contains signals of the same quantity that are vastly different in size (such as high voltage circuitry combined with low voltage control circuitry), you should consider specifying global option `bin_relref=yes'.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Post-Transient Simulation Summary
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   -   To further speed up simulation, consider
+          add ++aps on command line
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+During simulation, the CPU load for active processors is :
+         0 (51.4 %)      1 (44.1 %)      2 (3.1 %)      
+        Total: 99.2%
+Initial condition solution time: CPU = 3 ms, elapsed = 3.35407 ms.
+Intrinsic tran analysis time:    CPU = 236.965 ms, elapsed = 268.524 ms.
+Total time required for tran analysis `trans-000_trans': CPU = 241.964 ms, elapsed = 274.679 ms.
+Time accumulated: CPU = 13.7589 s, elapsed = 15.0906 s.
+Peak resident memory used = 227 Mbytes.
+
+
+Warning from spectre.
+    WARNING (SPECTRE-17101): The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+
+
+**********************************************************
+Transient Analysis `trans-000_trans': time = (0 s -> 1 us)
+**********************************************************
+
+Notice from spectre during IC analysis, during transient analysis `trans-000_trans', during task `MDLControl'.
+    GminDC = 1 pS is large enough to noticeably affect the DC solution.
+        dV(I20.NM9:int_d) = -22.3704 mV
+        Use the `gmin_check' option to eliminate or expand this report.
+
+DC simulation time: CPU = 3.999 ms, elapsed = 3.79395 ms.
+
+Opening the PSFXL file ./input.raw/trans-000_trans.tran.tran ...
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 1 us
+    step = 1 ns
+    maxstep = 20 ns
+    ic = all
+    useprevic = no
+    skipdc = no
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = moderate
+    method = traponly
+    lteratio = 3.5
+    relref = sigglobal
+    cmin = 0 F
+    gmin = 1 pS
+
+
+Output and IC/nodeset summary:
+                 save   1       (current)
+                 save   20      (voltage)
+
+......9......8......7......6......5......4......3......2......1......0
+Number of accepted tran steps =             509
+
+Maximum value achieved for any signal of each quantity: 
+V: V(I20.PM15:int_d) = 371.5 mV
+I: I(V0:p) = 3.425 uA
+If your circuit contains signals of the same quantity that are vastly different in size (such as high voltage circuitry combined with low voltage control circuitry), you should consider specifying global option `bin_relref=yes'.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Post-Transient Simulation Summary
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   -   To further speed up simulation, consider
+          add ++aps on command line
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+During simulation, the CPU load for active processors is :
+         0 (52.2 %)      1 (43.2 %)      2 (3.0 %)      
+        Total: 99.0%
+Initial condition solution time: CPU = 3.999 ms, elapsed = 3.83592 ms.
+Intrinsic tran analysis time:    CPU = 237.964 ms, elapsed = 294.992 ms.
+Total time required for tran analysis `trans-000_trans': CPU = 244.963 ms, elapsed = 301.637 ms.
+Time accumulated: CPU = 14.0359 s, elapsed = 15.4252 s.
+Peak resident memory used = 227 Mbytes.
+
+
+Warning from spectre.
+    WARNING (SPECTRE-17101): The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+    WARNING (SPECTRE-17101): The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+
+
+**********************************************************
+Transient Analysis `trans-000_trans': time = (0 s -> 1 us)
+**********************************************************
+
+Notice from spectre during IC analysis, during transient analysis `trans-000_trans', during task `MDLControl'.
+    GminDC = 1 pS is large enough to noticeably affect the DC solution.
+        dV(I20.NM9:int_d) = -22.3814 mV
+        Use the `gmin_check' option to eliminate or expand this report.
+
+DC simulation time: CPU = 3 ms, elapsed = 3.12209 ms.
+
+Opening the PSFXL file ./input.raw/trans-000_trans.tran.tran ...
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 1 us
+    step = 1 ns
+    maxstep = 20 ns
+    ic = all
+    useprevic = no
+    skipdc = no
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = moderate
+    method = traponly
+    lteratio = 3.5
+    relref = sigglobal
+    cmin = 0 F
+    gmin = 1 pS
+
+
+Output and IC/nodeset summary:
+                 save   1       (current)
+                 save   20      (voltage)
+
+......9......8......7......6......5......4......3......2......1......0
+Number of accepted tran steps =             509
+
+Maximum value achieved for any signal of each quantity: 
+V: V(I20.PM15:int_d) = 371.5 mV
+I: I(V0:p) = 3.425 uA
+If your circuit contains signals of the same quantity that are vastly different in size (such as high voltage circuitry combined with low voltage control circuitry), you should consider specifying global option `bin_relref=yes'.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Post-Transient Simulation Summary
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   -   To further speed up simulation, consider
+          add ++aps on command line
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+During simulation, the CPU load for active processors is :
+         0 (53.0 %)      1 (42.4 %)      2 (3.1 %)      
+        Total: 99.0%
+Initial condition solution time: CPU = 3 ms, elapsed = 3.16 ms.
+Intrinsic tran analysis time:    CPU = 242.962 ms, elapsed = 277.04 ms.
+Total time required for tran analysis `trans-000_trans': CPU = 248.962 ms, elapsed = 282.952 ms.
+Time accumulated: CPU = 14.3458 s, elapsed = 15.7717 s.
+Peak resident memory used = 227 Mbytes.
+
+
+Warning from spectre.
+    WARNING (SPECTRE-17101): The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+    WARNING (SPECTRE-17101): The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+
+
+**********************************************************
+Transient Analysis `trans-000_trans': time = (0 s -> 1 us)
+**********************************************************
+
+Notice from spectre during IC analysis, during transient analysis `trans-000_trans', during task `MDLControl'.
+    GminDC = 1 pS is large enough to noticeably affect the DC solution.
+        dV(I20.NM9:int_d) = -22.2841 mV
+        Use the `gmin_check' option to eliminate or expand this report.
+
+DC simulation time: CPU = 2.999 ms, elapsed = 3.1991 ms.
+
+Opening the PSFXL file ./input.raw/trans-000_trans.tran.tran ...
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 1 us
+    step = 1 ns
+    maxstep = 20 ns
+    ic = all
+    useprevic = no
+    skipdc = no
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = moderate
+    method = traponly
+    lteratio = 3.5
+    relref = sigglobal
+    cmin = 0 F
+    gmin = 1 pS
+
+
+Output and IC/nodeset summary:
+                 save   1       (current)
+                 save   20      (voltage)
+
+......9......8......7......6......5......4......3......2......1......0
+Number of accepted tran steps =             508
+
+Maximum value achieved for any signal of each quantity: 
+V: V(I20.PM15:int_d) = 371.5 mV
+I: I(V0:p) = 3.425 uA
+If your circuit contains signals of the same quantity that are vastly different in size (such as high voltage circuitry combined with low voltage control circuitry), you should consider specifying global option `bin_relref=yes'.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Post-Transient Simulation Summary
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   -   To further speed up simulation, consider
+          add ++aps on command line
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+During simulation, the CPU load for active processors is :
+         0 (52.4 %)      1 (43.0 %)      2 (3.2 %)      
+        Total: 99.2%
+Initial condition solution time: CPU = 2.999 ms, elapsed = 3.23915 ms.
+Intrinsic tran analysis time:    CPU = 241.964 ms, elapsed = 271.976 ms.
+Total time required for tran analysis `trans-000_trans': CPU = 247.963 ms, elapsed = 278.075 ms.
+Time accumulated: CPU = 14.6548 s, elapsed = 16.1131 s.
+Peak resident memory used = 227 Mbytes.
+
+
+Warning from spectre.
+    WARNING (SPECTRE-17101): The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+    WARNING (SPECTRE-17101): The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+
+
+**********************************************************
+Transient Analysis `trans-000_trans': time = (0 s -> 1 us)
+**********************************************************
+
+Notice from spectre during IC analysis, during transient analysis `trans-000_trans', during task `MDLControl'.
+    GminDC = 1 pS is large enough to noticeably affect the DC solution.
+        dV(I20.NM9:int_d) = -23.1069 mV
+        Use the `gmin_check' option to eliminate or expand this report.
+
+DC simulation time: CPU = 3 ms, elapsed = 3.335 ms.
+
+Opening the PSFXL file ./input.raw/trans-000_trans.tran.tran ...
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 1 us
+    step = 1 ns
+    maxstep = 20 ns
+    ic = all
+    useprevic = no
+    skipdc = no
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = moderate
+    method = traponly
+    lteratio = 3.5
+    relref = sigglobal
+    cmin = 0 F
+    gmin = 1 pS
+
+
+Output and IC/nodeset summary:
+                 save   1       (current)
+                 save   20      (voltage)
+
+......9......8......7......6......5......4......3......2......1......0
+Number of accepted tran steps =             508
+
+Maximum value achieved for any signal of each quantity: 
+V: V(I20.PM15:int_d) = 371.5 mV
+I: I(V0:p) = 3.424 uA
+If your circuit contains signals of the same quantity that are vastly different in size (such as high voltage circuitry combined with low voltage control circuitry), you should consider specifying global option `bin_relref=yes'.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Post-Transient Simulation Summary
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   -   To further speed up simulation, consider
+          add ++aps on command line
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+During simulation, the CPU load for active processors is :
+         0 (52.9 %)      1 (42.6 %)      2 (3.2 %)      
+        Total: 99.3%
+Initial condition solution time: CPU = 3 ms, elapsed = 3.37505 ms.
+Intrinsic tran analysis time:    CPU = 235.963 ms, elapsed = 269.092 ms.
+Total time required for tran analysis `trans-000_trans': CPU = 241.963 ms, elapsed = 275.32 ms.
+Time accumulated: CPU = 14.9597 s, elapsed = 16.4501 s.
+Peak resident memory used = 227 Mbytes.
+
+
+Warning from spectre.
+    WARNING (SPECTRE-17101): The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+
+
+**********************************************************
+Transient Analysis `trans-000_trans': time = (0 s -> 1 us)
+**********************************************************
+
+Notice from spectre during IC analysis, during transient analysis `trans-000_trans', during task `MDLControl'.
+    GminDC = 1 pS is large enough to noticeably affect the DC solution.
+        dV(I20.NM9:int_d) = -22.5002 mV
+        Use the `gmin_check' option to eliminate or expand this report.
+
+DC simulation time: CPU = 3.999 ms, elapsed = 3.61609 ms.
+
+Opening the PSFXL file ./input.raw/trans-000_trans.tran.tran ...
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 1 us
+    step = 1 ns
+    maxstep = 20 ns
+    ic = all
+    useprevic = no
+    skipdc = no
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = moderate
+    method = traponly
+    lteratio = 3.5
+    relref = sigglobal
+    cmin = 0 F
+    gmin = 1 pS
+
+
+Output and IC/nodeset summary:
+                 save   1       (current)
+                 save   20      (voltage)
+
+......9......8......7......6......5......4......3......2......1......0
+Number of accepted tran steps =             509
+
+Maximum value achieved for any signal of each quantity: 
+V: V(I20.PM15:int_d) = 371.5 mV
+I: I(V0:p) = 3.425 uA
+If your circuit contains signals of the same quantity that are vastly different in size (such as high voltage circuitry combined with low voltage control circuitry), you should consider specifying global option `bin_relref=yes'.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Post-Transient Simulation Summary
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   -   To further speed up simulation, consider
+          add ++aps on command line
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+During simulation, the CPU load for active processors is :
+         0 (52.2 %)      1 (43.2 %)      2 (3.2 %)      
+        Total: 99.3%
+Initial condition solution time: CPU = 3.999 ms, elapsed = 3.6571 ms.
+Intrinsic tran analysis time:    CPU = 239.964 ms, elapsed = 272.067 ms.
+Total time required for tran analysis `trans-000_trans': CPU = 245.963 ms, elapsed = 278.856 ms.
+Time accumulated: CPU = 15.2377 s, elapsed = 16.7621 s.
+Peak resident memory used = 227 Mbytes.
+
+
+Warning from spectre.
+    WARNING (SPECTRE-17101): The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+
+
+**********************************************************
+Transient Analysis `trans-000_trans': time = (0 s -> 1 us)
+**********************************************************
+
+Notice from spectre during IC analysis, during transient analysis `trans-000_trans', during task `MDLControl'.
+    GminDC = 1 pS is large enough to noticeably affect the DC solution.
+        dV(I20.NM9:int_d) = -22.4997 mV
+        Use the `gmin_check' option to eliminate or expand this report.
+
+DC simulation time: CPU = 3 ms, elapsed = 3.34907 ms.
+
+Opening the PSFXL file ./input.raw/trans-000_trans.tran.tran ...
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 1 us
+    step = 1 ns
+    maxstep = 20 ns
+    ic = all
+    useprevic = no
+    skipdc = no
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = moderate
+    method = traponly
+    lteratio = 3.5
+    relref = sigglobal
+    cmin = 0 F
+    gmin = 1 pS
+
+
+Output and IC/nodeset summary:
+                 save   1       (current)
+                 save   20      (voltage)
+
+......9......8......7......6......5......4......3......2......1......0
+Number of accepted tran steps =             509
+
+Maximum value achieved for any signal of each quantity: 
+V: V(I20.PM15:int_d) = 371.5 mV
+I: I(V0:p) = 3.425 uA
+If your circuit contains signals of the same quantity that are vastly different in size (such as high voltage circuitry combined with low voltage control circuitry), you should consider specifying global option `bin_relref=yes'.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Post-Transient Simulation Summary
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   -   To further speed up simulation, consider
+          add ++aps on command line
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+During simulation, the CPU load for active processors is :
+         0 (52.7 %)      1 (42.8 %)      2 (3.2 %)      
+        Total: 99.3%
+Initial condition solution time: CPU = 3 ms, elapsed = 3.38912 ms.
+Intrinsic tran analysis time:    CPU = 241.963 ms, elapsed = 264.021 ms.
+Total time required for tran analysis `trans-000_trans': CPU = 246.962 ms, elapsed = 270.308 ms.
+Time accumulated: CPU = 15.5176 s, elapsed = 17.0644 s.
+Peak resident memory used = 227 Mbytes.
+
+
+Warning from spectre.
+    WARNING (SPECTRE-17101): The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+
+
+**********************************************************
+Transient Analysis `trans-000_trans': time = (0 s -> 1 us)
+**********************************************************
+
+Notice from spectre during IC analysis, during transient analysis `trans-000_trans', during task `MDLControl'.
+    GminDC = 1 pS is large enough to noticeably affect the DC solution.
+        dV(I20.NM9:int_d) = -22.3876 mV
+        Use the `gmin_check' option to eliminate or expand this report.
+
+DC simulation time: CPU = 4 ms, elapsed = 3.34716 ms.
+
+Opening the PSFXL file ./input.raw/trans-000_trans.tran.tran ...
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 1 us
+    step = 1 ns
+    maxstep = 20 ns
+    ic = all
+    useprevic = no
+    skipdc = no
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = moderate
+    method = traponly
+    lteratio = 3.5
+    relref = sigglobal
+    cmin = 0 F
+    gmin = 1 pS
+
+
+Output and IC/nodeset summary:
+                 save   1       (current)
+                 save   20      (voltage)
+
+......9......8......7......6......5......4......3......2......1......0
+Number of accepted tran steps =             509
+
+Maximum value achieved for any signal of each quantity: 
+V: V(I20.PM15:int_d) = 371.5 mV
+I: I(V0:p) = 3.425 uA
+If your circuit contains signals of the same quantity that are vastly different in size (such as high voltage circuitry combined with low voltage control circuitry), you should consider specifying global option `bin_relref=yes'.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Post-Transient Simulation Summary
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   -   To further speed up simulation, consider
+          add ++aps on command line
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+During simulation, the CPU load for active processors is :
+         0 (52.1 %)      1 (43.4 %)      2 (3.2 %)      
+        Total: 99.4%
+Initial condition solution time: CPU = 4 ms, elapsed = 3.41797 ms.
+Intrinsic tran analysis time:    CPU = 235.965 ms, elapsed = 263.214 ms.
+Total time required for tran analysis `trans-000_trans': CPU = 242.964 ms, elapsed = 270.003 ms.
+Time accumulated: CPU = 15.7926 s, elapsed = 17.3676 s.
+Peak resident memory used = 227 Mbytes.
+
+
+Warning from spectre.
+    WARNING (SPECTRE-17101): The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+    WARNING (SPECTRE-17101): The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+
+
+**********************************************************
+Transient Analysis `trans-000_trans': time = (0 s -> 1 us)
+**********************************************************
+
+Notice from spectre during IC analysis, during transient analysis `trans-000_trans', during task `MDLControl'.
+    GminDC = 1 pS is large enough to noticeably affect the DC solution.
+        dV(I20.NM9:int_d) = -22.3816 mV
+        Use the `gmin_check' option to eliminate or expand this report.
+
+DC simulation time: CPU = 3.999 ms, elapsed = 3.23606 ms.
+
+Opening the PSFXL file ./input.raw/trans-000_trans.tran.tran ...
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 1 us
+    step = 1 ns
+    maxstep = 20 ns
+    ic = all
+    useprevic = no
+    skipdc = no
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = moderate
+    method = traponly
+    lteratio = 3.5
+    relref = sigglobal
+    cmin = 0 F
+    gmin = 1 pS
+
+
+Output and IC/nodeset summary:
+                 save   1       (current)
+                 save   20      (voltage)
+
+......9......8......7......6......5......4......3......2......1......0
+Number of accepted tran steps =             509
+
+Maximum value achieved for any signal of each quantity: 
+V: V(I20.PM15:int_d) = 371.5 mV
+I: I(V0:p) = 3.425 uA
+If your circuit contains signals of the same quantity that are vastly different in size (such as high voltage circuitry combined with low voltage control circuitry), you should consider specifying global option `bin_relref=yes'.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Post-Transient Simulation Summary
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   -   To further speed up simulation, consider
+          add ++aps on command line
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+During simulation, the CPU load for active processors is :
+         0 (52.6 %)      1 (43.0 %)      2 (3.2 %)      
+        Total: 99.5%
+Initial condition solution time: CPU = 3.999 ms, elapsed = 3.27587 ms.
+Intrinsic tran analysis time:    CPU = 243.963 ms, elapsed = 265.247 ms.
+Total time required for tran analysis `trans-000_trans': CPU = 250.962 ms, elapsed = 271.298 ms.
+Time accumulated: CPU = 16.1046 s, elapsed = 17.7007 s.
+Peak resident memory used = 227 Mbytes.
+
+
+Warning from spectre.
+    WARNING (SPECTRE-17101): The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+    WARNING (SPECTRE-17101): The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+
+
+**********************************************************
+Transient Analysis `trans-000_trans': time = (0 s -> 1 us)
+**********************************************************
+
+Notice from spectre during IC analysis, during transient analysis `trans-000_trans', during task `MDLControl'.
+    GminDC = 1 pS is large enough to noticeably affect the DC solution.
+        dV(I20.NM9:int_d) = -22.2666 mV
+        Use the `gmin_check' option to eliminate or expand this report.
+
+DC simulation time: CPU = 2 ms, elapsed = 3.1271 ms.
+
+Opening the PSFXL file ./input.raw/trans-000_trans.tran.tran ...
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 1 us
+    step = 1 ns
+    maxstep = 20 ns
+    ic = all
+    useprevic = no
+    skipdc = no
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = moderate
+    method = traponly
+    lteratio = 3.5
+    relref = sigglobal
+    cmin = 0 F
+    gmin = 1 pS
+
+
+Output and IC/nodeset summary:
+                 save   1       (current)
+                 save   20      (voltage)
+
+......9......8......7......6......5......4......3......2......1......0
+Number of accepted tran steps =             508
+
+Maximum value achieved for any signal of each quantity: 
+V: V(I20.PM15:int_d) = 371.5 mV
+I: I(V0:p) = 3.425 uA
+If your circuit contains signals of the same quantity that are vastly different in size (such as high voltage circuitry combined with low voltage control circuitry), you should consider specifying global option `bin_relref=yes'.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Post-Transient Simulation Summary
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   -   To further speed up simulation, consider
+          add ++aps on command line
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+During simulation, the CPU load for active processors is :
+         0 (53.4 %)      1 (42.3 %)      2 (3.3 %)      
+        Total: 99.5%
+Initial condition solution time: CPU = 2 ms, elapsed = 3.16501 ms.
+Intrinsic tran analysis time:    CPU = 241.963 ms, elapsed = 271.061 ms.
+Total time required for tran analysis `trans-000_trans': CPU = 246.962 ms, elapsed = 276.992 ms.
+Time accumulated: CPU = 16.4135 s, elapsed = 18.041 s.
+Peak resident memory used = 227 Mbytes.
+
+
+Warning from spectre.
+    WARNING (SPECTRE-17101): The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+    WARNING (SPECTRE-17101): The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+
+
+**********************************************************
+Transient Analysis `trans-000_trans': time = (0 s -> 1 us)
+**********************************************************
+
+Notice from spectre during IC analysis, during transient analysis `trans-000_trans', during task `MDLControl'.
+    GminDC = 1 pS is large enough to noticeably affect the DC solution.
+        dV(I20.NM9:int_d) = -23.107 mV
+        Use the `gmin_check' option to eliminate or expand this report.
+
+DC simulation time: CPU = 2.999 ms, elapsed = 3.27396 ms.
+
+Opening the PSFXL file ./input.raw/trans-000_trans.tran.tran ...
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 1 us
+    step = 1 ns
+    maxstep = 20 ns
+    ic = all
+    useprevic = no
+    skipdc = no
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = moderate
+    method = traponly
+    lteratio = 3.5
+    relref = sigglobal
+    cmin = 0 F
+    gmin = 1 pS
+
+
+Output and IC/nodeset summary:
+                 save   1       (current)
+                 save   20      (voltage)
+
+......9......8......7......6......5......4......3......2......1......0
+Number of accepted tran steps =             508
+
+Maximum value achieved for any signal of each quantity: 
+V: V(I20.PM15:int_d) = 371.5 mV
+I: I(V0:p) = 3.424 uA
+If your circuit contains signals of the same quantity that are vastly different in size (such as high voltage circuitry combined with low voltage control circuitry), you should consider specifying global option `bin_relref=yes'.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Post-Transient Simulation Summary
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   -   To further speed up simulation, consider
+          add ++aps on command line
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+During simulation, the CPU load for active processors is :
+         0 (53.8 %)      1 (41.8 %)      2 (3.3 %)      
+        Total: 99.5%
+Initial condition solution time: CPU = 2.999 ms, elapsed = 3.31306 ms.
+Intrinsic tran analysis time:    CPU = 239.963 ms, elapsed = 268.435 ms.
+Total time required for tran analysis `trans-000_trans': CPU = 246.962 ms, elapsed = 274.593 ms.
+Time accumulated: CPU = 16.7255 s, elapsed = 18.3821 s.
+Peak resident memory used = 227 Mbytes.
+
+
+Warning from spectre.
+    WARNING (SPECTRE-17101): The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+
+
+**********************************************************
+Transient Analysis `trans-000_trans': time = (0 s -> 1 us)
+**********************************************************
+
+Notice from spectre during IC analysis, during transient analysis `trans-000_trans', during task `MDLControl'.
+    GminDC = 1 pS is large enough to noticeably affect the DC solution.
+        dV(I20.NM9:int_d) = -22.4866 mV
+        Use the `gmin_check' option to eliminate or expand this report.
+
+DC simulation time: CPU = 4 ms, elapsed = 3.30305 ms.
+
+Opening the PSFXL file ./input.raw/trans-000_trans.tran.tran ...
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 1 us
+    step = 1 ns
+    maxstep = 20 ns
+    ic = all
+    useprevic = no
+    skipdc = no
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = moderate
+    method = traponly
+    lteratio = 3.5
+    relref = sigglobal
+    cmin = 0 F
+    gmin = 1 pS
+
+
+Output and IC/nodeset summary:
+                 save   1       (current)
+                 save   20      (voltage)
+
+......9......8......7......6......5......4......3......2......1......0
+Number of accepted tran steps =             509
+
+Maximum value achieved for any signal of each quantity: 
+V: V(I20.PM15:int_d) = 371.5 mV
+I: I(V0:p) = 3.425 uA
+If your circuit contains signals of the same quantity that are vastly different in size (such as high voltage circuitry combined with low voltage control circuitry), you should consider specifying global option `bin_relref=yes'.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Post-Transient Simulation Summary
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   -   To further speed up simulation, consider
+          add ++aps on command line
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+During simulation, the CPU load for active processors is :
+         0 (54.5 %)      1 (41.2 %)      2 (3.3 %)      
+        Total: 99.6%
+Initial condition solution time: CPU = 4 ms, elapsed = 3.34191 ms.
+Intrinsic tran analysis time:    CPU = 242.963 ms, elapsed = 270.927 ms.
+Total time required for tran analysis `trans-000_trans': CPU = 247.963 ms, elapsed = 277.018 ms.
+Time accumulated: CPU = 17.0064 s, elapsed = 18.6922 s.
+Peak resident memory used = 227 Mbytes.
+
+
+Warning from spectre.
+    WARNING (SPECTRE-17101): The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+
+
+**********************************************************
+Transient Analysis `trans-000_trans': time = (0 s -> 1 us)
+**********************************************************
+
+Notice from spectre during IC analysis, during transient analysis `trans-000_trans', during task `MDLControl'.
+    GminDC = 1 pS is large enough to noticeably affect the DC solution.
+        dV(I20.NM9:int_d) = -22.4998 mV
+        Use the `gmin_check' option to eliminate or expand this report.
+
+DC simulation time: CPU = 3.999 ms, elapsed = 3.35789 ms.
+
+Opening the PSFXL file ./input.raw/trans-000_trans.tran.tran ...
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 1 us
+    step = 1 ns
+    maxstep = 20 ns
+    ic = all
+    useprevic = no
+    skipdc = no
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = moderate
+    method = traponly
+    lteratio = 3.5
+    relref = sigglobal
+    cmin = 0 F
+    gmin = 1 pS
+
+
+Output and IC/nodeset summary:
+                 save   1       (current)
+                 save   20      (voltage)
+
+......9......8......7......6......5......4......3......2......1......0
+Number of accepted tran steps =             509
+
+Maximum value achieved for any signal of each quantity: 
+V: V(I20.PM15:int_d) = 371.5 mV
+I: I(V0:p) = 3.425 uA
+If your circuit contains signals of the same quantity that are vastly different in size (such as high voltage circuitry combined with low voltage control circuitry), you should consider specifying global option `bin_relref=yes'.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Post-Transient Simulation Summary
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   -   To further speed up simulation, consider
+          add ++aps on command line
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+During simulation, the CPU load for active processors is :
+         0 (53.9 %)      1 (41.8 %)      2 (3.4 %)      
+        Total: 99.6%
+Initial condition solution time: CPU = 3.999 ms, elapsed = 3.39794 ms.
+Intrinsic tran analysis time:    CPU = 235.964 ms, elapsed = 262.656 ms.
+Total time required for tran analysis `trans-000_trans': CPU = 241.962 ms, elapsed = 269.213 ms.
+Time accumulated: CPU = 17.2804 s, elapsed = 18.9944 s.
+Peak resident memory used = 227 Mbytes.
+
+
+Warning from spectre.
+    WARNING (SPECTRE-17101): The value 'psf' specified for the 'checklimitdest' option will no longer be supported in future releases. Use 'spectre -h' to see other recommended values for the 'checklimitdest' option.
+
+
+**********************************************************
+Transient Analysis `trans-000_trans': time = (0 s -> 1 us)
+**********************************************************
+
+Notice from spectre during IC analysis, during transient analysis `trans-000_trans', during task `MDLControl'.
+    GminDC = 1 pS is large enough to noticeably affect the DC solution.
+        dV(I20.NM9:int_d) = -22.4998 mV
+        Use the `gmin_check' option to eliminate or expand this report.
+
+DC simulation time: CPU = 3 ms, elapsed = 3.25203 ms.
+
+Opening the PSFXL file ./input.raw/trans-000_trans.tran.tran ...
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 1 us
+    step = 1 ns
+    maxstep = 20 ns
+    ic = all
+    useprevic = no
+    skipdc = no
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = moderate
+    method = traponly
+    lteratio = 3.5
+    relref = sigglobal
+    cmin = 0 F
+    gmin = 1 pS
+
+
+Output and IC/nodeset summary:
+                 save   1       (current)
+                 save   20      (voltage)
+
+......9......8......7......6......5......4......3......2......1......0
+Number of accepted tran steps =             509
+
+Maximum value achieved for any signal of each quantity: 
+V: V(I20.PM15:int_d) = 371.5 mV
+I: I(V0:p) = 3.425 uA
+If your circuit contains signals of the same quantity that are vastly different in size (such as high voltage circuitry combined with low voltage control circuitry), you should consider specifying global option `bin_relref=yes'.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Post-Transient Simulation Summary
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   -   To further speed up simulation, consider
+          add ++aps on command line
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+During simulation, the CPU load for active processors is :
+         0 (54.2 %)      1 (41.4 %)      2 (3.3 %)      
+        Total: 99.5%
+Initial condition solution time: CPU = 3 ms, elapsed = 3.28994 ms.
+Intrinsic tran analysis time:    CPU = 236.963 ms, elapsed = 263.253 ms.
+Total time required for tran analysis `trans-000_trans': CPU = 243.962 ms, elapsed = 269.342 ms.
+Time accumulated: CPU = 17.5563 s, elapsed = 19.2961 s.
+Peak resident memory used = 227 Mbytes.
+
+
+**********************************************************
+Transient Analysis `trans-000_trans': time = (0 s -> 1 us)
+**********************************************************
+
+Notice from spectre during IC analysis, during transient analysis `trans-000_trans', during task `MDLControl'.
+    GminDC = 1 pS is large enough to noticeably affect the DC solution.
+        dV(I20.NM9:int_d) = -22.4998 mV
+        Use the `gmin_check' option to eliminate or expand this report.
+
+DC simulation time: CPU = 3.999 ms, elapsed = 3.39389 ms.
+
+Opening the PSFXL file ./input.raw/trans-000_trans.tran.tran ...
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 1 us
+    step = 1 ns
+    maxstep = 20 ns
+    ic = all
+    useprevic = no
+    skipdc = no
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = moderate
+    method = traponly
+    lteratio = 3.5
+    relref = sigglobal
+    cmin = 0 F
+    gmin = 1 pS
+
+
+Output and IC/nodeset summary:
+                 save   1       (current)
+                 save   20      (voltage)
+
+......9......8......7......6......5......4......3......2......1......0
+Number of accepted tran steps =             509
+
+Maximum value achieved for any signal of each quantity: 
+V: V(I20.PM15:int_d) = 371.5 mV
+I: I(V0:p) = 3.425 uA
+If your circuit contains signals of the same quantity that are vastly different in size (such as high voltage circuitry combined with low voltage control circuitry), you should consider specifying global option `bin_relref=yes'.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Post-Transient Simulation Summary
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   -   To further speed up simulation, consider
+          add ++aps on command line
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+During simulation, the CPU load for active processors is :
+         0 (54.8 %)      1 (40.8 %)      2 (3.4 %)      
+        Total: 99.6%
+Initial condition solution time: CPU = 3.999 ms, elapsed = 3.4399 ms.
+Intrinsic tran analysis time:    CPU = 243.963 ms, elapsed = 275.717 ms.
+Total time required for tran analysis `trans-000_trans': CPU = 250.962 ms, elapsed = 281.674 ms.
+Time accumulated: CPU = 17.8083 s, elapsed = 19.5799 s.
+Peak resident memory used = 227 Mbytes.
+
+
+Aggregate audit (3:04:05 PM, Fri Dec 10, 2021):
+Time used: CPU = 17.9 s, elapsed = 19.8 s, util. = 90.7%.
+Time spent in licensing: elapsed = 222 ms.
+Peak memory used = 228 Mbytes.
+Simulation started at: 3:03:45 PM, Fri Dec 10, 2021, ended at: 3:04:05 PM, Fri Dec 10, 2021, with elapsed time (wall clock): 19.8 s.
+spectre completes with 0 errors, 75 warnings, and 55 notices.

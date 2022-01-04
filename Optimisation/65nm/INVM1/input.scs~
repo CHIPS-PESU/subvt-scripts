@@ -1,0 +1,109 @@
+// Generated for: spectre
+// Generated on: Dec 21 11:04:11 2021
+// Design library name: subvt
+// Design cell name: DUT
+// Design view name: schematic
+simulator lang=spectre
+global 0
+parameters LN=60n WN=2u LP=60n vdd=300m WP=2u
+include "/home/VLSI_ANALOG/UMC65/FDK/umc65ll/../Models/Spectre/l65ll_v181.lib.scs" section=tt_ll_rvt12
+include "/home/VLSI_ANALOG/UMC65/FDK/umc65ll/../Models/Spectre/l65ll_v181.lib.scs" section=tt_ll_hvt12
+include "/home/VLSI_ANALOG/UMC65/FDK/umc65ll/../Models/Spectre/l65ll_v181.lib.scs" section=tt_ll_lvt12
+include "/home/VLSI_ANALOG/UMC65/FDK/umc65ll/../Models/Spectre/l65ll_v181.lib.scs" section=tt_ll_io18
+include "/home/VLSI_ANALOG/UMC65/FDK/umc65ll/../Models/Spectre/l65ll_v181.lib.scs" section=tt_ll_io25od33
+include "/home/VLSI_ANALOG/UMC65/FDK/umc65ll/../Models/Spectre/l65ll_v181.lib.scs" section=tt_ll_io33
+include "/home/VLSI_ANALOG/UMC65/FDK/umc65ll/../Models/Spectre/l65ll_v181.lib.scs" section=tt_ll_nvt12
+include "/home/VLSI_ANALOG/UMC65/FDK/umc65ll/../Models/Spectre/l65ll_v181.lib.scs" section=tt_ll_nvt12_bpw
+include "/home/VLSI_ANALOG/UMC65/FDK/umc65ll/../Models/Spectre/l65ll_v181.lib.scs" section=tt_ll_nvt18
+include "/home/VLSI_ANALOG/UMC65/FDK/umc65ll/../Models/Spectre/l65ll_v181.lib.scs" section=tt_ll_nvt18_bpw
+include "/home/VLSI_ANALOG/UMC65/FDK/umc65ll/../Models/Spectre/l65ll_v181.lib.scs" section=tt_ll_nvt25od33
+include "/home/VLSI_ANALOG/UMC65/FDK/umc65ll/../Models/Spectre/l65ll_v181.lib.scs" section=tt_ll_nvt25od33_bpw
+include "/home/VLSI_ANALOG/UMC65/FDK/umc65ll/../Models/Spectre/l65ll_v181.lib.scs" section=tt_ll_nvt33
+include "/home/VLSI_ANALOG/UMC65/FDK/umc65ll/../Models/Spectre/l65ll_v181.lib.scs" section=tt_ll_nvt33_bpw
+include "/home/VLSI_ANALOG/UMC65/FDK/umc65ll/../Models/Spectre/l65ll_v181.lib.scs" section=tt_ll_bjt
+include "/home/VLSI_ANALOG/UMC65/FDK/umc65ll/../Models/Spectre/l65ll_v181.lib.scs" section=tt_ll_diode
+include "/home/VLSI_ANALOG/UMC65/FDK/umc65ll/../Models/Spectre/l65ll_v181.lib.scs" section=tt_ll_momcaps
+include "/home/VLSI_ANALOG/UMC65/FDK/umc65ll/../Models/Spectre/l65ll_v181.lib.scs" section=tt_ll_ncap12
+include "/home/VLSI_ANALOG/UMC65/FDK/umc65ll/../Models/Spectre/l65ll_v181.lib.scs" section=tt_ll_ncap18
+include "/home/VLSI_ANALOG/UMC65/FDK/umc65ll/../Models/Spectre/l65ll_v181.lib.scs" section=tt_ll_ncap25
+include "/home/VLSI_ANALOG/UMC65/FDK/umc65ll/../Models/Spectre/l65ll_v181.lib.scs" section=tt_ll_ncap33
+include "/home/VLSI_ANALOG/UMC65/FDK/umc65ll/../Models/Spectre/l65ll_v181.lib.scs" section=tt_ll_pcap12
+include "/home/VLSI_ANALOG/UMC65/FDK/umc65ll/../Models/Spectre/l65ll_v181.lib.scs" section=tt_ll_pcap18
+include "/home/VLSI_ANALOG/UMC65/FDK/umc65ll/../Models/Spectre/l65ll_v181.lib.scs" section=tt_ll_pcap25
+include "/home/VLSI_ANALOG/UMC65/FDK/umc65ll/../Models/Spectre/l65ll_v181.lib.scs" section=tt_ll_pcap33
+include "/home/VLSI_ANALOG/UMC65/FDK/umc65ll/../Models/Spectre/l65ll_v181.lib.scs" section=tt_ll_res
+include "/home/VLSI_ANALOG/UMC65/FDK/umc65ll/../Models/Spectre/L65LL_RVT12_V101_RF.lib.scs" section=tt
+include "/home/VLSI_ANALOG/UMC65/FDK/umc65ll/../Models/Spectre/L65LL_HVT12_V101_RF.lib.scs" section=tt
+include "/home/VLSI_ANALOG/UMC65/FDK/umc65ll/../Models/Spectre/L65LL_LVT12_V101_RF.lib.scs" section=tt
+include "/home/VLSI_ANALOG/UMC65/FDK/umc65ll/../Models/Spectre/L65LL_IO18_V101_RF.lib.scs" section=tt
+include "/home/VLSI_ANALOG/UMC65/FDK/umc65ll/../Models/Spectre/L65LL_IO25_V101_RF.lib.scs" section=tt
+include "/home/VLSI_ANALOG/UMC65/FDK/umc65ll/../Models/Spectre/L65LL_IO33_V111_RF.lib.scs" section=tt
+include "/home/VLSI_ANALOG/UMC65/FDK/umc65ll/../Models/Spectre/L65LL_VARMIS12_V111_RF.lib.scs" section=typ
+include "/home/VLSI_ANALOG/UMC65/FDK/umc65ll/../Models/Spectre/L65LL_VARMIS18_V111_RF.lib.scs" section=typ
+include "/home/VLSI_ANALOG/UMC65/FDK/umc65ll/../Models/Spectre/L65LL_VARMIS25_V121_RF.lib.scs" section=typ
+include "/home/VLSI_ANALOG/UMC65/FDK/umc65ll/../Models/Spectre/L65LL_VARMIS33_V111_RF.lib.scs" section=typ
+include "/home/VLSI_ANALOG/UMC65/FDK/umc65ll/../Models/Spectre/L65LL_VARDIOP_V101_RF.lib.scs" section=typ
+include "/home/VLSI_ANALOG/UMC65/FDK/umc65ll/../Models/Spectre/momcaps_array_vp3_rfvcl_V101.lib.scs" section=typ
+include "/home/VLSI_ANALOG/UMC65/FDK/umc65ll/../Models/Spectre/momcaps_array_vp4_rfvcl_V101.lib.scs" section=typ
+include "/home/VLSI_ANALOG/UMC65/FDK/umc65ll/../Models/Spectre/momcaps_array_vp5_rfvcl_V101.lib.scs" section=typ
+include "/home/VLSI_ANALOG/UMC65/FDK/umc65ll/../Models/Spectre/L65_MIMCAPS_20F_KF_V101_RF.lib.scs" section=tt
+include "/home/VLSI_ANALOG/UMC65/FDK/umc65ll/../Models/Spectre/L65LL_RNPPO_V101_RF.lib.scs" section=typ
+include "/home/VLSI_ANALOG/UMC65/FDK/umc65ll/../Models/Spectre/L65LL_RNNPO_V101_RF.lib.scs" section=typ
+include "/home/VLSI_ANALOG/UMC65/FDK/umc65ll/../Models/Spectre/L65LL_RNHR_V101_RF.lib.scs" section=typ
+include "/home/VLSI_ANALOG/UMC65/FDK/umc65ll/../Models/Spectre/L65_pad_rf_V101.lib.scs" section=typ
+
+// Library name: subvt
+// Cell name: INVM1
+// View name: schematic
+subckt INVM1 GND IN VDD Y
+    NM0 (Y IN GND GND) n_12_lllvt l=LN w=WN sa=(((WN) / (1)) < 119.5n) ? 0.175u > ((90n) + 30n) ? 0.175u : ((90n) + 30n) : 140n > ((90n) + (15n + 55n)) ? 140n : ((90n) + (15n + 55n)) \
+         sb=(((WN) / (1)) < 119.5n) ? 0.175u > ((90n) + 30n) ? 0.175u : ((90n) + 30n) : 140n > ((90n) + (15n + 55n)) ? 140n : ((90n) + (15n + 55n)) \
+         nf=1 mis_flag=1 sd=(1) == 1 ? 0 : (((WN) / (1)) < 119.5n) ? 0.23u > ((90n) + 30n) ? 0.23u : ((90n) + 30n) : 130n > ((90n) + 110n) ? 130n : ((90n) + 110n) \
+         as=((((((WN) / (1)) < 119.5n) ? 0.175u > ((90n) + 30n) ? 0.175u : ((90n) + 30n) : 140n > ((90n) + (15n + 55n)) ? 140n : ((90n) + (15n + 55n)))) * (WN) / (1)) + (((1) == 1 ? 0 : (((WN) / (1)) < 119.5n) ? 0.23u > ((90n) + 30n) ? 0.23u : ((90n) + 30n) : 130n > ((90n) + 110n) ? 130n : ((90n) + 110n)) * (WN) / (1) * 0) \
+         ad=((((((WN) / (1)) < 119.5n) ? 0.175u > ((90n) + 30n) ? 0.175u : ((90n) + 30n) : 140n > ((90n) + (15n + 55n)) ? 140n : ((90n) + (15n + 55n)))) * (WN) / (1)) + (((1) == 1 ? 0 : (((WN) / (1)) < 119.5n) ? 0.23u > ((90n) + 30n) ? 0.23u : ((90n) + 30n) : 130n > ((90n) + 110n) ? 130n : ((90n) + 110n)) * (WN) / (1) * 0) \
+         ps=((((((WN) / (1)) < 119.5n) ? 0.175u > ((90n) + 30n) ? 0.175u : ((90n) + 30n) : 140n > ((90n) + (15n + 55n)) ? 140n : ((90n) + (15n + 55n)))*2) + ((WN) / (1)*2)) + ((((1) == 1 ? 0 : (((WN) / (1)) < 119.5n) ? 0.23u > ((90n) + 30n) ? 0.23u : ((90n) + 30n) : 130n > ((90n) + 110n) ? 130n : ((90n) + 110n))*2) + ((WN) / (1)*2))*0 \
+         pd=((((((WN) / (1)) < 119.5n) ? 0.175u > ((90n) + 30n) ? 0.175u : ((90n) + 30n) : 140n > ((90n) + (15n + 55n)) ? 140n : ((90n) + (15n + 55n)))*2) + ((WN) / (1)*2)) + ((((1) == 1 ? 0 : (((WN) / (1)) < 119.5n) ? 0.23u > ((90n) + 30n) ? 0.23u : ((90n) + 30n) : 130n > ((90n) + 110n) ? 130n : ((90n) + 110n))*2) + ((WN) / (1)*2))*0 \
+         sca=((2.0u*2.0u)/((WN) / (1)))*(1/(150n)-1/((150n)+((WN) / (1)))) \
+        scb=(1/(((WN) / (1))*2.0u))*(2.0u/10*(150n)*exp(-10*(150n)/2.0u)+((2.0u*2.0u)/100)*exp(-10*(150n)/2.0u)-(2.0u/10)*((150n)+((WN) / (1)))*exp(-10*((150n)+((WN) / (1)))/2.0u)-(2.0u*2.0u)/100*exp(-10*((150n)+((WN) / (1)))/2.0u)) \
+         scc=(1/(((WN) / (1))*2.0u))*(2.0u/20*(150n)*exp(-20*(150n)/2.0u)+((2.0u*2.0u)/400)*exp(-20*(150n)/2.0u)-(2.0u/20)*((150n)+((WN) / (1)))*exp(-20*((150n)+((WN) / (1)))/2.0u)-(2.0u*2.0u)/400*exp(-20*((150n)+((WN) / (1)))/2.0u)) \
+         m=1 mf=1
+    PM0 (Y IN VDD VDD) p_12_lllvt l=LP w=WP sa=(((WP) / (1)) < 119.5n) ? 0.175u > ((90n) + 30n) ? 0.175u : ((90n) + 30n) : 140n > ((90n) + (15n + 55n)) ? 140n : ((90n) + (15n + 55n)) \
+         sb=(((WP) / (1)) < 119.5n) ? 0.175u > ((90n) + 30n) ? 0.175u : ((90n) + 30n) : 140n > ((90n) + (15n + 55n)) ? 140n : ((90n) + (15n + 55n)) \
+         nf=1 mis_flag=1 sd=(1) == 1 ? 0 : (((WP) / (1)) < 119.5n) ? 0.23u > ((90n) + 30n) ? 0.23u : ((90n) + 30n) : 130n > ((90n) + 110n) ? 130n : ((90n) + 110n) \
+         as=((((((WP) / (1)) < 119.5n) ? 0.175u > ((90n) + 30n) ? 0.175u : ((90n) + 30n) : 140n > ((90n) + (15n + 55n)) ? 140n : ((90n) + (15n + 55n)))) * (WP) / (1)) + (((1) == 1 ? 0 : (((WP) / (1)) < 119.5n) ? 0.23u > ((90n) + 30n) ? 0.23u : ((90n) + 30n) : 130n > ((90n) + 110n) ? 130n : ((90n) + 110n)) * (WP) / (1) * 0) \
+         ad=((((((WP) / (1)) < 119.5n) ? 0.175u > ((90n) + 30n) ? 0.175u : ((90n) + 30n) : 140n > ((90n) + (15n + 55n)) ? 140n : ((90n) + (15n + 55n)))) * (WP) / (1)) + (((1) == 1 ? 0 : (((WP) / (1)) < 119.5n) ? 0.23u > ((90n) + 30n) ? 0.23u : ((90n) + 30n) : 130n > ((90n) + 110n) ? 130n : ((90n) + 110n)) * (WP) / (1) * 0) \
+         ps=((((((WP) / (1)) < 119.5n) ? 0.175u > ((90n) + 30n) ? 0.175u : ((90n) + 30n) : 140n > ((90n) + (15n + 55n)) ? 140n : ((90n) + (15n + 55n)))*2) + ((WP) / (1)*2)) + ((((1) == 1 ? 0 : (((WP) / (1)) < 119.5n) ? 0.23u > ((90n) + 30n) ? 0.23u : ((90n) + 30n) : 130n > ((90n) + 110n) ? 130n : ((90n) + 110n))*2) + ((WP) / (1)*2))*0 \
+         pd=((((((WP) / (1)) < 119.5n) ? 0.175u > ((90n) + 30n) ? 0.175u : ((90n) + 30n) : 140n > ((90n) + (15n + 55n)) ? 140n : ((90n) + (15n + 55n)))*2) + ((WP) / (1)*2)) + ((((1) == 1 ? 0 : (((WP) / (1)) < 119.5n) ? 0.23u > ((90n) + 30n) ? 0.23u : ((90n) + 30n) : 130n > ((90n) + 110n) ? 130n : ((90n) + 110n))*2) + ((WP) / (1)*2))*0 \
+         sca=((2.0u*2.0u)/((WP) / (1)))*(1/(150n)-1/((150n)+((WP) / (1)))) \
+        scb=(1/(((WP) / (1))*2.0u))*(2.0u/10*(150n)*exp(-10*(150n)/2.0u)+((2.0u*2.0u)/100)*exp(-10*(150n)/2.0u)-(2.0u/10)*((150n)+((WP) / (1)))*exp(-10*((150n)+((WP) / (1)))/2.0u)-(2.0u*2.0u)/100*exp(-10*((150n)+((WP) / (1)))/2.0u)) \
+         scc=(1/(((WP) / (1))*2.0u))*(2.0u/20*(150n)*exp(-20*(150n)/2.0u)+((2.0u*2.0u)/400)*exp(-20*(150n)/2.0u)-(2.0u/20)*((150n)+((WP) / (1)))*exp(-20*((150n)+((WP) / (1)))/2.0u)-(2.0u*2.0u)/400*exp(-20*((150n)+((WP) / (1)))/2.0u)) \
+         m=1 mf=1
+ends INVM1
+// End of subcircuit definition.
+
+// Library name: subvt
+// Cell name: DUT
+// View name: schematic
+I0 (0 IN net5 Y) INVM1
+V0 (net5 0) vsource dc=vdd type=dc
+V1 (IN 0) vsource dc=0 type=pulse val0=0 val1=vdd period=100u delay=0 \
+        rise=1p fall=1p
+C0 (Y 0) capacitor c=20f
+simulatorOptions options psfversion="1.4.0" reltol=1e-3 vabstol=1e-6 \
+    iabstol=1e-12 temp=27 tnom=27 scalem=1.0 scale=1.0 gmin=1e-12 rforce=1 \
+    maxnotes=5 maxwarns=5 digits=5 cols=80 pivrel=1e-3 \
+    sensfile="../psf/sens.output" checklimitdest=psf 
+tran tran stop=200u write="spectre.ic" writefinal="spectre.fc" \
+    annotate=status maxiters=5 
+finalTimeOP info what=oppoint where=rawfile
+dcOp dc write="spectre.dc" maxiters=150 maxsteps=10000 annotate=status
+dcOpInfo info what=oppoint where=rawfile
+dc dc dev=V1 param=dc start=0 stop=vdd oppoint=rawfile maxiters=150 \
+    maxsteps=10000 annotate=status
+modelParameter info what=models where=rawfile
+element info what=inst where=rawfile
+outputParameter info what=output where=rawfile
+designParamVals info what=parameters where=rawfile
+primitives info what=primitives where=rawfile
+subckts info what=subckts where=rawfile
+saveOptions options save=all pwr=all currents=all

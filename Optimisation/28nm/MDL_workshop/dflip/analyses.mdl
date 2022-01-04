@@ -1,0 +1,80 @@
+//  analyses.mdl
+//  (C) 2008 Cadence Design Systems, Inc.
+//
+// This example shows MDL support not only SPICE synatx netlist-defined 
+// analyses such as .op, .dc, .ac and .tran, but also Spectre syntax 
+// actimes/acnames and infotimes/infoname to enable MDL to run AC 
+// analysis ot info analysis at specific times during a transient analysis.
+
+
+// alias measurement definition
+alias measurement mytran1 {
+
+   // define an input real variable
+   input real transtop=40n
+
+   // define a transient analysis with actimes/acnames
+   run tran( actimes={0, 20n, 40n}, acnames={ac1, CaptabInfo}, stop=transtop)
+   //run tran_ac
+
+   //compute voltage of V(q) at specific times
+   export real vq_40n=V(q)@4e-8
+   export real vq_transtop=V(q)@transtop
+   export real vq_20n=V(q)@20e-9
+   export real vq_10n=V(q)@10n
+}
+
+// alias measurement definition
+alias measurement mytran2 {
+
+   // define a transient analysis with infotimes/infoname
+   run tran( infotimes={10n, 30n}, infoname=instInfo, stop=40n)
+   //run tran_info
+
+   //compute voltage of V(q) at specific times
+   export real vq_40n=V(q)
+}
+
+// alias measurement definition
+alias measurement spice_op {
+
+   //define an OP analysis mapping SPICE .op defined in the netlist
+   run opBegin
+
+   //compute voltage of V(q) 
+   export real dcout=V(q)
+}
+
+// alias measurement definition
+alias measurement spice_dcswp {
+
+   //define an DC sweep analysis mapping SPICE .dc defined in the netlist
+   run srcSweep
+
+   //compute voltage of V(q) at different value of swept parameter
+   export real dcswpout_1p2=V(q)@1.2
+   export real dcswpout_1p8=V(q)@1.8
+   export real dcswpout_2p4=V(q)@2.4
+}
+
+// alias measurement definition
+alias measurement spice_tran {
+
+   //define an transient analysis mapping SPICE .tran defined in the netlist
+   run timeSweep
+
+   //compute maximum value of V(q)
+   export real maxq=max(V(q))
+}
+
+// execute the measurement alias
+run mytran1
+run mytran2
+run spice_op
+run spice_dcswp
+
+// define a sweep on dc vsource vvdd and do transient analysis
+foreach vvdd:dc from swp (start=1.2, stop=2.4, step=0.6) {
+   run spice_tran
+}
+

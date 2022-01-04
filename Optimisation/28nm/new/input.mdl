@@ -1,0 +1,70 @@
+//  mvarpwr.mdl
+//  (C) 2008 Cadence Design Systems, Inc.
+//
+// This example is to find optimal values of design parameters 
+// by running a multi-parameter, multi-goal search function
+//
+
+// alias measurement definition
+alias measurement trans {
+
+  // definition of transient analysis with autostop turned on
+  run tran( stop=20u, autostop='yes )
+
+//computation of falltime for signal V(out) from 90% to 10%
+     export real fall=falltime(sig=V(OUT), initval=0.3, inittype='y, finalval=0.0, finaltype='y, theta1=90, theta2=10)     
+
+// computation of risetime for signal V(out) from 10% to 90%
+     export real rise=risetime(sig=V(OUT), initval=0.0, inittype='y, finalval=0.3, finaltype='y, theta1=10, theta2=90)
+
+     export real delay = (rise*2+fall*2)/4
+
+     export real avg_pwr = avg(abs(I3.mn3:pwr))
+
+}
+
+// Print results to a specified file beginning with "to=" keyword
+print fmt ("\n****Intermediate Results of Optimization Searching****\n\n") to="mvar.print"
+
+// continue to print in user-format with "addto=" keyword
+print fmt ("%-15s%-15s%-15s%-15s%-15s\n", "pw","nw","rise","fall","avg_pwr") addto="mvar.print"
+
+// workaround - uncomment this and then the power gets properly measured in the subsequent
+// mvarsearch (seems like a bug)
+run trans
+
+// definition of a mvarsearch function
+mvarsearch {
+
+         // definition of multiple optimization goals
+   	 option {
+	    //method='lm
+   	    accuracy = 1e-12     // convergence tolerance of trans
+   	    deltax = 1e-6       // step length
+   	    maxiter = 1000       // limit to 100 iterations
+   	 }
+
+         //  definition of multiple parameters to be optimized
+   	 parameter {
+   	    {WP, 8u, 1u, 8.5u} //init_val, lower_val, upper_value
+   	    {WN, 8u, 300n, 8.5u} //init_val, lower_val, upper_value
+		
+   	 }
+
+         // execution of the measurement alias
+   	 exec {
+            print fmt("%-15e%-15e", WP, WN) addto="mvar.print"
+   	    run trans
+            print fmt("%-15e%-15e%-15e\n", trans->rise,trans->fall,trans->avg_pwr) \
+                      addto="mvar.print"
+   	 }
+
+         // definition of goal values to be minimized
+   	 zero {
+   	    tmp1 = trans->rise-1n
+   	    tmp2 = trans->fall-1n 
+// uncomment to add this power goal (doesn't work with this alone as the power is always 0)
+	    tmp3 = trans->avg_pwr-1p
+	    tmp4 = trans->delay-2p
+   	 }
+}

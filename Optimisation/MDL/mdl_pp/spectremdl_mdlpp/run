@@ -1,0 +1,6 @@
+spectre dflip.scs -outdir spectre_result
+ultrasim dflip.scs -outdir usim_result
+spectremdl dflip.mdl -outdir spectremdl_result
+mdl -d dflip.scs -b dflip.mdl -r spectre_result/dflip.raw/ -outdir mdlpp_spectre
+mdl -d dflip.scs -b dflip.mdl -r usim_result/ -outdir mdlpp_usim
+mdl -d dflip.scs -b dflip.mdl -r spectremdl_result/dflip.raw/ -outdir mdlpp_spectremdl

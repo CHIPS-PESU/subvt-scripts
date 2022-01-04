@@ -1,0 +1,145 @@
+ROOT_DIR = /home/installs/LIBERATE192
+exepath = /home/installs/LIBERATE192/tools/bin
+Host : cad19 x86_64 Linux 2.6.32-696.el6.x86_64
+LIBERATE Library Characterization Platform (x86_64) 
+Release dev, compiled by vficcm on Tue Sep 10 06:33:00 PDT 2019
+
+
+    ********************************************************************
+    *   Copyright (c)  Cadence Design Systems, Inc.  2006 - 2021.      *
+    *             All rights reserved.                                 *
+    *                                                                  *
+    *                                                                  *
+    *                                                                  *
+    * This program contains confidential and trade secret information  *
+    * of Cadence Design Systems, Inc. and is protected by copyright    *
+    * law and international treaties.  Any reproduction, use,          *
+    * distribution or disclosure of this program or any portion of it, *
+    * or any attempt to obtain a human-readable version of this        *
+    * program, without the express, prior written consent of           *
+    * Cadence Design Systems, Inc., is strictly prohibited.            *
+    *                                                                  *
+    *         Cadence Design Systems, Inc.                             *
+    *           2655 Seely Avenue                                      *
+    *           San Jose, CA 95134,  USA                               *
+    *                                                                  *
+    *                                                                  *
+    ********************************************************************
+    
+    
+    Copyright notices for Open Source and Third Party Tools used by this 
+    software can be viewed at <cds_inst_dir>/doc/liberate/thirdpartyinfo/Notices.txt
+
+LIBERATE started on cad19 at Thu May 20 16:10:07 2021
+
+Command line arguments: 'tcl/char.tcl'.
+ALTOSHOME set to '/home/installs/LIBERATE192'.
+Server ID : T20210520161007700880S0004462
+LIBERATE parameter "slew_lower_rise" set to "0.2"
+LIBERATE parameter "slew_upper_rise" set to "0.8"
+LIBERATE parameter "slew_lower_fall" set to "0.2"
+LIBERATE parameter "slew_upper_fall" set to "0.8"
+LIBERATE parameter "measure_slew_lower_rise" set to "0.2"
+LIBERATE parameter "measure_slew_upper_rise" set to "0.8"
+LIBERATE parameter "measure_slew_lower_fall" set to "0.2"
+LIBERATE parameter "measure_slew_upper_fall" set to "0.8"
+LIBERATE parameter "max_transition" set to "6.175e-08"
+LIBERATE parameter "extsim_model_include" set to "/home/TSMC/Desktop/UMC180/Designkits/Cadence_6.1/lowpower/liberate/umc.scs"
+INFO (LIB-511): (define_leafcell): Leafcell 'N_18_MM' (element) has been identified with pin_position (0 1 2 3) mapped to (D G S B).
+LIBERATE parameter "extsim_exclusive" set to "1"
+INFO (LIB-511): (define_leafcell): Leafcell 'P_18_MM' (element) has been identified with pin_position (0 1 2 3) mapped to (D G S B).
+LIBERATE parameter "spectre_pwr" set to "0"
+LIBERATE parameter "simulator" set to "spectre"
+LIBERATE parameter "char_library_skip_var_list" set to ""
+Start Characterizing Library at (Thu May 20 16:10:10 IST 2021)
+
+INFO (LIB-956): (read_spice): Reading file: '/home/TSMC/Desktop/UMC180/Designkits/Cadence_6.1/lowpower/liberate/umc.scs'.
+INFO (LIB-956): (read_spice): Reading file: 'netlist/INVX1.sp'.
+INFO (LIB-956): (read_spice): Reading file: 'netlist/AND2X1.sp'.
+INFO (LIB-956): (read_spice): Reading file: 'netlist/NAND2X1.sp'.
+INFO (LIB-956): (read_spice): Reading file: 'netlist/OR2X1.sp'.
+INFO (LIB-956): (read_spice): Reading file: 'netlist/NOR2X1.sp'.
+INFO (LIB-956): (read_spice): Reading file: 'netlist/XOR2X1.sp'.
+INFO (LIB-956): (read_spice): Reading file: 'netlist/XNOR2X1.sp'.
+INFO (LIB-943): Finished reading netlist(s) at May 20 16:10:10.
+INFO (LIB-711): Feature 'Virtuoso_Multi_mode_Simulation' exists in the license pool. The parameter 'spectre_use_mmsim_token_license' will be set to '1'.
+INFO (LIB-1008): (char_library): This LIBERATE release was qualified with MMSIM version '' but newer version '19.1.0.396.isr8' was detected. If MMSIM-related issues are found, update to the qualified MMSIM version and re-run.
+INFO (LIB-966): Using Spectre version 19.1.0.396.isr8 located at: /home/installs/SPECTRE191/tools/bin/spectre.
+*Info* Use temporary directory '/home/TSMC/Desktop/UMC180/Designkits/Cadence_6.1/lowpower/liberate'.
+LIBERATE parameter "extsim_deck_dir" defaulted to cad19:/home/TSMC/Desktop/UMC180/Designkits/Cadence_6.1/lowpower/liberate/decks.cad19.T20210520161007700880S0004462
+Initializing Spice
+*Info* Adding 10 global models to Spice.
+Building library database
+Processing cell: AND2X1
+(May 20 16:10:11) Finish building module.
+ERROR (LIB-5048): (LIBERATE): System error - could not execute command: cd /home/TSMC/Desktop/UMC180/Designkits/Cadence_6.1/lowpower/liberate/altos.cad19.T20210520161007700880S0004462.0; /home/installs/SPECTRE191/tools/bin/spectre  +lqt 0 =log sim.lis  +libtkn 0001208F0F964DEB4DDB67C73FE609F74FDE77D55BF946F37BD5279610F747F509CF6EC154DA12934B9F70D7629B49EA4ECE0BD3368335D8109B25EB159644D65A996F953AED25A20AD079D119DF75F437E975D9038439E368A824E078E877A20EE943E135B959920DD979D11B8977A237E979D11B8977A237E9197727024B29574F00003A6E /home/TSMC/Desktop/UMC180/Designkits/Cadence_6.1/lowpower/liberate/altos.cad19.T20210520161007700880S0004462.0/sim.sp >& /dev/null. Error code: 2.
+*Info* Simulation failed to complete. Restart the simulation in 5 seconds on host cad19.
+*Info* Run Spectre : (0) at /home/TSMC/Desktop/UMC180/Designkits/Cadence_6.1/lowpower/liberate/altos.cad19.T20210520161007700880S0004462.0
+ERROR (LIB-448): (char_library): Failed to run 'cd /home/TSMC/Desktop/UMC180/Designkits/Cadence_6.1/lowpower/liberate/altos.cad19.T20210520161007700880S0004462.0; /home/installs/SPECTRE191/tools/bin/spectre  +lqt 0 =log sim.lis  +libtkn 0001208F0F964DEB4DDB67C73FE609F74FDE77D55BF946F37BD5279610F747F509CF6EC154DA12934B9F70D7629B49EA4ECE0BD3368335D8109B25EB159644D65A996F953AED25A20AD079D119DF75F437E975D9038439E368A824E078E877A20EE943E135B959920DD979D11B8977A237E979D11B8977A237E9197727194B32574F00003A70 /home/TSMC/Desktop/UMC180/Designkits/Cadence_6.1/lowpower/liberate/altos.cad19.T20210520161007700880S0004462.0/sim.sp >& /dev/null' on host cad19. Spectre exit code: 2 (stop simulation because of Spectre error condition).
+ERROR (LIB-5048): (LIBERATE): System error - could not execute command: cd /home/TSMC/Desktop/UMC180/Designkits/Cadence_6.1/lowpower/liberate/altos.cad19.T20210520161007700880S0004462.0; /home/installs/SPECTRE191/tools/bin/spectre  +lqt 0 =log sim.lis  +libtkn 0001208F0F964DEB4DDB67C73FE609F74FDE77D55BF946F37BD5279610F747F509CF6EC154DA12934B9F70D7629B49EA4ECE0BD3368335D8109B25EB159644D65A996F953AED25A20AD079D119DF75F437E975D9038439E368A824E078E877A20EE943E135B959920DD979D11B8977A237E979D11B8977A237E9197727194B32574F00003A70 /home/TSMC/Desktop/UMC180/Designkits/Cadence_6.1/lowpower/liberate/altos.cad19.T20210520161007700880S0004462.0/sim.sp >& /dev/null. Error code: 2.
+*Info* Simulation failed to complete. Restart the simulation in 5 seconds on host cad19.
+*Info* Run Spectre : (0) at /home/TSMC/Desktop/UMC180/Designkits/Cadence_6.1/lowpower/liberate/altos.cad19.T20210520161007700880S0004462.0
+ERROR (LIB-448): (char_library): Failed to run 'cd /home/TSMC/Desktop/UMC180/Designkits/Cadence_6.1/lowpower/liberate/altos.cad19.T20210520161007700880S0004462.0; /home/installs/SPECTRE191/tools/bin/spectre  +lqt 0 =log sim.lis  +libtkn 0001208F0F964DEB4DDB67C73FE609F74FDE77D55BF946F37BD5279610F747F509CF6EC154DA12934B9F70D7629B49EA4ECE0BD3368335D8109B25EB159644D65A996F953AED25A20AD079D119DF75F437E975D9038439E368A824E078E877A20EE943E135B959920DD979D11B8977A237E979D11B8977A237E91977271F4B34574F00003A7F /home/TSMC/Desktop/UMC180/Designkits/Cadence_6.1/lowpower/liberate/altos.cad19.T20210520161007700880S0004462.0/sim.sp >& /dev/null' on host cad19. Spectre exit code: 2 (stop simulation because of Spectre error condition).
+INFO (LIB-423): (char_library): The MOS terminal capacitance pre-characterization has been stopped for the following models or leafcells. Add them to the 'char_mos_term_cap_skip_names' variable to skip the failed simulation in the next run.
+    : N_18_MM P_18_MM
+*Info* (char_library) : Cell AND2X1 found in file netlist/AND2X1.sp
+Processing cell: INVX1
+(May 20 16:10:22) Finish building module.
+INFO (LIB-501): (char_library): Cannot determine VDD for port 'in' in cell 'INVX1', use default value 0.300V.
+INFO (LIB-501): (char_library): Cannot determine VDD for port 'out' in cell 'INVX1', use default value 0.300V.
+*Info* (char_library) : Cell INVX1 found in file netlist/INVX1.sp
+*Warning* Unable to automatically determine the related_power_pin for pin "out" in cell "INVX1". Assigning to the supply referenced in the default vdd "VDD". Please check the netlist or use set_pin_vdd to avoid such warning.
+*Warning* Unable to automatically determine the related_power_pin for pin "in" in cell "INVX1". Assigning to the supply referenced in the default vdd "VDD". Please check the netlist or use set_pin_vdd to avoid such warning.
+Processing cell: NAND2X1
+(May 20 16:10:22) Finish building module.
+*Info* (char_library) : Cell NAND2X1 found in file netlist/NAND2X1.sp
+Processing cell: NOR2X1
+WARNING (LIB-519): (char_library): The pin 'a' is not defined for cell 'NOR2X1'. Check the netlist and make sure it is consistent with 'define_cell' command.
+WARNING (LIB-519): (char_library): The pin 'b' is not defined for cell 'NOR2X1'. Check the netlist and make sure it is consistent with 'define_cell' command.
+(May 20 16:10:22) Finish building module.
+*Info* (char_library) : Cell NOR2X1 found in file netlist/NOR2X1.sp
+Processing cell: OR2X1
+WARNING (LIB-519): (char_library): The pin 'a' is not defined for cell 'OR2X1'. Check the netlist and make sure it is consistent with 'define_cell' command.
+WARNING (LIB-519): (char_library): The pin 'b' is not defined for cell 'OR2X1'. Check the netlist and make sure it is consistent with 'define_cell' command.
+(May 20 16:10:22) Finish building module.
+*Info* (char_library) : Cell OR2X1 found in file netlist/OR2X1.sp
+Processing cell: XNOR2X1
+WARNING (LIB-519): (char_library): The pin 'a' is not defined for cell 'XNOR2X1'. Check the netlist and make sure it is consistent with 'define_cell' command.
+(May 20 16:10:22) Finish building module.
+INFO (LIB-501): (char_library): Cannot determine VDD for port 'b' in cell 'XNOR2X1', use default value 0.300V.
+INFO (LIB-501): (char_library): Cannot determine VDD for port 'y' in cell 'XNOR2X1', use default value 0.300V.
+*Info* (char_library) : Cell XNOR2X1 found in file netlist/XNOR2X1.sp
+Processing cell: XOR2X1
+(May 20 16:10:22) Finish building module.
+*Info* (char_library) : Cell XOR2X1 found in file netlist/XOR2X1.sp
+*Info* (char_library) : Cell AND2X1 found in file netlist/AND2X1.sp
+*Info* (char_library) : Cell INVX1 found in file netlist/INVX1.sp
+*Info* (char_library) : Cell NAND2X1 found in file netlist/NAND2X1.sp
+*Info* (char_library) : Cell NOR2X1 found in file netlist/NOR2X1.sp
+*Info* (char_library) : Cell OR2X1 found in file netlist/OR2X1.sp
+*Info* (char_library) : Cell XNOR2X1 found in file netlist/XNOR2X1.sp
+*Info* (char_library) : Cell XOR2X1 found in file netlist/XOR2X1.sp
+  MEM=456 MB
+  MEM=456 MB
+(May 20 16:10:22) Generating vectors: AND2X1
+(May 20 16:10:22) Generating vectors: INVX1
+(May 20 16:10:22) Generating vectors: NAND2X1
+(May 20 16:10:22) Generating vectors: NOR2X1
+(May 20 16:10:22) Generating vectors: OR2X1
+(May 20 16:10:22) Generating vectors: XNOR2X1
+(May 20 16:10:22) Generating vectors: XOR2X1
+  MEM=458 MB
+
+May 20 16:10:23 Thread 3: Cell=XOR2X1 (44%)     Pin=y    Related=a    combinational  rise_transition 
+May 20 16:10:23 Thread 0: Cell=XOR2X1 (68%)     Pin=y    Related=b    combinational  rise_transition 
+May 20 16:10:23 Thread 2: Cell=XOR2X1 (92%)     Pin=y    Related=a    combinational  fall_transition 
+May 20 16:10:23 Thread 1: Cell=XOR2X1 (100%)    Pin=b    Related=     rising_edge    rise_power     
+ERROR (LIB-5048): (LIBERATE): System error - could not execute command: cd /home/TSMC/Desktop/UMC180/Designkits/Cadence_6.1/lowpower/liberate/altos.cad19.T20210520161007700880S0004462.3; /home/installs/SPECTRE191/tools/bin/spectre  +lqt 0 =log sim.lis  +libtkn 0001208F0F964DEB4DDB67C73FE609F74FDE77D55BF946F37BD5279610F747F509CF6EC154DA12934B9F70D7629B49EA4ECE0BD3368335D8109B25EB159644D65A996F953AED25A20AD079D119DF75F437E975D9038439E368A824E078E877A20EE943E135B959920DD979D11B8977A237E979D11B8977A237E91977271E4B35574F00003A7F /home/TSMC/Desktop/UMC180/Designkits/Cadence_6.1/lowpower/liberate/altos.cad19.T20210520161007700880S0004462.3/sim.sp >& /dev/null. Error code: 2.
+*Info* Simulation failed to complete. Restart the simulation in 5 seconds on host cad19.
+ERROR (LIB-5048): (LIBERATE): System error - could not execute command: cd /home/TSMC/Desktop/UMC180/Designkits/Cadence_6.1/lowpower/liberate/altos.cad19.T20210520161007700880S0004462.2; /home/installs/SPECTRE191/tools/bin/spectre  +lqt 0 =log sim.lis  +libtkn 0001208F0F964DEB4DDB67C73FE609F74FDE77D55BF946F37BD5279610F747F509CF6EC154DA12934B9F70D7629B49EA4ECE0BD3368335D8109B25EB159644D65A996F953AED25A20AD079D119DF75F437E975D9038439E368A824E078E877A20EE943E135B959920DD979D11B8977A237E979D11B8977A237E91977271E4B35574F00003A7F /home/TSMC/Desktop/UMC180/Designkits/Cadence_6.1/lowpower/liberate/altos.cad19.T20210520161007700880S0004462.2/sim.sp >& /dev/null. Error code: 2.
+*Info* Simulation failed to complete. Restart the simulation in 5 seconds on host cad19.
+ERROR (LIB-5048): (LIBERATE): System error - could not execute command: cd /home/TSMC/Desktop/UMC180/Designkits/Cadence_6.1/lowpower/liberate/altos.cad19.T20210520161007700880S0004462.0; /home/installs/SPECTRE191/tools/bin/spectre  +lqt 0 =log sim.lis  +libtkn 0001208F0F964DEB4DDB67C73FE609F74FDE77D55BF946F37BD5279610F747F509CF6EC154DA12934B9F70D7629B49EA4ECE0BD3368335D8109B25EB159644D65A996F953AED25A20AD079D119DF75F437E975D9038439E368A824E078E877A20EE943E135B959920DD979D11B8977A237E979D11B8977A237E91977271E4B35574F00003A7F /home/TSMC/Desktop/UMC180/Designkits/Cadence_6.1/lowpower/liberate/altos.cad19.T20210520161007700880S0004462.0/sim.sp >& /dev/null. Error code: 2.
+*Info* Simulation failed to complete. Restart the simulation in 5 seconds on host cad19.
+ERROR (LIB-5048): (LIBERATE): System error - could not execute command: cd /home/TSMC/Desktop/UMC180/Designkits/Cadence_6.1/lowpower/liberate/altos.cad19.T20210520161007700880S0004462.1; /home/installs/SPECTRE191/tools/bin/spectre  +lqt 0 =log sim.lis  +libtkn 0001208F0F964DEB4DDB67C73FE609F74FDE77D55BF946F37BD5279610F747F509CF6EC154DA12934B9F70D7629B49EA4ECE0BD3368335D8109B25EB159644D65A996F953AED25A20AD079D119DF75F437E975D9038439E368A824E078E877A20EE943E135B959920DD979D11B8977A237E979D11B8977A237E91977271E4B35574F00003A7F /home/TSMC/Desktop/UMC180/Designkits/Cadence_6.1/lowpower/liberate/altos.cad19.T20210520161007700880S0004462.1/sim.sp >& /dev/null. Error code: 2.
+*Info* Simulation failed to complete. Restart the simulation in 5 seconds on host cad19.
+*Info* Run Spectre : (3) at /home/TSMC/Desktop/UMC180/Designkits/Cadence_6.1/lowpower/liberate/altos.cad19.T20210520161007700880S0004462.3

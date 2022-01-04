@@ -1,0 +1,35 @@
+Liberate Examples README
+========================
+
+This directory contains 5 Tcl scripts to run Liberate. 
+
+1.  This example creates a new library from just the Spice subckts and Spice models.
+
+> liberate char.tcl |& tee char.log
+
+
+2.  Create a template from the previously created library
+
+> liberate create_template.tcl |& tee create_library.log
+
+
+3.  This example creates a new library using the template created from the existing i
+library in step 2 above plus Spice subckts and Spice models.
+
+> liberate rechar.tcl |& tee rechar.log
+
+
+4.  This example compares two libraries, example_ccs.lib and 
+example_rechar_ccs.lib. Liberate generates a comparison report (with 
+reltol and abstol set to 0) and a lcplot input file ./GUI/example.gui
+
+> liberate compare_libs.tcl |& tee compare_libs.log
+
+5.  This example will use the ALAPI (ALtos API) commands to generate a report
+from a library that was read in.  This example reads an existing library 
+database (.ldb) and gives a simple example for each of the basic ALtos API (ALAPI) 
+routines.  It generates a report and provides an example of how to write
+customized reports.
+
+> liberate alapi.tcl |& tee alapi.log
+

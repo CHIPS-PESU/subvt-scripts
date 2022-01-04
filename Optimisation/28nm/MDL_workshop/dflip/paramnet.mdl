@@ -1,0 +1,90 @@
+//  paramnet.mdl
+//  (C) 2008 Cadence Design Systems, Inc.
+//
+// This example shows parametrized feature. Users can pass 
+// netlist parameters, nets, terminals and enumerated names 
+// from netlist to a measurement alias. 
+// This example also shows how MDL defines and accesses 
+// an 0-based index array, saves multiple occurrence function 
+// results to an array, passes the entire array, and gets 
+// the maximum index of an array. 
+
+
+// alias measurement definition
+alias measurement tranmeas { 
+
+  // pass netlist node clock to an input net parameter ck,
+  // define an input net type array inputnets[] initialized with a and b
+  input net ck=clock, inputnets[] = {a, b}
+
+  // pass netlist terminal vvdd:1 to an input term parameter cur1,
+  // define an input term type array inputterms[] initializing with c and d
+  input term cur1=vvdd:1, inputterms[] = {c,d} 
+
+  // define input enum parameter inputdir and tranerr
+  input enum inputdir='rise, tranerr = 'moderate
+
+  // define an export array
+  export real delay[]
+
+  // define a transient analysis in which enum parameter tranerr is used
+  run tran(stop=200n, errpreset=tranerr)
+
+  // define an array to save x-axis value of zero-crossing points
+  export real ck_crosses[]=crosses(V(ck), n=1, thresh=vdd/2)
+
+  // compute delay in which the passed nets and enum parameter are used
+  delay[0]=cross(sig=V(inputnets[0]), dir=inputdir, n=2, thresh=vdd/2)-ck_crosses[1]
+  delay[1]=cross(sig=V(inputnets[1]), dir=inputdir, n=2, thresh=vdd/2) - ck_crosses[1]
+
+  // compute the average current value at passed terminal cur1
+  export real Ivdd=avg(I(cur1))
+
+  // compute max current value between two passed terminals
+  export real Iavg=avg(I(inputterms[0]))+ avg(I(inputterms[1]))
+
+}
+
+// alias measurement definition
+alias measurement dcmeas {
+
+  // pass netlist node q to an input net variable out
+  input net out=q   
+
+  // pass netlist terminal vvdd:1 to an input term variable cur1
+  input term cur1=vvdd:1  
+
+  // define a dc analysis
+  run dc 
+
+  // compute voltage at the passed net out
+  export real dcout=v(out)
+
+  // compute current at the passed term cur1
+  export real i1=I(cur1)
+
+  // define a variable pi storing 3.14159..., the real value of 'pi
+  export real pi = 'pi
+
+  // define a variable nan storing the real value of 'nan
+  export real nan = 'nan
+
+}
+
+// execute the measurement alias with the default values
+run dcmeas
+
+// execute the measurement aliases with the passed values
+run dcmeas( out=i0.c,cur1=i0:q) as dcmeas_2
+run tranmeas(inputnets={data, q}, inputterms={i0.i0.mp0:s, i0.i0.mn0:s})
+
+// get maximum index of an array
+real xDimension = max(xval(tranmeas->delay))
+
+//print values of an array
+print fmt("*** print delay ***\n") to="paramnet.print"
+int i=0
+foreach i from swp(start=0, stop=xDimension, step=1) {
+  print fmt("delay[%V]=%V\n" ,i, tranmeas->delay[i]) addto="paramnet.print"
+}
+

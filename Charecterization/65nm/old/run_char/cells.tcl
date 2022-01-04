@@ -1,0 +1,9 @@
+# Comment
+set cells {
+  INVX1
+  AND2X1
+  NAND2X1
+  OR2X1
+  NOR2X1
+}
+set cells { INVX1 AND2X1 NAND2X1 OR2X1 NOR2X1 }

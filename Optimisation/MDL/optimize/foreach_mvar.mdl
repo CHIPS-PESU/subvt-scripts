@@ -1,0 +1,55 @@
+//  foreach_mvar.mdl
+//  (C) 2008 Cadence Design Systems, Inc.
+//
+// This MDL control file is to find optimal values of design parameters 
+// at different vlaues of vdd and temp by running mvarsearch function 
+// inside foreach loops
+
+// alias measurement definition
+alias measurement trans {
+
+  // define a transient analysis with autostop turned on
+  run tran( stop=1u, autostop='yes )
+
+  // compute the risetime for V(out) 
+  export real rise=risetime(sig=V(out), initval=0, finalval=vdd)
+
+  //compute the falltime for V(out)
+  export real fall=falltime(sig=V(out), initval=vdd, finalval=0)
+
+}
+
+foreach vdd from {3, 2.5} 
+{
+   foreach temp from {25, 30} 
+   {
+      // definition of a mvarsearch function
+      mvarsearch {
+
+         // definition of multiple optimization goals
+   	 option {
+   	    accuracy = 1e-3     // convergence tolerance of trans
+   	    deltax = 1e-3       // step length
+   	    maxiter = 100       // limit to 100 iterations
+            restoreParam=1      // a must
+   	 }
+
+         //  definition of multiple parameters to be optimized
+   	 parameter {
+   	    {pw, 2u, 0.05u, 10u} //init_val, lower_val, upper_value
+   	    {nw, 2u, 0.05u, 10u} //init_val, lower_val, upper_value
+   	 }
+
+         // execution of the measurement alias
+   	 exec {
+   	    run trans
+   	 }
+
+         // definition of goal values to be minimized
+   	 zero {
+   	    tmp1 = trans->rise-25p
+   	    tmp2 = trans->fall-25p 
+   	 }
+       }
+    }
+}

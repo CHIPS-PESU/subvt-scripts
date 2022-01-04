@@ -1,0 +1,23 @@
+subckt NAND3X1 Y A B C VDD GND
+PM0 (Y A VDD VDD) p_p9_hpclvt m=1 mf=1 w=1.08u l=30n nf=1 ad=81f as=81f \
+        pd=2.31u ps=2.31u sa=75n sb=75n sd=0 sca=13.4363 scb=7.97447m \
+        scc=1.45098m mis_flag=1 cctg_flag=1 rdscon_flag=1 rgate_flag=1
+PM5 (Y C VDD VDD) p_p9_hpclvt m=1 mf=1 w=1.08u l=30n nf=1 ad=81f as=81f \
+        pd=2.31u ps=2.31u sa=75n sb=75n sd=0 sca=13.4363 scb=7.97447m \
+        scc=1.45098m mis_flag=1 cctg_flag=1 rdscon_flag=1 rgate_flag=1
+PM4 (Y B VDD VDD) p_p9_hpclvt m=1 mf=1 w=1.08u l=30n nf=1 ad=81f as=81f \
+        pd=2.31u ps=2.31u sa=75n sb=75n sd=0 sca=13.4363 scb=7.97447m \
+        scc=1.45098m mis_flag=1 cctg_flag=1 rdscon_flag=1 rgate_flag=1
+NM5 (net64 A GND GND) n_p9_hpculvt m=1 mf=1 w=300n l=30n nf=1 ad=22.5f \
+        as=22.5f pd=750n ps=750n sa=75n sb=75n sd=0 sca=42.1496 \
+        scb=24.6839m scc=5.1768m mis_flag=1 cctg_flag=1 rdscon_flag=1 \
+        rgate_flag=1
+NM4 (net63 B net64 GND) n_p9_hpculvt m=1 mf=1 w=300n l=30n nf=1 ad=22.5f \
+        as=22.5f pd=750n ps=750n sa=75n sb=75n sd=0 sca=42.1496 \
+        scb=24.6839m scc=5.1768m mis_flag=1 cctg_flag=1 rdscon_flag=1 \
+        rgate_flag=1
+NM0 (Y C net63 GND) n_p9_hpculvt m=1 mf=1 w=300n l=30n nf=1 ad=22.5f \
+        as=22.5f pd=750n ps=750n sa=75n sb=75n sd=0 sca=42.1496 \
+        scb=24.6839m scc=5.1768m mis_flag=1 cctg_flag=1 rdscon_flag=1 \
+        rgate_flag=1
+ends NAND3X1

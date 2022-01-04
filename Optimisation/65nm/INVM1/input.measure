@@ -1,0 +1,181 @@
+Exported variables from results directory:  ././input.raw/
+
+date               :  11:33:57 AM, Tue Dec 21, 2021
+design             :  // Generated for: spectre
+simulator          :  spectre
+version            :  19.1.0.396.isr8
+
+
+Measurement Name   :  trans
+Analysis Type      :  tran
+a                     =  0.1 
+b                     =  1 
+delay                 =  2.97619e-08 
+energy                =  2.27976e-15 
+fall                  =  9.35464e-09 
+max_pwr               =  2.27977e-09 
+n_delay               =  0.0473176 
+n_energy              =  0.194941 
+n_fall                =  7.62888e-05 
+n_pwr                 =  -0.000443309 
+n_rise                =  0.000246349 
+n_tphl                =  0.141322 
+n_tplh                =  0.473176 
+rise                  =  2.97619e-08 
+tphl                  =  4.28259e-09 
+tplh                  =  1.42216e-08 
+
+
+Measurement Name   :  dcs
+Analysis Type      :  dc
+NM                    =  0.102605 
+NM_h                  =  0.128215 
+NM_h_n                =  1.16991 
+NM_l                  =  0.102605 
+NM_l_n                =  1.46192 
+V_ih                  =  0.171785 
+V_il                  =  0.102605 
+c                     =  0.1 
+d                     =  1e-30 
+d1                    =  0.102605 
+dvodvi                =  -0.00070016 
+max_dc_pwr            =  NaN 
+n_dc_pwr              =  NaN 
+n_nm                  =  0.146192 
+
+
+Swept Measurements :
+Measurement Name   :  trans-meas_optimize
+Analysis Type      :  tran
+a                  WP         @ 1.00441e-06
+                   WN         @ 9.83882e-08
+                   LP         @ 1.08544e-07
+                   LN         @ 1.12063e-07   =  0.1     
+b                  WP         @ 1.00441e-06
+                   WN         @ 9.83882e-08
+                   LP         @ 1.08544e-07
+                   LN         @ 1.12063e-07   =  1     
+delay              WP         @ 1.00441e-06
+                   WN         @ 9.83882e-08
+                   LP         @ 1.08544e-07
+                   LN         @ 1.12063e-07   =  5.35807e-08     
+energy             WP         @ 1.00441e-06
+                   WN         @ 9.83882e-08
+                   LP         @ 1.08544e-07
+                   LN         @ 1.12063e-07   =  1.93404e-15     
+fall               WP         @ 1.00441e-06
+                   WN         @ 9.83882e-08
+                   LP         @ 1.08544e-07
+                   LN         @ 1.12063e-07   =  4.59698e-08     
+max_pwr            WP         @ 1.00441e-06
+                   WN         @ 9.83882e-08
+                   LP         @ 1.08544e-07
+                   LN         @ 1.12063e-07   =  1.93404e-09     
+n_delay            WP         @ 1.00441e-06
+                   WN         @ 9.83882e-08
+                   LP         @ 1.08544e-07
+                   LN         @ 1.12063e-07   =  0.0950098     
+n_energy           WP         @ 1.00441e-06
+                   WN         @ 9.83882e-08
+                   LP         @ 1.08544e-07
+                   LN         @ 1.12063e-07   =  0.108511     
+n_fall             WP         @ 1.00441e-06
+                   WN         @ 9.83882e-08
+                   LP         @ 1.08544e-07
+                   LN         @ 1.12063e-07   =  0.000381415     
+n_pwr              WP         @ 1.00441e-06
+                   WN         @ 9.83882e-08
+                   LP         @ 1.08544e-07
+                   LN         @ 1.12063e-07   =  -0.000451958     
+n_rise             WP         @ 1.00441e-06
+                   WN         @ 9.83882e-08
+                   LP         @ 1.08544e-07
+                   LN         @ 1.12063e-07   =  0.00044484     
+n_tphl             WP         @ 1.00441e-06
+                   WN         @ 9.83882e-08
+                   LP         @ 1.08544e-07
+                   LN         @ 1.12063e-07   =  0.839881     
+n_tplh             WP         @ 1.00441e-06
+                   WN         @ 9.83882e-08
+                   LP         @ 1.08544e-07
+                   LN         @ 1.12063e-07   =  0.950098     
+rise               WP         @ 1.00441e-06
+                   WN         @ 9.83882e-08
+                   LP         @ 1.08544e-07
+                   LN         @ 1.12063e-07   =  5.35807e-08     
+tphl               WP         @ 1.00441e-06
+                   WN         @ 9.83882e-08
+                   LP         @ 1.08544e-07
+                   LN         @ 1.12063e-07   =  2.52044e-08     
+tplh               WP         @ 1.00441e-06
+                   WN         @ 9.83882e-08
+                   LP         @ 1.08544e-07
+                   LN         @ 1.12063e-07   =  2.85054e-08     
+
+
+Measurement Name   :  dcs-meas_optimize
+Analysis Type      :  dc
+NM                 WP         @ 1.00441e-06
+                   WN         @ 9.83882e-08
+                   LP         @ 1.08544e-07
+                   LN         @ 1.12063e-07   =  0.126771     
+NM_h               WP         @ 1.00441e-06
+                   WN         @ 9.83882e-08
+                   LP         @ 1.08544e-07
+                   LN         @ 1.12063e-07   =  0.128113     
+NM_h_n             WP         @ 1.00441e-06
+                   WN         @ 9.83882e-08
+                   LP         @ 1.08544e-07
+                   LN         @ 1.12063e-07   =  1.17084     
+NM_l               WP         @ 1.00441e-06
+                   WN         @ 9.83882e-08
+                   LP         @ 1.08544e-07
+                   LN         @ 1.12063e-07   =  0.126771     
+NM_l_n             WP         @ 1.00441e-06
+                   WN         @ 9.83882e-08
+                   LP         @ 1.08544e-07
+                   LN         @ 1.12063e-07   =  1.18324     
+V_ih               WP         @ 1.00441e-06
+                   WN         @ 9.83882e-08
+                   LP         @ 1.08544e-07
+                   LN         @ 1.12063e-07   =  0.171887     
+V_il               WP         @ 1.00441e-06
+                   WN         @ 9.83882e-08
+                   LP         @ 1.08544e-07
+                   LN         @ 1.12063e-07   =  0.126771     
+c                  WP         @ 1.00441e-06
+                   WN         @ 9.83882e-08
+                   LP         @ 1.08544e-07
+                   LN         @ 1.12063e-07   =  0.1     
+d                  WP         @ 1.00441e-06
+                   WN         @ 9.83882e-08
+                   LP         @ 1.08544e-07
+                   LN         @ 1.12063e-07   =  1e-30     
+d1                 WP         @ 1.00441e-06
+                   WN         @ 9.83882e-08
+                   LP         @ 1.08544e-07
+                   LN         @ 1.12063e-07   =  0.126771     
+dvodvi             WP         @ 1.00441e-06
+                   WN         @ 9.83882e-08
+                   LP         @ 1.08544e-07
+                   LN         @ 1.12063e-07   =  -0.000375717     
+max_dc_pwr         WP         @ 1.00441e-06
+                   WN         @ 9.83882e-08
+                   LP         @ 1.08544e-07
+                   LN         @ 1.12063e-07   =  NaN     
+n_dc_pwr           WP         @ 1.00441e-06
+                   WN         @ 9.83882e-08
+                   LP         @ 1.08544e-07
+                   LN         @ 1.12063e-07   =  NaN     
+n_nm               WP         @ 1.00441e-06
+                   WN         @ 9.83882e-08
+                   LP         @ 1.08544e-07
+                   LN         @ 1.12063e-07   =  0.118324     
+
+
+
+
+
+
+
+

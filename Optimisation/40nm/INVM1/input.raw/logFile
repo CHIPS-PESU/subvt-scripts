@@ -1,0 +1,6089 @@
+HEADER
+"PSFversion" "1.00"
+"Log Generator" "drlLog rev. 1.0"
+"Log Time Stamp" "Sun Dec 26 18:51:15 2021"
+"psfversion" "1.4.0"
+"simulator" "spectre"
+"version" "19.1.0.396.isr8"
+"date" "6:51:15 PM, Sun Dec 26, 2021"
+"design" "// Generated for: spectre"
+"signalNameType" "spectre"
+"simMode" "Spectre"
+"measdgt" 0
+"ingold" 2
+"sst2usecolon" 0
+TYPE
+"analysisInst" STRUCT(
+"analysisType" STRING *
+"dataFile" STRING *
+"format" STRING *
+"parent" STRING *
+"sweepVariable" ARRAY ( * ) STRING *
+"description" STRING *
+)
+VALUE
+"trans-tran" "analysisInst" (
+"tran"
+"trans.tran.tran"
+"PSF"
+""
+("time")
+"Transient Analysis `trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+)
+
+"trans-meas_tran" "analysisInst" (
+"meas_tran"
+"trans.meas_tran"
+"PSF"
+""
+()
+"Measurement Results for trans Analysis tran"
+)
+"dcs-dc" "analysisInst" (
+"dc"
+"dcs.dc"
+"PSF"
+""
+("dc")
+"DC Analysis `dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+)
+
+"dcs-meas_dc" "analysisInst" (
+"meas_dc"
+"dcs.meas_dc"
+"PSF"
+""
+()
+"Measurement Results for dcs Analysis dc"
+)
+"trans-optimize" "analysisInst" (
+"optimize"
+"trans.optimize"
+"PSF"
+""
+("_paramsetIndex" "WP" "WN" "LP" "LN")
+"parent"
+) PROP(
+"sweep_tree_type" "paramSetSweepNode"
+)
+
+"trans_meas-meas_optimize" "analysisInst" (
+"meas_optimize"
+"trans_meas.meas_optimize"
+"PSF"
+""
+("_paramsetIndex" "WP" "WN" "LP" "LN")
+"parent"
+) PROP(
+"sweep_tree_type" "paramSetSweepNode"
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 1.20000e-06
+"WN" 2.40000e-07
+"LP" 4.00000e-08
+"LN" 8.00000e-08
+)
+
+"dcs-optimize" "analysisInst" (
+"optimize"
+"dcs.optimize"
+"PSF"
+""
+("_paramsetIndex" "WP" "WN" "LP" "LN")
+"parent"
+) PROP(
+"sweep_tree_type" "paramSetSweepNode"
+)
+
+"dcs_meas-meas_optimize" "analysisInst" (
+"meas_optimize"
+"dcs_meas.meas_optimize"
+"PSF"
+""
+("_paramsetIndex" "WP" "WN" "LP" "LN")
+"parent"
+) PROP(
+"sweep_tree_type" "paramSetSweepNode"
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 1.20000e-06
+"WN" 2.40000e-07
+"LP" 4.00000e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 1.23795e-06
+"WN" 2.40000e-07
+"LP" 4.00000e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 1.23795e-06
+"WN" 2.40000e-07
+"LP" 4.00000e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 1.20000e-06
+"WN" 2.47589e-07
+"LP" 4.00000e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 1.20000e-06
+"WN" 2.47589e-07
+"LP" 4.00000e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 1.20000e-06
+"WN" 2.40000e-07
+"LP" 4.12649e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 1.20000e-06
+"WN" 2.40000e-07
+"LP" 4.12649e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 1.20000e-06
+"WN" 2.40000e-07
+"LP" 4.00000e-08
+"LN" 8.25298e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 1.20000e-06
+"WN" 2.40000e-07
+"LP" 4.00000e-08
+"LN" 8.25298e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.00000e-06
+"WN" 1.50000e-06
+"LP" 8.00000e-08
+"LN" 4.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.00000e-06
+"WN" 1.50000e-06
+"LP" 8.00000e-08
+"LN" 4.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.09487e-06
+"WN" 1.50000e-06
+"LP" 8.00000e-08
+"LN" 4.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.09487e-06
+"WN" 1.50000e-06
+"LP" 8.00000e-08
+"LN" 4.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.00000e-06
+"WN" 1.54743e-06
+"LP" 8.00000e-08
+"LN" 4.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.00000e-06
+"WN" 1.54743e-06
+"LP" 8.00000e-08
+"LN" 4.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.00000e-06
+"WN" 1.50000e-06
+"LP" 8.25298e-08
+"LN" 4.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.00000e-06
+"WN" 1.50000e-06
+"LP" 8.25298e-08
+"LN" 4.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.00000e-06
+"WN" 1.50000e-06
+"LP" 8.00000e-08
+"LN" 4.12649e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.00000e-06
+"WN" 1.50000e-06
+"LP" 8.00000e-08
+"LN" 4.12649e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97228e-06
+"WN" 1.20000e-07
+"LP" 4.00000e-08
+"LN" 4.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97228e-06
+"WN" 1.20000e-07
+"LP" 4.00000e-08
+"LN" 4.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.00000e-06
+"WN" 1.44158e-06
+"LP" 7.97725e-08
+"LN" 4.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.00000e-06
+"WN" 1.44158e-06
+"LP" 7.97725e-08
+"LN" 4.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.09487e-06
+"WN" 1.44158e-06
+"LP" 7.97725e-08
+"LN" 4.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.09487e-06
+"WN" 1.44158e-06
+"LP" 7.97725e-08
+"LN" 4.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.00000e-06
+"WN" 1.48717e-06
+"LP" 7.97725e-08
+"LN" 4.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.00000e-06
+"WN" 1.48717e-06
+"LP" 7.97725e-08
+"LN" 4.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.00000e-06
+"WN" 1.44158e-06
+"LP" 8.22952e-08
+"LN" 4.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.00000e-06
+"WN" 1.44158e-06
+"LP" 8.22952e-08
+"LN" 4.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.00000e-06
+"WN" 1.44158e-06
+"LP" 7.97725e-08
+"LN" 4.12649e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.00000e-06
+"WN" 1.44158e-06
+"LP" 7.97725e-08
+"LN" 4.12649e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.00000e-06
+"WN" 1.40850e-06
+"LP" 7.96258e-08
+"LN" 4.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.00000e-06
+"WN" 1.40850e-06
+"LP" 7.96258e-08
+"LN" 4.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.09487e-06
+"WN" 1.40850e-06
+"LP" 7.96258e-08
+"LN" 4.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.09487e-06
+"WN" 1.40850e-06
+"LP" 7.96258e-08
+"LN" 4.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.00000e-06
+"WN" 1.45304e-06
+"LP" 7.96258e-08
+"LN" 4.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.00000e-06
+"WN" 1.45304e-06
+"LP" 7.96258e-08
+"LN" 4.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.00000e-06
+"WN" 1.40850e-06
+"LP" 8.21438e-08
+"LN" 4.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.00000e-06
+"WN" 1.40850e-06
+"LP" 8.21438e-08
+"LN" 4.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.00000e-06
+"WN" 1.40850e-06
+"LP" 7.96258e-08
+"LN" 4.12649e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.00000e-06
+"WN" 1.40850e-06
+"LP" 7.96258e-08
+"LN" 4.12649e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.00000e-06
+"WN" 1.37424e-06
+"LP" 7.94818e-08
+"LN" 4.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.00000e-06
+"WN" 1.37424e-06
+"LP" 7.94818e-08
+"LN" 4.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.09487e-06
+"WN" 1.37424e-06
+"LP" 7.94818e-08
+"LN" 4.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.09487e-06
+"WN" 1.37424e-06
+"LP" 7.94818e-08
+"LN" 4.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.00000e-06
+"WN" 1.41770e-06
+"LP" 7.94818e-08
+"LN" 4.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.00000e-06
+"WN" 1.41770e-06
+"LP" 7.94818e-08
+"LN" 4.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.00000e-06
+"WN" 1.37424e-06
+"LP" 8.19953e-08
+"LN" 4.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.00000e-06
+"WN" 1.37424e-06
+"LP" 8.19953e-08
+"LN" 4.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.00000e-06
+"WN" 1.37424e-06
+"LP" 7.94818e-08
+"LN" 4.12649e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.00000e-06
+"WN" 1.37424e-06
+"LP" 7.94818e-08
+"LN" 4.12649e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.00000e-06
+"WN" 1.32665e-06
+"LP" 7.92650e-08
+"LN" 7.53638e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.00000e-06
+"WN" 1.32665e-06
+"LP" 7.92650e-08
+"LN" 7.53638e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.09487e-06
+"WN" 1.32665e-06
+"LP" 7.92650e-08
+"LN" 7.53638e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.09487e-06
+"WN" 1.32665e-06
+"LP" 7.92650e-08
+"LN" 7.53638e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.00000e-06
+"WN" 1.36860e-06
+"LP" 7.92650e-08
+"LN" 7.53638e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.00000e-06
+"WN" 1.36860e-06
+"LP" 7.92650e-08
+"LN" 7.53638e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.00000e-06
+"WN" 1.32665e-06
+"LP" 8.17716e-08
+"LN" 7.53638e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.00000e-06
+"WN" 1.32665e-06
+"LP" 8.17716e-08
+"LN" 7.53638e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.00000e-06
+"WN" 1.32665e-06
+"LP" 7.92650e-08
+"LN" 7.77471e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.00000e-06
+"WN" 1.32665e-06
+"LP" 7.92650e-08
+"LN" 7.77471e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.98005e-06
+"WN" 1.31609e-06
+"LP" 7.91139e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.98005e-06
+"WN" 1.31609e-06
+"LP" 7.91139e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.07429e-06
+"WN" 1.31609e-06
+"LP" 7.91139e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.07429e-06
+"WN" 1.31609e-06
+"LP" 7.91139e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.98005e-06
+"WN" 1.35771e-06
+"LP" 7.91139e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.98005e-06
+"WN" 1.35771e-06
+"LP" 7.91139e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.98005e-06
+"WN" 1.31609e-06
+"LP" 8.16157e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.98005e-06
+"WN" 1.31609e-06
+"LP" 8.16157e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.98005e-06
+"WN" 1.31609e-06
+"LP" 7.91139e-08
+"LN" 8.25298e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.98005e-06
+"WN" 1.31609e-06
+"LP" 7.91139e-08
+"LN" 8.25298e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97851e-06
+"WN" 1.30977e-06
+"LP" 7.90851e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97851e-06
+"WN" 1.30977e-06
+"LP" 7.90851e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.07270e-06
+"WN" 1.30977e-06
+"LP" 7.90851e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.07270e-06
+"WN" 1.30977e-06
+"LP" 7.90851e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97851e-06
+"WN" 1.35119e-06
+"LP" 7.90851e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97851e-06
+"WN" 1.35119e-06
+"LP" 7.90851e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97851e-06
+"WN" 1.30977e-06
+"LP" 8.15860e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97851e-06
+"WN" 1.30977e-06
+"LP" 8.15860e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97851e-06
+"WN" 1.30977e-06
+"LP" 7.90851e-08
+"LN" 8.25298e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97851e-06
+"WN" 1.30977e-06
+"LP" 7.90851e-08
+"LN" 8.25298e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97719e-06
+"WN" 1.30669e-06
+"LP" 7.90539e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97719e-06
+"WN" 1.30669e-06
+"LP" 7.90539e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97839e-06
+"WN" 1.30946e-06
+"LP" 7.90820e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97839e-06
+"WN" 1.30946e-06
+"LP" 7.90820e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97850e-06
+"WN" 1.30974e-06
+"LP" 7.90848e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97850e-06
+"WN" 1.30974e-06
+"LP" 7.90848e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.07269e-06
+"WN" 1.30974e-06
+"LP" 7.90848e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.07269e-06
+"WN" 1.30974e-06
+"LP" 7.90848e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97850e-06
+"WN" 1.35116e-06
+"LP" 7.90848e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97850e-06
+"WN" 1.35116e-06
+"LP" 7.90848e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97850e-06
+"WN" 1.30974e-06
+"LP" 8.15857e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97850e-06
+"WN" 1.30974e-06
+"LP" 8.15857e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97850e-06
+"WN" 1.30974e-06
+"LP" 7.90848e-08
+"LN" 8.25298e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97850e-06
+"WN" 1.30974e-06
+"LP" 7.90848e-08
+"LN" 8.25298e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97849e-06
+"WN" 1.30971e-06
+"LP" 7.90845e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97849e-06
+"WN" 1.30971e-06
+"LP" 7.90845e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.07267e-06
+"WN" 1.30971e-06
+"LP" 7.90845e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.07267e-06
+"WN" 1.30971e-06
+"LP" 7.90845e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97849e-06
+"WN" 1.35112e-06
+"LP" 7.90845e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97849e-06
+"WN" 1.35112e-06
+"LP" 7.90845e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97849e-06
+"WN" 1.30971e-06
+"LP" 8.15854e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97849e-06
+"WN" 1.30971e-06
+"LP" 8.15854e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97849e-06
+"WN" 1.30971e-06
+"LP" 7.90845e-08
+"LN" 8.25298e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97849e-06
+"WN" 1.30971e-06
+"LP" 7.90845e-08
+"LN" 8.25298e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30968e-06
+"LP" 7.90842e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30968e-06
+"LP" 7.90842e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.07266e-06
+"WN" 1.30968e-06
+"LP" 7.90842e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.07266e-06
+"WN" 1.30968e-06
+"LP" 7.90842e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.35109e-06
+"LP" 7.90842e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.35109e-06
+"LP" 7.90842e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30968e-06
+"LP" 8.15850e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30968e-06
+"LP" 8.15850e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30968e-06
+"LP" 7.90842e-08
+"LN" 8.25298e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30968e-06
+"LP" 7.90842e-08
+"LN" 8.25298e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97846e-06
+"WN" 1.30965e-06
+"LP" 7.90839e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97846e-06
+"WN" 1.30965e-06
+"LP" 7.90839e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30967e-06
+"LP" 7.90841e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30967e-06
+"LP" 7.90841e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.07266e-06
+"WN" 1.30967e-06
+"LP" 7.90841e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.07266e-06
+"WN" 1.30967e-06
+"LP" 7.90841e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.35109e-06
+"LP" 7.90841e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.35109e-06
+"LP" 7.90841e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30967e-06
+"LP" 8.15850e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30967e-06
+"LP" 8.15850e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30967e-06
+"LP" 7.90841e-08
+"LN" 8.25298e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30967e-06
+"LP" 7.90841e-08
+"LN" 8.25298e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30967e-06
+"LP" 7.90841e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30967e-06
+"LP" 7.90841e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.07266e-06
+"WN" 1.30967e-06
+"LP" 7.90841e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.07266e-06
+"WN" 1.30967e-06
+"LP" 7.90841e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.35109e-06
+"LP" 7.90841e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.35109e-06
+"LP" 7.90841e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30967e-06
+"LP" 8.15850e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30967e-06
+"LP" 8.15850e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30967e-06
+"LP" 7.90841e-08
+"LN" 8.25298e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30967e-06
+"LP" 7.90841e-08
+"LN" 8.25298e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30967e-06
+"LP" 7.90841e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30967e-06
+"LP" 7.90841e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.07266e-06
+"WN" 1.30967e-06
+"LP" 7.90841e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.07266e-06
+"WN" 1.30967e-06
+"LP" 7.90841e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.35108e-06
+"LP" 7.90841e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.35108e-06
+"LP" 7.90841e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30967e-06
+"LP" 8.15849e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30967e-06
+"LP" 8.15849e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30967e-06
+"LP" 7.90841e-08
+"LN" 8.25298e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30967e-06
+"LP" 7.90841e-08
+"LN" 8.25298e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.07266e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.07266e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.35108e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.35108e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 8.15849e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 8.15849e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.25298e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.25298e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.07266e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.07266e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.35108e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.35108e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 8.15849e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 8.15849e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.25298e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.25298e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.07266e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.07266e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.35108e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.35108e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 8.15849e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 8.15849e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.25298e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.25298e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.07266e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.07266e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.35108e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.35108e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 8.15849e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 8.15849e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.25298e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.25298e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.07266e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.07266e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.35108e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.35108e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 8.15849e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 8.15849e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.25298e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.25298e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.07266e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.07266e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.35108e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.35108e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 8.15849e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 8.15849e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.25298e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.25298e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.07266e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.07266e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.35108e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.35108e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 8.15849e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 8.15849e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.25298e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.25298e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.07266e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.07266e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.35108e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.35108e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 8.15849e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 8.15849e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.25298e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.25298e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.07266e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.07266e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.35108e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.35108e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 8.15849e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 8.15849e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.25298e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.25298e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.07266e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.07266e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.35108e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.35108e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 8.15849e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 8.15849e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.25298e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.25298e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.07266e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.07266e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.35108e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.35108e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 8.15849e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 8.15849e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.25298e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.25298e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.07266e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.07266e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.35108e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.35108e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 8.15849e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 8.15849e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.25298e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.25298e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.07266e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.07266e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.35108e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.35108e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 8.15849e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 8.15849e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.25298e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.25298e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.07266e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.07266e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.35108e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.35108e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 8.15849e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 8.15849e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.25298e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.25298e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.07266e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.07266e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.35108e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.35108e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 8.15849e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 8.15849e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.25298e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.25298e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.07266e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.07266e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.35108e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.35108e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 8.15849e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 8.15849e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.25298e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.25298e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.07266e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.07266e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.35108e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.35108e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 8.15849e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 8.15849e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.25298e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.25298e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.07266e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 3.07266e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.35108e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.35108e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 8.15849e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 8.15849e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.25298e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.25298e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"trans-000_trans-tran" "analysisInst" (
+"tran"
+"trans-000_trans.tran.tran"
+"PSF"
+"trans-optimize"
+("time")
+"Transient Analysis `trans-000_trans': time = (0 s -> 20 us)"
+) PROP(
+"data_type" "swept_scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"trans-optimize-000-meas_tran" "analysisInst" (
+"meas_tran"
+"trans-optimize-000.meas_tran"
+"PSF"
+"trans_meas-meas_optimize"
+()
+"Measurement Results for trans Analysis tran"
+) PROP(
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"dcs-000_dcs-dc" "analysisInst" (
+"dc"
+"dcs-000_dcs.dc"
+"PSF"
+"dcs-optimize"
+("dc")
+"DC Analysis `dcs-000_dcs': V1:dc = (0 V -> 300 mV)"
+) PROP(
+"data_type" "scalar"
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+"dcs-optimize-000-meas_dc" "analysisInst" (
+"meas_dc"
+"dcs-optimize-000.meas_dc"
+"PSF"
+"dcs_meas-meas_optimize"
+()
+"Measurement Results for dcs Analysis dc"
+) PROP(
+"sweep_tree_type" "leafNode"
+"_paramsetIndex" 0.00000
+"WP" 2.97847e-06
+"WN" 1.30966e-06
+"LP" 7.90840e-08
+"LN" 8.00000e-08
+)
+
+END

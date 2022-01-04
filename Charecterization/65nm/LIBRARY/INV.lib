@@ -1,0 +1,225 @@
+library (/home/VLSI_ANALOG/Backup/UMC180/Designkits/Cadence_6.1/lowpower/liberate/LIBRARY/INV) {
+  /* Models written by Liberate dev from Cadence Design Systems, Inc. on Tue Dec 14 16:29:35 IST 2021 */
+  comment : "";
+  date : "$Date: Tue Dec 14 16:28:40 2021 $";
+  revision : "1.0";
+  delay_model : table_lookup;
+  capacitive_load_unit (1,pf);
+  current_unit : "1mA";
+  leakage_power_unit : "1nW";
+  pulling_resistance_unit : "1kohm";
+  time_unit : "1ns";
+  voltage_unit : "1V";
+  voltage_map (VDD, 0.3);
+  voltage_map (GND, 0);
+  voltage_map (VSS, 0);
+  default_cell_leakage_power : 0;
+  default_fanout_load : 1;
+  default_max_transition : 5;
+  default_output_pin_cap : 0;
+  in_place_swap_mode : match_footprint;
+  input_threshold_pct_fall : 50;
+  input_threshold_pct_rise : 50;
+  nom_process : 1;
+  nom_temperature : 25;
+  nom_voltage : 0.3;
+  output_threshold_pct_fall : 50;
+  output_threshold_pct_rise : 50;
+  slew_derate_from_library : 1;
+  slew_lower_threshold_pct_fall : 10;
+  slew_lower_threshold_pct_rise : 10;
+  slew_upper_threshold_pct_fall : 90;
+  slew_upper_threshold_pct_rise : 90;
+  operating_conditions (PVT_0P3V_25C) {
+    process : 1;
+    temperature : 25;
+    voltage : 0.3;
+  }
+  default_operating_conditions : PVT_0P3V_25C;
+  lu_table_template (constraint_template_3x3) {
+    variable_1 : constrained_pin_transition;
+    variable_2 : related_pin_transition;
+    index_1 ("0.25, 0.75, 1.5");
+    index_2 ("0.25, 0.75, 1.5");
+  }
+  lu_table_template (delay_template_5x5) {
+    variable_1 : input_net_transition;
+    variable_2 : total_output_net_capacitance;
+    index_1 ("0.25, 0.5, 0.75, 1.25, 1.5");
+    index_2 ("0.015, 0.05, 0.15, 0.3, 0.6");
+  }
+  lu_table_template (mpw_constraint_template_3x3) {
+    variable_1 : constrained_pin_transition;
+    index_1 ("0.25, 0.75, 1.5");
+  }
+  power_lut_template (passive_power_template_5x1) {
+    variable_1 : input_transition_time;
+    index_1 ("0.25, 0.5, 0.75, 1.25, 1.5");
+  }
+  power_lut_template (power_template_5x5) {
+    variable_1 : input_transition_time;
+    variable_2 : total_output_net_capacitance;
+    index_1 ("0.25, 0.5, 0.75, 1.25, 1.5");
+    index_2 ("0.015, 0.05, 0.15, 0.3, 0.6");
+  }
+  cell (INVX1) {
+    area : 0;
+    cell_leakage_power : 0.650291;
+    pg_pin (GND) {
+      pg_type : primary_ground;
+      voltage_name : "GND";
+    }
+    pg_pin (VDD) {
+      pg_type : primary_power;
+      voltage_name : "VDD";
+    }
+    leakage_power () {
+      value : 0;
+      when : "(A * !Y)";
+      related_pg_pin : GND;
+    }
+    leakage_power () {
+      value : 0.921738;
+      when : "(A * !Y)";
+      related_pg_pin : VDD;
+    }
+    leakage_power () {
+      value : 0;
+      when : "(!A * Y)";
+      related_pg_pin : GND;
+    }
+    leakage_power () {
+      value : 0.378844;
+      when : "(!A * Y)";
+      related_pg_pin : VDD;
+    }
+    leakage_power () {
+      value : 0;
+      related_pg_pin : GND;
+    }
+    leakage_power () {
+      value : 0.650291;
+      related_pg_pin : VDD;
+    }
+    pin (Y) {
+      direction : output;
+      function : "!A";
+      power_down_function : "(!VDD) + (GND)";
+      related_ground_pin : GND;
+      related_power_pin : VDD;
+      max_capacitance : 0.0546202;
+      timing () {
+        related_pin : "A";
+        timing_sense : negative_unate;
+        timing_type : combinational;
+        cell_rise (delay_template_5x5) {
+          index_1 ("0.006, 0.0322371, 0.173205, 0.930605, 5");
+          index_2 ("0.02, 0.0257105, 0.0330515, 0.0424886, 0.0546202");
+          values ( \
+            "1.03482, 1.22919, 1.47821, 1.79777, 2.20753", \
+            "1.04533, 1.2398, 1.48891, 1.80833, 2.21836", \
+            "1.10421, 1.29886, 1.54803, 1.86744, 2.2774", \
+            "1.42985, 1.6291, 1.87126, 2.19403, 2.60513", \
+            "3.2687, 3.46042, 3.7095, 4.02804, 4.43752" \
+          );
+        }
+        rise_transition (delay_template_5x5) {
+          index_1 ("0.006, 0.0322371, 0.173205, 0.930605, 5");
+          index_2 ("0.02, 0.0257105, 0.0330515, 0.0424886, 0.0546202");
+          values ( \
+            "1.98565, 2.42582, 2.99165, 3.71854, 4.65366", \
+            "1.98575, 2.42592, 2.99177, 3.71852, 4.65385", \
+            "1.98575, 2.42592, 2.99177, 3.71851, 4.65384", \
+            "1.98575, 2.4255, 2.99127, 3.71866, 4.65375", \
+            "2.48438, 2.83547, 3.31453, 3.95616, 4.81336" \
+          );
+        }
+        cell_fall (delay_template_5x5) {
+          index_1 ("0.006, 0.0322371, 0.173205, 0.930605, 5");
+          index_2 ("0.02, 0.0257105, 0.0330515, 0.0424886, 0.0546202");
+          values ( \
+            "0.696246, 0.821677, 0.982615, 1.18923, 1.45459", \
+            "0.70731, 0.832807, 0.993753, 1.2004, 1.46578", \
+            "0.769138, 0.894786, 1.05589, 1.26264, 1.52811", \
+            "1.10506, 1.2314, 1.39108, 1.60354, 1.86942", \
+            "3.006, 3.14357, 3.30452, 3.51285, 3.77874" \
+          );
+        }
+        fall_transition (delay_template_5x5) {
+          index_1 ("0.006, 0.0322371, 0.173205, 0.930605, 5");
+          index_2 ("0.02, 0.0257105, 0.0330515, 0.0424886, 0.0546202");
+          values ( \
+            "1.15129, 1.40725, 1.7363, 2.1593, 2.70292", \
+            "1.15128, 1.4073, 1.73633, 2.15936, 2.70292", \
+            "1.15129, 1.40726, 1.73629, 2.15929, 2.70291", \
+            "1.15114, 1.40722, 1.73618, 2.15858, 2.70213", \
+            "1.65873, 1.84016, 2.09328, 2.44141, 2.90978" \
+          );
+        }
+      }
+      internal_power () {
+        related_pin : "A";
+        related_pg_pin : GND;
+        rise_power (power_template_5x5) {
+          index_1 ("0.006, 0.0322371, 0.173205, 0.930605, 5");
+          index_2 ("0.02, 0.0257105, 0.0330515, 0.0424886, 0.0546202");
+          values ( \
+            "0, 0, 0, 0, 0", \
+            "0, 0, 0, 0, 0", \
+            "0, 0, 0, 0, 0", \
+            "0, 0, 0, 0, 0", \
+            "0, 0, 0, 0, 0" \
+          );
+        }
+        fall_power (power_template_5x5) {
+          index_1 ("0.006, 0.0322371, 0.173205, 0.930605, 5");
+          index_2 ("0.02, 0.0257105, 0.0330515, 0.0424886, 0.0546202");
+          values ( \
+            "0, 0, 0, 0, 0", \
+            "0, 0, 0, 0, 0", \
+            "0, 0, 0, 0, 0", \
+            "0, 0, 0, 0, 0", \
+            "0, 0, 0, 0, 0" \
+          );
+        }
+      }
+      internal_power () {
+        related_pin : "A";
+        related_pg_pin : VDD;
+        rise_power (power_template_5x5) {
+          index_1 ("0.006, 0.0322371, 0.173205, 0.930605, 5");
+          index_2 ("0.02, 0.0257105, 0.0330515, 0.0424886, 0.0546202");
+          values ( \
+            "0.000465377, 0.000465324, 0.000465254, 0.000465175, 0.000465063", \
+            "0.000464906, 0.00046498, 0.000464998, 0.000464969, 0.000464904", \
+            "0.000462327, 0.000462772, 0.00046308, 0.000463273, 0.000463382", \
+            "0.000450908, 0.000454181, 0.000454822, 0.000458497, 0.000459188", \
+            "0.000431935, 0.000433971, 0.00043794, 0.000441784, 0.000443965" \
+          );
+        }
+        fall_power (power_template_5x5) {
+          index_1 ("0.006, 0.0322371, 0.173205, 0.930605, 5");
+          index_2 ("0.02, 0.0257105, 0.0330515, 0.0424886, 0.0546202");
+          values ( \
+            "-3.75741e-05, -3.73362e-05, -3.73145e-05, -3.73128e-05, -3.73446e-05", \
+            "-3.77054e-05, -3.7653e-05, -3.76647e-05, -3.77206e-05, -3.78004e-05", \
+            "-3.89826e-05, -3.86787e-05, -3.84704e-05, -3.8344e-05, -3.83025e-05", \
+            "-4.47391e-05, -4.39095e-05, -4.25188e-05, -4.05107e-05, -3.97806e-05", \
+            "-6.42149e-05, -6.09756e-05, -5.80445e-05, -5.5587e-05, -5.22457e-05" \
+          );
+        }
+      }
+    }
+    pin (A) {
+      direction : input;
+      related_ground_pin : GND;
+      related_power_pin : VDD;
+      max_transition : 5;
+      capacitance : 0.0097677;
+      rise_capacitance : 0.0097677;
+      rise_capacitance_range (0.00729983, 0.0097677);
+      fall_capacitance : 0.00929222;
+      fall_capacitance_range (0.00733959, 0.00929222);
+    }
+  }
+}

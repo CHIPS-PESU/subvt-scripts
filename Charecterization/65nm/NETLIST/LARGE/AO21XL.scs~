@@ -1,0 +1,34 @@
+subckt AO21XL Y A0 A1 B0 VDD GND
+PM4 (net85 B0 net83 VDD) p_p9_hpculvt m=1 mf=1 w=60u l=30n nf=20 ad=3.3p \
+        as=3.42p pd=62.2u ps=68.28u sa=75n sb=75n sd=110n sca=5.01945 \
+        scb=2.87125m scc=522.353u mis_flag=1 nrd=651.163m nrs=651.163m \
+        cctg_flag=1 rdscon_flag=1 rgate_flag=1
+PM5 (Y net85 VDD VDD) p_p9_hpculvt m=1 mf=1 w=60u l=30n nf=20 ad=3.3p \
+        as=3.42p pd=62.2u ps=68.28u sa=75n sb=75n sd=110n sca=5.01945 \
+        scb=2.87125m scc=522.353u mis_flag=1 nrd=651.163m nrs=651.163m \
+        cctg_flag=1 rdscon_flag=1 rgate_flag=1
+mp0 (net83 A0 VDD VDD) p_p9_hpculvt m=1 mf=1 w=60u l=30n nf=20 ad=3.3p \
+        as=3.42p pd=62.2u ps=68.28u sa=75n sb=75n sd=110n sca=5.01945 \
+        scb=2.87125m scc=522.353u mis_flag=1 nrd=651.163m nrs=651.163m \
+        cctg_flag=1 rdscon_flag=1 rgate_flag=1
+PM3 (net83 A1 VDD VDD) p_p9_hpculvt m=1 mf=1 w=60u l=30n nf=20 ad=3.3p \
+        as=3.42p pd=62.2u ps=68.28u sa=75n sb=75n sd=110n sca=5.01945 \
+        scb=2.87125m scc=522.353u mis_flag=1 nrd=651.163m nrs=651.163m \
+        cctg_flag=1 rdscon_flag=1 rgate_flag=1
+mn2 (net85 B0 GND GND) n_p9_hpculvt m=1 mf=1 w=50u l=30n nf=20 ad=2.5p \
+        as=2.625p pd=52u ps=57.1u sa=75n sb=75n sd=100n sca=5.9979 \
+        scb=3.4455m scc=626.823u mis_flag=1 nrd=965.517m nrs=965.517m \
+        cctg_flag=1 rdscon_flag=1 rgate_flag=1
+NM5 (Y net85 GND GND) n_p9_hpculvt m=1 mf=1 w=50u l=30n nf=20 ad=2.5p \
+        as=2.625p pd=52u ps=57.1u sa=75n sb=75n sd=100n sca=5.9979 \
+        scb=3.4455m scc=626.823u mis_flag=1 nrd=965.517m nrs=965.517m \
+        cctg_flag=1 rdscon_flag=1 rgate_flag=1
+NM4 (net84 A0 GND GND) n_p9_hpculvt m=1 mf=1 w=50u l=30n nf=20 ad=2.5p \
+        as=2.625p pd=52u ps=57.1u sa=75n sb=75n sd=100n sca=5.9979 \
+        scb=3.4455m scc=626.823u mis_flag=1 nrd=965.517m nrs=965.517m \
+        cctg_flag=1 rdscon_flag=1 rgate_flag=1
+NM3 (net85 A1 net84 GND) n_p9_hpculvt m=1 mf=1 w=50u l=30n nf=20 ad=2.5p \
+        as=2.625p pd=52u ps=57.1u sa=75n sb=75n sd=100n sca=5.9979 \
+        scb=3.4455m scc=626.823u mis_flag=1 nrd=965.517m nrs=965.517m \
+        cctg_flag=1 rdscon_flag=1 rgate_flag=1
+ends AO21XL

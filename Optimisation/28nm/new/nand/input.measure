@@ -1,0 +1,111 @@
+Exported variables from results directory:  ././input.raw/
+
+date               :  12:31:28 PM, Mon Dec 13, 2021
+design             :  // Generated for: spectre
+simulator          :  spectre
+version            :  19.1.0.396.isr8
+
+
+Measurement Name   :  trans
+Analysis Type      :  tran
+delay                 =  5.57582e-10 
+energy                =  1.04923e-14 
+fall                  =  8.52365e-10 
+max_pwr               =  1.57953e-05 
+n_fall                =  0.219059 
+n_pwr                 =  0.640976 
+n_rise                =  0.0138566 
+rise                  =  2.62799e-10 
+
+
+Measurement Name   :  dcs
+Analysis Type      :  dc
+NM_h                  =  0.0889227 
+NM_h_n                =  -0.296409 
+NM_l                  =  0.128137 
+NM_l_n                =  -0.427122 
+V_ih                  =  0.211077 
+V_il                  =  0.128137 
+d1                    =  0.128137 
+dvodvi                =  -0.0225679 
+
+
+Swept Measurements :
+Measurement Name   :  trans-meas_optimize
+Analysis Type      :  tran
+delay              WP         @ 7.94724e-06
+                   WN         @ 1.19995e-05
+                   ln         @ 1.17618e-07
+                   lp         @ 3.96929e-08   =  1.50311e-09     
+energy             WP         @ 7.94724e-06
+                   WN         @ 1.19995e-05
+                   ln         @ 1.17618e-07
+                   lp         @ 3.96929e-08   =  1.02046e-14     
+fall               WP         @ 7.94724e-06
+                   WN         @ 1.19995e-05
+                   ln         @ 1.17618e-07
+                   lp         @ 3.96929e-08   =  1.51013e-09     
+max_pwr            WP         @ 7.94724e-06
+                   WN         @ 1.19995e-05
+                   ln         @ 1.17618e-07
+                   lp         @ 3.96929e-08   =  3.54935e-06     
+n_fall             WP         @ 7.94724e-06
+                   WN         @ 1.19995e-05
+                   ln         @ 1.17618e-07
+                   lp         @ 3.96929e-08   =  0.453974     
+n_pwr              WP         @ 7.94724e-06
+                   WN         @ 1.19995e-05
+                   ln         @ 1.17618e-07
+                   lp         @ 3.96929e-08   =  0.143173     
+n_rise             WP         @ 7.94724e-06
+                   WN         @ 1.19995e-05
+                   ln         @ 1.17618e-07
+                   lp         @ 3.96929e-08   =  0.454317     
+rise               WP         @ 7.94724e-06
+                   WN         @ 1.19995e-05
+                   ln         @ 1.17618e-07
+                   lp         @ 3.96929e-08   =  1.49609e-09     
+
+
+Measurement Name   :  dcs-meas_optimize
+Analysis Type      :  dc
+NM_h               WP         @ 7.94724e-06
+                   WN         @ 1.19995e-05
+                   ln         @ 1.17618e-07
+                   lp         @ 3.96929e-08   =  0.121139     
+NM_h_n             WP         @ 7.94724e-06
+                   WN         @ 1.19995e-05
+                   ln         @ 1.17618e-07
+                   lp         @ 3.96929e-08   =  -0.403795     
+NM_l               WP         @ 7.94724e-06
+                   WN         @ 1.19995e-05
+                   ln         @ 1.17618e-07
+                   lp         @ 3.96929e-08   =  0.121166     
+NM_l_n             WP         @ 7.94724e-06
+                   WN         @ 1.19995e-05
+                   ln         @ 1.17618e-07
+                   lp         @ 3.96929e-08   =  -0.403888     
+V_ih               WP         @ 7.94724e-06
+                   WN         @ 1.19995e-05
+                   ln         @ 1.17618e-07
+                   lp         @ 3.96929e-08   =  0.178861     
+V_il               WP         @ 7.94724e-06
+                   WN         @ 1.19995e-05
+                   ln         @ 1.17618e-07
+                   lp         @ 3.96929e-08   =  0.121166     
+d1                 WP         @ 7.94724e-06
+                   WN         @ 1.19995e-05
+                   ln         @ 1.17618e-07
+                   lp         @ 3.96929e-08   =  0.121166     
+dvodvi             WP         @ 7.94724e-06
+                   WN         @ 1.19995e-05
+                   ln         @ 1.17618e-07
+                   lp         @ 3.96929e-08   =  -0.00154409     
+
+
+
+
+
+
+
+

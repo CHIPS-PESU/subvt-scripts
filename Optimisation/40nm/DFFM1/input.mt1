@@ -1,0 +1,5 @@
+$ Simulator: spectre (ver. 19.1.0.396.isr8)
+.title '// Generated for: spectre'
+index WP WN LP LN my_fall my_rise ctoq tpd delay n_delay energy n_energy alter# 
+1 1.15121e-06 7.32772e-07 4.26781e-08 6.50218e-08 9.83985e-09 1.20132e-09 
+failed 9.83985e-09 failed failed 6.11713e-15 0.213214 2 

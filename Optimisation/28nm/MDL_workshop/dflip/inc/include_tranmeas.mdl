@@ -1,0 +1,22 @@
+alias measurement tranmeas {
+
+  // definition of the parameters to be output
+  export real outcross, maxq, minq, q_rise_time
+
+  // definition of transient analysis to be run in a conservative tolerance
+  run tran(stop=40n, errpreset='conservative)
+
+  // computation of crossing point of V(q)
+  outcross=cross(V(q),thresh=vdd/2)
+
+  //computation of maximum value of V(q)
+  maxq=max(v(q))
+
+  //computation of minimum value of V(q)
+  minq=min(V(q))
+
+  //computation of risetime for signal V(q)
+  q_rise_time=risetime(V(q), initval=minq, finalval=maxq, \
+              inittype='y, finaltype='y, theta1=10, theta2=90)
+}
+

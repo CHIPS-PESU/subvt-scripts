@@ -1,0 +1,63 @@
+Exported variables from results directory:  ././input.raw/
+
+date               :  3:03:50 PM, Fri Dec 10, 2021
+design             :  // Generated for: spectre
+simulator          :  spectre
+version            :  19.1.0.396.isr8
+
+
+Measurement Name   :  trans
+Analysis Type      :  tran
+delay                 =  1.57266e-09 
+energy                =  5.28332e-13 
+fall                  =  1.38442 
+max_pwr               =  1.26145e-06 
+my_fall               =  8.57421e-08 
+my_pwr                =  1.59216e-05 
+my_rise               =  5.59617e-10 
+rise                  =  1.11502e-05 
+
+
+Swept Measurements :
+Measurement Name   :  trans-meas_optimize
+Analysis Type      :  tran
+delay              WP         @ 3e-07     
+                   WN         @ 3e-07     
+                   ln         @ 1.3e-07   
+                   lp         @ 3.0006e-08   =  2.07189e-07     
+energy             WP         @ 3e-07     
+                   WN         @ 3e-07     
+                   ln         @ 1.3e-07   
+                   lp         @ 3.0006e-08   =  1.16261e-13     
+fall               WP         @ 3e-07     
+                   WN         @ 3e-07     
+                   ln         @ 1.3e-07   
+                   lp         @ 3.0006e-08   =  0.0520393     
+max_pwr            WP         @ 3e-07     
+                   WN         @ 3e-07     
+                   ln         @ 1.3e-07   
+                   lp         @ 3.0006e-08   =  8.50027e-08     
+my_fall            WP         @ 3e-07     
+                   WN         @ 3e-07     
+                   ln         @ 1.3e-07   
+                   lp         @ 3.0006e-08   =  3.453e-09     
+my_pwr             WP         @ 3e-07     
+                   WN         @ 3e-07     
+                   ln         @ 1.3e-07   
+                   lp         @ 3.0006e-08   =  1.09834e-06     
+my_rise            WP         @ 3e-07     
+                   WN         @ 3e-07     
+                   ln         @ 1.3e-07   
+                   lp         @ 3.0006e-08   =  1.4017e-08     
+rise               WP         @ 3e-07     
+                   WN         @ 3e-07     
+                   ln         @ 1.3e-07   
+                   lp         @ 3.0006e-08   =  0.000458242     
+
+
+
+
+
+
+
+

@@ -1,0 +1,3 @@
+spectre dflip.scs =mdl monte.mdl -f psfbin -outdir spectremdl_result
+mdl -b monte.mdl -d dflip.scs -r spectremdl_result/dflip.raw -outdir mdlpp_spectremdl
+mdl -b monte_pp.mdl -d dflip.scs -r spectremdl_result/dflip.raw -outdir mdlpp_spectremdl_new

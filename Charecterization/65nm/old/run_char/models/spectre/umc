@@ -1,0 +1,5 @@
+*** Model include file ***
+
+simulator lang = spectre
+include "/home/TSMC/Desktop/UMC180/Designkits/Cadence_6.1/Models/Spectre/MM180_SPECTRE_MAIN_V161.lib.scs" section=tt
+simulator lang = spice

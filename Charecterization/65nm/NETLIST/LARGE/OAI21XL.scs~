@@ -1,0 +1,26 @@
+subckt OAI21X1 Y A0 A1 B0 VDD GND
+NM1 (n0 A0 GND GND) n_p9_hpculvt m=1 mf=1 w=200n l=30n nf=1 ad=15f as=15f \
+        pd=550n ps=550n sa=75n sb=75n sd=0 sca=58.0552 scb=30.1749m \
+        scc=7.4422m mis_flag=1 nrd=538.462m nrs=538.462m cctg_flag=1 \
+        rdscon_flag=1 rgate_flag=1
+NM0 (n0 A1 GND GND) n_p9_hpculvt m=1 mf=1 w=200n l=30n nf=1 ad=15f as=15f \
+        pd=550n ps=550n sa=75n sb=75n sd=0 sca=58.0552 scb=30.1749m \
+        scc=7.4422m mis_flag=1 nrd=538.462m nrs=538.462m cctg_flag=1 \
+        rdscon_flag=1 rgate_flag=1
+mn2 (Y B0 n0 GND) n_p9_hpculvt m=1 mf=1 w=200n l=30n nf=1 ad=15f as=15f \
+        pd=550n ps=550n sa=75n sb=75n sd=0 sca=58.0552 scb=30.1749m \
+        scc=7.4422m mis_flag=1 nrd=538.462m nrs=538.462m cctg_flag=1 \
+        rdscon_flag=1 rgate_flag=1
+PM1 (Y A1 n1 VDD) p_p9_hpculvt m=1 mf=1 w=2.16u l=30n nf=1 ad=162f as=162f \
+        pd=4.47u ps=4.47u sa=75n sb=75n sd=0 sca=6.91443 scb=3.98785m \
+        scc=725.49u mis_flag=1 nrd=358.974m nrs=358.974m cctg_flag=1 \
+        rdscon_flag=1 rgate_flag=1
+PM0 (n1 A0 VDD VDD) p_p9_hpculvt m=1 mf=1 w=2.16u l=30n nf=1 ad=162f \
+        as=162f pd=4.47u ps=4.47u sa=75n sb=75n sd=0 sca=6.91443 \
+        scb=3.98785m scc=725.49u mis_flag=1 nrd=358.974m nrs=358.974m \
+        cctg_flag=1 rdscon_flag=1 rgate_flag=1
+mp2 (Y B0 VDD VDD) p_p9_hpculvt m=1 mf=1 w=1.08u l=30n nf=1 ad=81f as=81f \
+        pd=2.31u ps=2.31u sa=75n sb=75n sd=0 sca=13.4363 scb=7.97447m \
+        scc=1.45098m mis_flag=1 nrd=358.974m nrs=358.974m cctg_flag=1 \
+        rdscon_flag=1 rgate_flag=1
+ends OAI21X1

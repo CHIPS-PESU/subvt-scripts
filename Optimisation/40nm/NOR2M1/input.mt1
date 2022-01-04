@@ -1,0 +1,7 @@
+$ Simulator: spectre (ver. 19.1.0.396.isr8)
+.title '// Generated for: spectre'
+c d dvodvi d1 V_il V_ih NM_h NM_h_n NM_l NM_l_n max_dc_pwr n_dc_pwr NM n_nm 
+alter# 
+0.1 1e-30 -0.0034426 0.128517 0.128517 0.190724 0.109276 0.823606 0.128517 
+0.700298 1.84348e-09 0.0327755 0.109276 0.823606 2 
+

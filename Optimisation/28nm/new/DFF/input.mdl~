@@ -1,0 +1,45 @@
+alias measurement trans {
+
+     run tran( stop=1u )
+     export real my_fall = falltime(sig=V(QN), initval=max(trim(V(QN),350n,1u)), inittype='y, finalval=min(trim(V(QN),350n,1u)), finaltype='y, theta1=80, theta2=20)
+     export real fall=(my_fall-(239e-12))/(62e-09 - 239e-12)     
+     
+     export real my_rise=risetime(sig=V(QN), initval=min(trim(V(QN),0,350n)), inittype='y, finalval=max(trim(V(QN)),0,350n), finaltype='y, theta1=20, theta2=80)
+
+     export real rise=(my_rise-(224e-12))/(30.10e-06 - 224e-12)
+     export real delay = cross(sig=V(QN), dir='rise, n=1, thresh=150e-03) - cross(sig=V(CLK), dir='rise, n=1, thresh=150e-03)
+     export real my_pwr=max(abs(I19:pwr))
+     export real energy = integ(I19:pwr, from=0n, to=1u)
+     export real max_pwr = (my_pwr-27.31e-09)/(18.6-06 - 27.31e-09)
+}
+
+print fmt ("\n****Intermediate Results of Optimization Searching****\n\n") to="mvar.print"
+print fmt ("%-15s%-15s%-15s%-15s%-15s%-15s%-15s%-15s\n", "WP","WN","LP","LN","rise","fall","pwr","energy") addto="mvar.print"
+run trans
+//run dcs
+mvarsearch {
+   	 option {
+   	    accuracy = 1e-9
+   	    deltax = 1e-9
+   	    maxiter = 1000
+   	 }
+   	 parameter {
+   	    {WP, 2.16u, 300n, 8.95u}
+   	    {WN, 2u, 300n, 8.95u}
+	    {ln, 30n, 30n, 130n}
+   	    {lp, 30n, 30n, 130n}
+   	 }
+   	 exec {
+            print fmt("%-15e%-15e%-15e%-15e", WP, WN,lp,ln) addto="mvar.print"
+   	    run trans
+	  //run dcs
+            print fmt("%-15e%-15e%-15e%-15e\n", trans->my_rise,trans->my_fall,trans->my_pwr,trans->energy) \
+                      addto="mvar.print"
+   	 }
+   	 zero {
+   	    tmp1 = max(trans->my_rise,trans->my_fall)
+	    tmp2 = trans->my_pwr
+	    tmp3 = trans->delay
+	    tmp4 = trans->energy
+   	 }
+}

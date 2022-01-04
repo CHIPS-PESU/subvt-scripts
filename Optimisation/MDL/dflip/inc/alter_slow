@@ -1,0 +1,8 @@
+// switch to using the section of the model file designated by
+// the alter_slow altergroup statement in dflip.scs file
+run alter_slow
+
+// switch to using temperature value designated by
+// the alter_temp_slow altergroup statement in dflip.scs file
+run alter_temp_slow
+

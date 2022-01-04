@@ -1,0 +1,59 @@
+//  mvar.mdl
+//  (C) 2008 Cadence Design Systems, Inc.
+//
+// This example is to find optimal values of design parameters 
+// by running a multi-parameter, multi-goal search function
+//
+
+// alias measurement definition
+alias measurement trans {
+
+  // definition of transient analysis with autostop turned on
+  run tran( stop=1u, autostop='yes )
+
+     // computation of risetime for signal V(out) from 10% to 90%
+     export real rise=risetime(sig=V(out), initval=0.5, \
+                      finalval=3.0)
+
+     //computation of falltime for signal V(out) from 90% to 10%
+     export real fall=falltime(sig=V(out), initval=3.0, \
+                      finalval=0.5)
+
+}
+
+// Print results to a specified file beginning with "to=" keyword
+print fmt ("\n****Intermediate Results of Optimization Searching****\n\n") to="mvar.print"
+
+// continue to print in user-format with "addto=" keyword
+print fmt ("%-15s%-15s%-15s%-15s\n", "pw","nw","rise","fall") addto="mvar.print"
+
+// definition of a mvarsearch function
+mvarsearch {
+
+         // definition of multiple optimization goals
+   	 option {
+   	    accuracy = 1e-3     // convergence tolerance of trans
+   	    deltax = 1e-3       // step length
+   	    maxiter = 100       // limit to 100 iterations
+   	 }
+
+         //  definition of multiple parameters to be optimized
+   	 parameter {
+   	    {pw, 2u, 0.05u, 10u} //init_val, lower_val, upper_value
+   	    {nw, 2u, 0.05u, 10u} //init_val, lower_val, upper_value 
+   	 }
+
+         // execution of the measurement alias
+   	 exec {
+            print fmt("%-15e%-15e", pw, nw) addto="mvar.print"
+   	    run trans
+            print fmt("%-15e%-15e\n", trans->rise,trans->fall) \
+                      addto="mvar.print"
+   	 }
+
+         // definition of goal values to be minimized
+   	 zero {
+   	    tmp1 = trans->rise-25p
+   	    tmp2 = trans->fall-25p 
+   	 }
+}

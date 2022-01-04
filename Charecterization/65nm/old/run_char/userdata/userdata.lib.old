@@ -1,0 +1,105 @@
+library (gsclib045_userdata) {
+  cell (AND2X1) {
+    area : 1.368;
+    cell_footprint : "AND2";
+  }
+  cell (DFFQX1) {
+    area : 5.814;
+    cell_footprint : "DFFQ";
+  }
+  cell (DFFSRHQX1) {
+    area : 10.944;
+    cell_footprint : "DFFSRHQ";
+  }
+  cell (INVX1) {
+    area : 0.684;
+    cell_footprint : "INV";
+  }
+  cell (SDFFQX1) {
+    area : 7.524;
+    cell_footprint : "SDFFQ";
+    test_cell () {
+      pin (Q) {
+        direction : output;
+        function : "IQ";
+        signal_type : test_scan_out;
+      }
+      pin (SI) {
+        direction : input;
+        signal_type : test_scan_in;
+      }
+      pin (SE) {
+        direction : input;
+        signal_type : test_scan_enable;
+      }
+      pin (D) {
+        direction : input;
+      }
+      pin (CK) {
+        direction : input;
+      }
+      ff (IQ,IQN) {
+        clocked_on : "CK";
+        next_state : "D";
+      }
+    }
+  }
+  cell (SDFFSRHQX1) {
+    area : 13.338;
+    cell_footprint : "SDFFSRHQ";
+    test_cell () {
+      pin (Q) {
+        direction : output;
+        function : "IQ";
+        signal_type : test_scan_out;
+      }
+      pin (CK) {
+        direction : input;
+      }
+      pin (D) {
+        direction : input;
+      }
+      pin (RN) {
+        direction : input;
+      }
+      pin (SE) {
+        direction : input;
+        signal_type : test_scan_enable;
+      }
+      pin (SI) {
+        direction : input;
+        signal_type : test_scan_in;
+      }
+      pin (SN) {
+        direction : input;
+      }
+      ff (IQ,IQN) {
+        clear : "!RN";
+        clear_preset_var1 : H;
+        clear_preset_var2 : L;
+        clocked_on : "CK";
+        next_state : "D";
+        preset : "!SN";
+      }
+    }
+  }
+  cell (TLATQX1) {
+    area : 5.13;
+    cell_footprint : "TLATQ";
+  }
+  cell (TLATSRX1) {
+    area : 6.498;
+    cell_footprint : "TLATSR";
+  }
+  cell (TLATX1) {
+    area : 5.472;
+    cell_footprint : "TLAT";
+  }
+  cell (XOR2X1) {
+    area : 2.736;
+    cell_footprint : "XOR2";
+    pin (Y) {
+      function : "(A ^ B)";
+    }
+  }
+}

@@ -1,0 +1,6 @@
+$ Simulator: spectre (ver. 19.1.0.396.isr8)
+.title '// Generated for: spectre'
+my_fall fall my_rise rise delay my_pwr energy max_pwr alter# 
+1.13341e-09 0.0144818 2.31833e-09 6.95796e-05 0.00727569 8.81092e-07 
+2.61238e-15 6.77605e-08 1 
+

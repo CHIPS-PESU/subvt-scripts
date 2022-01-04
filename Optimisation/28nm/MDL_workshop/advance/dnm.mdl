@@ -1,0 +1,53 @@
+//  dnm.mdl
+//  (C) 2008 Cadence Design Systems, Inc.
+//
+// This measurement computes dynamic noise margin for a signal 
+// implemented by a static noise margin calcultion combined with 
+// foreach and search functions using only 15 lines of statements. Magic!!
+
+// alias measurement definition
+alias measurement snm {
+
+       // definition of the parameters to be output
+   	export real vin_low, vin_high, snmargin
+
+        // definition of dc analysis on source vin and sweeping dc value
+	run dc (start=0, stop=3.0, step=.05m, dev=vin, param=dc)
+
+        // calculation of low and high static noise margin
+	vin_low = cross(sig=deriv(out), dir='fall, n=1, thresh=-1) - 0
+	vin_high = 3.0 - cross(sig=deriv(out), dir='rise, n=-1, thresh=-1)
+
+        // calculation of minimum static noise margin snmargin 
+	snmargin=min(vin_low, vin_high)
+}
+
+// alias measurement definition
+alias measurement dnm {
+
+        // definition of transient analysis 
+	run tran(stop=1n)
+
+        // calculation of parameter minout to be output
+	export real minout=min(out)
+
+        // definition of parameter vin_max to be optimized and output
+	export real vin_max=vin:val1
+}
+
+// execute the measurement alias
+run snm
+
+// definition of the outer foreach variable pulse_width from 50p to 500p
+foreach pulse_width from swp(start=50p, stop=500p, step=25p) {
+
+  // definition of the inner search variable vin:val1 to be optimized
+  search vin:val1 from binary(start=snm->snmargin, stop=3.0, \
+  tol=1m) {
+
+    // execute the measurement alias
+    run dnm
+
+    // Continuing search until dnm:minout falls below (3.0 - snm->snmargin)
+    }until ((dnm->minout) < (3.0 - snm->snmargin))
+}

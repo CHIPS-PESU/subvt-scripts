@@ -1,0 +1,63 @@
+Exported variables from results directory:  ././input.raw/
+
+date               :  3:19:23 PM, Mon Dec 27, 2021
+design             :  // Generated for: spectre
+simulator          :  spectre
+version            :  19.1.0.396.isr8
+
+
+Measurement Name   :  trans
+Analysis Type      :  tran
+ctoq                  =  NaN 
+delay                 =  NaN 
+energy                =  1.51522e-14 
+my_fall               =  5.7239e-09 
+my_rise               =  1.47846e-09 
+n_delay               =  NaN 
+n_energy              =  0.589677 
+tpd                   =  5.7239e-09 
+
+
+Swept Measurements :
+Measurement Name   :  trans-meas_optimize
+Analysis Type      :  tran
+ctoq               WP         @ 1.15121e-06
+                   WN         @ 7.32772e-07
+                   LP         @ 4.26781e-08
+                   LN         @ 6.50218e-08   =  NaN     
+delay              WP         @ 1.15121e-06
+                   WN         @ 7.32772e-07
+                   LP         @ 4.26781e-08
+                   LN         @ 6.50218e-08   =  NaN     
+energy             WP         @ 1.15121e-06
+                   WN         @ 7.32772e-07
+                   LP         @ 4.26781e-08
+                   LN         @ 6.50218e-08   =  6.11713e-15     
+my_fall            WP         @ 1.15121e-06
+                   WN         @ 7.32772e-07
+                   LP         @ 4.26781e-08
+                   LN         @ 6.50218e-08   =  9.83985e-09     
+my_rise            WP         @ 1.15121e-06
+                   WN         @ 7.32772e-07
+                   LP         @ 4.26781e-08
+                   LN         @ 6.50218e-08   =  1.20132e-09     
+n_delay            WP         @ 1.15121e-06
+                   WN         @ 7.32772e-07
+                   LP         @ 4.26781e-08
+                   LN         @ 6.50218e-08   =  NaN     
+n_energy           WP         @ 1.15121e-06
+                   WN         @ 7.32772e-07
+                   LP         @ 4.26781e-08
+                   LN         @ 6.50218e-08   =  0.213214     
+tpd                WP         @ 1.15121e-06
+                   WN         @ 7.32772e-07
+                   LP         @ 4.26781e-08
+                   LN         @ 6.50218e-08   =  9.83985e-09     
+
+
+
+
+
+
+
+

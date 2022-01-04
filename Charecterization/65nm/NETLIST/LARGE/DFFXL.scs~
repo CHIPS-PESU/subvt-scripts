@@ -1,0 +1,113 @@
+subckt DFFX1 Q QN D CK VDD GND
+mp40 (net306 net308 net291 VDD) p_p9_hpculvt m=1 mf=1 w=1.08u l=30n nf=1 \
+        ad=81f as=81f pd=2.31u ps=2.31u sa=75n sb=75n sd=0 sca=13.4363 \
+        scb=7.97447m scc=1.45098m mis_flag=1 nrd=651.163m nrs=651.163m \
+        cctg_flag=1 rdscon_flag=1 rgate_flag=1
+PM5 (net309 net308 VDD VDD) p_p9_hpculvt m=1 mf=1 w=1.08u l=30n nf=1 \
+        ad=81f as=81f pd=2.31u ps=2.31u sa=75n sb=75n sd=0 sca=13.4363 \
+        scb=7.97447m scc=1.45098m mis_flag=1 cctg_flag=1 rdscon_flag=1 \
+        rgate_flag=1
+PM7 (net301 D VDD VDD) p_p9_hpculvt m=1 mf=1 w=2.16u l=30n nf=1 ad=162f \
+        as=162f pd=4.47u ps=4.47u sa=75n sb=75n sd=0 sca=6.91443 \
+        scb=3.98785m scc=725.49u mis_flag=1 cctg_flag=1 rdscon_flag=1 \
+        rgate_flag=1
+PM8 (net307 net309 net301 VDD) p_p9_hpculvt m=1 mf=1 w=2.16u l=30n nf=1 \
+        ad=162f as=162f pd=4.47u ps=4.47u sa=75n sb=75n sd=0 sca=6.91443 \
+        scb=3.98785m scc=725.49u mis_flag=1 cctg_flag=1 rdscon_flag=1 \
+        rgate_flag=1
+PM4 (net291 net307 VDD VDD) p_p9_hpculvt m=1 mf=1 w=1.08u l=30n nf=1 \
+        ad=81f as=81f pd=2.31u ps=2.31u sa=75n sb=75n sd=0 sca=13.4363 \
+        scb=7.97447m scc=1.45098m mis_flag=1 cctg_flag=1 rdscon_flag=1 \
+        rgate_flag=1
+PM3 (net299 net306 VDD VDD) p_p9_hpculvt m=1 mf=1 w=1.08u l=30n nf=1 \
+        ad=81f as=81f pd=2.31u ps=2.31u sa=75n sb=75n sd=0 sca=13.4363 \
+        scb=7.97447m scc=1.45098m mis_flag=1 cctg_flag=1 rdscon_flag=1 \
+        rgate_flag=1
+PM12 (net306 net309 net304 VDD) p_p9_hpculvt m=1 mf=1 w=2.16u l=30n nf=1 \
+        ad=162f as=162f pd=4.47u ps=4.47u sa=75n sb=75n sd=0 sca=6.91443 \
+        scb=3.98785m scc=725.49u mis_flag=1 cctg_flag=1 rdscon_flag=1 \
+        rgate_flag=1
+PM11 (net304 net299 VDD VDD) p_p9_hpculvt m=1 mf=1 w=2.16u l=30n nf=1 \
+        ad=162f as=162f pd=4.47u ps=4.47u sa=75n sb=75n sd=0 sca=6.91443 \
+        scb=3.98785m scc=725.49u mis_flag=1 cctg_flag=1 rdscon_flag=1 \
+        rgate_flag=1
+PM2 (Q net299 VDD VDD) p_p9_hpculvt m=1 mf=1 w=1.08u l=30n nf=1 ad=81f \
+        as=81f pd=2.31u ps=2.31u sa=75n sb=75n sd=0 sca=13.4363 \
+        scb=7.97447m scc=1.45098m mis_flag=1 cctg_flag=1 rdscon_flag=1 \
+        rgate_flag=1
+PM6 (net308 CK VDD VDD) p_p9_hpculvt m=1 mf=1 w=1.08u l=30n nf=1 ad=81f \
+        as=81f pd=2.31u ps=2.31u sa=75n sb=75n sd=0 sca=13.4363 \
+        scb=7.97447m scc=1.45098m mis_flag=1 cctg_flag=1 rdscon_flag=1 \
+        rgate_flag=1
+PM10 (net307 net308 net303 VDD) p_p9_hpculvt m=1 mf=1 w=2.16u l=30n nf=1 \
+        ad=162f as=162f pd=4.47u ps=4.47u sa=75n sb=75n sd=0 sca=6.91443 \
+        scb=3.98785m scc=725.49u mis_flag=1 cctg_flag=1 rdscon_flag=1 \
+        rgate_flag=1
+PM9 (net303 net291 VDD VDD) p_p9_hpculvt m=1 mf=1 w=2.16u l=30n nf=1 \
+        ad=162f as=162f pd=4.47u ps=4.47u sa=75n sb=75n sd=0 sca=6.91443 \
+        scb=3.98785m scc=725.49u mis_flag=1 cctg_flag=1 rdscon_flag=1 \
+        rgate_flag=1
+PM1 (QN net297 VDD VDD) p_p9_hpculvt m=1 mf=1 w=1.08u l=30n nf=1 ad=81f \
+        as=81f pd=2.31u ps=2.31u sa=75n sb=75n sd=0 sca=13.4363 \
+        scb=7.97447m scc=1.45098m mis_flag=1 cctg_flag=1 rdscon_flag=1 \
+        rgate_flag=1
+PM0 (net297 net299 VDD VDD) p_p9_hpculvt m=1 mf=1 w=1.08u l=30n nf=1 \
+        ad=81f as=81f pd=2.31u ps=2.31u sa=75n sb=75n sd=0 sca=13.4363 \
+        scb=7.97447m scc=1.45098m mis_flag=1 cctg_flag=1 rdscon_flag=1 \
+        rgate_flag=1
+NM2 (net291 net307 GND GND) n_p9_hpculvt m=1 mf=1 w=100n l=30n nf=1 \
+        ad=7.5f as=7.5f pd=350n ps=350n sa=75n sb=75n sd=0 sca=93.2401 \
+        scb=35.2443m scc=11.7056m mis_flag=1 cctg_flag=1 rdscon_flag=1 \
+        rgate_flag=1
+NM6 (QN net297 GND GND) n_p9_hpculvt m=1 mf=1 w=100n l=30n nf=1 ad=7.5f \
+        as=7.5f pd=350n ps=350n sa=75n sb=75n sd=0 sca=93.2401 \
+        scb=35.2443m scc=11.7056m mis_flag=1 cctg_flag=1 rdscon_flag=1 \
+        rgate_flag=1
+NM0 (net308 CK GND GND) n_p9_hpculvt m=1 mf=1 w=100n l=30n nf=1 ad=7.5f \
+        as=7.5f pd=350n ps=350n sa=75n sb=75n sd=0 sca=93.2401 \
+        scb=35.2443m scc=11.7056m mis_flag=1 cctg_flag=1 rdscon_flag=1 \
+        rgate_flag=1
+NM5 (Q net299 GND GND) n_p9_hpculvt m=1 mf=1 w=100n l=30n nf=1 ad=7.5f \
+        as=7.5f pd=350n ps=350n sa=75n sb=75n sd=0 sca=93.2401 \
+        scb=35.2443m scc=11.7056m mis_flag=1 cctg_flag=1 rdscon_flag=1 \
+        rgate_flag=1
+NM10 (net302 net291 GND GND) n_p9_hpculvt m=1 mf=1 w=200n l=30n nf=1 \
+        ad=15f as=15f pd=550n ps=550n sa=75n sb=75n sd=0 sca=58.0552 \
+        scb=30.1749m scc=7.4422m mis_flag=1 cctg_flag=1 rdscon_flag=1 \
+        rgate_flag=1
+NM9 (net307 net309 net302 GND) n_p9_hpculvt m=1 mf=1 w=200n l=30n nf=1 \
+        ad=15f as=15f pd=550n ps=550n sa=75n sb=75n sd=0 sca=58.0552 \
+        scb=30.1749m scc=7.4422m mis_flag=1 cctg_flag=1 rdscon_flag=1 \
+        rgate_flag=1
+mn40 (net306 net309 net291 GND) n_p9_hpculvt m=1 mf=1 w=100n l=30n nf=1 \
+        ad=7.5f as=7.5f pd=350n ps=350n sa=75n sb=75n sd=0 sca=93.2401 \
+        scb=35.2443m scc=11.7056m mis_flag=1 nrd=965.517m nrs=965.517m \
+        cctg_flag=1 rdscon_flag=1 rgate_flag=1
+NM1 (net309 net308 GND GND) n_p9_hpculvt m=1 mf=1 w=100n l=30n nf=1 \
+        ad=7.5f as=7.5f pd=350n ps=350n sa=75n sb=75n sd=0 sca=93.2401 \
+        scb=35.2443m scc=11.7056m mis_flag=1 cctg_flag=1 rdscon_flag=1 \
+        rgate_flag=1
+NM4 (net297 net299 GND GND) n_p9_hpculvt m=1 mf=1 w=100n l=30n nf=1 \
+        ad=7.5f as=7.5f pd=350n ps=350n sa=75n sb=75n sd=0 sca=93.2401 \
+        scb=35.2443m scc=11.7056m mis_flag=1 cctg_flag=1 rdscon_flag=1 \
+        rgate_flag=1
+NM3 (net299 net306 GND GND) n_p9_hpculvt m=1 mf=1 w=100n l=30n nf=1 \
+        ad=7.5f as=7.5f pd=350n ps=350n sa=75n sb=75n sd=0 sca=93.2401 \
+        scb=35.2443m scc=11.7056m mis_flag=1 cctg_flag=1 rdscon_flag=1 \
+        rgate_flag=1
+NM12 (net305 net299 GND GND) n_p9_hpculvt m=1 mf=1 w=200n l=30n nf=1 \
+        ad=15f as=15f pd=550n ps=550n sa=75n sb=75n sd=0 sca=58.0552 \
+        scb=30.1749m scc=7.4422m mis_flag=1 cctg_flag=1 rdscon_flag=1 \
+        rgate_flag=1
+NM11 (net306 net308 net305 GND) n_p9_hpculvt m=1 mf=1 w=200n l=30n nf=1 \
+        ad=15f as=15f pd=550n ps=550n sa=75n sb=75n sd=0 sca=58.0552 \
+        scb=30.1749m scc=7.4422m mis_flag=1 cctg_flag=1 rdscon_flag=1 \
+        rgate_flag=1
+NM7 (net300 D GND GND) n_p9_hpculvt m=1 mf=1 w=200n l=30n nf=1 ad=15f \
+        as=15f pd=550n ps=550n sa=75n sb=75n sd=0 sca=58.0552 scb=30.1749m \
+        scc=7.4422m mis_flag=1 cctg_flag=1 rdscon_flag=1 rgate_flag=1
+NM8 (net307 net308 net300 GND) n_p9_hpculvt m=1 mf=1 w=200n l=30n nf=1 \
+        ad=15f as=15f pd=550n ps=550n sa=75n sb=75n sd=0 sca=58.0552 \
+        scb=30.1749m scc=7.4422m mis_flag=1 cctg_flag=1 rdscon_flag=1 \
+        rgate_flag=1
+ends DFFX1

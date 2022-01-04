@@ -1,0 +1,18 @@
+subckt NOR2X1 Y A B VDD GND
+PM1 (Y B net16 VDD) p_p9_hpculvt m=1 mf=1 w=1.005u l=30n nf=3 ad=58.625f \
+        as=58.625f pd=1.69u ps=1.69u sa=75n sb=75n sd=100n sca=38.4615 \
+        scb=22.979m scc=4.65525m mis_flag=1 cctg_flag=1 rdscon_flag=1 \
+        rgate_flag=1
+PM0 (net16 A VDD VDD) p_p9_hpculvt m=1 mf=1 w=1.005u l=30n nf=3 ad=58.625f \
+        as=58.625f pd=1.69u ps=1.69u sa=75n sb=75n sd=100n sca=38.4615 \
+        scb=22.979m scc=4.65525m mis_flag=1 cctg_flag=1 rdscon_flag=1 \
+        rgate_flag=1
+PM3 (Y B GND GND) n_p9_hpculvt m=1 mf=1 w=450n l=60n nf=3 ad=26.25f \
+        as=26.25f pd=950n ps=950n sa=75n sb=75n sd=100n sca=71.5564 \
+        scb=32.9634m scc=9.2485m mis_flag=1 cctg_flag=1 rdscon_flag=1 \
+        rgate_flag=1
+PM2 (Y A GND GND) n_p9_hpculvt m=1 mf=1 w=450n l=60n nf=3 ad=26.25f \
+        as=26.25f pd=950n ps=950n sa=75n sb=75n sd=100n sca=71.5564 \
+        scb=32.9634m scc=9.2485m mis_flag=1 cctg_flag=1 rdscon_flag=1 \
+        rgate_flag=1
+ends NOR2X1

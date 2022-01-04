@@ -1,0 +1,4 @@
+$ Simulator: spectre (ver. 19.1.0.396.isr8)
+.title '// Generated for: spectre'
+index WP WN rise fall delay my_avg_power alter# 
+1 1e-07 1.03162e-07 failed failed failed failed 1 

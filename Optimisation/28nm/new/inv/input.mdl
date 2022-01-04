@@ -1,0 +1,81 @@
+alias measurement trans {
+  	run tran( stop=500n, autostop='yes )
+
+	export real a = 1e-01
+	export real b = 1e+00
+
+  	export real fall=falltime(sig=V(OUT), initval=0.3, inittype='y, finalval=0.0, finaltype='y, theta1=90, theta2=10)
+     	export real n_fall=((fall-(200e-12))/(120e-06 - 200e-12))
+
+     	export real rise=risetime(sig=V(OUT), initval=0.0, inittype='y, finalval=0.3, finaltype='y, theta1=10, theta2=90)
+     	export real n_rise=((rise-(200e-12))/(120e-06 - 200e-12))
+
+	export real tphl = cross(sig=V(OUT), dir='fall, n=1, thresh=150e-03) - cross(sig=V(IN), dir='rise, n=1, thresh=150e-03)
+	export real n_tphl = (tphl - 50e-12)/(30e-9 - 50e-12)
+
+	export real tplh = cross(sig=V(OUT), dir='rise, n=1, thresh=150e-03) - cross(sig=V(IN), dir='fall, n=1, thresh=150e-03)
+	export real n_tplh = (tplh - 50e-12)/(30e-9 - 50e-12)
+
+	export real delay = max(max(rise, fall), max(tphl, tplh))
+     	export real n_delay = max(max(n_rise, n_fall), max(n_tphl, n_tplh)) * a
+
+     	export real max_pwr=avg(I23:pwr)
+	export real n_pwr = ((max_pwr-20e-09)/(40e-06 - 27.31e-09))
+
+     	export real energy = integ(I23:pwr, from=0n, to=10u)
+     	export real n_energy = (energy - 1.5e-15)/(5.5e-15 - 1.5e-15) * b
+}
+
+alias measurement dcs {
+	run dc
+
+	export real c = 1 *1e-1
+	export real d = 1 * 1e-30
+
+	export real dvodvi = deriv(V(OUT))
+	export real d1 = yval(cross(sig=deriv(V(OUT)), dir='fall, n=1, thresh=-1))
+        export real V_il = cross(sig=deriv(V(OUT)), dir='fall, n=1, thresh=-1)
+        export real V_ih = cross(sig=deriv(V(OUT)), dir='rise, n=1, thresh=-1)
+
+        export real NM_h = (300e-03 - V_ih)
+        export real NM_h_n = 150e-03/NM_h
+	 
+        export real NM_l = (V_il)
+        export real NM_l_n = 150e-03/NM_l
+
+        export real max_dc_pwr = avg(abs(I23:pwr))
+        export real n_dc_pwr = ((max_dc_pwr - 39.5e-12)/(55.08e-09 - 39.5e-12))
+
+	export real NM = min(NM_h, NM_l)
+
+	export real n_nm = max(NM_h_n, NM_l_n) * c
+}
+	print fmt ("%-12s,%-12s,%-12s,%-12s,%-12s,%-12s,%-12s,%-12s,%-12s,%-12s\n", "WP","WN","LP","LN","Delay","Energy","NM","Norm Delay","Norm Energy","1/NM") to="mvar.csv"
+	run trans
+	run dcs
+mvarsearch {
+   	 option {
+	    method='lm
+   	    accuracy = 1e-3
+   	    deltax = 1e-3
+   	    maxiter = 100
+   	 }
+   	 parameter {
+   	    {WP, 2u, 200n, 6u}
+   	    {WN, 200n, 200n, 6u}
+	    {LP, 30n, 30n, 45n}
+	    {LN, 90n, 60n, 90n}
+   	 }
+   	 exec {
+            print fmt("%-12e,%-12e,%-12e,%-12e,", WP, WN, LP, LN) addto="mvar.csv"
+   	    run trans
+	    run dcs
+            print fmt("%-12e,%-12e,%-12e,%-12e,%-12e,%-12e\n", trans->delay, trans->energy, dcs->NM, trans->n_delay, trans->n_energy, dcs->n_nm) addto="mvar.csv"
+   	 }
+   	 zero {
+   	    tmp1 = (trans->n_delay) * trans->a
+	    tmp2 = (trans->n_energy) * trans->b
+	    tmp3 = dcs-n_nm //* 1e-50//(dcs->n_nm) * dcs->c
+	    tmp4 = (trans->n_pwr)*1e-50
+   	 }
+}

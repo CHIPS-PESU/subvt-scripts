@@ -1,0 +1,63 @@
+Exported variables from results directory:  ././input.raw/
+
+date               :  3:00:51 PM, Fri Dec 10, 2021
+design             :  // Generated for: spectre
+simulator          :  spectre
+version            :  19.1.0.396.isr8
+
+
+Measurement Name   :  trans
+Analysis Type      :  tran
+delay                 =  NaN 
+energy                =  1.91064e-14 
+fall                  =  0.00981464 
+max_pwr               =  2.34906e-07 
+my_fall               =  8.45162e-10 
+my_pwr                =  2.98712e-06 
+my_rise               =  1.20023e-09 
+rise                  =  3.2433e-05 
+
+
+Swept Measurements :
+Measurement Name   :  trans-meas_optimize
+Analysis Type      :  tran
+delay              WP         @ nan       
+                   WN         @ nan       
+                   ln         @ nan       
+                   lp         @ nan          =  NaN     
+energy             WP         @ nan       
+                   WN         @ nan       
+                   ln         @ nan       
+                   lp         @ nan          =  1.48873e-14     
+fall               WP         @ nan       
+                   WN         @ nan       
+                   ln         @ nan       
+                   lp         @ nan          =  0.0122671     
+max_pwr            WP         @ nan       
+                   WN         @ nan       
+                   ln         @ nan       
+                   lp         @ nan          =  2.21908e-07     
+my_fall            WP         @ nan       
+                   WN         @ nan       
+                   ln         @ nan       
+                   lp         @ nan          =  9.96628e-10     
+my_pwr             WP         @ nan       
+                   WN         @ nan       
+                   ln         @ nan       
+                   lp         @ nan          =  2.82335e-06     
+my_rise            WP         @ nan       
+                   WN         @ nan       
+                   ln         @ nan       
+                   lp         @ nan          =  1.4834e-09     
+rise               WP         @ nan       
+                   WN         @ nan       
+                   ln         @ nan       
+                   lp         @ nan          =  4.1841e-05     
+
+
+
+
+
+
+
+

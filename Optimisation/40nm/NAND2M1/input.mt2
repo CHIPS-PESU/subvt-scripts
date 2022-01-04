@@ -1,0 +1,7 @@
+$ Simulator: spectre (ver. 19.1.0.396.isr8)
+.title '// Generated for: spectre'
+index WP WN LP LN a b fall rise tphl tplh delay n_delay max_pwr n_pwr energy 
+n_energy alter# 
+1 1.97064e-06 5.53969e-07 7.17201e-08 7.98718e-08 10 100 3.2503e-08 2.28431e-08 
+2.49587e-08 -1.24068e-06 3.2503e-08 0.0839146 4.76685e-10 -0.000488416 
+2.38343e-15 0.589702 3 

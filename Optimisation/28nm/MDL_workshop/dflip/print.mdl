@@ -1,0 +1,88 @@
+//  print.mdl
+//  (C) 2008 Cadence Design Systems, Inc.
+//
+// This example shows print statements defined at the top level,
+// in a measurement alias and in a foreach loop, and output 
+// the results in user-defined format.
+
+// alias measurement definition
+alias measurement findqmax {
+
+  //define an input string variable to instore the specifed file name
+  input string out="myfile.out"
+
+  //print a header
+  print fmt ("%s\t%s\t\t%s\t%s\t%s\n","maxq","minq","REG", \
+             "intREG","realREG") addto=out
+
+  // define a transient analysis to be run in a conservative tolerance
+  run tran(stop=100n, errpreset='conservative)
+
+  //compute the maximum value of V(q)
+  export real maxq=max(V(q))
+
+  //compute the minimum value of V(q)
+  export real minq=min(V(q))
+
+  //obtain region of a mosfet and save to an enum type variable REG
+  enum REG=i0.mp0:region
+
+  // obtain region of a mosfet and save to an integer variable intREG
+  export int intREG=i0.mp0:region
+
+  //convert value of REG to a real number
+  export real realREG=real(REG)
+
+  // define print statements in an alias
+  print fmt ("%V\t%V\t%V\t%V\t%V\n", maxq, minq, REG, \
+             intREG,realREG) addto=out
+}
+
+// alias measurement definition
+alias measurement findqdelay {
+
+  // define the variables to be output
+  export real q_delay, q_rise_time, q_fall_time
+
+  // defie a transient analysis to be run in a conservative tolerance
+  run tran(stop=100n, errpreset='conservative)
+
+  // compute the delay using deltax function
+  q_delay=deltax(sig1=v(clock), sig2=v(q), dir1='rise, \
+            n1=1, thresh1=vdd/2, dir2='cross, n2=1, thresh2=vdd/2)
+
+  //compute the risetime of V(q)
+  q_rise_time=risetime(q, initval=0, finalval=vdd, \
+              inittype='y, finaltype='y, theta1=10, theta2=90)
+
+  //compute the falltime of V(q)
+  q_fall_time=falltime(q, initval=vdd, finalval=0, \
+              inittype='y, finaltype='y, theta1=90, theta2=10)
+}
+
+// Print results to a specified file in user-defined format
+
+// The first print statement using "to=" keyword to clean the old data 
+print fmt("\n***Max/Min/Region value***\n\n") to="print.print"
+
+//execute the measurement alias and define a print file name
+run findqmax (out="print.print")
+
+// Print a header at the top level and append the new results
+print fmt ("\n***Delay varies with vdd***\n\n") \
+           addto="print.print"
+print fmt ("%-15s%-15s%-15s%-15s\n\n", "Vdd", "delay", \
+           "rise", "fall") addto="print.print"
+
+// define a foreach loop
+foreach vdd from {1.5, 1.8, 2} {
+
+  // execute the measurement alias
+  run findqdelay
+
+  // print results inside the foreach loop
+  print fmt("%-15g%-15e%-15S%-15.8S\n", vdd, findqdelay->q_delay, \
+            findqdelay->q_rise_time, findqdelay->q_fall_time) \
+            addto="print.print"
+}
+

@@ -1,0 +1,118 @@
+//  dff.mdl
+//  (C) 2008 Cadence Design Systems, Inc.
+//
+// This example computes various figures of merit for a circuit
+// including cross, deltax, max, min, avg, pp, rms, risetime,
+// falltime, trim, deriv, integ, dutycycle and slewrate of a signal and 
+// lv/lx parameters of an element.
+
+// In this example, You will also experience some useful command
+// line options, such as -eng, -prec, -rmrawfiles, -measure and -mt0. 
+
+
+// alias measurement definition
+alias measurement tranmeas { 
+
+  // definition of the parameters to be output 
+  export real clk_data_delay, outcross, clk_q_delay, \
+              vq, clk_q_delay2, maxq, minq, avgq, pp_q, \
+              rmsout, q_rise_time, q_fall_time, mn0_lv1, \
+              mn0_lv2, mn0_lx2, q_dvdt_rise, q_dvdt_fall, q_integ
+
+  // definition of transient analysis to be run in a conservative tolerance 
+  run tran(stop=100n, errpreset='conservative)
+
+  // computation of crossing point of V(data)
+  real vddelay=cross(sig=V(data), thresh=vdd/2, dir='rise, n=1)
+
+  // computation of crossing point of V(clock)
+  real vcdelay=cross(sig=V(clock), thresh=vdd/2, n=1)
+
+  // computation of crossing point of V(q)
+  outcross=cross(V(q),thresh=vdd/2)
+
+  // find value of V(q) at t=40ns
+  vq=v(q) @40n
+
+  // computation of delay of V(data) versus V(clock)
+  clk_data_delay=vcdelay-vddelay
+
+  // computation of delay of V(q) versus V(clock)
+  clk_q_delay=outcross-vcdelay
+
+  //The second method to compute delay using deltax function
+  clk_q_delay2=deltax(sig1=v(clock), sig2=v(q), dir1='rise, \
+            n1=1, thresh1=vdd/2, dir2='cross, n2=1, thresh2=vdd/2)
+
+  //computation of maximum value of V(q)
+  maxq=max(V(q))
+
+  //computation of minimum value of V(q)
+  minq=min(V(q))
+
+  //computation of average value of V(q) within a time period
+  //by using avg() and trim() in combination.
+  avgq=avg(trim(V(q), from=0, to=100n))
+
+  //computation of peak-to-peak value of V(q) within a time period
+  //by using pp() and trim() in combination.
+  pp_q=pp(trim(V(q), from=0, to=100n))
+
+  //computation of rms value of V(q) within a time period
+  //by using rms() and trim() in combination.
+  rmsout=rms(trim(V(q), from=0, to=100n))
+
+  //computation of risetime for signal V(q)
+  q_rise_time=risetime(V(q), initval=0, finalval=vdd, \
+              inittype='y, finaltype='y, theta1=10, theta2=90)
+
+
+  //computation of falltime for signal V(q)
+  q_fall_time=falltime(V(q), initval=vdd, finalval=0, \
+              inittype='y, finaltype='y, theta1=90, theta2=10)
+
+  // measurement of effective length of element i0.mn0
+  mn0_lv1=i0.mn0:lv1
+
+  // measurement of effective width of element i0.mn0
+  mn0_lv2=i0.mn0:lv2
+
+  // measurement of gate-source voltage(VGS) of element i0.mn0
+  mn0_lx2=i0.mn0:lx2
+
+  //computation of derivative for signal V(q) at t=10.19ns
+  q_dvdt_rise=deriv(V(q))@10.19n
+
+  //computation of derivative for signal V(q)
+  //at its first crossing point at vdd/2 in fall direction
+  q_dvdt_fall=deriv(V(q))@cross(V(q), dir='fall, n=1, thresh=vdd/2)
+
+  //computation of integral for signal q over 0 to 50ns
+  q_integ=integ(trim(V(q),from=0,to=50n))
+
+  //computation of dutycycle for signal V(q)
+  export real q_duty=dutycycle( sig=v(q), theta=50)
+
+  //computation of slewrate for signal V(q)
+  export real q_slew=slewrate( sig=v(q), initval=5n, \
+                     finalval=20n, inittype='x, finaltype='x )
+}
+
+// alias measurement definition
+alias measurement dcmeas {
+
+  // definition of dc analysis saving op results to logfile
+  run dc (oppoint='logfile)
+
+  // definition of the parameters to be output
+  export real dcvq=v(q)             //V(node)
+  export real dcvy=v(i0.i5:y)       //V(Instname:term)
+  export real I03=I(i0:3)           //I(subInst:portIndex)
+  export real I0q=I(i0:q)           //I(subInst:portNname)
+  export real Imn0_1=I(i0.mn0:1)    //I(modInst:termIndex)
+  export real Imn0_d=I(i0.mn0:d)    //I(modInst:termName)
+}
+
+// execute the measurement aliases
+run tranmeas
+run dcmeas

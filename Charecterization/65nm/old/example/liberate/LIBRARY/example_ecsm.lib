@@ -1,0 +1,3081 @@
+library (/home/TSMC/Desktop/UMC180/Designkits/Cadence_6.1/lowpower/liberate/example/liberate/LIBRARY/example_ecsm) {
+  /* Models written by Liberate dev from Cadence Design Systems, Inc. on Fri May 21 12:08:33 IST 2021 */
+  comment : "";
+  date : "$Date: Fri May 21 12:03:13 2021 $";
+  revision : "1.0";
+  delay_model : table_lookup;
+  capacitive_load_unit (1,pf);
+  current_unit : "1mA";
+  leakage_power_unit : "1nW";
+  pulling_resistance_unit : "1kohm";
+  time_unit : "1ns";
+  voltage_unit : "1V";
+  voltage_map (VDD, 0.3);
+  voltage_map (GND, 0);
+  voltage_map (VSS, 0);
+  default_cell_leakage_power : 0;
+  default_fanout_load : 1;
+  default_max_transition : 15;
+  default_output_pin_cap : 0;
+  in_place_swap_mode : match_footprint;
+  input_threshold_pct_fall : 50;
+  input_threshold_pct_rise : 50;
+  nom_process : 1;
+  nom_temperature : 25;
+  nom_voltage : 0.3;
+  output_threshold_pct_fall : 50;
+  output_threshold_pct_rise : 50;
+  slew_derate_from_library : 1;
+  slew_lower_threshold_pct_fall : 20;
+  slew_lower_threshold_pct_rise : 20;
+  slew_upper_threshold_pct_fall : 80;
+  slew_upper_threshold_pct_rise : 80;
+  operating_conditions (PVT_0P3V_25C) {
+    process : 1;
+    temperature : 25;
+    voltage : 0.3;
+  }
+  default_operating_conditions : PVT_0P3V_25C;
+  lu_table_template (constraint_template_3x3) {
+    variable_1 : constrained_pin_transition;
+    variable_2 : related_pin_transition;
+    index_1 ("61.75, 158.9, 794.1");
+    index_2 ("18.732, 37.464, 74.928");
+  }
+  lu_table_template (delay_template_3x3) {
+    variable_1 : input_net_transition;
+    variable_2 : total_output_net_capacitance;
+    index_1 ("61.75, 158.9, 794.1");
+    index_2 ("18.732, 37.464, 74.928");
+  }
+  lu_table_template (mpw_constraint_template_3x3) {
+    variable_1 : constrained_pin_transition;
+    index_1 ("61.75, 158.9, 794.1");
+  }
+  power_lut_template (passive_power_template_3x1) {
+    variable_1 : input_transition_time;
+    index_1 ("61.75, 158.9, 794.1");
+  }
+  power_lut_template (power_template_3x3) {
+    variable_1 : input_transition_time;
+    variable_2 : total_output_net_capacitance;
+    index_1 ("61.75, 158.9, 794.1");
+    index_2 ("18.732, 37.464, 74.928");
+  }
+  define_group(ecsm_waveform_set, rise_transition);
+  define_group(ecsm_waveform_set, fall_transition);
+  define_group(ecsm_waveform_set, retain_rise_slew);
+  define_group(ecsm_waveform_set, retain_fall_slew);
+  define_group(ecsm_capacitance, rise_transition);
+  define_group(ecsm_capacitance, fall_transition);
+  define_group(ecsm_capacitance, pin);
+  define_group(ecsm_capacitance, retain_rise_slew);
+  define_group(ecsm_capacitance, retain_fall_slew);
+  define(ecsm_version, library, float);
+  define(index_1, ecsm_waveform_set, string);
+  define(values, ecsm_waveform_set, string);
+  define(index_1, ecsm_capacitance, string);
+  define(values, ecsm_capacitance, string);
+  define(when, ecsm_capacitance, string);
+  define(ecsm_base_rail_vdd_rise, timing, float);
+  define(ecsm_base_rail_vdd_fall, timing, float);
+  define(ecsm_base_rail_gnd_rise, timing, float);
+  define(ecsm_base_rail_gnd_fall, timing, float);
+  define(threshold_pct, ecsm_capacitance, string);
+  define(ecsm_vtp, library, float);
+  define(ecsm_vtn, library, float);
+  define(ecsm_vtp, cell, float);
+  define(ecsm_vtn, cell, float);
+  ecsm_version : 2.1 ;
+  ecsm_vtn : 0.35;
+  ecsm_vtp : 0.35;
+  define(char_when, ecsm_capacitance, string);
+  cell (AND2X1) {
+    ecsm_vtn : 0.35;
+    ecsm_vtp : 0.35;
+    area : 0;
+    cell_leakage_power : 0.00546244;
+    pg_pin (GND) {
+      pg_type : primary_ground;
+      voltage_name : "GND";
+    }
+    pg_pin (VDD) {
+      pg_type : primary_power;
+      voltage_name : "VDD";
+    }
+    leakage_power () {
+      value : 0;
+      when : "(a * b * y)";
+      related_pg_pin : GND;
+    }
+    leakage_power () {
+      value : 0.00981545;
+      when : "(a * b * y)";
+      related_pg_pin : VDD;
+    }
+    leakage_power () {
+      value : 0;
+      when : "(a * !b * !y)";
+      related_pg_pin : GND;
+    }
+    leakage_power () {
+      value : 0.00427714;
+      when : "(a * !b * !y)";
+      related_pg_pin : VDD;
+    }
+    leakage_power () {
+      value : 0;
+      when : "(!a * b * !y)";
+      related_pg_pin : GND;
+    }
+    leakage_power () {
+      value : 0.00434464;
+      when : "(!a * b * !y)";
+      related_pg_pin : VDD;
+    }
+    leakage_power () {
+      value : 0;
+      when : "(!a * !b * !y)";
+      related_pg_pin : GND;
+    }
+    leakage_power () {
+      value : 0.00341254;
+      when : "(!a * !b * !y)";
+      related_pg_pin : VDD;
+    }
+    leakage_power () {
+      value : 0;
+      related_pg_pin : GND;
+    }
+    leakage_power () {
+      value : 0.00546244;
+      related_pg_pin : VDD;
+    }
+    pin (y) {
+      direction : output;
+      function : "(a * b)";
+      power_down_function : "(!VDD) + (GND)";
+      related_ground_pin : GND;
+      related_power_pin : VDD;
+      max_capacitance : 74.928;
+      timing () {
+        related_pin : "a";
+        ecsm_base_rail_vdd_rise : 9.89215e-06;
+        ecsm_base_rail_gnd_rise : 8.79738e-06;
+        ecsm_base_rail_vdd_fall : 0.299968;
+        ecsm_base_rail_gnd_fall : 0.299962;
+        timing_sense : positive_unate;
+        timing_type : combinational;
+        cell_rise (delay_template_3x3) {
+          index_1 ("61.75, 158.9, 794.1");
+          index_2 ("18.732, 37.464, 74.928");
+          values ( \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31" \
+          );
+        }
+        rise_transition (delay_template_3x3) {
+          index_1 ("61.75, 158.9, 794.1");
+          index_2 ("18.732, 37.464, 74.928");
+          values ( \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31" \
+          );
+          ecsm_waveform_set (ecsm_template_13) {
+            index_1 : "0.02, 0.05, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 0.95, 0.98";
+            values : \
+              "266.919, 266.977, 267.073, 267.264, 267.455, 267.645, 267.834, 268.023, 268.211, 268.398, 268.585, 268.678, 268.734, \
+               267.05, 267.165, 267.356, 267.737, 268.115, 268.491, 268.863, 269.234, 269.602, 269.967, 270.33, 270.511, 270.619, \
+               267.603, 267.833, 268.214, 268.967, 269.711, 270.444, 271.169, 271.884, 272.591, 273.29, 273.981, 274.323, 274.528, \
+               316.74, 316.799, 316.895, 317.086, 317.277, 317.467, 317.656, 317.844, 318.032, 318.22, 318.406, 318.5, 318.555, \
+               316.909, 317.024, 317.216, 317.596, 317.974, 318.35, 318.722, 319.093, 319.46, 319.826, 320.189, 320.37, 320.478, \
+               316.847, 317.077, 317.458, 318.211, 318.955, 319.688, 320.412, 321.128, 321.835, 322.533, 323.224, 323.567, 323.772, \
+               653.152, 653.224, 653.34, 653.572, 653.803, 654.033, 654.262, 654.489, 654.716, 654.941, 655.165, 655.277, 655.344, \
+               653.177, 653.317, 653.55, 654.011, 654.467, 654.92, 655.368, 655.812, 656.252, 656.688, 657.12, 657.335, 657.463, \
+               653.32, 653.599, 654.059, 654.965, 655.855, 656.729, 657.588, 658.432, 659.263, 660.081, 660.887, 661.286, 661.523";
+          }
+          ecsm_capacitance (rise) {
+            threshold_pct : "10.0";
+            values : \
+              "0.00597425, 0.00596707, 0.00598201, \
+               0.0060654, 0.00605162, 0.00607049, \
+               0.0062602, 0.00626017, 0.00625687";
+          }
+          ecsm_capacitance (rise) {
+            threshold_pct : "20.0";
+            values : \
+              "0.00600658, 0.00600698, 0.00600961, \
+               0.00610271, 0.0060988, 0.00610483, \
+               0.00627467, 0.00627455, 0.00627375";
+          }
+          ecsm_capacitance (rise) {
+            threshold_pct : "30.0";
+            values : \
+              "0.00601631, 0.00601655, 0.00601417, \
+               0.0061071, 0.00610559, 0.00611151, \
+               0.00627387, 0.00627395, 0.0062745";
+          }
+          ecsm_capacitance (rise) {
+            threshold_pct : "50.0";
+            values : \
+              "0.00602128, 0.00602091, 0.00602099, \
+               0.00610563, 0.00610514, 0.00610559, \
+               0.00630294, 0.00630302, 0.00630293";
+          }
+          ecsm_capacitance (rise) {
+            threshold_pct : "60.0";
+            values : \
+              "0.00602702, 0.00602645, 0.0060288, \
+               0.00612119, 0.0061173, 0.00612056, \
+               0.00638569, 0.00638545, 0.00638476";
+          }
+          ecsm_capacitance (rise) {
+            threshold_pct : "70.0";
+            values : \
+              "0.00604258, 0.00604153, 0.00604073, \
+               0.00615351, 0.00615349, 0.00615299, \
+               0.00658154, 0.00658179, 0.00658235";
+          }
+          ecsm_capacitance (rise) {
+            threshold_pct : "80.0";
+            values : \
+              "0.00607788, 0.00607637, 0.00607184, \
+               0.006236, 0.00623304, 0.00623593, \
+               0.00697122, 0.00697103, 0.00697051";
+          }
+          ecsm_capacitance (rise) {
+            threshold_pct : "90.0";
+            values : \
+              "0.00613251, 0.0061312, 0.00612381, \
+               0.00637719, 0.00637333, 0.00637679, \
+               0.00761445, 0.00761462, 0.00761507";
+          }
+          ecsm_capacitance (rise) {
+            threshold_pct : "99.99";
+            values : \
+              "0.00621387, 0.00621265, 0.0062067, \
+               0.00658095, 0.00657904, 0.00658068, \
+               0.00835816, 0.00835806, 0.00835834";
+          }
+        }
+        cell_fall (delay_template_3x3) {
+          index_1 ("61.75, 158.9, 794.1");
+          index_2 ("18.732, 37.464, 74.928");
+          values ( \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31" \
+          );
+        }
+        fall_transition (delay_template_3x3) {
+          index_1 ("61.75, 158.9, 794.1");
+          index_2 ("18.732, 37.464, 74.928");
+          values ( \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31" \
+          );
+          ecsm_waveform_set (ecsm_template_13) {
+            index_1 : "0.98, 0.95, 0.9, 0.8, 0.7, 0.6, 0.5, 0.4, 0.3, 0.2, 0.1, 0.05";
+            values : \
+              "203.087, 203.339, 203.761, 204.603, 205.446, 206.288, 207.131, 207.973, 208.766, 209.423, 210.079, 210.408, \
+               202.904, 203.376, 204.163, 205.737, 207.311, 208.885, 210.459, 211.851, 212.974, 214.096, 215.219, 215.78, \
+               202.484, 203.296, 204.649, 207.355, 210.061, 212.767, 215.473, 218.116, 219.869, 221.621, 223.374, 224.251, \
+               260.719, 261.091, 261.546, 262.275, 263.004, 263.733, 264.461, 265.19, 265.919, 266.648, 267.36, 267.681, \
+               260.957, 261.519, 262.182, 263.507, 264.831, 266.156, 267.481, 268.806, 270.131, 271.456, 272.561, 273.094, \
+               261.371, 262.027, 263.119, 265.304, 267.488, 269.673, 271.857, 274.042, 276.226, 278.411, 280.595, 281.589, \
+               631.625, 632.18, 633.105, 634.955, 636.263, 637.315, 638.368, 639.42, 640.473, 641.525, 642.54, 642.996, \
+               631.998, 633.108, 634.958, 637.126, 639.004, 640.881, 642.759, 644.636, 646.514, 648.188, 649.63, 650.351, \
+               632.74, 634.96, 637.09, 640.757, 644.424, 648.092, 650.848, 653.463, 655.886, 657.989, 660.092, 661.143";
+          }
+          ecsm_capacitance (fall) {
+            threshold_pct : "90.0";
+            values : \
+              "0.00606478, 0.00606478, 0.00606479, \
+               0.00612247, 0.00612247, 0.00612247, \
+               0.00635614, 0.00635614, 0.00635614";
+          }
+          ecsm_capacitance (fall) {
+            threshold_pct : "80.0";
+            values : \
+              "0.00607026, 0.00607026, 0.00607026, \
+               0.00618877, 0.00618877, 0.00618877, \
+               0.0063854, 0.0063854, 0.0063854";
+          }
+          ecsm_capacitance (fall) {
+            threshold_pct : "70.0";
+            values : \
+              "0.00610503, 0.00610503, 0.00610503, \
+               0.00620136, 0.00620136, 0.00620136, \
+               0.00637361, 0.00637361, 0.00637361";
+          }
+          ecsm_capacitance (fall) {
+            threshold_pct : "50.0";
+            values : \
+              "0.00608285, 0.00608285, 0.00608285, \
+               0.00617303, 0.00617303, 0.00617303, \
+               0.00636883, 0.00636883, 0.00636883";
+          }
+          ecsm_capacitance (fall) {
+            threshold_pct : "40.0";
+            values : \
+              "0.0060872, 0.0060872, 0.0060872, \
+               0.00617112, 0.00617113, 0.00617113, \
+               0.00641435, 0.00641435, 0.00641435";
+          }
+          ecsm_capacitance (fall) {
+            threshold_pct : "30.0";
+            values : \
+              "0.00607941, 0.00607941, 0.00607941, \
+               0.00617862, 0.00617862, 0.00617862, \
+               0.00654081, 0.0065408, 0.0065408";
+          }
+          ecsm_capacitance (fall) {
+            threshold_pct : "20.0";
+            values : \
+              "0.00609321, 0.00609321, 0.00609321, \
+               0.00622796, 0.00622796, 0.00622796, \
+               0.00681754, 0.00681754, 0.00681754";
+          }
+          ecsm_capacitance (fall) {
+            threshold_pct : "10.0";
+            values : \
+              "0.00614255, 0.00614255, 0.00614256, \
+               0.00633778, 0.00633778, 0.00633778, \
+               0.00735744, 0.00735743, 0.00735743";
+          }
+          ecsm_capacitance (fall) {
+            threshold_pct : "0.01";
+            values : \
+              "0.00622774, 0.00622774, 0.00622774, \
+               0.00655532, 0.00655532, 0.00655532, \
+               0.00826032, 0.0082601, 0.00825992";
+          }
+        }
+      }
+      timing () {
+        related_pin : "b";
+        ecsm_base_rail_vdd_rise : 9.00181e-06;
+        ecsm_base_rail_gnd_rise : 8.79748e-06;
+        ecsm_base_rail_vdd_fall : 0.299968;
+        ecsm_base_rail_gnd_fall : 0.299964;
+        timing_sense : positive_unate;
+        timing_type : combinational;
+        cell_rise (delay_template_3x3) {
+          index_1 ("61.75, 158.9, 794.1");
+          index_2 ("18.732, 37.464, 74.928");
+          values ( \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31" \
+          );
+        }
+        rise_transition (delay_template_3x3) {
+          index_1 ("61.75, 158.9, 794.1");
+          index_2 ("18.732, 37.464, 74.928");
+          values ( \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31" \
+          );
+          ecsm_waveform_set (ecsm_template_13) {
+            index_1 : "0.02, 0.05, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 0.95, 0.98";
+            values : \
+              "934.015, 934.026, 934.044, 934.08, 934.115, 934.151, 934.187, 934.223, 934.259, 934.294, 934.33, 934.348, 934.359, \
+               933.996, 934.018, 934.054, 934.126, 934.198, 934.269, 934.341, 934.412, 934.483, 934.554, 934.625, 934.661, 934.682, \
+               934.024, 934.067, 934.139, 934.282, 934.425, 934.567, 934.709, 934.851, 934.992, 935.133, 935.274, 935.344, 935.386, \
+               989.197, 989.208, 989.226, 989.262, 989.297, 989.333, 989.369, 989.405, 989.44, 989.476, 989.512, 989.53, 989.54, \
+               989.18, 989.202, 989.238, 989.309, 989.381, 989.452, 989.524, 989.595, 989.666, 989.737, 989.808, 989.844, 989.865, \
+               989.187, 989.23, 989.301, 989.444, 989.587, 989.729, 989.871, 990.012, 990.153, 990.294, 990.434, 990.505, 990.547, \
+               0, 2.12659, 6.2038, 17.4414, 36.8168, 71.3378, 114.67, 154.835, 190.232, 221.734, 250.266, 263.601, 271.339, \
+               1.39587, 6.20648, 17.431, 70.8074, 154.07, 220.676, 275.116, 321.813, 363.206, 400.879, 435.714, 452.328, 462.057, \
+               4.49829, 17.5014, 70.3839, 220.118, 321.045, 399.907, 467.324, 528.146, 585.343, 641.463, 700.009, 733.26, 757.81";
+          }
+          ecsm_capacitance (rise) {
+            threshold_pct : "10.0";
+            values : \
+              "0.00539123, 0.00539136, 0.00539078, \
+               0.00543634, 0.00543677, 0.00543504, \
+               0.00555172, 0.00554725, 0.00554663";
+          }
+          ecsm_capacitance (rise) {
+            threshold_pct : "20.0";
+            values : \
+              "0.00540634, 0.00540663, 0.00540637, \
+               0.00545828, 0.0054587, 0.00545581, \
+               0.00556954, 0.00557136, 0.00557138";
+          }
+          ecsm_capacitance (rise) {
+            threshold_pct : "30.0";
+            values : \
+              "0.00541302, 0.00541318, 0.00541297, \
+               0.00546556, 0.00546582, 0.00546553, \
+               0.00558417, 0.00558528, 0.00558397";
+          }
+          ecsm_capacitance (rise) {
+            threshold_pct : "50.0";
+            values : \
+              "0.00542685, 0.00542599, 0.0054254, \
+               0.00548485, 0.00548501, 0.00548475, \
+               0.0056812, 0.00568116, 0.00568113";
+          }
+          ecsm_capacitance (rise) {
+            threshold_pct : "60.0";
+            values : \
+              "0.00544169, 0.0054415, 0.00544051, \
+               0.00551726, 0.00551736, 0.00551545, \
+               0.00581729, 0.00581684, 0.00581673";
+          }
+          ecsm_capacitance (rise) {
+            threshold_pct : "70.0";
+            values : \
+              "0.00547388, 0.00547495, 0.00547276, \
+               0.00558802, 0.00558809, 0.0055893, \
+               0.00599758, 0.0059979, 0.00599791";
+          }
+          ecsm_capacitance (rise) {
+            threshold_pct : "80.0";
+            values : \
+              "0.00553751, 0.00553869, 0.00553661, \
+               0.00572268, 0.00572271, 0.00572368, \
+               0.00625879, 0.00625844, 0.00625841";
+          }
+          ecsm_capacitance (rise) {
+            threshold_pct : "90.0";
+            values : \
+              "0.00565572, 0.00565637, 0.00565501, \
+               0.00589275, 0.00589284, 0.00589309, \
+               0.00673734, 0.00673761, 0.00673757";
+          }
+          ecsm_capacitance (rise) {
+            threshold_pct : "99.99";
+            values : \
+              "0.00581721, 0.00581848, 0.00581708, \
+               0.00605769, 0.00605771, 0.00605769, \
+               0.00739337, 0.00739484, 0.00739406";
+          }
+        }
+        cell_fall (delay_template_3x3) {
+          index_1 ("61.75, 158.9, 794.1");
+          index_2 ("18.732, 37.464, 74.928");
+          values ( \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31" \
+          );
+        }
+        fall_transition (delay_template_3x3) {
+          index_1 ("61.75, 158.9, 794.1");
+          index_2 ("18.732, 37.464, 74.928");
+          values ( \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31" \
+          );
+          ecsm_waveform_set (ecsm_template_13) {
+            index_1 : "0.98, 0.95, 0.9, 0.8, 0.7, 0.6, 0.5, 0.4, 0.3, 0.2, 0.1, 0.05";
+            values : \
+              "206.285, 206.556, 207.01, 207.694, 208.25, 208.806, 209.362, 209.917, 210.473, 211.029, 211.584, 211.827, \
+               206.461, 207.005, 207.668, 208.706, 209.744, 210.782, 211.821, 212.859, 213.897, 214.923, 215.805, 216.231, \
+               206.821, 207.639, 208.59, 210.49, 212.391, 214.292, 216.192, 218.093, 219.763, 221.216, 222.668, 223.326, \
+               264.427, 264.6, 264.887, 265.462, 266.037, 266.612, 267.186, 267.761, 268.336, 268.911, 269.441, 269.693, \
+               264.49, 264.812, 265.349, 266.422, 267.495, 268.568, 269.641, 270.714, 271.787, 272.741, 273.63, 274.053, \
+               264.625, 265.212, 266.19, 268.145, 270.101, 272.057, 274.012, 275.968, 277.55, 279.009, 280.468, 281.125, \
+               638.69, 638.949, 639.381, 640.244, 641.108, 641.971, 642.834, 643.698, 644.561, 645.424, 646.288, 646.626, \
+               638.696, 639.187, 640.006, 641.644, 643.282, 644.92, 646.557, 648.195, 649.532, 650.743, 651.953, 652.51, \
+               639.033, 640.018, 641.66, 644.943, 648.226, 650.622, 652.909, 655.181, 657.099, 658.964, 660.694, 661.517";
+          }
+          ecsm_capacitance (fall) {
+            threshold_pct : "90.0";
+            values : \
+              "0.00556258, 0.00556258, 0.00556258, \
+               0.00559787, 0.00559787, 0.00559787, \
+               0.005744, 0.005744, 0.005744";
+          }
+          ecsm_capacitance (fall) {
+            threshold_pct : "80.0";
+            values : \
+              "0.00554777, 0.00554777, 0.00554778, \
+               0.00562204, 0.00562204, 0.00562204, \
+               0.0057543, 0.0057543, 0.0057543";
+          }
+          ecsm_capacitance (fall) {
+            threshold_pct : "70.0";
+            values : \
+              "0.00555556, 0.00555556, 0.00555556, \
+               0.00561824, 0.00561824, 0.00561824, \
+               0.00574099, 0.00574099, 0.00574099";
+          }
+          ecsm_capacitance (fall) {
+            threshold_pct : "50.0";
+            values : \
+              "0.00552567, 0.00552567, 0.00552567, \
+               0.0055871, 0.0055871, 0.00558711, \
+               0.00573564, 0.00573564, 0.00573564";
+          }
+          ecsm_capacitance (fall) {
+            threshold_pct : "40.0";
+            values : \
+              "0.00552435, 0.00552435, 0.00552435, \
+               0.00558362, 0.00558362, 0.00558362, \
+               0.00577445, 0.00577445, 0.00577445";
+          }
+          ecsm_capacitance (fall) {
+            threshold_pct : "30.0";
+            values : \
+              "0.00551775, 0.00551775, 0.00551775, \
+               0.00559037, 0.00559038, 0.00559038, \
+               0.00588043, 0.00588043, 0.00588043";
+          }
+          ecsm_capacitance (fall) {
+            threshold_pct : "20.0";
+            values : \
+              "0.00552866, 0.00552866, 0.00552866, \
+               0.00563003, 0.00563003, 0.00563003, \
+               0.00610995, 0.00610995, 0.00610995";
+          }
+          ecsm_capacitance (fall) {
+            threshold_pct : "10.0";
+            values : \
+              "0.0055664, 0.0055664, 0.0055664, \
+               0.00571968, 0.00571968, 0.00571968, \
+               0.00655042, 0.00655041, 0.00655041";
+          }
+          ecsm_capacitance (fall) {
+            threshold_pct : "0.01";
+            values : \
+              "0.00563517, 0.00563517, 0.00563517, \
+               0.00589786, 0.00589786, 0.00589786, \
+               0.00726651, 0.00726721, 0.00726721";
+          }
+        }
+      }
+      internal_power () {
+        related_pin : "a";
+        related_pg_pin : GND;
+        rise_power (power_template_3x3) {
+          index_1 ("61.75, 158.9, 794.1");
+          index_2 ("18.732, 37.464, 74.928");
+          values ( \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31" \
+          );
+        }
+        fall_power (power_template_3x3) {
+          index_1 ("61.75, 158.9, 794.1");
+          index_2 ("18.732, 37.464, 74.928");
+          values ( \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31" \
+          );
+        }
+      }
+      internal_power () {
+        related_pin : "a";
+        related_pg_pin : VDD;
+        rise_power (power_template_3x3) {
+          index_1 ("61.75, 158.9, 794.1");
+          index_2 ("18.732, 37.464, 74.928");
+          values ( \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31" \
+          );
+        }
+        fall_power (power_template_3x3) {
+          index_1 ("61.75, 158.9, 794.1");
+          index_2 ("18.732, 37.464, 74.928");
+          values ( \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31" \
+          );
+        }
+      }
+      internal_power () {
+        related_pin : "b";
+        related_pg_pin : GND;
+        rise_power (power_template_3x3) {
+          index_1 ("61.75, 158.9, 794.1");
+          index_2 ("18.732, 37.464, 74.928");
+          values ( \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31" \
+          );
+        }
+        fall_power (power_template_3x3) {
+          index_1 ("61.75, 158.9, 794.1");
+          index_2 ("18.732, 37.464, 74.928");
+          values ( \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31" \
+          );
+        }
+      }
+      internal_power () {
+        related_pin : "b";
+        related_pg_pin : VDD;
+        rise_power (power_template_3x3) {
+          index_1 ("61.75, 158.9, 794.1");
+          index_2 ("18.732, 37.464, 74.928");
+          values ( \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31" \
+          );
+        }
+        fall_power (power_template_3x3) {
+          index_1 ("61.75, 158.9, 794.1");
+          index_2 ("18.732, 37.464, 74.928");
+          values ( \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31" \
+          );
+        }
+      }
+    }
+    pin (a) {
+      direction : input;
+      related_ground_pin : GND;
+      related_power_pin : VDD;
+      max_transition : 794.1;
+      capacitance : 0.00833557;
+      rise_capacitance : 0.00833557;
+      rise_capacitance_range (0.00615328, 0.00833557);
+      fall_capacitance : 0.00818999;
+      fall_capacitance_range (0.0062004, 0.00818999);
+      ecsm_capacitance (rise) {
+        when : "!b";
+        threshold_pct : "10.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.0054283, 0.00523016, 0.0052554";
+      }
+      ecsm_capacitance (rise) {
+        when : "!b";
+        threshold_pct : "20.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.00566082, 0.0056793, 0.0057614";
+      }
+      ecsm_capacitance (rise) {
+        when : "!b";
+        threshold_pct : "30.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.00578755, 0.00586041, 0.00593389";
+      }
+      ecsm_capacitance (rise) {
+        when : "!b";
+        threshold_pct : "50.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.00596726, 0.00602993, 0.00607392";
+      }
+      ecsm_capacitance (rise) {
+        when : "!b";
+        threshold_pct : "60.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.00600988, 0.00608107, 0.00610826";
+      }
+      ecsm_capacitance (rise) {
+        when : "!b";
+        threshold_pct : "70.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.00605512, 0.00611085, 0.00613071";
+      }
+      ecsm_capacitance (rise) {
+        when : "!b";
+        threshold_pct : "80.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.00609863, 0.00614147, 0.00614594";
+      }
+      ecsm_capacitance (rise) {
+        when : "!b";
+        threshold_pct : "90.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.00612639, 0.0061574, 0.00615626";
+      }
+      ecsm_capacitance (rise) {
+        when : "!b";
+        threshold_pct : "99.99";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.0061436, 0.00617482, 0.00616395";
+      }
+      ecsm_capacitance (fall) {
+        when : "!b";
+        threshold_pct : "90.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.00581156, 0.00571905, 0.00577374";
+      }
+      ecsm_capacitance (fall) {
+        when : "!b";
+        threshold_pct : "80.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.0058987, 0.00594641, 0.00606999";
+      }
+      ecsm_capacitance (fall) {
+        when : "!b";
+        threshold_pct : "70.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.00599356, 0.00607842, 0.00616175";
+      }
+      ecsm_capacitance (fall) {
+        when : "!b";
+        threshold_pct : "50.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.00606776, 0.00617658, 0.00622843";
+      }
+      ecsm_capacitance (fall) {
+        when : "!b";
+        threshold_pct : "40.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.00611159, 0.00619188, 0.00624254";
+      }
+      ecsm_capacitance (fall) {
+        when : "!b";
+        threshold_pct : "30.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.00613432, 0.0062159, 0.00625075";
+      }
+      ecsm_capacitance (fall) {
+        when : "!b";
+        threshold_pct : "20.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.00614555, 0.00622271, 0.00625492";
+      }
+      ecsm_capacitance (fall) {
+        when : "!b";
+        threshold_pct : "10.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.00616683, 0.00623855, 0.00625907";
+      }
+      ecsm_capacitance (fall) {
+        when : "!b";
+        threshold_pct : "0.01";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.0061977, 0.00624674, 0.00626072";
+      }
+      internal_power () {
+        when : "(!b * !y)";
+        related_pg_pin : GND;
+        rise_power (passive_power_template_3x1) {
+          index_1 ("61.75, 158.9, 794.1");
+          values ( \
+            "0, 0, 0" \
+          );
+        }
+        fall_power (passive_power_template_3x1) {
+          index_1 ("61.75, 158.9, 794.1");
+          values ( \
+            "0, 0, 0" \
+          );
+        }
+      }
+      internal_power () {
+        when : "(!b * !y)";
+        related_pg_pin : VDD;
+        rise_power (passive_power_template_3x1) {
+          index_1 ("61.75, 158.9, 794.1");
+          values ( \
+            "-0.000193425, -0.000194945, -0.000199627" \
+          );
+        }
+        fall_power (passive_power_template_3x1) {
+          index_1 ("61.75, 158.9, 794.1");
+          values ( \
+            "0.000221268, 0.000219625, 0.000219182" \
+          );
+        }
+      }
+    }
+    pin (b) {
+      direction : input;
+      related_ground_pin : GND;
+      related_power_pin : VDD;
+      max_transition : 794.1;
+      capacitance : 0.00735831;
+      rise_capacitance : 0.00735831;
+      rise_capacitance_range (0.00559925, 0.00735831);
+      fall_capacitance : 0.00720806;
+      fall_capacitance_range (0.00562817, 0.00720806);
+      ecsm_capacitance (rise) {
+        when : "!a";
+        threshold_pct : "10.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.0051692, 0.00507013, 0.00500705";
+      }
+      ecsm_capacitance (rise) {
+        when : "!a";
+        threshold_pct : "20.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.00528053, 0.00528836, 0.00526113";
+      }
+      ecsm_capacitance (rise) {
+        when : "!a";
+        threshold_pct : "30.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.00535607, 0.00537527, 0.00535441";
+      }
+      ecsm_capacitance (rise) {
+        when : "!a";
+        threshold_pct : "50.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.00544456, 0.00546372, 0.00546203";
+      }
+      ecsm_capacitance (rise) {
+        when : "!a";
+        threshold_pct : "60.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.00547499, 0.00549734, 0.00551349";
+      }
+      ecsm_capacitance (rise) {
+        when : "!a";
+        threshold_pct : "70.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.00549719, 0.00552841, 0.00555669";
+      }
+      ecsm_capacitance (rise) {
+        when : "!a";
+        threshold_pct : "80.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.00553268, 0.00556595, 0.00558794";
+      }
+      ecsm_capacitance (rise) {
+        when : "!a";
+        threshold_pct : "90.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.00556593, 0.00559618, 0.0056135";
+      }
+      ecsm_capacitance (rise) {
+        when : "!a";
+        threshold_pct : "99.99";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.00559546, 0.00562049, 0.00563516";
+      }
+      ecsm_capacitance (fall) {
+        when : "!a";
+        threshold_pct : "90.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.00546933, 0.00541984, 0.00543792";
+      }
+      ecsm_capacitance (fall) {
+        when : "!a";
+        threshold_pct : "80.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.00552631, 0.00554923, 0.00562443";
+      }
+      ecsm_capacitance (fall) {
+        when : "!a";
+        threshold_pct : "70.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.00556591, 0.00562284, 0.00567874";
+      }
+      ecsm_capacitance (fall) {
+        when : "!a";
+        threshold_pct : "50.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.00559425, 0.0056643, 0.00571043";
+      }
+      ecsm_capacitance (fall) {
+        when : "!a";
+        threshold_pct : "40.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.00560969, 0.00566412, 0.00571198";
+      }
+      ecsm_capacitance (fall) {
+        when : "!a";
+        threshold_pct : "30.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.00561236, 0.00566936, 0.00570982";
+      }
+      ecsm_capacitance (fall) {
+        when : "!a";
+        threshold_pct : "20.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.00561066, 0.00566498, 0.00570482";
+      }
+      ecsm_capacitance (fall) {
+        when : "!a";
+        threshold_pct : "10.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.00561624, 0.00566662, 0.00569996";
+      }
+      ecsm_capacitance (fall) {
+        when : "!a";
+        threshold_pct : "0.01";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.00562758, 0.00566462, 0.00569454";
+      }
+      internal_power () {
+        when : "(!a * !y)";
+        related_pg_pin : GND;
+        rise_power (passive_power_template_3x1) {
+          index_1 ("61.75, 158.9, 794.1");
+          values ( \
+            "0, 0, 0" \
+          );
+        }
+        fall_power (passive_power_template_3x1) {
+          index_1 ("61.75, 158.9, 794.1");
+          values ( \
+            "0, 0, 0" \
+          );
+        }
+      }
+      internal_power () {
+        when : "(!a * !y)";
+        related_pg_pin : VDD;
+        rise_power (passive_power_template_3x1) {
+          index_1 ("61.75, 158.9, 794.1");
+          values ( \
+            "-0.000177879, -0.00017611, -0.000174927" \
+          );
+        }
+        fall_power (passive_power_template_3x1) {
+          index_1 ("61.75, 158.9, 794.1");
+          values ( \
+            "0.000188954, 0.000186705, 0.000184219" \
+          );
+        }
+      }
+    }
+  }
+  cell (INVX1) {
+    ecsm_vtn : 0.35;
+    ecsm_vtp : 0.35;
+    area : 0;
+    cell_leakage_power : 7.68213e-06;
+    pg_pin (GND) {
+      pg_type : primary_ground;
+      voltage_name : "GND";
+    }
+    pg_pin (VDD) {
+      pg_type : primary_power;
+      voltage_name : "VDD";
+    }
+    leakage_power () {
+      value : 0;
+      when : "(in * !out)";
+      related_pg_pin : GND;
+    }
+    leakage_power () {
+      value : 7.45274e-06;
+      when : "(in * !out)";
+      related_pg_pin : VDD;
+    }
+    leakage_power () {
+      value : 0;
+      when : "(!in * out)";
+      related_pg_pin : GND;
+    }
+    leakage_power () {
+      value : 7.79683e-06;
+      when : "(!in * out)";
+      related_pg_pin : VDD;
+    }
+    leakage_power () {
+      value : 0;
+      when : "(!in * !out)";
+      related_pg_pin : GND;
+    }
+    leakage_power () {
+      value : 7.79683e-06;
+      when : "(!in * !out)";
+      related_pg_pin : VDD;
+    }
+    leakage_power () {
+      value : 0;
+      related_pg_pin : GND;
+    }
+    leakage_power () {
+      value : 7.68213e-06;
+      related_pg_pin : VDD;
+    }
+    pin (out) {
+      direction : output;
+      function : "0";
+      related_ground_pin : GND;
+      related_power_pin : VDD;
+      three_state : "!in";
+      max_capacitance : 74.928;
+      capacitance : 0.0028556;
+      rise_capacitance : 0.00261033;
+      rise_capacitance_range (0.00261033, 0.00261033);
+      fall_capacitance : 0.0028556;
+      fall_capacitance_range (0.0028556, 0.0028556);
+      timing () {
+        related_pin : "in";
+        ecsm_base_rail_vdd_fall : 0;
+        ecsm_base_rail_gnd_fall : 0.299856;
+        timing_sense : negative_unate;
+        timing_type : combinational_fall;
+        cell_fall (delay_template_3x3) {
+          index_1 ("61.75, 158.9, 794.1");
+          index_2 ("18.7349, 37.4669, 74.9309");
+          values ( \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31" \
+          );
+        }
+        fall_transition (delay_template_3x3) {
+          index_1 ("61.75, 158.9, 794.1");
+          index_2 ("18.7349, 37.4669, 74.9309");
+          values ( \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31" \
+          );
+          ecsm_waveform_set (ecsm_template_13) {
+            index_1 : "0.98, 0.95, 0.9, 0.8, 0.7, 0.6, 0.5, 0.4, 0.3, 0.2, 0.1, 0.05, 0.02";
+            values : \
+              "43.7808, 45.7311, 48.9815, 54.0669, 58.2809, 62.495, 66.7091, 70.9232, 75.1373, 79.3514, 83.5656, 85.6726, 86.9369, \
+               45.081, 48.9812, 54.0663, 62.4937, 70.9209, 79.3481, 87.7752, 96.2022, 104.629, 113.056, 121.483, 125.696, 128.224, \
+               47.681, 54.0661, 62.493, 79.3464, 96.1993, 113.051, 129.903, 146.755, 163.605, 180.456, 197.306, 205.73, 210.785, \
+               84.6675, 89.4802, 96.975, 106.219, 114.896, 121.116, 126.724, 131.402, 135.713, 139.924, 144.134, 146.24, 147.503, \
+               87.876, 96.9332, 105.63, 120.461, 130.68, 139.193, 147.614, 156.035, 164.455, 172.876, 181.296, 185.507, 188.033, \
+               94.2914, 105.629, 120.373, 139.668, 156.507, 173.347, 190.187, 207.026, 223.866, 240.705, 257.544, 265.964, 271.016, \
+               164.532, 188.337, 220.24, 269.079, 306.081, 335.525, 360.618, 382.198, 401.031, 418.41, 434.191, 441.425, 445.765, \
+               180.788, 220.239, 269.062, 335.248, 382.389, 418.192, 447.978, 473.366, 495.588, 515.58, 532.962, 541.592, 546.373, \
+               208.475, 269.06, 335.244, 418.317, 473.826, 515.168, 549.235, 577.843, 602.399, 623.992, 643.828, 652.99, 658.236";
+          }
+          ecsm_capacitance (rise) {
+            threshold_pct : "10.0";
+            values : \
+              "0.00467324, 0.00467337, 0.00467343, \
+               0.00479678, 0.00479695, 0.00479703, \
+               0.00497359, 0.00497381, 0.00497391";
+          }
+          ecsm_capacitance (rise) {
+            threshold_pct : "20.0";
+            values : \
+              "0.0046985, 0.00469863, 0.0046987, \
+               0.00483222, 0.00483239, 0.00483247, \
+               0.00498605, 0.00498626, 0.00498636";
+          }
+          ecsm_capacitance (rise) {
+            threshold_pct : "30.0";
+            values : \
+              "0.00472356, 0.00472369, 0.00472375, \
+               0.00484129, 0.00484145, 0.00484153, \
+               0.00497528, 0.00497547, 0.00497557";
+          }
+          ecsm_capacitance (rise) {
+            threshold_pct : "50.0";
+            values : \
+              "0.00469633, 0.00469644, 0.0046965, \
+               0.00480089, 0.00480103, 0.00480109, \
+               0.00494152, 0.00494164, 0.0049417";
+          }
+          ecsm_capacitance (rise) {
+            threshold_pct : "60.0";
+            values : \
+              "0.00469064, 0.00469074, 0.0046908, \
+               0.00477727, 0.00477739, 0.00477744, \
+               0.00491929, 0.00491933, 0.00491935";
+          }
+          ecsm_capacitance (rise) {
+            threshold_pct : "70.0";
+            values : \
+              "0.00466945, 0.00466955, 0.00466959, \
+               0.00476173, 0.00476182, 0.00476186, \
+               0.00489608, 0.00489599, 0.00489594";
+          }
+          ecsm_capacitance (rise) {
+            threshold_pct : "80.0";
+            values : \
+              "0.00465274, 0.00465281, 0.00465284, \
+               0.00474343, 0.00474346, 0.00474347, \
+               0.004873, 0.00487265, 0.00487308";
+          }
+          ecsm_capacitance (rise) {
+            threshold_pct : "90.0";
+            values : \
+              "0.00464905, 0.00464907, 0.00464909, \
+               0.00472475, 0.00472432, 0.00472428, \
+               0.00485248, 0.00485245, 0.00485173";
+          }
+          ecsm_capacitance (rise) {
+            threshold_pct : "99.99";
+            values : \
+              "0.00463932, 0.00463927, 0.00463925, \
+               0.0047127, 0.00471387, 0.00471237, \
+               0.00483458, 0.00483291, 0.00483207";
+          }
+        }
+      }
+      timing () {
+        related_pin : "in";
+        timing_sense : negative_unate;
+        timing_type : three_state_disable_rise;
+        cell_rise (delay_template_3x3) {
+          index_1 ("61.75, 158.9, 794.1");
+          index_2 ("18.7346, 37.4666, 74.9306");
+          values ( \
+            "-50.4289, -50.4289, -50.4289", \
+            "-129.768, -129.768, -129.768", \
+            "-648.515, -648.515, -648.515" \
+          );
+        }
+        rise_transition (delay_template_3x3) {
+          index_1 ("61.75, 158.9, 794.1");
+          index_2 ("18.7346, 37.4666, 74.9306");
+          values ( \
+            "-50.4289, -50.4289, -50.4289", \
+            "-129.768, -129.768, -129.768", \
+            "-648.515, -648.515, -648.515" \
+          );
+          ecsm_capacitance (fall) {
+            threshold_pct : "90.0";
+            values : \
+              "0.00461932, 0.0046194, 0.00461944, \
+               0.00459115, 0.00459123, 0.00459127, \
+               0.00460148, 0.00460156, 0.0046016";
+          }
+          ecsm_capacitance (fall) {
+            threshold_pct : "80.0";
+            values : \
+              "0.00458136, 0.00458143, 0.00458147, \
+               0.00459496, 0.00459504, 0.00459508, \
+               0.00459782, 0.0045979, 0.00459794";
+          }
+          ecsm_capacitance (fall) {
+            threshold_pct : "70.0";
+            values : \
+              "0.0045844, 0.00458448, 0.00458452, \
+               0.00459304, 0.00459312, 0.00459315, \
+               0.00458635, 0.00458642, 0.00458646";
+          }
+          ecsm_capacitance (fall) {
+            threshold_pct : "50.0";
+            values : \
+              "0.00457207, 0.00457215, 0.00457219, \
+               0.00457134, 0.00457142, 0.00457146, \
+               0.00457069, 0.00457077, 0.00457081";
+          }
+          ecsm_capacitance (fall) {
+            threshold_pct : "40.0";
+            values : \
+              "0.00455579, 0.00455587, 0.00455591, \
+               0.0045664, 0.00456647, 0.00456651, \
+               0.00456431, 0.00456439, 0.00456443";
+          }
+          ecsm_capacitance (fall) {
+            threshold_pct : "30.0";
+            values : \
+              "0.0045565, 0.00455658, 0.00455662, \
+               0.00455393, 0.00455401, 0.00455405, \
+               0.00455582, 0.0045559, 0.00455594";
+          }
+          ecsm_capacitance (fall) {
+            threshold_pct : "20.0";
+            values : \
+              "0.00455503, 0.00455511, 0.00455515, \
+               0.0045494, 0.00454948, 0.00454952, \
+               0.00454956, 0.00454963, 0.00454967";
+          }
+          ecsm_capacitance (fall) {
+            threshold_pct : "10.0";
+            values : \
+              "0.00454148, 0.00454156, 0.0045416, \
+               0.00454393, 0.00454401, 0.00454405, \
+               0.00454175, 0.00454183, 0.00454187";
+          }
+          ecsm_capacitance (fall) {
+            threshold_pct : "0.01";
+            values : \
+              "0.00453549, 0.00453557, 0.00453561, \
+               0.0045355, 0.00453558, 0.00453561, \
+               0.00453537, 0.00453545, 0.00453549";
+          }
+        }
+      }
+      internal_power () {
+        related_pin : "in";
+        related_pg_pin : GND;
+        rise_power (scalar) {
+          values ( \
+            "0" \
+          );
+        }
+        fall_power (power_template_3x3) {
+          index_1 ("61.75, 158.9, 794.1");
+          index_2 ("18.7349, 37.4669, 74.9309");
+          values ( \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31" \
+          );
+        }
+      }
+      internal_power () {
+        related_pin : "in";
+        related_pg_pin : VDD;
+        rise_power (scalar) {
+          values ( \
+            "0" \
+          );
+        }
+        fall_power (power_template_3x3) {
+          index_1 ("61.75, 158.9, 794.1");
+          index_2 ("18.7349, 37.4669, 74.9309");
+          values ( \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31" \
+          );
+        }
+      }
+    }
+    pin (in) {
+      direction : input;
+      related_ground_pin : GND;
+      related_power_pin : VDD;
+      max_transition : 794.1;
+      capacitance : 0.00483713;
+      rise_capacitance : 0.00483713;
+      rise_capacitance_range (0.00392164, 0.00483713);
+      fall_capacitance : 0.00453556;
+      fall_capacitance_range (0.00385364, 0.00453556);
+      ecsm_capacitance (rise) {
+        threshold_pct : "10.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.00319278, 0.00307346, 0.00252542";
+      }
+      ecsm_capacitance (rise) {
+        threshold_pct : "20.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.00318283, 0.00309494, 0.00264484";
+      }
+      ecsm_capacitance (rise) {
+        threshold_pct : "30.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.00319688, 0.00310286, 0.0027644";
+      }
+      ecsm_capacitance (rise) {
+        threshold_pct : "50.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.00323967, 0.00318436, 0.00312808";
+      }
+      ecsm_capacitance (rise) {
+        threshold_pct : "60.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.0032819, 0.00328696, 0.00342849";
+      }
+      ecsm_capacitance (rise) {
+        threshold_pct : "70.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.00337004, 0.00345822, 0.00366433";
+      }
+      ecsm_capacitance (rise) {
+        threshold_pct : "80.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.0035245, 0.00369414, 0.00379571";
+      }
+      ecsm_capacitance (rise) {
+        threshold_pct : "90.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.00374766, 0.00386583, 0.00388926";
+      }
+      ecsm_capacitance (rise) {
+        threshold_pct : "99.99";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.00392679, 0.00395418, 0.00396298";
+      }
+      ecsm_capacitance (fall) {
+        threshold_pct : "90.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.00421271, 0.0044216, 0.00455068";
+      }
+      ecsm_capacitance (fall) {
+        threshold_pct : "80.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.00427208, 0.00442487, 0.00454918";
+      }
+      ecsm_capacitance (fall) {
+        threshold_pct : "70.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.00423188, 0.00439507, 0.00452806";
+      }
+      ecsm_capacitance (fall) {
+        threshold_pct : "50.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.00413287, 0.00427842, 0.00445187";
+      }
+      ecsm_capacitance (fall) {
+        threshold_pct : "40.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.00406357, 0.00420758, 0.00439764";
+      }
+      ecsm_capacitance (fall) {
+        threshold_pct : "30.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.00399829, 0.00414384, 0.00433638";
+      }
+      ecsm_capacitance (fall) {
+        threshold_pct : "20.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.00394375, 0.00407583, 0.0042712";
+      }
+      ecsm_capacitance (fall) {
+        threshold_pct : "10.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.00389575, 0.00401808, 0.00420672";
+      }
+      ecsm_capacitance (fall) {
+        threshold_pct : "0.01";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.00384571, 0.00396069, 0.00414367";
+      }
+      internal_power () {
+        when : "!out";
+        related_pg_pin : GND;
+        rise_power (passive_power_template_3x1) {
+          index_1 ("61.75, 158.9, 794.1");
+          values ( \
+            "0, 0, 0" \
+          );
+        }
+        fall_power (passive_power_template_3x1) {
+          index_1 ("61.75, 158.9, 794.1");
+          values ( \
+            "0, 0, 0" \
+          );
+        }
+      }
+      internal_power () {
+        when : "!out";
+        related_pg_pin : VDD;
+        rise_power (passive_power_template_3x1) {
+          index_1 ("61.75, 158.9, 794.1");
+          values ( \
+            "-9.05529e-05, -9.05949e-05, -9.03953e-05" \
+          );
+        }
+        fall_power (passive_power_template_3x1) {
+          index_1 ("61.75, 158.9, 794.1");
+          values ( \
+            "9.05529e-05, 9.05949e-05, 9.03953e-05" \
+          );
+        }
+      }
+    }
+  }
+  cell (NAND2X1) {
+    ecsm_vtn : 0.35;
+    ecsm_vtp : 0.35;
+    area : 0;
+    cell_leakage_power : 0.00231521;
+    pg_pin (GND) {
+      pg_type : primary_ground;
+      voltage_name : "GND";
+    }
+    pg_pin (VDD) {
+      pg_type : primary_power;
+      voltage_name : "VDD";
+    }
+    leakage_power () {
+      value : 0;
+      when : "(a * b * !y)";
+      related_pg_pin : GND;
+    }
+    leakage_power () {
+      value : 0.00554306;
+      when : "(a * b * !y)";
+      related_pg_pin : VDD;
+    }
+    leakage_power () {
+      value : 0;
+      when : "(a * !b * y)";
+      related_pg_pin : GND;
+    }
+    leakage_power () {
+      value : 0.00150478;
+      when : "(a * !b * y)";
+      related_pg_pin : VDD;
+    }
+    leakage_power () {
+      value : 0;
+      when : "(!a * b * y)";
+      related_pg_pin : GND;
+    }
+    leakage_power () {
+      value : 0.00157224;
+      when : "(!a * b * y)";
+      related_pg_pin : VDD;
+    }
+    leakage_power () {
+      value : 0;
+      when : "(!a * !b * y)";
+      related_pg_pin : GND;
+    }
+    leakage_power () {
+      value : 0.000640779;
+      when : "(!a * !b * y)";
+      related_pg_pin : VDD;
+    }
+    leakage_power () {
+      value : 0;
+      related_pg_pin : GND;
+    }
+    leakage_power () {
+      value : 0.00231521;
+      related_pg_pin : VDD;
+    }
+    pin (y) {
+      direction : output;
+      function : "(!a) + (!b)";
+      power_down_function : "(!VDD) + (GND)";
+      related_ground_pin : GND;
+      related_power_pin : VDD;
+      max_capacitance : 74.928;
+      timing () {
+        related_pin : "a";
+        ecsm_base_rail_vdd_rise : 8.85392e-05;
+        ecsm_base_rail_gnd_rise : 5.12196e-05;
+        ecsm_base_rail_vdd_fall : 0.299988;
+        ecsm_base_rail_gnd_fall : 0.299944;
+        timing_sense : negative_unate;
+        timing_type : combinational;
+        cell_rise (delay_template_3x3) {
+          index_1 ("61.75, 158.9, 794.1");
+          index_2 ("18.732, 37.464, 74.928");
+          values ( \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31" \
+          );
+        }
+        rise_transition (delay_template_3x3) {
+          index_1 ("61.75, 158.9, 794.1");
+          index_2 ("18.732, 37.464, 74.928");
+          values ( \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31" \
+          );
+          ecsm_waveform_set (ecsm_template_13) {
+            index_1 : "0.02, 0.05, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 0.95, 0.98";
+            values : \
+              "67.8407, 68.9393, 70.7704, 74.4326, 78.0949, 81.7571, 85.4194, 89.0817, 92.7439, 96.4062, 100.069, 101.9, 102.998, \
+               68.5741, 70.7711, 74.4327, 81.7561, 89.0795, 96.403, 103.726, 111.05, 118.373, 125.697, 133.02, 136.682, 138.879, \
+               70.0392, 74.4328, 81.7556, 96.4013, 111.047, 125.693, 140.339, 154.985, 169.63, 184.276, 198.922, 206.245, 210.639, \
+               127.194, 128.627, 130.879, 134.745, 138.404, 142.066, 145.728, 149.39, 153.053, 156.715, 160.377, 162.208, 163.307, \
+               127.595, 130.364, 134.316, 141.635, 148.958, 156.282, 163.605, 170.929, 178.252, 185.576, 192.899, 196.561, 198.758, \
+               129.467, 134.315, 141.634, 156.279, 170.925, 185.571, 200.217, 214.863, 229.508, 244.154, 258.8, 266.123, 270.517, \
+               307.897, 317.354, 331.876, 357.267, 379.012, 398.09, 415.115, 430.5, 444.549, 457.476, 469.461, 475.141, 478.458, \
+               314.318, 331.905, 357.251, 398.071, 430.455, 457.432, 480.555, 500.851, 518.95, 535.292, 550.202, 557.195, 561.257, \
+               326.318, 357.29, 398.124, 457.428, 500.853, 535.294, 563.893, 588.365, 609.8, 628.88, 646.088, 654.098, 658.735";
+          }
+          ecsm_capacitance (fall) {
+            threshold_pct : "90.0";
+            values : \
+              "0.00577179, 0.0057719, 0.00577196, \
+               0.00575227, 0.00575239, 0.00575245, \
+               0.00576452, 0.00576463, 0.00576469";
+          }
+          ecsm_capacitance (fall) {
+            threshold_pct : "80.0";
+            values : \
+              "0.00574287, 0.00574298, 0.00574304, \
+               0.00575475, 0.00575486, 0.00575491, \
+               0.00576206, 0.00576217, 0.00576222";
+          }
+          ecsm_capacitance (fall) {
+            threshold_pct : "70.0";
+            values : \
+              "0.00576288, 0.00576298, 0.00576304, \
+               0.00575704, 0.00575715, 0.0057572, \
+               0.00575113, 0.00575123, 0.00575128";
+          }
+          ecsm_capacitance (fall) {
+            threshold_pct : "50.0";
+            values : \
+              "0.00573446, 0.00573456, 0.00573461, \
+               0.00573641, 0.00573651, 0.00573656, \
+               0.00573746, 0.00573754, 0.00573758";
+          }
+          ecsm_capacitance (fall) {
+            threshold_pct : "40.0";
+            values : \
+              "0.00573357, 0.00573367, 0.00573372, \
+               0.00572672, 0.00572682, 0.00572686, \
+               0.00573056, 0.00573061, 0.00573064";
+          }
+          ecsm_capacitance (fall) {
+            threshold_pct : "30.0";
+            values : \
+              "0.00571601, 0.00571611, 0.00571616, \
+               0.00572543, 0.00572551, 0.00572556, \
+               0.00572379, 0.00572381, 0.00572382";
+          }
+          ecsm_capacitance (fall) {
+            threshold_pct : "20.0";
+            values : \
+              "0.00571101, 0.00571109, 0.00571114, \
+               0.00571644, 0.0057165, 0.00571654, \
+               0.00571753, 0.00571733, 0.0057173";
+          }
+          ecsm_capacitance (fall) {
+            threshold_pct : "10.0";
+            values : \
+              "0.00571348, 0.00571356, 0.0057136, \
+               0.00570871, 0.00570875, 0.00570877, \
+               0.00571164, 0.00571107, 0.00571123";
+          }
+          ecsm_capacitance (fall) {
+            threshold_pct : "0.01";
+            values : \
+              "0.0057038, 0.00570385, 0.00570388, \
+               0.00570492, 0.00570612, 0.00570612, \
+               0.0057064, 0.00570588, 0.00570564";
+          }
+        }
+        cell_fall (delay_template_3x3) {
+          index_1 ("61.75, 158.9, 794.1");
+          index_2 ("18.732, 37.464, 74.928");
+          values ( \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31" \
+          );
+        }
+        fall_transition (delay_template_3x3) {
+          index_1 ("61.75, 158.9, 794.1");
+          index_2 ("18.732, 37.464, 74.928");
+          values ( \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31" \
+          );
+          ecsm_waveform_set (ecsm_template_13) {
+            index_1 : "0.98, 0.95, 0.9, 0.8, 0.7, 0.6, 0.5, 0.4, 0.3, 0.2, 0.1, 0.05, 0.02";
+            values : \
+              "69.3524, 70.8418, 73.3236, 78.2867, 83.2502, 88.2143, 93.1784, 98.1425, 103.106, 108.07, 113.034, 115.516, 117.005, \
+               70.3462, 73.3241, 78.2864, 88.2126, 98.1393, 108.065, 117.992, 127.918, 137.845, 147.771, 157.697, 162.661, 165.639, \
+               72.3319, 78.2863, 88.2117, 108.063, 127.914, 147.766, 167.617, 187.468, 207.32, 227.171, 247.023, 256.948, 262.904, \
+               118.406, 120.65, 124.389, 130.972, 136.163, 141.118, 146.083, 151.046, 156.01, 160.974, 165.938, 168.42, 169.909, \
+               119.905, 124.392, 130.973, 141.117, 151.044, 160.971, 170.897, 180.823, 190.75, 200.676, 210.603, 215.566, 218.544, \
+               122.898, 130.973, 141.117, 160.969, 180.82, 200.671, 220.523, 240.374, 260.226, 280.077, 299.929, 309.854, 315.81, \
+               258.148, 268.637, 284.193, 311.472, 334.562, 354.857, 373.309, 389.511, 404.695, 418.897, 431.561, 437.892, 441.691, \
+               265.584, 284.248, 311.514, 354.882, 389.527, 418.631, 443.766, 466.059, 486.316, 505.212, 522.315, 530.457, 535.253, \
+               278.055, 311.536, 354.894, 418.636, 466.059, 505.107, 538.059, 567.303, 593.709, 618.167, 640.552, 651.265, 657.518";
+          }
+          ecsm_capacitance (rise) {
+            threshold_pct : "10.0";
+            values : \
+              "0.00564974, 0.00564985, 0.0056499, \
+               0.0056429, 0.005643, 0.00564305, \
+               0.00564918, 0.00564928, 0.00564933";
+          }
+          ecsm_capacitance (rise) {
+            threshold_pct : "20.0";
+            values : \
+              "0.00564311, 0.00564321, 0.00564326, \
+               0.00564771, 0.00564781, 0.00564786, \
+               0.00565899, 0.00565909, 0.00565914";
+          }
+          ecsm_capacitance (rise) {
+            threshold_pct : "30.0";
+            values : \
+              "0.00566737, 0.00566748, 0.00566753, \
+               0.00566613, 0.00566623, 0.00566628, \
+               0.00566073, 0.00566082, 0.00566087";
+          }
+          ecsm_capacitance (rise) {
+            threshold_pct : "50.0";
+            values : \
+              "0.00566855, 0.00566865, 0.0056687, \
+               0.00567049, 0.00567059, 0.00567064, \
+               0.00567148, 0.00567155, 0.00567159";
+          }
+          ecsm_capacitance (rise) {
+            threshold_pct : "60.0";
+            values : \
+              "0.00568134, 0.00568143, 0.00568148, \
+               0.00567446, 0.00567456, 0.0056746, \
+               0.00567586, 0.00567591, 0.00567593";
+          }
+          ecsm_capacitance (rise) {
+            threshold_pct : "70.0";
+            values : \
+              "0.00567668, 0.00567677, 0.00567682, \
+               0.00567628, 0.00567636, 0.0056764, \
+               0.0056789, 0.00567889, 0.00567889";
+          }
+          ecsm_capacitance (rise) {
+            threshold_pct : "80.0";
+            values : \
+              "0.0056732, 0.00567328, 0.00567332, \
+               0.0056817, 0.00568176, 0.00568179, \
+               0.00567995, 0.00567984, 0.00567978";
+          }
+          ecsm_capacitance (rise) {
+            threshold_pct : "90.0";
+            values : \
+              "0.005679, 0.00567907, 0.00567911, \
+               0.0056771, 0.00567712, 0.00567713, \
+               0.00567854, 0.00567761, 0.00567762";
+          }
+          ecsm_capacitance (rise) {
+            threshold_pct : "99.99";
+            values : \
+              "0.00567359, 0.00567363, 0.00567366, \
+               0.00567281, 0.00567278, 0.00567276, \
+               0.00567338, 0.00567282, 0.00567253";
+          }
+        }
+      }
+      timing () {
+        related_pin : "b";
+        ecsm_base_rail_vdd_rise : 8.76037e-05;
+        ecsm_base_rail_gnd_rise : 5.12196e-05;
+        ecsm_base_rail_vdd_fall : 0.299987;
+        ecsm_base_rail_gnd_fall : 0.299953;
+        timing_sense : negative_unate;
+        timing_type : combinational;
+        cell_rise (delay_template_3x3) {
+          index_1 ("61.75, 158.9, 794.1");
+          index_2 ("18.732, 37.464, 74.928");
+          values ( \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31" \
+          );
+        }
+        rise_transition (delay_template_3x3) {
+          index_1 ("61.75, 158.9, 794.1");
+          index_2 ("18.732, 37.464, 74.928");
+          values ( \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31" \
+          );
+          ecsm_waveform_set (ecsm_template_13) {
+            index_1 : "0.02, 0.05, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 0.95, 0.98";
+            values : \
+              "71.8302, 72.9014, 74.6867, 78.2574, 81.828, 85.3986, 88.9693, 92.5399, 96.1106, 99.6813, 103.252, 105.037, 106.108, \
+               72.5452, 74.6871, 78.2571, 85.3971, 92.5372, 99.6772, 106.817, 113.957, 121.097, 128.238, 135.378, 138.948, 141.09, \
+               73.9733, 78.257, 85.3964, 99.6751, 113.954, 128.233, 142.512, 156.791, 171.07, 185.349, 199.628, 206.767, 211.051, \
+               131.415, 132.641, 134.457, 138.048, 141.622, 145.194, 148.764, 152.335, 155.906, 159.476, 163.047, 164.832, 165.904, \
+               132.243, 134.445, 138.036, 145.18, 152.32, 159.46, 166.6, 173.74, 180.88, 188.02, 195.161, 198.731, 200.873, \
+               133.737, 138.052, 145.195, 159.474, 173.753, 188.032, 202.311, 216.59, 230.869, 245.148, 259.427, 266.566, 270.85, \
+               327.863, 336.181, 349.07, 371.904, 391.721, 409.285, 425.077, 439.439, 452.612, 464.791, 476.123, 481.507, 484.654, \
+               333.506, 349.098, 371.895, 409.274, 439.392, 464.749, 486.666, 505.993, 523.303, 538.989, 553.343, 560.088, 564.011, \
+               344.079, 371.882, 409.272, 464.705, 505.963, 538.953, 566.503, 590.235, 611.069, 629.662, 646.456, 654.285, 658.82";
+          }
+          ecsm_capacitance (fall) {
+            threshold_pct : "90.0";
+            values : \
+              "0.00647773, 0.00647783, 0.00647789, \
+               0.00648355, 0.00648366, 0.00648372, \
+               0.00649251, 0.00649262, 0.00649268";
+          }
+          ecsm_capacitance (fall) {
+            threshold_pct : "80.0";
+            values : \
+              "0.00647498, 0.00647509, 0.00647515, \
+               0.00647542, 0.00647554, 0.0064756, \
+               0.00649024, 0.00649036, 0.00649041";
+          }
+          ecsm_capacitance (fall) {
+            threshold_pct : "70.0";
+            values : \
+              "0.00647884, 0.00647896, 0.00647902, \
+               0.00648224, 0.00648236, 0.00648242, \
+               0.00647971, 0.00647982, 0.00647988";
+          }
+          ecsm_capacitance (fall) {
+            threshold_pct : "50.0";
+            values : \
+              "0.0064581, 0.00645822, 0.00645829, \
+               0.00646332, 0.00646344, 0.0064635, \
+               0.00646613, 0.00646623, 0.00646628";
+          }
+          ecsm_capacitance (fall) {
+            threshold_pct : "40.0";
+            values : \
+              "0.00646017, 0.0064603, 0.00646036, \
+               0.00645495, 0.00645507, 0.00645513, \
+               0.00645926, 0.00645934, 0.00645938";
+          }
+          ecsm_capacitance (fall) {
+            threshold_pct : "30.0";
+            values : \
+              "0.0064459, 0.00644603, 0.00644609, \
+               0.00644928, 0.00644939, 0.00644945, \
+               0.00645255, 0.00645258, 0.0064526";
+          }
+          ecsm_capacitance (fall) {
+            threshold_pct : "20.0";
+            values : \
+              "0.00643513, 0.00643524, 0.0064353, \
+               0.00644645, 0.00644655, 0.00644659, \
+               0.00644625, 0.00644641, 0.00644657";
+          }
+          ecsm_capacitance (fall) {
+            threshold_pct : "10.0";
+            values : \
+              "0.00643638, 0.00643648, 0.00643653, \
+               0.00643697, 0.00643703, 0.00643706, \
+               0.00644043, 0.00644054, 0.00643973";
+          }
+          ecsm_capacitance (fall) {
+            threshold_pct : "0.01";
+            values : \
+              "0.00643005, 0.00643012, 0.00643016, \
+               0.00643286, 0.00643266, 0.00643283, \
+               0.0064353, 0.00643479, 0.00643451";
+          }
+        }
+        cell_fall (delay_template_3x3) {
+          index_1 ("61.75, 158.9, 794.1");
+          index_2 ("18.732, 37.464, 74.928");
+          values ( \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31" \
+          );
+        }
+        fall_transition (delay_template_3x3) {
+          index_1 ("61.75, 158.9, 794.1");
+          index_2 ("18.732, 37.464, 74.928");
+          values ( \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31" \
+          );
+          ecsm_waveform_set (ecsm_template_13) {
+            index_1 : "0.98, 0.95, 0.9, 0.8, 0.7, 0.6, 0.5, 0.4, 0.3, 0.2, 0.1, 0.05, 0.02";
+            values : \
+              "81.6947, 82.8727, 84.8359, 88.7623, 92.6887, 96.6152, 100.542, 104.468, 108.395, 112.321, 116.248, 118.211, 119.389, \
+               82.4808, 84.8364, 88.7622, 96.614, 104.466, 112.318, 120.169, 128.021, 135.873, 143.725, 151.577, 155.503, 157.858, \
+               84.0514, 88.7621, 96.6133, 112.316, 128.018, 143.721, 159.423, 175.126, 190.828, 206.531, 222.233, 230.085, 234.795, \
+               141.115, 142.294, 144.257, 148.185, 152.11, 156.036, 159.963, 163.889, 167.816, 171.742, 175.669, 177.632, 178.81, \
+               141.903, 144.259, 148.186, 156.036, 163.888, 171.74, 179.592, 187.443, 195.295, 203.147, 210.999, 214.925, 217.28, \
+               143.474, 148.186, 156.036, 171.739, 187.441, 203.143, 218.846, 234.548, 250.251, 265.954, 281.656, 289.508, 294.218, \
+               379.338, 384.307, 392.59, 407.259, 421.164, 433.35, 445.132, 455.977, 466.096, 476.104, 485.128, 489.64, 492.214, \
+               382.689, 392.627, 407.288, 433.371, 455.966, 476.106, 493.559, 509.918, 525.017, 538.831, 552.07, 558.513, 562.159, \
+               389.334, 407.303, 433.382, 476.112, 509.92, 538.831, 564.246, 587.106, 607.969, 626.828, 644.884, 653.384, 658.357";
+          }
+          ecsm_capacitance (rise) {
+            threshold_pct : "10.0";
+            values : \
+              "0.00618987, 0.00618995, 0.00619, \
+               0.00616419, 0.00616428, 0.00616432, \
+               0.00617964, 0.00617973, 0.00617977";
+          }
+          ecsm_capacitance (rise) {
+            threshold_pct : "20.0";
+            values : \
+              "0.00616776, 0.00616784, 0.00616789, \
+               0.00618344, 0.00618353, 0.00618357, \
+               0.0061997, 0.00619979, 0.00619983";
+          }
+          ecsm_capacitance (rise) {
+            threshold_pct : "30.0";
+            values : \
+              "0.00618334, 0.00618342, 0.00618347, \
+               0.00619788, 0.00619796, 0.00619801, \
+               0.00622257, 0.00622265, 0.0062227";
+          }
+          ecsm_capacitance (rise) {
+            threshold_pct : "50.0";
+            values : \
+              "0.00621156, 0.00621164, 0.00621169, \
+               0.00623106, 0.00623114, 0.00623119, \
+               0.00636289, 0.00636297, 0.00636301";
+          }
+          ecsm_capacitance (rise) {
+            threshold_pct : "60.0";
+            values : \
+              "0.00623126, 0.00623134, 0.00623139, \
+               0.00627891, 0.00627899, 0.00627903, \
+               0.00654268, 0.00654275, 0.00654279";
+          }
+          ecsm_capacitance (rise) {
+            threshold_pct : "70.0";
+            values : \
+              "0.00627461, 0.00627469, 0.00627474, \
+               0.00636373, 0.00636381, 0.00636385, \
+               0.00681911, 0.00681916, 0.00681919";
+          }
+          ecsm_capacitance (rise) {
+            threshold_pct : "80.0";
+            values : \
+              "0.00635046, 0.00635054, 0.00635058, \
+               0.00653452, 0.00653459, 0.00653463, \
+               0.00688441, 0.0068844, 0.00688439";
+          }
+          ecsm_capacitance (rise) {
+            threshold_pct : "90.0";
+            values : \
+              "0.00649317, 0.00649324, 0.00649328, \
+               0.00680269, 0.00680275, 0.00680278, \
+               0.00688904, 0.00688832, 0.00688824";
+          }
+          ecsm_capacitance (rise) {
+            threshold_pct : "99.99";
+            values : \
+              "0.00673493, 0.006735, 0.00673504, \
+               0.00687946, 0.00687948, 0.00687949, \
+               0.00688334, 0.00688296, 0.00688277";
+          }
+        }
+      }
+      internal_power () {
+        related_pin : "a";
+        related_pg_pin : GND;
+        rise_power (power_template_3x3) {
+          index_1 ("61.75, 158.9, 794.1");
+          index_2 ("18.732, 37.464, 74.928");
+          values ( \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31" \
+          );
+        }
+        fall_power (power_template_3x3) {
+          index_1 ("61.75, 158.9, 794.1");
+          index_2 ("18.732, 37.464, 74.928");
+          values ( \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31" \
+          );
+        }
+      }
+      internal_power () {
+        related_pin : "a";
+        related_pg_pin : VDD;
+        rise_power (power_template_3x3) {
+          index_1 ("61.75, 158.9, 794.1");
+          index_2 ("18.732, 37.464, 74.928");
+          values ( \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31" \
+          );
+        }
+        fall_power (power_template_3x3) {
+          index_1 ("61.75, 158.9, 794.1");
+          index_2 ("18.732, 37.464, 74.928");
+          values ( \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31" \
+          );
+        }
+      }
+      internal_power () {
+        related_pin : "b";
+        related_pg_pin : GND;
+        rise_power (power_template_3x3) {
+          index_1 ("61.75, 158.9, 794.1");
+          index_2 ("18.732, 37.464, 74.928");
+          values ( \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31" \
+          );
+        }
+        fall_power (power_template_3x3) {
+          index_1 ("61.75, 158.9, 794.1");
+          index_2 ("18.732, 37.464, 74.928");
+          values ( \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31" \
+          );
+        }
+      }
+      internal_power () {
+        related_pin : "b";
+        related_pg_pin : VDD;
+        rise_power (power_template_3x3) {
+          index_1 ("61.75, 158.9, 794.1");
+          index_2 ("18.732, 37.464, 74.928");
+          values ( \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31" \
+          );
+        }
+        fall_power (power_template_3x3) {
+          index_1 ("61.75, 158.9, 794.1");
+          index_2 ("18.732, 37.464, 74.928");
+          values ( \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31" \
+          );
+        }
+      }
+    }
+    pin (a) {
+      direction : input;
+      related_ground_pin : GND;
+      related_power_pin : VDD;
+      max_transition : 794.1;
+      capacitance : 0.00570611;
+      rise_capacitance : 0.00567604;
+      rise_capacitance_range (0.00523901, 0.00567604);
+      fall_capacitance : 0.00570611;
+      fall_capacitance_range (0.00552132, 0.00570611);
+      ecsm_capacitance (rise) {
+        when : "!b";
+        threshold_pct : "10.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.00350062, 0.0031706, 0.00326142";
+      }
+      ecsm_capacitance (rise) {
+        when : "!b";
+        threshold_pct : "20.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.00426026, 0.00433804, 0.00444087";
+      }
+      ecsm_capacitance (rise) {
+        when : "!b";
+        threshold_pct : "30.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.00464708, 0.00474821, 0.00480936";
+      }
+      ecsm_capacitance (rise) {
+        when : "!b";
+        threshold_pct : "50.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.00501464, 0.00508802, 0.00512828";
+      }
+      ecsm_capacitance (rise) {
+        when : "!b";
+        threshold_pct : "60.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.00511791, 0.00517693, 0.00519769";
+      }
+      ecsm_capacitance (rise) {
+        when : "!b";
+        threshold_pct : "70.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.0051886, 0.00524045, 0.00525546";
+      }
+      ecsm_capacitance (rise) {
+        when : "!b";
+        threshold_pct : "80.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.0052438, 0.00528929, 0.00528556";
+      }
+      ecsm_capacitance (rise) {
+        when : "!b";
+        threshold_pct : "90.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.00529042, 0.00532443, 0.00531181";
+      }
+      ecsm_capacitance (rise) {
+        when : "!b";
+        threshold_pct : "99.99";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.00532783, 0.0053521, 0.0053308";
+      }
+      ecsm_capacitance (fall) {
+        when : "!b";
+        threshold_pct : "90.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.00482585, 0.0048428, 0.00502315";
+      }
+      ecsm_capacitance (fall) {
+        when : "!b";
+        threshold_pct : "80.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.00505691, 0.00521778, 0.00534953";
+      }
+      ecsm_capacitance (fall) {
+        when : "!b";
+        threshold_pct : "70.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.00520468, 0.00535626, 0.00545198";
+      }
+      ecsm_capacitance (fall) {
+        when : "!b";
+        threshold_pct : "50.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.00535979, 0.00547076, 0.00552627";
+      }
+      ecsm_capacitance (fall) {
+        when : "!b";
+        threshold_pct : "40.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.00539504, 0.00550128, 0.00554185";
+      }
+      ecsm_capacitance (fall) {
+        when : "!b";
+        threshold_pct : "30.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.00542614, 0.00551503, 0.00555142";
+      }
+      ecsm_capacitance (fall) {
+        when : "!b";
+        threshold_pct : "20.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.00546018, 0.00553155, 0.00555707";
+      }
+      ecsm_capacitance (fall) {
+        when : "!b";
+        threshold_pct : "10.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.00548915, 0.00554049, 0.00556143";
+      }
+      ecsm_capacitance (fall) {
+        when : "!b";
+        threshold_pct : "0.01";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.00551156, 0.00555178, 0.0055639";
+      }
+      internal_power () {
+        when : "(!b * y)";
+        related_pg_pin : GND;
+        rise_power (passive_power_template_3x1) {
+          index_1 ("61.75, 158.9, 794.1");
+          values ( \
+            "0, 0, 0" \
+          );
+        }
+        fall_power (passive_power_template_3x1) {
+          index_1 ("61.75, 158.9, 794.1");
+          values ( \
+            "0, 0, 0" \
+          );
+        }
+      }
+      internal_power () {
+        when : "(!b * y)";
+        related_pg_pin : VDD;
+        rise_power (passive_power_template_3x1) {
+          index_1 ("61.75, 158.9, 794.1");
+          values ( \
+            "-0.000166963, -0.000168269, -0.000175509" \
+          );
+        }
+        fall_power (passive_power_template_3x1) {
+          index_1 ("61.75, 158.9, 794.1");
+          values ( \
+            "0.00020779, 0.000206392, 0.000205955" \
+          );
+        }
+      }
+    }
+    pin (b) {
+      direction : input;
+      related_ground_pin : GND;
+      related_power_pin : VDD;
+      max_transition : 794.1;
+      capacitance : 0.00689135;
+      rise_capacitance : 0.00689135;
+      rise_capacitance_range (0.00613964, 0.00689135);
+      fall_capacitance : 0.0064351;
+      fall_capacitance_range (0.00621297, 0.0064351);
+      ecsm_capacitance (rise) {
+        when : "!a";
+        threshold_pct : "10.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.00462749, 0.00441002, 0.00443481";
+      }
+      ecsm_capacitance (rise) {
+        when : "!a";
+        threshold_pct : "20.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.00519935, 0.00525637, 0.00528602";
+      }
+      ecsm_capacitance (rise) {
+        when : "!a";
+        threshold_pct : "30.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.00548221, 0.00555563, 0.00556223";
+      }
+      ecsm_capacitance (rise) {
+        when : "!a";
+        threshold_pct : "50.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.00575594, 0.00581213, 0.00583239";
+      }
+      ecsm_capacitance (rise) {
+        when : "!a";
+        threshold_pct : "60.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.00584463, 0.00589069, 0.00593202";
+      }
+      ecsm_capacitance (rise) {
+        when : "!a";
+        threshold_pct : "70.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.00591407, 0.00596629, 0.00602521";
+      }
+      ecsm_capacitance (rise) {
+        when : "!a";
+        threshold_pct : "80.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.00597978, 0.00604328, 0.00608345";
+      }
+      ecsm_capacitance (rise) {
+        when : "!a";
+        threshold_pct : "90.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.00605892, 0.00610788, 0.00612887";
+      }
+      ecsm_capacitance (rise) {
+        when : "!a";
+        threshold_pct : "99.99";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.00611825, 0.00614912, 0.00616688";
+      }
+      ecsm_capacitance (fall) {
+        when : "!a";
+        threshold_pct : "90.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.00578979, 0.00583351, 0.00597322";
+      }
+      ecsm_capacitance (fall) {
+        when : "!a";
+        threshold_pct : "80.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.00597428, 0.00610972, 0.006223";
+      }
+      ecsm_capacitance (fall) {
+        when : "!a";
+        threshold_pct : "70.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.00605784, 0.00619891, 0.00629781";
+      }
+      ecsm_capacitance (fall) {
+        when : "!a";
+        threshold_pct : "50.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.00614817, 0.00625655, 0.00633724";
+      }
+      ecsm_capacitance (fall) {
+        when : "!a";
+        threshold_pct : "40.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.006157, 0.0062664, 0.00633709";
+      }
+      ecsm_capacitance (fall) {
+        when : "!a";
+        threshold_pct : "30.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.00617181, 0.00626126, 0.00633151";
+      }
+      ecsm_capacitance (fall) {
+        when : "!a";
+        threshold_pct : "20.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.00618816, 0.00626225, 0.00632347";
+      }
+      ecsm_capacitance (fall) {
+        when : "!a";
+        threshold_pct : "10.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.00619812, 0.00625707, 0.00631476";
+      }
+      ecsm_capacitance (fall) {
+        when : "!a";
+        threshold_pct : "0.01";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.00620544, 0.00625661, 0.00630653";
+      }
+      internal_power () {
+        when : "(!a * y)";
+        related_pg_pin : GND;
+        rise_power (passive_power_template_3x1) {
+          index_1 ("61.75, 158.9, 794.1");
+          values ( \
+            "0, 0, 0" \
+          );
+        }
+        fall_power (passive_power_template_3x1) {
+          index_1 ("61.75, 158.9, 794.1");
+          values ( \
+            "0, 0, 0" \
+          );
+        }
+      }
+      internal_power () {
+        when : "(!a * y)";
+        related_pg_pin : VDD;
+        rise_power (passive_power_template_3x1) {
+          index_1 ("61.75, 158.9, 794.1");
+          values ( \
+            "-0.000179211, -0.000180669, -0.000179077" \
+          );
+        }
+        fall_power (passive_power_template_3x1) {
+          index_1 ("61.75, 158.9, 794.1");
+          values ( \
+            "0.000198278, 0.000196897, 0.000193621" \
+          );
+        }
+      }
+    }
+  }
+  cell (NOR2X1) {
+    ecsm_vtn : 0.35;
+    ecsm_vtp : 0.35;
+    area : 0;
+    cell_leakage_power : 0.00853168;
+    pg_pin (GND) {
+      pg_type : primary_ground;
+      voltage_name : "GND";
+    }
+    pg_pin (VDD) {
+      pg_type : primary_power;
+      voltage_name : "VDD";
+    }
+    leakage_power () {
+      value : 0;
+      when : "y";
+      related_pg_pin : GND;
+    }
+    leakage_power () {
+      value : 0.00853168;
+      when : "y";
+      related_pg_pin : VDD;
+    }
+    leakage_power () {
+      value : 0;
+      when : "!y";
+      related_pg_pin : GND;
+    }
+    leakage_power () {
+      value : 0.00853168;
+      when : "!y";
+      related_pg_pin : VDD;
+    }
+    leakage_power () {
+      value : 0;
+      related_pg_pin : GND;
+    }
+    leakage_power () {
+      value : 0.00853168;
+      related_pg_pin : VDD;
+    }
+    pin (y) {
+      direction : output;
+      driver_type : open_drain;
+      function : "1";
+      power_down_function : "(!VDD) + (GND)";
+      related_ground_pin : GND;
+      related_power_pin : VDD;
+    }
+  }
+  cell (OR2X1) {
+    ecsm_vtn : 0.35;
+    ecsm_vtp : 0.35;
+    area : 0;
+    cell_leakage_power : 0.00429475;
+    pg_pin (GND) {
+      pg_type : primary_ground;
+      voltage_name : "GND";
+    }
+    pg_pin (VDD) {
+      pg_type : primary_power;
+      voltage_name : "VDD";
+    }
+    leakage_power () {
+      value : 0;
+      when : "y";
+      related_pg_pin : GND;
+    }
+    leakage_power () {
+      value : 0.00429475;
+      when : "y";
+      related_pg_pin : VDD;
+    }
+    leakage_power () {
+      value : 0;
+      related_pg_pin : GND;
+    }
+    leakage_power () {
+      value : 0.00429475;
+      related_pg_pin : VDD;
+    }
+    pin (y) {
+      direction : output;
+      driver_type : open_drain;
+      function : "1";
+      power_down_function : "(!VDD) + (GND)";
+      related_ground_pin : GND;
+      related_power_pin : VDD;
+    }
+  }
+  cell (XNOR2X1) {
+    ecsm_vtn : 0.35;
+    ecsm_vtp : 0.35;
+    area : 0;
+    cell_leakage_power : 0;
+    pg_pin (GND) {
+      pg_type : primary_ground;
+      voltage_name : "GND";
+    }
+    pg_pin (VDD) {
+      pg_type : primary_power;
+      voltage_name : "VDD";
+    }
+    leakage_power () {
+      value : 0;
+      when : "(b * y)";
+      related_pg_pin : GND;
+    }
+    leakage_power () {
+      value : 0;
+      when : "(b * !y)";
+      related_pg_pin : GND;
+    }
+    leakage_power () {
+      value : 0;
+      when : "(!b * y)";
+      related_pg_pin : GND;
+    }
+    leakage_power () {
+      value : 0;
+      when : "(!b * !y)";
+      related_pg_pin : GND;
+    }
+    leakage_power () {
+      value : 0;
+      related_pg_pin : GND;
+    }
+    pin (y) {
+      direction : output;
+      function : "0";
+      related_ground_pin : GND;
+      max_capacitance : 74.928;
+    }
+    pin (b) {
+      direction : input;
+      related_ground_pin : GND;
+      capacitance : 0.00810335;
+      rise_capacitance : 0.00810335;
+      rise_capacitance_range (0.00810335, 0.00810335);
+      fall_capacitance : 0.00711375;
+      fall_capacitance_range (0.00711375, 0.00711375);
+    }
+  }
+  cell (XOR2X1) {
+    ecsm_vtn : 0.35;
+    ecsm_vtp : 0.35;
+    area : 0;
+    cell_leakage_power : 13.1958;
+    pg_pin (GND) {
+      pg_type : primary_ground;
+      voltage_name : "GND";
+    }
+    pg_pin (VDD) {
+      pg_type : primary_power;
+      voltage_name : "VDD";
+    }
+    leakage_power () {
+      value : 0;
+      when : "(a * b * !y)";
+      related_pg_pin : GND;
+    }
+    leakage_power () {
+      value : 23.8635;
+      when : "(a * b * !y)";
+      related_pg_pin : VDD;
+    }
+    leakage_power () {
+      value : 0;
+      when : "(a * !b * !y)";
+      related_pg_pin : GND;
+    }
+    leakage_power () {
+      value : 24.0621;
+      when : "(a * !b * !y)";
+      related_pg_pin : VDD;
+    }
+    leakage_power () {
+      value : 0;
+      when : "(!a * b * y)";
+      related_pg_pin : GND;
+    }
+    leakage_power () {
+      value : 0.0101153;
+      when : "(!a * b * y)";
+      related_pg_pin : VDD;
+    }
+    leakage_power () {
+      value : 0;
+      when : "(!a * !b * !y)";
+      related_pg_pin : GND;
+    }
+    leakage_power () {
+      value : 4.84766;
+      when : "(!a * !b * !y)";
+      related_pg_pin : VDD;
+    }
+    leakage_power () {
+      value : 0;
+      related_pg_pin : GND;
+    }
+    leakage_power () {
+      value : 13.1958;
+      related_pg_pin : VDD;
+    }
+    pin (y) {
+      direction : output;
+      function : "(!a * b)";
+      power_down_function : "(!VDD) + (GND)";
+      related_ground_pin : GND;
+      related_power_pin : VDD;
+      max_capacitance : 74.928;
+      timing () {
+        related_pin : "a";
+        ecsm_base_rail_vdd_rise : 0.000131212;
+        ecsm_base_rail_gnd_rise : 0.000101038;
+        ecsm_base_rail_vdd_fall : 0.299975;
+        ecsm_base_rail_gnd_fall : 0.299936;
+        timing_sense : negative_unate;
+        timing_type : combinational;
+        cell_rise (delay_template_3x3) {
+          index_1 ("61.75, 158.9, 794.1");
+          index_2 ("18.732, 37.464, 74.928");
+          values ( \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31" \
+          );
+        }
+        rise_transition (delay_template_3x3) {
+          index_1 ("61.75, 158.9, 794.1");
+          index_2 ("18.732, 37.464, 74.928");
+          values ( \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31" \
+          );
+          ecsm_waveform_set (ecsm_template_13) {
+            index_1 : "0.02, 0.05, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 0.95, 0.98";
+            values : \
+              "85.9539, 90.8091, 97.3551, 106.081, 112.118, 116.972, 121.234, 125.161, 128.881, 132.467, 135.961, 137.683, 138.71, \
+               89.0702, 97.2898, 106.132, 116.975, 125.162, 132.455, 139.382, 146.12, 152.76, 159.349, 165.909, 169.183, 171.146, \
+               94.5553, 105.959, 116.91, 132.434, 146.097, 159.331, 172.431, 185.495, 198.55, 211.602, 224.654, 231.18, 235.095, \
+               146.248, 150.688, 156.966, 165.615, 171.604, 176.444, 180.698, 184.62, 188.337, 191.921, 195.413, 197.135, 198.161, \
+               149.209, 156.906, 165.507, 176.406, 184.628, 191.916, 198.834, 205.572, 212.215, 218.806, 225.367, 228.641, 230.605, \
+               154.536, 165.385, 176.366, 191.933, 205.588, 218.822, 231.922, 244.986, 258.041, 271.093, 284.145, 290.671, 294.586, \
+               403.042, 418.769, 437.688, 461.473, 476.765, 488.268, 497.717, 505.93, 513.323, 520.141, 526.532, 529.6, 531.405, \
+               413.881, 437.651, 461.429, 488.143, 505.867, 520.116, 532.583, 543.977, 554.63, 564.724, 574.361, 579.031, 581.789, \
+               430.668, 461.278, 488.177, 520.134, 544.017, 564.732, 583.595, 601.097, 617.494, 632.966, 647.648, 654.727, 658.897";
+          }
+          ecsm_capacitance (fall) {
+            threshold_pct : "90.0";
+            values : \
+              "0.0155613, 0.0155613, 0.0155613, \
+               0.0156178, 0.0156178, 0.0156178, \
+               0.0159668, 0.0159664, 0.0159661";
+          }
+          ecsm_capacitance (fall) {
+            threshold_pct : "80.0";
+            values : \
+              "0.0155773, 0.0155773, 0.0155774, \
+               0.0157169, 0.0157168, 0.0157168, \
+               0.0162031, 0.016202, 0.0162014";
+          }
+          ecsm_capacitance (fall) {
+            threshold_pct : "70.0";
+            values : \
+              "0.0156116, 0.0156116, 0.0156116, \
+               0.0157916, 0.0157914, 0.0157914, \
+               0.0163602, 0.0163581, 0.0163571";
+          }
+          ecsm_capacitance (fall) {
+            threshold_pct : "50.0";
+            values : \
+              "0.0156719, 0.0156718, 0.0156718, \
+               0.0159103, 0.0159099, 0.0159098, \
+               0.0166148, 0.0166113, 0.0166096";
+          }
+          ecsm_capacitance (fall) {
+            threshold_pct : "40.0";
+            values : \
+              "0.0157054, 0.0157053, 0.0157053, \
+               0.0159858, 0.0159854, 0.0159852, \
+               0.016777, 0.0167734, 0.0167716";
+          }
+          ecsm_capacitance (fall) {
+            threshold_pct : "30.0";
+            values : \
+              "0.0157527, 0.0157526, 0.0157525, \
+               0.0161031, 0.0161026, 0.0161024, \
+               0.0169834, 0.0169805, 0.016979";
+          }
+          ecsm_capacitance (fall) {
+            threshold_pct : "20.0";
+            values : \
+              "0.0158526, 0.0158524, 0.0158524, \
+               0.0163072, 0.0163066, 0.0163063, \
+               0.0178001, 0.0178, 0.0178";
+          }
+          ecsm_capacitance (fall) {
+            threshold_pct : "10.0";
+            values : \
+              "0.016015, 0.0160149, 0.0160148, \
+               0.0166625, 0.016662, 0.0166617, \
+               0.0187196, 0.0187199, 0.0187208";
+          }
+          ecsm_capacitance (fall) {
+            threshold_pct : "0.01";
+            values : \
+              "0.0163165, 0.0163164, 0.0163163, \
+               0.0172447, 0.0172447, 0.0172447, \
+               0.0186693, 0.0186692, 0.0186692";
+          }
+        }
+        cell_fall (delay_template_3x3) {
+          index_1 ("61.75, 158.9, 794.1");
+          index_2 ("18.732, 37.464, 74.928");
+          values ( \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31" \
+          );
+        }
+        fall_transition (delay_template_3x3) {
+          index_1 ("61.75, 158.9, 794.1");
+          index_2 ("18.732, 37.464, 74.928");
+          values ( \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31" \
+          );
+          ecsm_waveform_set (ecsm_template_13) {
+            index_1 : "0.98, 0.95, 0.9, 0.8, 0.7, 0.6, 0.5, 0.4, 0.3, 0.2, 0.1, 0.05, 0.02";
+            values : \
+              "91.3379, 92.6777, 94.9107, 99.3766, 103.843, 108.299, 112.754, 117.21, 121.662, 126.114, 130.566, 132.792, 134.127, \
+               92.2337, 94.9113, 99.3739, 108.298, 117.201, 126.104, 135.002, 143.9, 152.797, 161.694, 170.591, 175.039, 177.708, \
+               94.0199, 99.374, 108.296, 126.098, 143.89, 161.68, 179.47, 197.259, 215.049, 232.838, 250.628, 259.523, 264.86, \
+               143.185, 144.617, 146.916, 151.488, 155.984, 160.479, 164.971, 169.44, 173.901, 178.362, 182.817, 185.045, 186.382, \
+               144.145, 146.92, 151.49, 160.478, 169.429, 178.353, 187.258, 196.162, 205.061, 213.959, 222.856, 227.305, 229.974, \
+               146.008, 151.492, 160.477, 178.349, 196.153, 213.947, 231.737, 249.527, 267.316, 285.106, 302.895, 311.79, 317.127, \
+               335.661, 342.157, 351.625, 369.848, 385.497, 400.474, 413.774, 426.815, 438.53, 449.637, 460.098, 465.227, 468.198, \
+               340.084, 351.698, 369.913, 400.51, 426.658, 449.684, 470.009, 488.762, 505.551, 521.602, 536.436, 543.815, 547.972, \
+               348.092, 369.946, 400.528, 449.69, 488.397, 521.493, 550.47, 576.521, 600.033, 621.785, 642.393, 652.15, 657.865";
+          }
+          ecsm_capacitance (rise) {
+            threshold_pct : "10.0";
+            values : \
+              "0.015972, 0.0159721, 0.0159721, \
+               0.0162795, 0.0162796, 0.0162796, \
+               0.0164759, 0.016476, 0.0164761";
+          }
+          ecsm_capacitance (rise) {
+            threshold_pct : "20.0";
+            values : \
+              "0.0161966, 0.0161967, 0.0161968, \
+               0.0163931, 0.0163932, 0.0163933, \
+               0.0165111, 0.0165113, 0.0165114";
+          }
+          ecsm_capacitance (rise) {
+            threshold_pct : "30.0";
+            values : \
+              "0.0162994, 0.0162995, 0.0162996, \
+               0.0164477, 0.0164479, 0.016448, \
+               0.016535, 0.0165352, 0.0165353";
+          }
+          ecsm_capacitance (rise) {
+            threshold_pct : "50.0";
+            values : \
+              "0.0164223, 0.0164225, 0.0164225, \
+               0.0165205, 0.0165207, 0.0165208, \
+               0.0165775, 0.0165777, 0.0165778";
+          }
+          ecsm_capacitance (rise) {
+            threshold_pct : "60.0";
+            values : \
+              "0.0164655, 0.0164657, 0.0164658, \
+               0.0165493, 0.0165495, 0.0165496, \
+               0.0165976, 0.0165978, 0.0165979";
+          }
+          ecsm_capacitance (rise) {
+            threshold_pct : "70.0";
+            values : \
+              "0.0165034, 0.0165036, 0.0165037, \
+               0.0165753, 0.0165755, 0.0165756, \
+               0.0166168, 0.0166169, 0.0166169";
+          }
+          ecsm_capacitance (rise) {
+            threshold_pct : "80.0";
+            values : \
+              "0.0165352, 0.0165354, 0.0165355, \
+               0.0165977, 0.0165978, 0.0165979, \
+               0.0166344, 0.0166343, 0.0166343";
+          }
+          ecsm_capacitance (rise) {
+            threshold_pct : "90.0";
+            values : \
+              "0.0165611, 0.0165613, 0.0165614, \
+               0.0166168, 0.0166169, 0.016617, \
+               0.01665, 0.0166496, 0.0166494";
+          }
+          ecsm_capacitance (rise) {
+            threshold_pct : "99.99";
+            values : \
+              "0.0165831, 0.0165832, 0.0165833, \
+               0.0166331, 0.0166331, 0.0166331, \
+               0.0166636, 0.0166627, 0.0166623";
+          }
+        }
+      }
+      timing () {
+        related_pin : "b";
+        ecsm_base_rail_vdd_rise : 0.219063;
+        ecsm_base_rail_gnd_rise : 0.219063;
+        timing_sense : positive_unate;
+        timing_type : combinational_rise;
+        cell_rise (delay_template_3x3) {
+          index_1 ("61.75, 158.9, 794.1");
+          index_2 ("18.732, 37.464, 74.928");
+          values ( \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31" \
+          );
+        }
+        rise_transition (delay_template_3x3) {
+          index_1 ("61.75, 158.9, 794.1");
+          index_2 ("18.732, 37.464, 74.928");
+          values ( \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31" \
+          );
+          ecsm_waveform_set (ecsm_template_13) {
+            index_1 : "0.02, 0.05, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 0.95, 0.98";
+            values : \
+              "938.761, 938.762, 938.762, 938.764, 938.766, 938.768, 938.77, 938.771, 938.773, 938.775, 938.777, 938.778, 938.778, \
+               938.782, 938.783, 938.785, 938.789, 938.792, 938.796, 938.8, 938.803, 938.807, 938.81, 938.814, 938.816, 938.817, \
+               938.793, 938.796, 938.799, 938.806, 938.814, 938.821, 938.828, 938.835, 938.843, 938.85, 938.857, 938.861, 938.863, \
+               1113.25, 1113.26, 1113.26, 1113.26, 1113.26, 1113.26, 1113.26, 1113.27, 1113.27, 1113.27, 1113.27, 1113.27, 1113.27, \
+               1113.33, 1113.33, 1113.33, 1113.33, 1113.34, 1113.34, 1113.35, 1113.35, 1113.35, 1113.36, 1113.36, 1113.36, 1113.36, \
+               1113.37, 1113.37, 1113.37, 1113.38, 1113.39, 1113.39, 1113.4, 1113.41, 1113.41, 1113.42, 1113.43, 1113.43, 1113.43, \
+               0, 0.0180664, 0.0482178, 0.109131, 0.171143, 0.233154, 0.297485, 0.362, 0.426514, 0.491028, 0.561035, 0.596191, 0.61731, \
+               0.0120239, 0.0482178, 0.10907, 0.233093, 0.361877, 0.490906, 0.631226, 0.77179, 0.912354, 1.06348, 1.23596, 1.3222, 1.37396, \
+               0.0361328, 0.10907, 0.233093, 0.490845, 0.771667, 1.06335, 1.4082, 1.75311, 2.15594, 2.79681, 3.43762, 3.75806, 3.95032";
+          }
+          ecsm_capacitance (rise) {
+            threshold_pct : "10.0";
+            values : \
+              "0.0115277, 0.0115277, 0.0115277, \
+               0.0115593, 0.0115592, 0.0115592, \
+               0.0116756, 0.0116747, 0.0116742";
+          }
+          ecsm_capacitance (rise) {
+            threshold_pct : "20.0";
+            values : \
+              "0.011541, 0.0115409, 0.0115409, \
+               0.0115933, 0.011593, 0.0115929, \
+               0.0117112, 0.0117097, 0.0117089";
+          }
+          ecsm_capacitance (rise) {
+            threshold_pct : "30.0";
+            values : \
+              "0.0115659, 0.0115658, 0.0115658, \
+               0.0116132, 0.0116128, 0.0116127, \
+               0.0117431, 0.0117412, 0.0117403";
+          }
+          ecsm_capacitance (rise) {
+            threshold_pct : "50.0";
+            values : \
+              "0.0116031, 0.0116029, 0.0116029, \
+               0.0116692, 0.0116687, 0.0116685, \
+               0.0119355, 0.0119331, 0.0119319";
+          }
+          ecsm_capacitance (rise) {
+            threshold_pct : "60.0";
+            values : \
+              "0.0116376, 0.0116374, 0.0116373, \
+               0.0117415, 0.011741, 0.0117408, \
+               0.0121591, 0.0121567, 0.0121554";
+          }
+          ecsm_capacitance (rise) {
+            threshold_pct : "70.0";
+            values : \
+              "0.0117066, 0.0117064, 0.0117064, \
+               0.0118754, 0.0118748, 0.0118746, \
+               0.0124849, 0.0124825, 0.0124813";
+          }
+          ecsm_capacitance (rise) {
+            threshold_pct : "80.0";
+            values : \
+              "0.0118252, 0.011825, 0.0118249, \
+               0.0120854, 0.0120848, 0.0120845, \
+               0.0130584, 0.0130562, 0.0130551";
+          }
+          ecsm_capacitance (rise) {
+            threshold_pct : "90.0";
+            values : \
+              "0.0120103, 0.0120101, 0.01201, \
+               0.0123581, 0.0123576, 0.0123573, \
+               0.0139054, 0.0139035, 0.0139026";
+          }
+          ecsm_capacitance (rise) {
+            threshold_pct : "99.99";
+            values : \
+              "0.0122282, 0.012228, 0.0122279, \
+               0.0128002, 0.0127996, 0.0127993, \
+               0.0139162, 0.0139149, 0.0139143";
+          }
+        }
+      }
+      internal_power () {
+        related_pin : "a";
+        related_pg_pin : GND;
+        rise_power (power_template_3x3) {
+          index_1 ("61.75, 158.9, 794.1");
+          index_2 ("18.732, 37.464, 74.928");
+          values ( \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31" \
+          );
+        }
+        fall_power (power_template_3x3) {
+          index_1 ("61.75, 158.9, 794.1");
+          index_2 ("18.732, 37.464, 74.928");
+          values ( \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31" \
+          );
+        }
+      }
+      internal_power () {
+        related_pin : "a";
+        related_pg_pin : VDD;
+        rise_power (power_template_3x3) {
+          index_1 ("61.75, 158.9, 794.1");
+          index_2 ("18.732, 37.464, 74.928");
+          values ( \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31" \
+          );
+        }
+        fall_power (power_template_3x3) {
+          index_1 ("61.75, 158.9, 794.1");
+          index_2 ("18.732, 37.464, 74.928");
+          values ( \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31" \
+          );
+        }
+      }
+      internal_power () {
+        related_pin : "b";
+        related_pg_pin : GND;
+        rise_power (power_template_3x3) {
+          index_1 ("61.75, 158.9, 794.1");
+          index_2 ("18.732, 37.464, 74.928");
+          values ( \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31" \
+          );
+        }
+        fall_power (scalar) {
+          values ( \
+            "0" \
+          );
+        }
+      }
+      internal_power () {
+        related_pin : "b";
+        related_pg_pin : VDD;
+        rise_power (power_template_3x3) {
+          index_1 ("61.75, 158.9, 794.1");
+          index_2 ("18.732, 37.464, 74.928");
+          values ( \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31", \
+            "1e+31, 1e+31, 1e+31" \
+          );
+        }
+        fall_power (scalar) {
+          values ( \
+            "0" \
+          );
+        }
+      }
+    }
+    pin (a) {
+      direction : input;
+      related_ground_pin : GND;
+      related_power_pin : VDD;
+      max_transition : 794.1;
+      capacitance : 0.0187092;
+      rise_capacitance : 0.0166679;
+      rise_capacitance_range (0.0165955, 0.0166679);
+      fall_capacitance : 0.0187092;
+      fall_capacitance_range (0.0162888, 0.0187092);
+    }
+    pin (b) {
+      direction : input;
+      related_ground_pin : GND;
+      related_power_pin : VDD;
+      max_transition : 794.1;
+      capacitance : 0.0153331;
+      rise_capacitance : 0.0153331;
+      rise_capacitance_range (0.0122105, 0.0153331);
+      fall_capacitance : 0.0153331;
+      fall_capacitance_range (0.0153331, 0.0153331);
+      ecsm_capacitance (rise) {
+        when : "a";
+        threshold_pct : "10.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.0114604, 0.0120507, 0.0145705";
+      }
+      ecsm_capacitance (rise) {
+        when : "a";
+        threshold_pct : "20.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.0117213, 0.0125883, 0.0161645";
+      }
+      ecsm_capacitance (rise) {
+        when : "a";
+        threshold_pct : "30.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.0118969, 0.0129074, 0.0164045";
+      }
+      ecsm_capacitance (rise) {
+        when : "a";
+        threshold_pct : "50.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.0121245, 0.0132699, 0.0148971";
+      }
+      ecsm_capacitance (rise) {
+        when : "a";
+        threshold_pct : "60.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.0122208, 0.0134326, 0.0145905";
+      }
+      ecsm_capacitance (rise) {
+        when : "a";
+        threshold_pct : "70.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.0123477, 0.0136189, 0.0146157";
+      }
+      ecsm_capacitance (rise) {
+        when : "a";
+        threshold_pct : "80.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.0125308, 0.0138036, 0.0150446";
+      }
+      ecsm_capacitance (rise) {
+        when : "a";
+        threshold_pct : "90.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.0128274, 0.014081, 0.0155781";
+      }
+      ecsm_capacitance (rise) {
+        when : "a";
+        threshold_pct : "99.99";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.013226, 0.0145268, 0.0152647";
+      }
+      ecsm_capacitance (fall) {
+        when : "a";
+        threshold_pct : "90.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.0114604, 0.0120507, 0.0145705";
+      }
+      ecsm_capacitance (fall) {
+        when : "a";
+        threshold_pct : "80.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.0117213, 0.0125883, 0.0161645";
+      }
+      ecsm_capacitance (fall) {
+        when : "a";
+        threshold_pct : "70.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.0118969, 0.0129074, 0.0164045";
+      }
+      ecsm_capacitance (fall) {
+        when : "a";
+        threshold_pct : "50.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.0121245, 0.0132699, 0.0148971";
+      }
+      ecsm_capacitance (fall) {
+        when : "a";
+        threshold_pct : "40.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.0122208, 0.0134326, 0.0145905";
+      }
+      ecsm_capacitance (fall) {
+        when : "a";
+        threshold_pct : "30.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.0123477, 0.0136189, 0.0146157";
+      }
+      ecsm_capacitance (fall) {
+        when : "a";
+        threshold_pct : "20.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.0125308, 0.0138036, 0.0150446";
+      }
+      ecsm_capacitance (fall) {
+        when : "a";
+        threshold_pct : "10.0";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.0128274, 0.014081, 0.0155781";
+      }
+      ecsm_capacitance (fall) {
+        when : "a";
+        threshold_pct : "0.01";
+        index_1 : "61.75, 158.9, 794.1";
+        values : \
+          "0.013226, 0.0145268, 0.0152647";
+      }
+      internal_power () {
+        when : "(a * !y)";
+        related_pg_pin : GND;
+        rise_power (passive_power_template_3x1) {
+          index_1 ("61.75, 158.9, 794.1");
+          values ( \
+            "0, 0, 0" \
+          );
+        }
+        fall_power (scalar) {
+          values ( \
+            "0" \
+          );
+        }
+      }
+      internal_power () {
+        when : "(a * !y)";
+        related_pg_pin : VDD;
+        rise_power (passive_power_template_3x1) {
+          index_1 ("61.75, 158.9, 794.1");
+          values ( \
+            "0.0133668, 0.0134235, 0.0138446" \
+          );
+        }
+        fall_power (scalar) {
+          values ( \
+            "0" \
+          );
+        }
+      }
+    }
+  }
+}
