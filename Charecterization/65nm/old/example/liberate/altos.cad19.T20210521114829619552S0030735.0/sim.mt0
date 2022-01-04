@@ -1,6 +1,0 @@
-$ Simulator: spectre (ver. 19.1.0.396.isr8)
-.title '**** Altos spice deck for characterization release dev'
-altosdevicecap00000004 altosdevicecap00000008 altosdevicecap00000012 temper 
-alter# 
--2.389047e-16 -2.698429e-15 -2.872385e-15 25 1 
-
